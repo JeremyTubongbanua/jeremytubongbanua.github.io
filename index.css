@@ -18,7 +18,8 @@ body {
 nav {
     background-color: #002366;
     display: flex;
-    padding: 10px 20px;
+    flex-wrap: wrap;
+    padding: 1em 2em;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -27,8 +28,9 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 1em;
     font-weight: bold;
+    font-size: 1.2em;
 }
 
 nav a:hover {
@@ -37,46 +39,48 @@ nav a:hover {
 
 .container {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 2em;
     color: white;
+    padding: 1em;
 }
 
 .info-box {
     background-color: #0047ab;
     display: inline-block;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.3);
     color: white;
-    width: 80%;
-    max-width: 1000px;
+    width: 90%;
+    max-width: 60em;
 }
 
 .info-box h1 {
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-bottom: 1em;
 }
 
 .info-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 2em;
+    flex-wrap: wrap;
 }
 
 .info-content img {
-    width: 45em;
+    width: 40em;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+    box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
 }
 
 .buttons {
     display: flex;
     flex-direction: column;
-    justify-content: space-around; /* Distributes space evenly */
+    justify-content: space-around;
     height: 100%;
-    gap: 4em; /* Additional gap between buttons */
+    gap: 2em;
 }
 
 .buttons a {
@@ -88,10 +92,10 @@ nav a:hover {
     align-items: center;
     background-color: #002366;
     color: white;
-    border-radius: 10px;
-    padding: 15px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 200px;
+    border-radius: 1em;
+    padding: 1em 1.5em;
+    box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.2);
+    width: 12em;
     text-align: left;
     transition: background-color 0.3s ease;
 }
@@ -101,8 +105,8 @@ nav a:hover {
 }
 
 .button img {
-    width: 4em;
-    height: 4em;
+    width: 3em;
+    height: 3em;
     margin-right: 1em;
 }
 
@@ -110,3 +114,86 @@ nav a:hover {
     font-size: 1.2em;
     margin: 0;
 }
+
+/* Media Queries for Mobile */
+@media (max-width: 40em) {
+    .info-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .info-content img {
+        width: 100%;
+        max-width: 20em;
+    }
+
+    .buttons {
+        width: 100%;
+        align-items: center;
+    }
+
+    .button {
+        width: 90%;
+        max-width: 20em;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 0.5em 0;
+    }
+}
+
+.about-card {
+    display: flex;
+    align-items: flex-start;
+    border: 0.2em solid #0047ab;
+    border-radius: 1em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+    width: 100%;
+    gap: 1.5em;
+    overflow: hidden;
+    align-items: center;
+}
+
+.about-card img {
+    width: 20em;
+    height: 20em;
+    object-fit: cover;
+    border-radius: 0.5em;
+    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: 1;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.about-card h2 {
+    font-size: 1.8em;
+    margin: 0 0 0.5em 0;
+    color: #0047ab;
+    font-weight: bold;
+    text-align: left;
+}
+
+.about-card p {
+    font-size: 1.2em;
+    line-height: 1.6em;
+    color: #333;
+    margin: 0;
+    text-align: left;
+}
+
