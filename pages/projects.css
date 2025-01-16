@@ -17,31 +17,31 @@ main {
 
 .project-card {
     display: flex;
-    flex-direction: column; /* Makes the image stack above the text */
+    flex-direction: column; 
     border: 0.2em solid #ffffff;
     border-radius: 1em;
     padding: 1.5em;
     background-color: #ffffff;
     color: #000000;
     box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
-    gap: 1em; /* Space between the image and text */
+    gap: 1em; 
     align-items: flex-start;
 }
 
 .project-image {
     width: 100%;
-    max-width: 40em; /* Adjusts the image size */
+    max-width: 40em;
     height: 20em;
     object-fit: contain;
     border-radius: 0.5em;
     box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
-    align-self: center; /* Centers the image */
+    align-self: center;
 }
 
 .project-header {
     display: flex;
     justify-content: space-between;
-    width: 100%; /* Ensures the header spans the full width */
+    width: 100%;
 }
 
 .project-header h1 {
