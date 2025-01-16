@@ -1,0 +1,41 @@
+nav {
+    background-color: #002366;
+    display: flex;
+    justify-content: center; /* Centers the navigation items */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    padding: 1em 2em;
+    position: sticky; /* Sticks to the top on scroll */
+    top: 0;
+    z-index: 1000; /* Ensures it stays above other elements */
+    box-shadow: 0 0.2em 0.5em rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effect */
+    padding: 0.5em 1em; /* Adds padding to links for a clickable area */
+    border-radius: 0.5em; /* Slight rounding for a modern look */
+}
+
+nav a:hover {
+    color: #0047ab; /* Changes text color on hover */
+    background-color: white; /* Adds a background on hover */
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stacks items vertically on smaller screens */
+        align-items: center;
+        padding: 1em;
+    }
+
+    nav a {
+        margin: 0.5em 0; /* Reduces margin for vertical alignment */
+        width: 100%; /* Links take full width */
+        text-align: center; /* Centers the text */
+    }
+}
