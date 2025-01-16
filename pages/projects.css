@@ -6,6 +6,8 @@ body {
 }
 
 main {
+    margin-left: 20em;
+    margin-right: 20em;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
