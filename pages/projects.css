@@ -30,7 +30,7 @@ main {
     width: 100%;
     max-width: 40em; /* Adjusts the image size */
     height: 20em;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 0.5em;
     box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
     align-self: center; /* Centers the image */
