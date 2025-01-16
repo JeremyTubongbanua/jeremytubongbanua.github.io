@@ -6,10 +6,10 @@ body {
 }
 
 main {
-    margin-left: 20em;
-    margin-right: 20em;
+    margin-left: 10em;
+    margin-right: 10em;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2em;
     padding: 2em;
     justify-content: center;
