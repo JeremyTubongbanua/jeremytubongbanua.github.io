@@ -9,8 +9,8 @@ main {
     margin-left: 20em;
     margin-right: 20em;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
     padding: 2em;
     justify-content: center;
 }
@@ -29,13 +29,12 @@ main {
 }
 
 .project-image {
-    width: 100%;
-    max-width: 40em;
-    height: 20em;
+    width: 20em;
+    height: 10em;
     object-fit: contain;
-    border-radius: 0.5em;
+    border-radius: 0.25em;
     box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
-    align-self: center; /* Centers the image */
+    align-self: center;
 }
 
 .project-header {

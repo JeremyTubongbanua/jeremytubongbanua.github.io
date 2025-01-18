@@ -29,9 +29,8 @@ main {
 }
 
 .project-image {
-    width: 100%;
-    max-width: 40em;
-    height: 20em;
+    width: 20em;
+    height: 10em;
     object-fit: contain;
     border-radius: 0.5em;
     box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
