@@ -12,24 +12,29 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
+    /* background: rgba(0, 0, 0, 0.4); Subtle overlay to enhance text readability */
 }
 
 .container {
-    text-align: center;
-    margin-top: 2em;
-    color: white;
+    margin: 2em auto;
     padding: 1em;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    max-width: 95%;
 }
 
 .info-box {
     background-color: #0047ab;
-    display: inline-block;
     padding: 2em;
     border-radius: 1em;
     box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.3);
     color: white;
-    width: 90%;
+    width: 100%;
     max-width: 60em;
+    text-align: center;
 }
 
 .info-box h1 {
@@ -39,29 +44,25 @@ body {
 
 .info-content {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2em;
     flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    align-items: center;
 }
 
 .info-content img {
-    width: 40em;
-    height: auto;
+    width: 100%;
+    max-width: 20em;
     border-radius: 1em;
     box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
 }
 
 .buttons {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 100%;
-    gap: 2em;
-}
-
-.buttons a {
-    text-decoration: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+    width: 100%;
 }
 
 .button {
@@ -72,7 +73,7 @@ body {
     border-radius: 1em;
     padding: 1em 1.5em;
     box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.2);
-    width: 12em;
+    max-width: 12em;
     text-align: left;
     transition: background-color 0.3s ease;
 }
@@ -89,78 +90,149 @@ body {
 
 .button span {
     font-size: 1.2em;
-    margin: 0;
-}
-
-@media (max-width: 40em) {
-    .info-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 2em;
-    }
-
-    .info-content img {
-        width: 100%;
-        max-width: 20em;
-    }
-
-    .buttons {
-        width: 100%;
-        align-items: center;
-    }
-
-    .button {
-        width: 90%;
-        max-width: 20em;
-    }
 }
 
 .about-card {
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     border: 0.2em solid #0047ab;
     border-radius: 1em;
-    padding: 0.5em;
-    margin: 0.5em 0;
+    padding: 1.5em;
+    margin: 1em 0;
     box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
     background-color: #f9f9f9;
+    gap: 1em;
     width: 100%;
-    gap: 1.5em;
-    overflow: hidden;
-    align-items: center;
+    max-width: 60em;
 }
 
 .about-card img {
-    width: 20em;
-    height: 20em;
+    width: 100%;
+    max-width: 15em;
     object-fit: cover;
     border-radius: 0.5em;
     box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
 }
 
 .about-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex: 1;
+    text-align: center;
+    max-width: 100%;
     word-wrap: break-word;
-    overflow-wrap: break-word;
 }
 
 .about-card h2 {
     font-size: 1.8em;
-    margin: 0 0 0.5em 0;
     color: #0047ab;
     font-weight: bold;
-    text-align: left;
 }
 
 .about-card p {
-    font-size: 1.2em;
-    line-height: 1.6em;
+    font-size: 1em;
+    line-height: 1.5em;
     color: #333;
-    margin: 0;
-    text-align: left;
 }
 
+nav {
+    background-color: #002366;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    gap: 2em;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    transition: background-color 0.3s ease;
+    border-radius: 0.5em;
+}
+
+nav a:hover {
+    background-color: #001944;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .about-card {
+        flex-direction: row;
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .about-text {
+        max-width: 70%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-box {
+        padding: 1.5em;
+    }
+
+    .info-box h1 {
+        font-size: 2em;
+    }
+
+    .button {
+        max-width: 18em;
+        padding: 0.8em;
+    }
+
+    .button img {
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    .about-card img {
+        max-width: 12em;
+    }
+
+    .about-card h2 {
+        font-size: 1.5em;
+    }
+
+    .about-card p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .info-box h1 {
+        font-size: 1.8em;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .button {
+        width: 90%;
+    }
+
+    .about-card img {
+        max-width: 10em;
+    }
+
+    .about-card h2 {
+        font-size: 1.2em;
+    }
+
+    .about-card p {
+        font-size: 0.8em;
+    }
+}
