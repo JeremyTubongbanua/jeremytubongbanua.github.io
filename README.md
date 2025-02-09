@@ -6,12 +6,16 @@ Personal portfolio website made using HTML and CSS.
 
 ## Screenshots
 
-![alt text](image.png)
+![](./readme-images/image%20copy%204.png)
 
-![alt text](image-1.png)
+![](./readme-images/image%20copy%205.png)
 
-![alt text](image-2.png)
+![](./readme-images/image%20copy%203.png)
 
-![alt text](image-3.png)
+![](./readme-images/image%20copy%206.png)
 
-![alt text](image-4.png)
+![](./readme-images/image%20copy%207.png)
+
+![](./readme-images/image.png)
+
+![](./readme-images/image%20copy%202.png)
