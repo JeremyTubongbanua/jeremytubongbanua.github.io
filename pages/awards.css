@@ -9,13 +9,14 @@ body {
   /* ====== MAIN CONTENT AREA ====== */
   main {
     /* Limit how wide the content can get and center it */
+    min-width:100em;
     max-width: 1200px;
-    margin: 2em auto;
+    margin: 1em auto;
     
     /* Grid layout for desktop */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
+    gap: 1em;
     
     /* Internal padding */
     padding: 2em;
@@ -37,8 +38,8 @@ body {
   }
   
   .project-image {
-    width: 20em;
-    height: 10em;
+    width: 30em;
+    height: 20em;
     object-fit: contain;
     border-radius: 0.5em;
     box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
