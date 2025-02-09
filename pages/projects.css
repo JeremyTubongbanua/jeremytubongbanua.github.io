@@ -13,11 +13,11 @@ body {
   
     /* On larger screens (above 768px), show two columns */
     display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2em;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2em;
 
-  /* ensure items do not stretch to the row's tallest card */
-  align-items: start;
+    /* ensure items do not stretch to the row's tallest card */
+    align-items: start;
   }
   
   /* ---- PROJECT CARD ---- */
@@ -33,25 +33,61 @@ body {
   
   /* ---- HEADER (TITLE + DATE) ---- */
   .project-header {
-    display: flex;
+    display: flex; 
     justify-content: space-between;
-    align-items: flex-start; /* Avoid overlap on narrower screens */
+    align-items: flex-start; 
+    gap: 2em; 
     margin-bottom: 0.5em;
-    gap: 1em; /* Ensures space between title and date */
   }
   
-  .project-header h1 {
-    font-size: 1.6em;
+  /* Left side wraps title, subtitle, and skill badges in a column */
+  .project-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em; /* Space between items (title, subtitle, skills) */
+  }
+  
+  /* Title styling */
+  .project-info h1 {
     margin: 0;
-    line-height: 1.2;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #000;
   }
   
-  .project-date {
+  /* Subtitle or short description under the title */
+  .project-subtitle {
     font-size: 1em;
-    color: #777777;
-    white-space: nowrap; /* So date text doesn't wrap awkwardly */
+    color: #444;
+    margin: 0;
+    line-height: 1.4;
   }
   
+  /* Skill badges container can also be flex-wrapped if needed */
+  .project-skills {
+    display: flex;
+    flex-wrap: wrap; /* allows badges to wrap onto new lines if too wide */
+    gap: 0.5em;
+    margin: 0; /* optional if you want no extra spacing */
+  }
+  
+  /* Individual skill “pill” styling */
+  .skill-badge {
+    background-color: #eee;
+    color: #000;
+    padding: 0.2em 0.5em;
+    border-radius: 0.3em;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+  
+  /* Date styling on the right */
+  .project-date {
+    font-size: 0.95em;
+    color: #777;
+    white-space: nowrap; 
+  }
+    
   /* ---- PROJECT BODY ---- */
   .project-body {
     margin-top: 0.5em;
