@@ -26,7 +26,7 @@ main {
   color: #000000;
   box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
   padding: 1em;
-  min-height: 8em;
+  /* max-height: 50em; */
   cursor: pointer;
 }
 
@@ -37,6 +37,9 @@ main {
 }
 
 .project-info {
+  /* display: flex; */
+  /* flex-direction: column;
+  justify-content: space-between; */
   display: flex;
   flex-direction: column;
   flex: 1;
