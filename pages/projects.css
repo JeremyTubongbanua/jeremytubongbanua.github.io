@@ -166,5 +166,11 @@ body {
     .project-date {
       font-size: 0.9em;
     }
+
+    .project-image {
+      max-height: 10em;
+      min-width: 10em;
+      object-fit: contain;
+    }
   }
   
