@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Projects</title>
+  <!-- If you have your own external CSS files, you can continue to use them -->
   <link rel="stylesheet" href="projects.css" />
   <link rel="stylesheet" href="../nav.css" />
 </head>
@@ -26,139 +27,149 @@
   <main>
     <!-- 13) Ongoing - at_c -->
     <section class="project-card">
+      <!-- Click this to toggle -->
+      <div class="project-header">
+        <h1>at_c</h1>
+        <span class="project-date">In-Progress</span>
+      </div>
+      <!-- Collapsible content -->
+      <div class="project-body hidden">
         <img
           src="../assets/projects/at_c/thumbnail.png"
           alt="at_c Thumbnail"
           class="project-image"
         />
-        <div>
-          <div class="project-header">
-            <h1>at_c</h1>
-            <span class="project-date">In-Progress</span>
-          </div>
-          <p class="project-tagline">
-            atProtocol implementation in C for ESP32 and Embedded Devices
-          </p>
-          <p class="project-description">
-            at_c is the client implementation of the atProtocol. Similar to
-            libraries needed for HTTP communication, the C SDK is required for embedded devices and C applications to
-            interact with their atServer through the atProtocol. This SDK facilitates edge encryption,
-            server authentication, and simplifies protocol interactions for users.
-            Among the SDKs I contributed to, including at_java, at_pico_w, and
-            at_esp32, at_c emerged as the most complete due to customer demand. By
-            August 2024, we achieved the v0.1.0 beta release.
-          </p>
-          <p>
-            <strong>Cryptography Features:</strong>
-            <ul>
-              <li>RSA 2048 encrypt/decrypt</li>
-              <li>RSA 2048 sign/verify</li>
-              <li>AES 256 CTR encrypt/decrypt</li>
-              <li>AES key generation</li>
-              <li>RSA 2048 key importing</li>
-              <li>SHA 256 hashing</li>
-            </ul>
-          </p>
-          <p>
-            <strong>atProtocol Features:</strong>
-            <ul>
-              <li>CRUD operations: Put, Get, Delete</li>
-              <li>Events: Notify, Monitor</li>
-              <li>AtKey: metadata, to/from string</li>
-              <li>Authentication: PKAM authentication</li>
-            </ul>
-          </p>
-          <p>
-            <a href="https://github.com/JeremyTubongbanua/at_c/tree/trunk"
-              >GitHub Source Code</a
-            >.
-          </p>
-        </div>
-      </section>
-  
-      <!-- 14) In-Progress - noports -->
-      <section class="project-card">
+        <p class="project-tagline">
+          atProtocol implementation in C for ESP32 and Embedded Devices
+        </p>
+        <p class="project-description">
+          at_c is the client implementation of the atProtocol. Similar to
+          libraries needed for HTTP communication, the C SDK is required for
+          embedded devices and C applications to interact with their atServer
+          through the atProtocol. This SDK facilitates edge encryption,
+          server authentication, and simplifies protocol interactions for users.
+          Among the SDKs I contributed to, including at_java, at_pico_w, and
+          at_esp32, at_c emerged as the most complete due to customer demand. By
+          August 2024, we achieved the v0.1.0 beta release.
+        </p>
+        <p>
+          <strong>Cryptography Features:</strong>
+          <ul>
+            <li>RSA 2048 encrypt/decrypt</li>
+            <li>RSA 2048 sign/verify</li>
+            <li>AES 256 CTR encrypt/decrypt</li>
+            <li>AES key generation</li>
+            <li>RSA 2048 key importing</li>
+            <li>SHA 256 hashing</li>
+          </ul>
+        </p>
+        <p>
+          <strong>atProtocol Features:</strong>
+          <ul>
+            <li>CRUD operations: Put, Get, Delete</li>
+            <li>Events: Notify, Monitor</li>
+            <li>AtKey: metadata, to/from string</li>
+            <li>Authentication: PKAM authentication</li>
+          </ul>
+        </p>
+        <p>
+          <a href="https://github.com/JeremyTubongbanua/at_c/tree/trunk"
+            >GitHub Source Code</a
+          >.
+        </p>
+      </div>
+    </section>
+
+    <!-- 14) In-Progress - noports -->
+    <section class="project-card">
+      <div class="project-header">
+        <h1>noports</h1>
+        <span class="project-date">In-Progress</span>
+      </div>
+      <div class="project-body hidden">
         <img
           src="../assets/projects/noports/thumbnail.png"
           alt="noports Thumbnail"
           class="project-image"
         />
-        <div>
-          <div class="project-header">
-            <h1>noports</h1>
-            <span class="project-date">In-Progress</span>
-          </div>
-          <p class="project-tagline">Establish TCP connections without opening ports</p>
-          <p class="project-description">
-            noports is a company-wide project designed to allow users to remotely
-            access their machines without requiring open ports. It provides a
-            secure and user-friendly solution, especially for non-tech-savvy
-            users. The project is currently under development and not yet publicly
-            available.
-          </p>
-          <p>
-            <strong>My Contribution:</strong>
-            <ul>
-              <li>
-                Developed the <code>at_c</code> C SDK, a core dependency for
-                noports' C SSHNPD.
-              </li>
-              <li>
-                Created the initial set of end-to-end tests using Docker to
-                simulate the noports handshake process. This involved closing
-                ports on Docker machines and simulating one container SSH'ing into
-                another.
-              </li>
-            </ul>
-          </p>
-          <p>
-            <a href="https://github.com/JeremyTubongbanua/noports"
-              >GitHub Source Code</a
-            >.
-          </p>
-        </div>
-      </section>
+        <p class="project-tagline">Establish TCP connections without opening ports</p>
+        <p class="project-description">
+          noports is a company-wide project designed to allow users to remotely
+          access their machines without requiring open ports. It provides a
+          secure and user-friendly solution, especially for non-tech-savvy
+          users. The project is currently under development and not yet publicly
+          available.
+        </p>
+        <p>
+          <strong>My Contribution:</strong>
+          <ul>
+            <li>
+              Developed the <code>at_c</code> C SDK, a core dependency for
+              noports' C SSHNPD.
+            </li>
+            <li>
+              Created the initial set of end-to-end tests using Docker to
+              simulate the noports handshake process. This involved closing
+              ports on Docker machines and simulating one container SSH'ing into
+              another.
+            </li>
+          </ul>
+        </p>
+        <p>
+          <a href="https://github.com/JeremyTubongbanua/noports"
+            >GitHub Source Code</a
+          >.
+        </p>
+      </div>
+    </section>
 
     <!-- OEc 2025 -->
     <section class="project-card">
-      <img
-        src="../assets/projects/oec_2024/thumbnail.png"
-        alt="NDCTrack Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>NDCTrack</h1>
-          <span class="project-date">January 2025</span>
-        </div>
+      <div class="project-header">
+        <h1>NDCTrack</h1>
+        <span class="project-date">January 2025</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/oec_2024/thumbnail.png"
+          alt="NDCTrack Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">Placeholder</p>
         <p class="project-description">
           Placeholder
         </p>
         <p>
-            <a href="https://github.com/JeremyTubongbanua/OEC_2025">GitHub Repository</a>.
+          <a href="https://github.com/JeremyTubongbanua/OEC_2025">GitHub Repository</a>.
         </p>
       </div>
     </section>
 
     <!-- 1) October 2024 - Face Tracking Robot -->
     <section class="project-card">
-      <img
-        src="../assets/projects/face_tracking_robot/thumbnail.png"
-        alt="Face Tracking Robot Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Face Tracking Robot</h1>
-          <span class="project-date">October 2024</span>
-        </div>
-        <p class="project-tagline">A 2-axis face tracking robot powered by Luxonis Oak-D Lite</p>
+      <div class="project-header">
+        <h1>Face Tracking Robot</h1>
+        <span class="project-date">October 2024</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/face_tracking_robot/thumbnail.png"
+          alt="Face Tracking Robot Thumbnail"
+          class="project-image"
+        />
+        <p class="project-tagline">
+          A 2-axis face tracking robot powered by Luxonis Oak-D Lite
+        </p>
         <p class="project-description">
-          This project features a 2-axis (yaw/pitch) face tracking robot powered by a Luxonis Oak-D Lite camera and two micro servo motors. The system utilizes Python, Flask, DepthAI, OpenCV, and a Raspberry Pi for real-time face tracking and control.
+          This project features a 2-axis (yaw/pitch) face tracking robot powered
+          by a Luxonis Oak-D Lite camera and two micro servo motors. The system
+          utilizes Python, Flask, DepthAI, OpenCV, and a Raspberry Pi for
+          real-time face tracking and control.
         </p>
         <p>
-          <a href="https://github.com/JeremyTubongbanua/Face-Tracking-Robot">GitHub Repository</a>.
+          <a href="https://github.com/JeremyTubongbanua/Face-Tracking-Robot"
+            >GitHub Repository</a
+          >.
           <a href="https://youtube.com/shorts/XLtfobL6sic">YouTube Demo</a>.
         </p>
       </div>
@@ -166,19 +177,21 @@
 
     <!-- 2) October 2024 - Meal Plan Discord Bot -->
     <section class="project-card">
-      <img
-        src="../assets/projects/meal_plan_discord_bot/thumbnail.png"
-        alt="Meal Plan Discord Bot Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Meal Plan Discord Bot</h1>
-          <span class="project-date">October 2024</span>
-        </div>
+      <div class="project-header">
+        <h1>Meal Plan Discord Bot</h1>
+        <span class="project-date">October 2024</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/meal_plan_discord_bot/thumbnail.png"
+          alt="Meal Plan Discord Bot Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">South Village Dining Hall Menu Bot</p>
         <p class="project-description">
-          This bot fetches daily menus from the South Village Dining Hall API and outputs them in a Discord bot, providing users with up-to-date meal information.
+          This bot fetches daily menus from the South Village Dining Hall API
+          and outputs them in a Discord bot, providing users with up-to-date
+          meal information.
         </p>
         <p>
           <a href="https://github.com/JeremyTubongbanua/svdh">GitHub Repository</a>.
@@ -188,98 +201,130 @@
 
     <!-- 3) October 2024 - MappingX -->
     <section class="project-card">
-      <img
-        src="../assets/projects/mappingx/thumbnail.png"
-        alt="MappingX Logo"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>MappingX</h1>
-          <span class="project-date">October 2024</span>
-        </div>
+      <div class="project-header">
+        <h1>MappingX</h1>
+        <span class="project-date">October 2024</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/mappingx/thumbnail.png"
+          alt="MappingX Logo"
+          class="project-image"
+        />
         <p class="project-tagline">1st place at NASA Space Apps 2024</p>
         <p class="project-description">
-          Mapping X is a web-based interactive Geographical Information System (GIS) tool that lets you generate .STL meshes from Digital Elevation Model (DEM) data and Surface Water and Ocean Topography (SWOT) data from open-source NASA Earthview data. Built using Python, React, and Linux.
+          Mapping X is a web-based interactive Geographical Information System
+          (GIS) tool that lets you generate .STL meshes from Digital Elevation
+          Model (DEM) data and Surface Water and Ocean Topography (SWOT) data
+          from open-source NASA Earthview data. Built using Python, React, and
+          Linux.
         </p>
         <p>
-          <a href="https://github.com/JeremyTubongbanua/nasa_space_apps_2024/">GitHub repository</a>.
-          <a href="https://www.youtube.com/watch?v=ficv-n9h3qk">5 min YouTube video</a>.
-          <a href="https://www.youtube.com/watch?v=AShcmuF7qmU">30 second YouTube video</a>.
+          <a href="https://github.com/JeremyTubongbanua/nasa_space_apps_2024/"
+            >GitHub repository</a
+          >.
+          <a href="https://www.youtube.com/watch?v=ficv-n9h3qk"
+            >5 min YouTube video</a
+          >.
+          <a href="https://www.youtube.com/watch?v=AShcmuF7qmU"
+            >30 second YouTube video</a
+          >.
         </p>
       </div>
     </section>
 
     <!-- 4) September 2024 - connect.py -->
     <section class="project-card">
-      <img
-        src="../assets/projects/connect_py/thumbnail.png"
-        alt="connect.py Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>connect.py</h1>
-          <span class="project-date">September 2024</span>
-        </div>
+      <div class="project-header">
+        <h1>connect.py</h1>
+        <span class="project-date">September 2024</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/connect_py/thumbnail.png"
+          alt="connect.py Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">Hack The North 2024</p>
         <p class="project-description">
-          connect.py is a solution for secure remote access to a Jetson Nano in an air-gapped environment without requiring open ports. This project leverages Docker and Linux to ensure a secure and reliable implementation.
+          connect.py is a solution for secure remote access to a Jetson Nano in
+          an air-gapped environment without requiring open ports. This project
+          leverages Docker and Linux to ensure a secure and reliable
+          implementation.
         </p>
         <p>
-          <a href="https://devpost.com/software/connect-y6khjl">DevPost Submission</a>.
-          <a href="https://github.com/JeremyTubongbanua/hackthenorth2024">GitHub Repository</a>.
-          <a href="https://www.youtube.com/watch?v=lrKfHAbEC_E&feature=youtu.be">YouTube Demo</a>.
+          <a href="https://devpost.com/software/connect-y6khjl"
+            >DevPost Submission</a
+          >.
+          <a href="https://github.com/JeremyTubongbanua/hackthenorth2024"
+            >GitHub Repository</a
+          >.
+          <a
+            href="https://www.youtube.com/watch?v=lrKfHAbEC_E&feature=youtu.be"
+            >YouTube Demo</a
+          >.
         </p>
       </div>
     </section>
 
     <!-- 5) September 2024 - Custom Inhaler Case -->
     <section class="project-card">
-      <img
-        src="../assets/projects/custom_inhaler_case/thumbnail.png"
-        alt="Custom Inhaler Case Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Custom Inhaler Case</h1>
-          <span class="project-date">September 2024</span>
-        </div>
-        <p class="project-tagline">A custom 3D printed case for my asthma inhaler</p>
+      <div class="project-header">
+        <h1>Custom Inhaler Case</h1>
+        <span class="project-date">September 2024</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/custom_inhaler_case/thumbnail.png"
+          alt="Custom Inhaler Case Thumbnail"
+          class="project-image"
+        />
+        <p class="project-tagline">
+          A custom 3D printed case for my asthma inhaler
+        </p>
         <p class="project-description">
-          I designed and printed my own case for my asthma inhaler using Fusion 360. The case was fully custom-designed and utilizes 6x2mm magnets to securely hold the case together. The top comes off and snaps back on with magnets for satisfying ease of use.
+          I designed and printed my own case for my asthma inhaler using Fusion
+          360. The case was fully custom-designed and utilizes 6x2mm magnets to
+          securely hold the case together. The top comes off and snaps back on
+          with magnets for satisfying ease of use.
         </p>
       </div>
     </section>
 
     <!-- 6) September 2024 - jeremymark.ca -->
     <section class="project-card">
-      <img
-        src="../assets/projects/jeremymark_ca/thumbnail.png"
-        alt="jeremymark.ca Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>jeremymark.ca</h1>
-          <span class="project-date">September 2024</span>
-        </div>
+      <div class="project-header">
+        <h1>jeremymark.ca</h1>
+        <span class="project-date">September 2024</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/jeremymark_ca/thumbnail.png"
+          alt="jeremymark.ca Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">Old portfolio page</p>
         <p class="project-description">
-          jeremymark.ca is my old personal portfolio website. Unfortunately, I lost the domain. It had cool features like showing what song I was listening to on Spotify.
+          jeremymark.ca is my old personal portfolio website. Unfortunately, I
+          lost the domain. It had cool features like showing what song I was
+          listening to on Spotify.
         </p>
         <p>
           <strong>Technologies Used:</strong>
           <ul>
             <li><strong>Web Application:</strong> React, Tailwind CSS, Vite</li>
-            <li><strong>Backend:</strong> Node.js/Express with Spotify API integration</li>
+            <li>
+              <strong>Backend:</strong> Node.js/Express with Spotify API
+              integration
+            </li>
             <li><strong>Containerization:</strong> Docker, Docker Compose</li>
             <li><strong>Web Server:</strong> Nginx with HTTPS (Let's Encrypt)</li>
           </ul>
         </p>
         <p>
-          <a href="https://github.com/JeremyTubongbanua/jeremymark_ca">GitHub Repository</a>.
+          <a href="https://github.com/JeremyTubongbanua/jeremymark_ca"
+            >GitHub Repository</a
+          >.
           <a href="https://jeremymark.ca">Live Site</a>.
         </p>
       </div>
@@ -287,119 +332,110 @@
 
     <!-- 7) August 2024 - Simple Garbage Holder -->
     <section class="project-card">
-      <img
-        src="../assets/projects/simple_garbage_holder/thumbnail.png"
-        alt="Simple Garbage Holder Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Simple Garbage Holder</h1>
-          <span class="project-date">August 2024</span>
-        </div>
-        <p class="project-tagline">A simple model to hold small garbage plastic bags</p>
+      <div class="project-header">
+        <h1>Simple Garbage Holder</h1>
+        <span class="project-date">August 2024</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/simple_garbage_holder/thumbnail.png"
+          alt="Simple Garbage Holder Thumbnail"
+          class="project-image"
+        />
+        <p class="project-tagline">
+          A simple model to hold small garbage plastic bags
+        </p>
         <p class="project-description">
-          This is a custom garbage holder designed to fit between the gaps of kitchen cabinets, making it more convenient for my mom to dispose of garbage without bending down. The holder was 3D printed in PLA and designed in Fusion360.
+          This is a custom garbage holder designed to fit between the gaps of
+          kitchen cabinets, making it more convenient for my mom to dispose of
+          garbage without bending down. The holder was 3D printed in PLA and
+          designed in Fusion360.
         </p>
-        <!-- <p>
-          <strong>Usage:</strong><br />
-          <img
-            src="https://i.imgur.com/Wdcq2xa.png"
-            alt="Usage Example"
-            class="project-image"
-          />
-        </p>
-        <p>
-          <strong>Iterations:</strong><br />
-          Iteration 1:<br />
-          <img
-            src="https://i.imgur.com/ooYskzw.png"
-            alt="Iteration 1"
-            class="project-image"
-          /><br />
-          Iteration 2:<br />
-          <img
-            src="https://i.imgur.com/ZODDqRf.png"
-            alt="Iteration 2"
-            class="project-image"
-          />
-        </p> -->
       </div>
     </section>
 
     <!-- 8) August 2024 - codecraft.io -->
     <section class="project-card">
-      <img
-        src="../assets/projects/codecraft/thumbnail.png"
-        alt="Codecraft Logo"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>codecraft.io</h1>
-          <span class="project-date">August 2024</span>
-        </div>
+      <div class="project-header">
+        <h1>codecraft.io</h1>
+        <span class="project-date">August 2024</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/codecraft/thumbnail.png"
+          alt="Codecraft Logo"
+          class="project-image"
+        />
         <p class="project-tagline">Ignition Hacks 2024</p>
         <p class="project-description">
-          AI-assisted coding learning platform built using React, Node.js Express, and Docker.
+          AI-assisted coding learning platform built using React, Node.js
+          Express, and Docker.
         </p>
         <p>
-          <a href="https://devpost.com/software/codecraft-4wr1od">DevPost Link</a>.
-          <a href="https://www.youtube.com/watch?v=69-goLnVlUo">YouTube video</a>.
-          <a href="https://github.com/JeremyTubongbanua/codecraft.io">GitHub</a>.
+          <a href="https://devpost.com/software/codecraft-4wr1od"
+            >DevPost Link</a
+          >.
+          <a href="https://www.youtube.com/watch?v=69-goLnVlUo"
+            >YouTube video</a
+          >.
+          <a href="https://github.com/JeremyTubongbanua/codecraft.io"
+            >GitHub</a
+          >.
         </p>
       </div>
     </section>
 
     <!-- 9) July 2024 - Creality K1 Mods -->
     <section class="project-card">
-      <img
-        src="../assets/projects/creality_k1_mods/thumbnail.png"
-        alt="Creality K1 Mods Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Creality K1 Mods</h1>
-          <span class="project-date">July 2024</span>
-        </div>
+      <div class="project-header">
+        <h1>Creality K1 Mods</h1>
+        <span class="project-date">July 2024</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/creality_k1_mods/thumbnail.png"
+          alt="Creality K1 Mods Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">18 mods for my Creality K1 3D printer</p>
         <p class="project-description">
-          I created and personally use 18 mods for my Creality K1 3D printer. These mods enhance functionality, improve usability, and include both custom-made designs and downloads from Printables. Mods range from chain risers and exhaust filters to lid risers and filament guides.
+          I created and personally use 18 mods for my Creality K1 3D printer.
+          These mods enhance functionality, improve usability, and include both
+          custom-made designs and downloads from Printables. Mods range from
+          chain risers and exhaust filters to lid risers and filament guides.
         </p>
-        <!-- TODO CREATE GITHUB -->
-        <!-- <p>
-          <a href="https://github.com/JeremyTubongbanua/Creality-K1-Mods">GitHub Source Code</a>.
-        </p> -->
       </div>
     </section>
 
     <!-- 10) May 2024 - Weekly Wardrobe -->
     <section class="project-card">
-      <img
-        src="../assets/projects/weeklywardrobe/thumbnail.png"
-        alt="Weekly Wardrobe Logo"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Weekly Wardrobe</h1>
-          <span class="project-date">May 2024</span>
-        </div>
+      <div class="project-header">
+        <h1>Weekly Wardrobe</h1>
+        <span class="project-date">May 2024</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/weeklywardrobe/thumbnail.png"
+          alt="Weekly Wardrobe Logo"
+          class="project-image"
+        />
         <p class="project-tagline">HawkHacks 2024</p>
         <p class="project-description">
           Weekly Wardrobe is a web application platform that allows users to
-          subscribe to a "try on clothing temporarily" service. They will
-          receive used clothing for them to try on, then they will rate the
+          subscribe to a &quot;try on clothing temporarily&quot; service. They
+          will receive used clothing for them to try on, then they will rate the
           week's clothing. The algorithm will slowly adapt their style and
-          preferences to the clothing they receive. Project was built using React, Node.js Express, Blockchain, and Linux.
+          preferences to the clothing they receive. Project was built using
+          React, Node.js Express, Blockchain, and Linux.
         </p>
         <p>
           <a
             href="https://taikai.network/hackbox/hackathons/hawkhacks/projects/clwd4ehgl0d80z901w94tbk3h/idea"
             >Taikai Project Site</a
           >.
-          <a href="https://www.youtube.com/watch?v=PwSXqk1gRiI">YouTube demo</a>.
+          <a href="https://www.youtube.com/watch?v=PwSXqk1gRiI"
+            >YouTube demo</a
+          >.
           <a href="https://github.com/JeremyTubongbanua/WeeklyWardrobe"
             >GitHub repository</a
           >.
@@ -409,16 +445,16 @@
 
     <!-- 11) April 2024 - SuperCoolFlights -->
     <section class="project-card">
-      <img
-        src="../assets/projects/supercoolflights/thumbnail.png"
-        alt="SuperCoolFlights Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>SuperCoolFlights</h1>
-          <span class="project-date">April 2024</span>
-        </div>
+      <div class="project-header">
+        <h1>SuperCoolFlights</h1>
+        <span class="project-date">April 2024</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/supercoolflights/thumbnail.png"
+          alt="SuperCoolFlights Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">SOFE 3980U Final</p>
         <p class="project-description">
           Flight booking web application built using React, Tailwind CSS, Node.js
@@ -436,16 +472,16 @@
 
     <!-- 12) January 2024 - Qt/Atsign Plant -->
     <section class="project-card">
-      <img
-        src="../assets/projects/qt_atsign_plant/thumbnail.png"
-        alt="Qt/Atsign Plant Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Qt/Atsign Plant</h1>
-          <span class="project-date">January 2024</span>
-        </div>
+      <div class="project-header">
+        <h1>Qt/Atsign Plant</h1>
+        <span class="project-date">January 2024</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/qt_atsign_plant/thumbnail.png"
+          alt="Qt/Atsign Plant Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">CES 2024 Booth Demo</p>
         <p class="project-description">
           This was a joint demo with the Qt Company showcased at CES 2024 in Las
@@ -454,18 +490,16 @@
           IoT plant monitoring system using atProtocol and Qt.
         </p>
         <p>
-          <strong>Qt Application:</strong>
-          A Python Qt QML application ran on a Raspberry Pi with a screen,
-          providing a simple UI to control and monitor the plant securely using
-          atSign's encrypted control plane.
+          <strong>Qt Application:</strong> A Python Qt QML application ran on a
+          Raspberry Pi with a screen, providing a simple UI to control and
+          monitor the plant securely using atSign's encrypted control plane.
         </p>
         <p>
-          <strong>Atsign Plant:</strong>
-          The plant setup included a custom-designed PLA pot, a 5V DC water
-          pump, soil moisture and water level sensors, and other electrical
-          components like relays. The software, written in Python using the
-          at_python SDK, enabled secure communication between the Raspberry Pi
-          and the Qt application.
+          <strong>Atsign Plant:</strong> The plant setup included a
+          custom-designed PLA pot, a 5V DC water pump, soil moisture and water
+          level sensors, and other electrical components like relays. The
+          software, written in Python using the at_python SDK, enabled secure
+          communication between the Raspberry Pi and the Qt application.
         </p>
         <p>
           <a
@@ -473,7 +507,7 @@
             >Source Code GitHub</a
           >.
           <a
-            href="https://www.linkedin.com/posts/atsigncompany_cybersecurity-remoteaccess-security-ugcPost-7180945780306841601-PsNL?utm_source=share&utm_medium=member_desktop"
+            href="https://www.linkedin.com/posts/atsigncompany_cybersecurity-remoteaccess-security-ugcPost-7180945780306841601-PsNL"
             >Atsign LinkedIn Post</a
           >.
           <a href="https://www.youtube.com/watch?v=2cHUCFewl0I"
@@ -485,16 +519,16 @@
 
     <!-- 15) November 2023 - SuperCoolJobs -->
     <section class="project-card">
-      <img
-        src="../assets/projects/supercooljobs/thumbnail.png"
-        alt="SuperCoolJobs Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>SuperCoolJobs</h1>
-          <span class="project-date">November 2023</span>
-        </div>
+      <div class="project-header">
+        <h1>SuperCoolJobs</h1>
+        <span class="project-date">November 2023</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/supercooljobs/thumbnail.png"
+          alt="SuperCoolJobs Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">SOFE 3700U Final</p>
         <p class="project-description">
           Job recruitment web application built using React, Tailwind CSS,
@@ -511,16 +545,16 @@
 
     <!-- 16) October 2023 - Climate Crusaders -->
     <section class="project-card">
-      <img
-        src="../assets/projects/climatecrusaders/thumbnail.png"
-        alt="Climate Crusaders Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Climate Crusaders</h1>
-          <span class="project-date">October 2023</span>
-        </div>
+      <div class="project-header">
+        <h1>Climate Crusaders</h1>
+        <span class="project-date">October 2023</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/climatecrusaders/thumbnail.png"
+          alt="Climate Crusaders Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">3rd Place at NASA Space Apps 2023</p>
         <p class="project-description">
           The goal of Climate Crusaders is to raise awareness about rising sea
@@ -545,16 +579,16 @@
 
     <!-- 17) June 2023 - at_pico_w -->
     <section class="project-card">
-      <img
-        src="../assets/projects/at_pico_w/thumbnail.png"
-        alt="at_pico_w Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>at_pico_w</h1>
-          <span class="project-date">June 2023</span>
-        </div>
+      <div class="project-header">
+        <h1>at_pico_w</h1>
+        <span class="project-date">June 2023</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/at_pico_w/thumbnail.png"
+          alt="at_pico_w Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">
           atProtocol implementation in Micropython for Raspberry Pi Pico W
         </p>
@@ -573,30 +607,31 @@
 
     <!-- 18) April 2023 - CleanChoice -->
     <section class="project-card">
-      <img
-        src="../assets/projects/cleanchoice/thumbnail.png"
-        alt="CleanChoice Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>CleanChoice</h1>
-          <span class="project-date">April 2023</span>
-        </div>
+      <div class="project-header">
+        <h1>CleanChoice</h1>
+        <span class="project-date">April 2023</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/cleanchoice/thumbnail.png"
+          alt="CleanChoice Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">2nd Place and Best UI/UX Award</p>
         <p class="project-description">
-          CleanChoice won 2nd place ($2k prize) and Best UI/UX ($1k prize). CleanChoice was a project submitted to Schulich Hacks 2023, where my
+          CleanChoice won 2nd place ($2k prize) and Best UI/UX ($1k prize).
+          CleanChoice was a project submitted to Schulich Hacks 2023, where my
           team and I were flown to the University of Calgary for a weekend to
-          create a project to help the environment.
-          CleanChoice generates a QR code on your receipt and scans the
-          environmental impact of the products you've purchased.
+          create a project to help the environment. CleanChoice generates a QR
+          code on your receipt and scans the environmental impact of the
+          products you've purchased.
         </p>
         <p>
           <a href="https://github.com/JeremyTubongbanua/CleanChoice"
             >GitHub Source Code</a
           >.
           <a
-            href="https://www.linkedin.com/posts/jeremy-tubongbanua_thank-you-schulich-school-of-engineering-activity-7060422361740677120-37kN?utm_source=share&utm_medium=member_desktop"
+            href="https://www.linkedin.com/posts/jeremy-tubongbanua_thank-you-schulich-school-of-engineering-activity-7060422361740677120-37kN"
             >LinkedIn Post</a
           >.
         </p>
@@ -605,22 +640,23 @@
 
     <!-- 19) April 2023 - at_java -->
     <section class="project-card">
-      <img
-        src="../assets/projects/at_java/thumbnail.png"
-        alt="at_java Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>at_java</h1>
-          <span class="project-date">April 2023</span>
-        </div>
+      <div class="project-header">
+        <h1>at_java</h1>
+        <span class="project-date">April 2023</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/at_java/thumbnail.png"
+          alt="at_java Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">atProtocol implementation in Java</p>
         <p class="project-description">
           at_java is the client implementation of the atProtocol written in
           Java. During my internship at Atsign in 2022, I had the opportunity to
           implement key features such as CRAM and AtKey to/from string
-          functions. I also implemented continuous deployment of publishing the Java SDK to Sonatype Nexus Repository.
+          functions. I also implemented continuous deployment of publishing the
+          Java SDK to Sonatype Nexus Repository.
         </p>
         <p>
           <a href="https://github.com/JeremyTubongbanua/at_java"
@@ -632,16 +668,16 @@
 
     <!-- 20) April 2023 - at_esp32 -->
     <section class="project-card">
-      <img
-        src="../assets/projects/at_esp32/thumbnail.png"
-        alt="at_esp32 Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>at_esp32</h1>
-          <span class="project-date">April 2023</span>
-        </div>
+      <div class="project-header">
+        <h1>at_esp32</h1>
+        <span class="project-date">April 2023</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/at_esp32/thumbnail.png"
+          alt="at_esp32 Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">
           atProtocol implementation in C++ for ESP32 Arduino
         </p>
@@ -653,11 +689,10 @@
           like put, get, delete, and PKAM authentication.
         </p>
         <p>
-          <strong>UMass Boston Winter 2022:</strong>
-          This SDK was developed to support UMass Boston students in their final
-          CS project, which involved creating an actuator/sensor ESP32 demo
-          using the atPlatform. I conducted workshops, held office hours, and
-          created a
+          <strong>UMass Boston Winter 2022:</strong> This SDK was developed to
+          support UMass Boston students in their final CS project, which
+          involved creating an actuator/sensor ESP32 demo using the atPlatform.
+          I conducted workshops, held office hours, and created a
           <a
             href="https://www.youtube.com/playlist?list=PLkZCny-S3rfC93_Xqd_HBkK_dAjDzQ9Et"
             >video tutorial playlist</a
@@ -678,16 +713,16 @@
 
     <!-- 21) March 2023 - Split -->
     <section class="project-card">
-      <img
-        src="../assets/projects/split/thumbnail.png"
-        alt="Split Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Split</h1>
-          <span class="project-date">March 2023</span>
-        </div>
+      <div class="project-header">
+        <h1>Split</h1>
+        <span class="project-date">March 2023</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/split/thumbnail.png"
+          alt="Split Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">Demo Fest 2023</p>
         <p class="project-description">
           Using atSigns and the at_java Java SDK, we implemented a Distributed
@@ -705,16 +740,16 @@
 
     <!-- 22) December 2022 - SuperCoolJobs -->
     <section class="project-card">
-      <img
-        src="../assets/projects/supercooljobs0/thumbnail.png"
-        alt="SuperCoolJobs Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>SuperCoolJobs</h1>
-          <span class="project-date">December 2022</span>
-        </div>
+      <div class="project-header">
+        <h1>SuperCoolJobs</h1>
+        <span class="project-date">December 2022</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/supercooljobs0/thumbnail.png"
+          alt="SuperCoolJobs Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">SOFE 2800U Final</p>
         <p class="project-description">
           This was our submission to the SOFE 2800U final project. SuperCoolJobs
@@ -731,16 +766,16 @@
 
     <!-- 23) September 2022 - Bailey x Twitch -->
     <section class="project-card">
-      <img
-        src="../assets/projects/baileyxtwitch/thumbnail.png"
-        alt="Bailey x Twitch Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Bailey x Twitch</h1>
-          <span class="project-date">September 2022</span>
-        </div>
+      <div class="project-header">
+        <h1>Bailey x Twitch</h1>
+        <span class="project-date">September 2022</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/baileyxtwitch/thumbnail.png"
+          alt="Bailey x Twitch Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">IoT plant that is watered by Twitch chat</p>
         <p class="project-description">
           This is an IoT plant connected to a Raspberry Pi Zero. A web server is
@@ -753,23 +788,25 @@
           <a href="https://github.com/JeremyTubongbanua/Bailey-x-Twitch"
             >GitHub Source Code</a
           >.
-          <a href="https://www.youtube.com/watch?v=76K0j2CXyxc">YouTube Demo</a>.
+          <a href="https://www.youtube.com/watch?v=76K0j2CXyxc"
+            >YouTube Demo</a
+          >.
         </p>
       </div>
     </section>
 
     <!-- 24) May 2022 - Instagram Clone -->
     <section class="project-card">
-      <img
-        src="../assets/projects/instagramclone/thumbnail.png"
-        alt="Instagram Clone Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Instagram Clone</h1>
-          <span class="project-date">May 2022</span>
-        </div>
+      <div class="project-header">
+        <h1>Instagram Clone</h1>
+        <span class="project-date">May 2022</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/instagramclone/thumbnail.png"
+          alt="Instagram Clone Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">Visual clone of the Instagram app</p>
         <p class="project-description">
           A basic visual clone of Instagram using Flutter/Dart. This was a small
@@ -785,16 +822,16 @@
 
     <!-- 25) February 2022 - MasterChef -->
     <section class="project-card">
-      <img
-        src="../assets/projects/masterchef/thumbnail.png"
-        alt="MasterChef Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>MasterChef</h1>
-          <span class="project-date">February 2022</span>
-        </div>
+      <div class="project-header">
+        <h1>MasterChef</h1>
+        <span class="project-date">February 2022</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/masterchef/thumbnail.png"
+          alt="MasterChef Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">UofT Hacks IX</p>
         <p class="project-description">
           MasterChef is a web application that allows users to search for
@@ -814,16 +851,16 @@
 
     <!-- 26) February 2022 - WhereTo? -->
     <section class="project-card">
-      <img
-        src="../assets/projects/whereto/thumbnail.png"
-        alt="WhereTo? Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>WhereTo?</h1>
-          <span class="project-date">February 2022</span>
-        </div>
+      <div class="project-header">
+        <h1>WhereTo?</h1>
+        <span class="project-date">February 2022</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/whereto/thumbnail.png"
+          alt="WhereTo? Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">CalgaryHacks 2022</p>
         <p class="project-description">
           WhereTo? is a React Native app and Figma mockup designed to help users
@@ -846,16 +883,16 @@
 
     <!-- 27) October 2021 - Connect -->
     <section class="project-card">
-      <img
-        src="../assets/projects/connect/thumbnail.png"
-        alt="Connect Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Connect</h1>
-          <span class="project-date">October 2021</span>
-        </div>
+      <div class="project-header">
+        <h1>Connect</h1>
+        <span class="project-date">October 2021</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/connect/thumbnail.png"
+          alt="Connect Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">Cal Hacks 8.0</p>
         <p class="project-description">
           Connect is a Figma mockup representing an app designed to help people
@@ -872,16 +909,16 @@
 
     <!-- 28) August 2021 - MoneyMoneyStocksBot -->
     <section class="project-card">
-      <img
-        src="../assets/projects/moneymoneystocksbot/thumbnail.png"
-        alt="MoneyMoneyStocksBot Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>MoneyMoneyStocksBot</h1>
-          <span class="project-date">August 2021</span>
-        </div>
+      <div class="project-header">
+        <h1>MoneyMoneyStocksBot</h1>
+        <span class="project-date">August 2021</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/moneymoneystocksbot/thumbnail.png"
+          alt="MoneyMoneyStocksBot Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">Best Veteran Hack at XHacks2021</p>
         <p class="project-description">
           This is a Discord bot that provides real-time stock data. It was
@@ -891,27 +928,28 @@
           <a href="https://devpost.com/software/money-money-stocks-bot"
             >DevPost Submission</a
           >.
-          <a
-            href="https://github.com/JeremyTubongbanua/MoneyMoneyStocksBot"
+          <a href="https://github.com/JeremyTubongbanua/MoneyMoneyStocksBot"
             >GitHub Source Code</a
           >.
-          <a href="https://www.youtube.com/watch?v=RS_kKBstfEc">YouTube Demo</a>.
+          <a href="https://www.youtube.com/watch?v=RS_kKBstfEc"
+            >YouTube Demo</a
+          >.
         </p>
       </div>
     </section>
 
     <!-- 29) May 2021 - Re:Start -->
     <section class="project-card">
-      <img
-        src="../assets/projects/restart/thumbnail.png"
-        alt="Re:Start Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Re:Start</h1>
-          <span class="project-date">May 2021</span>
-        </div>
+      <div class="project-header">
+        <h1>Re:Start</h1>
+        <span class="project-date">May 2021</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/restart/thumbnail.png"
+          alt="Re:Start Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">RU Hacks 2021</p>
         <p class="project-description">
           Re:Start is a simple React Native app and Figma mockup that helps
@@ -921,7 +959,9 @@
           <a href="https://devpost.com/software/re-start-ijxhga"
             >DevPost Submission</a
           >.
-          <a href="https://www.youtube.com/watch?v=YTvmJBhho_Y">YouTube Demo</a>.
+          <a href="https://www.youtube.com/watch?v=YTvmJBhho_Y"
+            >YouTube Demo</a
+          >.
           <a href="https://github.com/JeremyTubongbanua/Re-Start"
             >GitHub Source Code</a
           >.
@@ -931,16 +971,16 @@
 
     <!-- 30) May 2021 - Cryptomon -->
     <section class="project-card">
-      <img
-        src="../assets/projects/cryptomon/thumbnail.png"
-        alt="Cryptomon Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Cryptomon</h1>
-          <span class="project-date">May 2021</span>
-        </div>
+      <div class="project-header">
+        <h1>Cryptomon</h1>
+        <span class="project-date">May 2021</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/cryptomon/thumbnail.png"
+          alt="Cryptomon Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">
           1st Place Winner at University of Washington Blockchain Hackathon 2021
         </p>
@@ -955,7 +995,9 @@
           <a href="https://devpost.com/software/cryptomon-1mc5a7"
             >DevPost Submission</a
           >.
-          <a href="https://www.youtube.com/watch?v=NGu4aZXOVpA">YouTube Demo</a>.
+          <a href="https://www.youtube.com/watch?v=NGu4aZXOVpA"
+            >YouTube Demo</a
+          >.
           <a href="https://github.com/JeremyTubongbanua/Cryptomon"
             >GitHub Source Code</a
           >.
@@ -965,16 +1007,16 @@
 
     <!-- 31) February 2021 - BeaverBot -->
     <section class="project-card">
-      <img
-        src="../assets/projects/beaverbot/thumbnail.png"
-        alt="BeaverBot Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>BeaverBot</h1>
-          <span class="project-date">February 2021</span>
-        </div>
+      <div class="project-header">
+        <h1>BeaverBot</h1>
+        <span class="project-date">February 2021</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/beaverbot/thumbnail.png"
+          alt="BeaverBot Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">2nd Place at CalHacks2021</p>
         <p class="project-description">
           This was my first hackathon project with my friends Chris and Henry.
@@ -999,16 +1041,16 @@
 
     <!-- 32) June 2020 - FRC 2020 Robot -->
     <section class="project-card">
-      <img
-        src="../assets/projects/frc2020robot/thumbnail.png"
-        alt="FRC 2020 Robot Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>FRC 2020 Robot</h1>
-          <span class="project-date">June 2020</span>
-        </div>
+      <div class="project-header">
+        <h1>FRC 2020 Robot</h1>
+        <span class="project-date">June 2020</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/frc2020robot/thumbnail.png"
+          alt="FRC 2020 Robot Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">6 Ball Autonomous</p>
         <p class="project-description">
           This was my last year of high school, where I served as the lead
@@ -1036,16 +1078,16 @@
 
     <!-- 33) November 2019 - MapImg -->
     <section class="project-card">
-      <img
-        src="../assets/projects/mapimg/thumbnail.png"
-        alt="MapImg Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>MapImg</h1>
-          <span class="project-date">November 2019</span>
-        </div>
+      <div class="project-header">
+        <h1>MapImg</h1>
+        <span class="project-date">November 2019</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/mapimg/thumbnail.png"
+          alt="MapImg Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">Converts images to map items</p>
         <p class="project-description">
           This Spigot Minecraft plugin takes an image (via URL) and converts it
@@ -1068,16 +1110,16 @@
 
     <!-- 34) June 2019 - FRC 2019 Robot -->
     <section class="project-card">
-      <img
-        src="../assets/projects/frc2019robot/thumbnail.png"
-        alt="FRC 2019 Robot Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>FRC 2019 Robot</h1>
-          <span class="project-date">June 2019</span>
-        </div>
+      <div class="project-header">
+        <h1>FRC 2019 Robot</h1>
+        <span class="project-date">June 2019</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/frc2019robot/thumbnail.png"
+          alt="FRC 2019 Robot Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">2019 Robot for FIRST Robotics</p>
         <p class="project-description">
           The 2019 FRC robot for team 5596. As a first-year programmer on the
@@ -1095,23 +1137,23 @@
 
     <!-- 35) May 2019 - MailBox -->
     <section class="project-card">
-      <img
-        src="../assets/projects/mailbox/thumbnail.png"
-        alt="MailBox Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>MailBox</h1>
-          <span class="project-date">May 2019</span>
-        </div>
+      <div class="project-header">
+        <h1>MailBox</h1>
+        <span class="project-date">May 2019</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/mailbox/thumbnail.png"
+          alt="MailBox Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">Spigot plugin that got 1 donation</p>
         <p class="project-description">
           MailBox is a Spigot plugin that allows players to send messages to a
-          "mailbox" for offline players. The mailbox stores messages until the
-          recipient logs in to read them. This project led to my first $10 USD
-          donation and a custom version commissioned for a customer, which was
-          delivered as a private `.jar`.
+          &quot;mailbox&quot; for offline players. The mailbox stores messages
+          until the recipient logs in to read them. This project led to my first
+          $10 USD donation and a custom version commissioned for a customer,
+          which was delivered as a private <code>.jar</code>.
         </p>
         <p>
           <a href="https://github.com/ImJeremyy/MailBox"
@@ -1142,16 +1184,22 @@
 
     <!-- 36) April 2019 - Timber -->
     <section class="project-card">
-      <img
-        src="../assets/projects/timber/thumbnail.png"
-        alt="Timber Thumbnail"
-        class="project-image"
-      />
-      <div>
-        <div class="project-header">
-          <h1>Timber</h1>
-          <span class="project-date">April 2019</span>
-        </div>
+      <div class="project-header">
+        <h1>Timber</h1>
+        <p>2.6k+ Downloads Java Plugin</p>
+        <p class="project-skills">
+          <span class="skill-badge">Java</span>
+          <span class="skill-badge">Spigot API</span>
+          <span class="skill-badge">Minecraft Plugin Development</span>
+        </p>
+        <span class="project-date">April 2019</span>
+      </div>
+      <div class="project-body hidden">
+        <img
+          src="../assets/projects/timber/thumbnail.png"
+          alt="Timber Thumbnail"
+          class="project-image"
+        />
         <p class="project-tagline">2.6k+ Downloads</p>
         <p class="project-description">
           Timber is a simple Spigot plugin that uses recursion to break down
@@ -1174,8 +1222,27 @@
             <li>Average 7 servers using the plugin</li>
           </ul>
         </p>
+        <p class="project-skills">
+          <strong>Skills:</strong>
+          <span class="skill-badge">Java</span>
+          <span class="skill-badge">Spigot API</span>
+          <span class="skill-badge">Minecraft Plugin Development</span>
+        </p>
       </div>
     </section>
   </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const projectCards = document.querySelectorAll('.project-card');
+      projectCards.forEach((card) => {
+        const header = card.querySelector('.project-header');
+        const body = card.querySelector('.project-body');
+        header.addEventListener('click', () => {
+          body.classList.toggle('hidden');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
