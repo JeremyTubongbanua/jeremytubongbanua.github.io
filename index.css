@@ -133,33 +133,6 @@ body {
     color: #333;
 }
 
-nav {
-    background-color: #002366;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1em;
-    gap: 2em;
-    flex-wrap: wrap;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    padding: 0.5em 1em;
-    transition: background-color 0.3s ease;
-    border-radius: 0.5em;
-}
-
-nav a:hover {
-    background-color: #001944;
-}
-
 /* Responsive Design */
 @media (min-width: 768px) {
     .about-card {
@@ -203,36 +176,5 @@ nav a:hover {
 
     .about-card p {
         font-size: 0.9em;
-    }
-}
-
-@media (max-width: 480px) {
-    nav {
-        flex-direction: column;
-    }
-
-    .info-box h1 {
-        font-size: 1.8em;
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 1em;
-    }
-
-    .button {
-        width: 90%;
-    }
-
-    .about-card img {
-        max-width: 10em;
-    }
-
-    .about-card h2 {
-        font-size: 1.2em;
-    }
-
-    .about-card p {
-        font-size: 0.8em;
     }
 }

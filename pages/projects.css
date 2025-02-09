@@ -28,6 +28,7 @@ body {
     color: #000000;
     box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
     padding: 1em;
+    min-height: 8em;
     cursor: pointer; /* For collapsible or hover effects */
   }
   
@@ -144,9 +145,8 @@ body {
   
   /* Smaller devices: switch to single column layout */
   @media (max-width: 768px) {
+    
     main {
-      margin-left: 1em;
-      margin-right: 1em;
   
       /* Switch to one column on phones or smaller devices */
       grid-template-columns: 1fr;
