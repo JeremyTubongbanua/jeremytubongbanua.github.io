@@ -1,176 +1,142 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0047ab;
-    color: white;
-  }
-  
-  /* ---- GRID LAYOUT FOR PROJECTS ---- */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0047ab;
+  color: white;
+}
+
+main {
+  margin-left: 10em;
+  margin-right: 10em;
+  padding: 2em;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2em;
+  align-items: start;
+}
+
+.project-card {
+  border: 0.2em solid #ffffff;
+  border-radius: 1em;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  min-height: 8em;
+  cursor: pointer;
+}
+
+.project-header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.project-title {
+  display: flex;
+  width: 100%;
+}
+
+.project-info h1 {
+  margin: 0;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: #000;
+}
+
+.project-date {
+  margin-left: auto;
+  font-size: 0.95em;
+  color: #777;
+  white-space: nowrap;
+}
+
+.project-subtitle {
+  font-size: 1em;
+  color: #444;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.project-skills {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  margin: 0;
+  font-size: 1em;
+  color: #444444;
+}
+
+.skill-badge {
+  display: inline-block;
+  background-color: #eee;
+  color: #000;
+  padding: 0.2em 0.5em;
+  border-radius: 0.3em;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.project-body {
+  margin-top: 0.5em;
+}
+
+.hidden {
+  display: none;
+}
+
+.project-description {
+  font-size: 1em;
+  line-height: 1.5;
+  color: #555555;
+  margin-bottom: 1em;
+}
+
+.project-image {
+  width: 100%;
+  max-height: 20em;
+  min-width: 40em;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.5em;
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
+  margin-bottom: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-tagline {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0.5em 0;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
   main {
-    margin-left: 10em;
-    margin-right: 10em;
-    padding: 2em;
-  
-    /* On larger screens (above 768px), show two columns */
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2em;
+    grid-template-columns: 1fr;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
 
-    /* ensure items do not stretch to the row's tallest card */
-    align-items: start;
+  .project-header h1 {
+    font-size: 1.4em;
   }
-  
-  /* ---- PROJECT CARD ---- */
-  .project-card {
-    border: 0.2em solid #ffffff;
-    border-radius: 1em;
-    background-color: #ffffff;
-    color: #000000;
-    box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
-    padding: 1em;
-    min-height: 8em;
-    cursor: pointer; /* For collapsible or hover effects */
-  }
-  
-  /* ---- HEADER (TITLE + DATE) ---- */
-  .project-header {
-    display: flex; 
-    justify-content: space-between;
-    align-items: flex-start; 
-    gap: 2em; 
-    margin-bottom: 0.5em;
-  }
-  
-  /* Left side wraps title, subtitle, and skill badges in a column */
-  .project-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5em; /* Space between items (title, subtitle, skills) */
-  }
-  
-  /* Title styling */
-  .project-info h1 {
-    margin: 0;
-    font-size: 1.6em;
-    font-weight: bold;
-    color: #000;
-  }
-  
-  /* Subtitle or short description under the title */
-  .project-subtitle {
-    font-size: 1em;
-    color: #444;
-    margin: 0;
-    line-height: 1.4;
-  }
-  
-  /* Skill badges container can also be flex-wrapped if needed */
-  .project-skills {
-    display: flex;
-    flex-wrap: wrap; /* allows badges to wrap onto new lines if too wide */
-    gap: 0.5em;
-    margin: 0; /* optional if you want no extra spacing */
-  }
-  
-  /* Individual skill “pill” styling */
-  .skill-badge {
-    background-color: #eee;
-    color: #000;
-    padding: 0.2em 0.5em;
-    border-radius: 0.3em;
-    font-weight: bold;
-    font-size: 0.9em;
-  }
-  
-  /* Date styling on the right */
+
   .project-date {
-    font-size: 0.95em;
-    color: #777;
-    white-space: nowrap; 
-  }
-    
-  /* ---- PROJECT BODY ---- */
-  .project-body {
-    margin-top: 0.5em;
-  }
-  
-  /* Hide it if you're collapsing on click */
-  .hidden {
-    display: none;
-  }
-  
-  /* ---- PROJECT DESCRIPTION ---- */
-  .project-description {
-    font-size: 1em;
-    line-height: 1.5;
-    color: #555555;
-    margin-bottom: 1em;
-  }
-  
-  /* ---- SKILLS ---- */
-  .project-skills {
-    font-size: 1em;
-    color: #444444;
-  }
-  
-  .skill-badge {
-    display: inline-block;
-    background-color: #eee;
-    color: #000;
-    padding: 0.2em 0.5em;
-    margin-left: 0.3em;
-    border-radius: 0.3em;
-    font-weight: bold;
     font-size: 0.9em;
   }
-  
-  /* ---- IMAGES ---- */
-  .project-image {
-    width: 100%;
-    max-height: 20em;
-    min-width: 40em;
-    object-fit: contain;
-    height: auto;
-    object-fit: contain;
-    border-radius: 0.5em;
-    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
-    margin-bottom: 1em;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  /* ---- TAGLINE ---- */
-  .project-tagline {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 0.5em 0;
-    color: #000000;
-  }
-  
-  /* Smaller devices: switch to single column layout */
-  @media (max-width: 768px) {
-    
-    main {
-  
-      /* Switch to one column on phones or smaller devices */
-      grid-template-columns: 1fr;
-      margin-left: 0.5em;
-      margin-right:0.51em;
-    }
-  
-    /* Slightly reduce headings, etc. */
-    .project-header h1 {
-      font-size: 1.4em;
-    }
-    .project-date {
-      font-size: 0.9em;
-    }
 
-    .project-image {
-      max-height: 10em;
-      min-width: 10em;
-      object-fit: contain;
-    }
+  .project-image {
+    max-height: 10em;
+    min-width: 10em;
   }
-  
+}
