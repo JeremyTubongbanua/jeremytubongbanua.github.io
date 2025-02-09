@@ -85,6 +85,7 @@ body {
 .button img {
     width: 3em;
     height: 3em;
+    object-fit: contain;
     margin-right: 1em;
 }
 
