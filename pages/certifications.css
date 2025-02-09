@@ -38,8 +38,8 @@ body {
   .project-image {
     /* Fill the card width on desktop, but also be flexible on smaller screens */
     width: 100%;
-    max-width: 40em;       /* maximum width on larger devices */
-    height: 20em;          /* fixed height if you want consistency */
+    max-width: 40em;   
+    height: 20em;      
     object-fit: contain;
     border-radius: 0.5em;
     box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);

@@ -6,6 +6,9 @@ body {
 }
 
 main {
+    display: flex;
+    align-items: start;
+    justify-content: center;
     margin-left: 20em;
     margin-right: 20em;
     display: grid;
@@ -17,6 +20,7 @@ main {
 
 .project-card {
     display: flex;
+    height: 100%;
     flex-direction: column;
     border: 0.2em solid #ffffff;
     border-radius: 1em;
@@ -29,8 +33,8 @@ main {
 }
 
 .project-image {
-    width: 30em;
-    height: 15em;
+    width: 100%;
+    height: 10em;
     object-fit: contain;
     border-radius: 0.25em;
     box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);

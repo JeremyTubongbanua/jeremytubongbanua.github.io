@@ -1,96 +1,98 @@
 /* ====== GLOBAL STYLES ====== */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #0047ab;
-    color: white;
-  }
-  
-  /* ====== MAIN CONTENT AREA ====== */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0047ab;
+  color: white;
+}
+
+/* ====== MAIN CONTENT AREA ====== */
+main {
+  display: flex;
+  /* align-items: start; */
+  justify-content: center;
+  /* min-width: 100em; */
+  margin: 1em auto;
+  margin-left: 10em;
+  margin-right: 10em;
+
+  /* Grid layout for desktop */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+
+  /* Internal padding */
+  padding: 2em;
+  justify-content: center;
+}
+
+/* ====== PROJECT CARD STYLES ====== */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 0.2em solid #ffffff;
+  border-radius: 1em;
+  padding: 1.5em;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
+  gap: 1em;
+  align-items: flex-start;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 40em;
+  height: 20em;
+  object-fit: contain;
+  border-radius: 0.5em;
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
+  align-self: center; /* Centers the image horizontally in the card */
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.project-header h1 {
+  font-size: 1.8em;
+  margin: 0;
+  color: #000000;
+}
+
+.project-header .project-date {
+  font-size: 1.2em;
+  color: #777777;
+  text-align: right;
+}
+
+.project-tagline {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin: 0.5em 0;
+  color: #000000;
+}
+
+.project-description {
+  font-size: 1.2em;
+  color: #555555;
+  line-height: 1.6em;
+  margin: 0;
+}
+
+/* ====== RESPONSIVE STYLES ====== */
+@media (max-width: 768px) {
+  /* Stack cards in one column, scale down container */
   main {
-    /* Limit how wide the content can get and center it */
-    min-width:100em;
-    max-width: 1200px;
+    max-width: 90%;
     margin: 1em auto;
-    
-    /* Grid layout for desktop */
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
-    
-    /* Internal padding */
-    padding: 2em;
-    justify-content: center;
+    grid-template-columns: 1fr;
   }
-  
-  /* ====== PROJECT CARD STYLES ====== */
-  .project-card {
-    display: flex;
-    flex-direction: column;
-    border: 0.2em solid #ffffff;
-    border-radius: 1em;
-    padding: 1.5em;
-    background-color: #ffffff;
-    color: #000000;
-    box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
-    gap: 1em;
-    align-items: flex-start;
-  }
-  
+
   .project-image {
-    width: 30em;
-    height: 20em;
-    object-fit: contain;
-    border-radius: 0.5em;
-    box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
-    align-self: center; /* Centers the image horizontally in the card */
-  }
-  
-  .project-header {
-    display: flex;
-    justify-content: space-between;
     width: 100%;
+    height: auto;
   }
-  
-  .project-header h1 {
-    font-size: 1.8em;
-    margin: 0;
-    color: #000000;
-  }
-  
-  .project-header .project-date {
-    font-size: 1.2em;
-    color: #777777;
-    text-align: right;
-  }
-  
-  .project-tagline {
-    font-size: 1.4em;
-    font-weight: bold;
-    margin: 0.5em 0;
-    color: #000000;
-  }
-  
-  .project-description {
-    font-size: 1.2em;
-    color: #555555;
-    line-height: 1.6em;
-    margin: 0;
-  }
-  
-  /* ====== RESPONSIVE STYLES ====== */
-  @media (max-width: 768px) {
-    /* Stack cards in one column, scale down container */
-    main {
-      max-width: 90%;
-      margin: 1em auto;
-      grid-template-columns: 1fr;
-    }
-    
-    /* Scale images to fit the new layout width */
-    .project-image {
-      width: 100%;
-      height: auto;
-    }
-  }
-  
+}
