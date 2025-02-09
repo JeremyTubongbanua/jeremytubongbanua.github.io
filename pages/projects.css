@@ -150,6 +150,8 @@ body {
   
       /* Switch to one column on phones or smaller devices */
       grid-template-columns: 1fr;
+      margin-left: 0.5em;
+      margin-right:0.51em;
     }
   
     /* Slightly reduce headings, etc. */
