@@ -72,5 +72,7 @@ main {
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
+        margin-left: 1em;
+        margin-right: 1em;
     }
 }

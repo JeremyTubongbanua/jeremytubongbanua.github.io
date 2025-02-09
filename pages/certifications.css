@@ -1,21 +1,27 @@
+/* Global Body Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #0047ab;
     color: white;
-}
-
-main {
+  }
+  
+  /* Main Section / 2-column Grid for Certifications */
+  main {
+    /* Large margins on desktop */
     margin-left: 20em;
     margin-right: 20em;
+  
+    /* 2-column grid on desktop */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
     padding: 2em;
     justify-content: center;
-}
-
-.project-card {
+  }
+  
+  /* Project Card (or Certification Card) */
+  .project-card {
     display: flex;
     flex-direction: column;
     border: 0.2em solid #ffffff;
@@ -26,52 +32,72 @@ main {
     box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.2);
     gap: 1em;
     align-items: flex-start;
-}
-
-.project-image {
+  }
+  
+  /* Image inside the card */
+  .project-image {
+    /* Fill the card width on desktop, but also be flexible on smaller screens */
     width: 100%;
-    max-width: 40em;
-    height: 20em;
+    max-width: 40em;       /* maximum width on larger devices */
+    height: 20em;          /* fixed height if you want consistency */
     object-fit: contain;
     border-radius: 0.5em;
     box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.2);
-    align-self: center; /* Centers the image */
-}
-
-.project-header {
+    align-self: center;    /* centers the image in the card */
+  }
+  
+  /* Project (Certification) Header Row */
+  .project-header {
     display: flex;
     justify-content: space-between;
     width: 100%;
-}
-
-.project-header h1 {
+  }
+  
+  .project-header h1 {
     font-size: 1.8em;
     margin: 0;
     color: #000000;
-}
-
-.project-header .project-date {
+  }
+  
+  .project-header .project-date {
     font-size: 1.2em;
     color: #777777;
     text-align: right;
-}
-
-.project-tagline {
+  }
+  
+  /* Tagline and description */
+  .project-tagline {
     font-size: 1.4em;
     font-weight: bold;
     margin: 0.5em 0;
     color: #000000;
-}
-
-.project-description {
+  }
+  
+  .project-description {
     font-size: 1.2em;
     color: #555555;
     line-height: 1.6em;
     margin: 0;
-}
-
-@media (max-width: 768px) {
+  }
+  
+  /*
+     MEDIA QUERY for Mobile
+     - Switch to 1-column layout
+     - Reduce side margins so content doesn't overflow
+     - Let images scale down
+  */
+  @media (max-width: 768px) {
     main {
-        grid-template-columns: 1fr;
+      margin-left: 1em;  /* reduce margins on mobile */
+      margin-right: 1em;
+      grid-template-columns: 1fr; /* switch to single column */
     }
-}
+  
+    .project-image {
+      /* Ensure images shrink properly in a narrow layout */
+      width: 100%;
+      max-width: 100%;
+      height: auto;       /* maintain aspect ratio instead of forcing height */
+    }
+  }
+  
