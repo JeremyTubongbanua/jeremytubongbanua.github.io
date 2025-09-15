@@ -46,7 +46,17 @@ def load_asset_data(asset_path)
   end
 
   # Sort by date if available, newest first
-  data.sort_by { |item| item['date'] || item['todate'] || item['fromdate'] || '0000-00-00' }.reverse
+  # For experiences: sort by the most recent relevant date (todate if ended, fromdate if ongoing)
+  # For others: use date, todate, or fromdate
+  data.sort_by do |item|
+    if item['todate'].nil? || item['todate'] == ''
+      # Ongoing item, use fromdate and treat as very recent
+      item['fromdate'] || item['date'] || '9999-12-31'
+    else
+      # Completed item, use todate
+      item['todate'] || item['date'] || item['fromdate'] || '0000-00-00'
+    end
+  end.reverse
 end
 
 # Generate data files

@@ -17,15 +17,18 @@ jobs:
     - name: Set up Ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.0'
+        ruby-version: '3.2'
+        bundler-cache: true
 
     - name: Generate data files
       run: |
         ruby _data/generate_data.rb
+        ruby generate_all_pages.rb
 
     - name: Commit and push if changed
       run: |
         git config --global user.email "action@github.com"
         git config --global user.name "GitHub Action"
         git add _data/*.yml
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Update data files from assets [skip ci]" && git push)
+        git add _projects/*.md _experiences/*.md _awards/*.md _certifications/*.md
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Update data files and pages from assets [skip ci]" && git push)
