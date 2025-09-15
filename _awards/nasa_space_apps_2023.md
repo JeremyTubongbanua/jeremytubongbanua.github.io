@@ -1,7 +1,8 @@
 ---
 layout: award
-title: "3rd Place - NASA Space Apps"
-description: "3rd Place Overall & People's Choice Award"
+title: "3rd Place Overall & People's Choice Award"
+subtitle: "NASA Space Apps 2023"
+description: ""
 date: 2023-10-05
 placement: 3rd Place
 thumbnail: /assets/awards/nasa_space_apps_2023/thumbnail.png

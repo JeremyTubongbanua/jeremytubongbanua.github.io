@@ -1,6 +1,6 @@
 ---
 - id: adc_figma
-  title: 1st Place - Figma Challenge
+  title: 1st Place Overall
   subtitle: Figma Challenge - Ontario Tech Automated Drive Club
   description: Won 1st place overall in ADC's Figma Challenge. Designed car dashboard
     and tablet Figma prototypes for accessible semi-automated vehicles.
@@ -9,12 +9,12 @@
   thumbnail: "/assets/awards/adc_figma/thumbnail.png"
   folder: adc_figma
 - id: brilliant_catalyst_2025
-  title: Top 9 Finalists
+  title: Top 9 Finalist
   subtitle: Brilliant Catalyst Challenge
   description: Qualified for final pitch, presented to a panel of Lakeridge Health
     Judges and awarded $325 each for participation.
   date: '2025-01-31'
-  placement: Top 9 Finalists
+  placement: Top 9 Finalist
   thumbnail: "/assets/awards/brilliant_catalyst_2025/thumbnail.png"
   folder: brilliant_catalyst_2025
 - id: oec_2025
@@ -38,21 +38,25 @@
   thumbnail: "/assets/awards/amazon_tour_024/thumbnail.png"
   folder: amazon_tour_024
 - id: iec_2024
-  title: 1st Place Programming - IEC 2024
-  description: 1st Place Overall
+  title: 1st Place in Programming
+  subtitle: Internal Engineering Competition 2024
+  description: Hosted by Ontario Tech University's Engineering Society
   date: '2024-11-03'
   placement: 1st Place
   thumbnail: "/assets/awards/iec_2024/thumbnail.png"
   folder: iec_2024
 - id: nasa_space_apps_2024
-  title: 1st Place and Global Nominee - NASA Space Apps 2024
-  description: 1st Place Overall
+  title: 1st Place Overall and Global Nominee
+  subtitle: NASA Space Apps 2024
+  description: Also was offered an internship at the Canadian Space Agency as a result
+    of winning.
   date: '2024-10-06'
   placement: 1st Place
   thumbnail: "/assets/awards/nasa_space_apps_2024/thumbnail.png"
   folder: nasa_space_apps_2024
 - id: smart_cities_2024
-  title: Top 6 Finalists - Smart Cities
+  title: Top 6 Finalists
+  subtitle: Smart Cities by Brilliant Catalyst
   description: Top 6 finalists among 12 teams. Awarded $2,625 in prizes
   date: '2024-03-01'
   placement: Top 6
@@ -60,23 +64,25 @@
   gallery: []
   folder: smart_cities_2024
 - id: iec_2023
-  title: 1st Place - IEC Consulting
-  description: 1st Place in Consulting & 2nd Place Overall
+  title: 1st Place in Consulting (2nd Place Overall)
+  subtitle: Internal Engineering Cometition Consulting Category
+  description: Hosted by Ontario Tech University Engineering Society
   date: '2023-11-05'
   placement: 1st Place
   thumbnail: "/assets/awards/iec_2023/thumbnail.png"
   gallery: []
   folder: iec_2023
 - id: nasa_space_apps_2023
-  title: 3rd Place - NASA Space Apps
-  description: 3rd Place Overall & People's Choice Award
+  title: 3rd Place Overall & People's Choice Award
+  subtitle: NASA Space Apps 2023
   date: '2023-10-05'
   placement: 3rd Place
   thumbnail: "/assets/awards/nasa_space_apps_2023/thumbnail.png"
   gallery: []
   folder: nasa_space_apps_2023
 - id: schulich_hacks_2023
-  title: 2nd Place - Schulich Hacks (Calgary)
+  title: 2nd Place Overall & Best UI/UX Award
+  subtitle: Schulich Hacks 2023
   description: 2nd Place Overall & Best UI/UX. Sponsored to attend Schulich Hacks
     2023 in Calgary in-person, awarded $3000 in prizes
   date: '2023-04-29'
@@ -85,22 +91,25 @@
   gallery: []
   folder: schulich_hacks_2023
 - id: calgary_hacks_2021
-  title: 2nd Place - Calgary Hacks 2021
-  description: 2nd Place Overall among 700+ participants. Awarded $750 in prizes
+  title: 2nd Place Overall
+  subtitle: Calgary Hacks 2021 - among 700+ participants. Awarded $750 in prizes
+  description: ''
   date: '2021-07-01'
   thumbnail: "/assets/awards/calgary_hacks_2021/thumbnail.png"
   gallery: []
   folder: calgary_hacks_2021
 - id: xhacks_2021
   title: Best Veteran Hack - XHacks2021
-  description: Best Veteran Hack
+  subtitle: XHacks2021
+  description: Won best veteran hack
   date: '2021-07-01'
   placement: Best Veteran Hack
   thumbnail: "/assets/awards/xhacks_2021/thumbnail.png"
   gallery: []
   folder: xhacks_2021
 - id: uw_blockchain_hackathon_2021
-  title: 1st Place - University of Washington Blockchain Hackathon
+  title: 1st Place Overall
+  subtitle: University of Washington Blockchain Hackathon 2021
   description: 1st Place Overall among 15 teams. Awarded $750 in prizes.
   date: '2021-05-16'
   placement: 1st Place
