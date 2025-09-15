@@ -6,14 +6,16 @@ permalink: /awards/
 ---
 
 <div class="awards-container">
-    {% assign awards_by_year = site.data.asset_awards | group_by_exp: 'award', 'award.date | date: "%Y"' | reverse %}
+    {% assign awards_by_year = site.data.asset_awards | group_by_exp: 'award', 'award.date | date: "%Y"' %}
+    {% assign sorted_years = awards_by_year | sort: 'name' | reverse %}
 
-    {% for year in awards_by_year %}
+    {% for year in sorted_years %}
         <section class="year-section">
             <h2 class="year-header">{{ year.name }}</h2>
 
             <div class="awards-grid">
-                {% for award in year.items %}
+                {% assign sorted_awards = year.items | sort: 'date' | reverse %}
+                {% for award in sorted_awards %}
                     <article class="award-card">
                         {% if award.thumbnail %}
                             <img src="{{ award.thumbnail | relative_url }}" alt="{{ award.title }}" class="award-thumbnail">
