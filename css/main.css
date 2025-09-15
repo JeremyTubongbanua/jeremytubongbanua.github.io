@@ -181,6 +181,21 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
+/* 2-column grids for awards, experiences, and certifications */
+.awards-grid,
+.experiences-list,
+.certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 1024px) {
+    .awards-grid,
+    .experiences-list,
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .highlight-card,
 .project-card,
 .award-card,
@@ -191,6 +206,16 @@ body {
     padding: 1.5rem;
     border: 1px solid var(--border-color);
     transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Ensure cards in 2-column grids have consistent height */
+.award-card,
+.experience-card,
+.certification-card {
+    min-height: 250px;
 }
 
 .project-card:hover,
@@ -210,6 +235,13 @@ body {
     object-fit: cover;
     border-radius: 0.375rem;
     margin-bottom: 1rem;
+}
+
+/* Adjust thumbnail height for 2-column layouts */
+.award-thumbnail,
+.exp-thumbnail,
+.cert-thumbnail {
+    height: 150px;
 }
 
 .project-title,
@@ -373,6 +405,48 @@ body {
 .status-planned {
     background: #e0e7ff;
     color: #3730a3;
+}
+
+/* Year sections for awards */
+.year-section {
+    margin-bottom: 3rem;
+}
+
+.year-header {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Experience sections */
+.experience-section {
+    margin-bottom: 3rem;
+}
+
+.experience-section h2 {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Content spacing in cards */
+.award-content,
+.exp-content,
+.cert-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.award-meta,
+.exp-meta,
+.cert-meta {
+    margin-top: auto;
+    padding-top: 1rem;
 }
 
 /* Responsive Design */

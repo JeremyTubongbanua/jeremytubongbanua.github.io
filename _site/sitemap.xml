@@ -1,22 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/awards/oec-2025/</loc>
-<lastmod>2025-01-26T00:00:00-05:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/certifications/first-aid/</loc>
-<lastmod>2025-09-14T20:15:59-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/experiences/software-engineer-atsign/</loc>
-<lastmod>2025-09-14T20:15:59-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/projects/at-c/</loc>
-<lastmod>2023-08-23T00:00:00-04:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/awards/</loc>
 </url>
 <url>
@@ -266,13 +250,5 @@
 <url>
 <loc>http://localhost:4000/assets/awards/adc_figma/Jeremy%20Mark%20Tubongbanua.pdf</loc>
 <lastmod>2025-03-24T11:35:28-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/old/awards.html</loc>
-<lastmod>2025-09-14T20:12:58-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/old/certifications.html</loc>
-<lastmod>2025-09-14T20:13:16-04:00</lastmod>
 </url>
 </urlset>
