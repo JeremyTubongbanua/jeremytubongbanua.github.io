@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="/assets/4.png">
     <link rel="apple-touch-icon" href="/assets/4.png">
     <link rel="stylesheet" href="/css/main.css">
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jeremy Tubongbanua" />
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4001/feed.xml" title="Jeremy Tubongbanua" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Software Engineer Consultant | Jeremy Tubongbanua</title>
 <meta name="generator" content="Jekyll v3.10.0" />
@@ -17,15 +17,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Software engineer consultant for Atsign for 2yrs 9months. Did work from C SDK, C++ SDK, university mentoring, intern talent acquisition and mentorship, and more." />
 <meta property="og:description" content="Software engineer consultant for Atsign for 2yrs 9months. Did work from C SDK, C++ SDK, university mentoring, intern talent acquisition and mentorship, and more." />
-<link rel="canonical" href="http://localhost:4000/experiences/software_engineer_consultant_atsign/" />
-<meta property="og:url" content="http://localhost:4000/experiences/software_engineer_consultant_atsign/" />
+<link rel="canonical" href="http://localhost:4001/experiences/software_engineer_consultant_atsign/" />
+<meta property="og:url" content="http://localhost:4001/experiences/software_engineer_consultant_atsign/" />
 <meta property="og:site_name" content="Jeremy Tubongbanua" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-09-14T22:19:36-04:00" />
+<meta property="article:published_time" content="2025-09-15T08:27:57-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Software Engineer Consultant" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-14T22:19:36-04:00","datePublished":"2025-09-14T22:19:36-04:00","description":"Software engineer consultant for Atsign for 2yrs 9months. Did work from C SDK, C++ SDK, university mentoring, intern talent acquisition and mentorship, and more.","headline":"Software Engineer Consultant","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/experiences/software_engineer_consultant_atsign/"},"url":"http://localhost:4000/experiences/software_engineer_consultant_atsign/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-15T08:27:57-04:00","datePublished":"2025-09-15T08:27:57-04:00","description":"Software engineer consultant for Atsign for 2yrs 9months. Did work from C SDK, C++ SDK, university mentoring, intern talent acquisition and mentorship, and more.","headline":"Software Engineer Consultant","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/experiences/software_engineer_consultant_atsign/"},"url":"http://localhost:4001/experiences/software_engineer_consultant_atsign/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -156,5 +156,25 @@ Aug 2022 - Apr 2025 · 2 yrs 9 mosAug 2022 to Apr 2025 · 2 yrs 9 mos</p>
         </div>
     </div>
 </footer>
+    <script>
+    // Mobile nav toggle
+    (function() {
+      var toggle = document.querySelector('.nav-toggle');
+      var menu = document.querySelector('.nav-menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', (!expanded).toString());
+      });
+      // Close menu when clicking a link (mobile)
+      menu.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A' && menu.classList.contains('active')) {
+          menu.classList.remove('active');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+    </script>
 </body>
 </html>

@@ -1005,6 +1005,7 @@ a:hover {
         padding: 1rem;
         border-bottom: 1px solid var(--border-color);
         box-shadow: var(--shadow-md);
+        gap: 0.5rem;
     }
 
     .nav-menu.active {
@@ -1034,9 +1035,15 @@ a:hover {
         text-align: center;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+    .highlights-grid,
+    /* Keep two columns for projects on small screens when possible */
+    .awards-grid,
+    .experiences-grid,
+    .certifications-grid,
+    .gallery-grid { grid-template-columns: 1fr; }
+
+    /* Two-column layout for projects on narrow viewports */
+    .projects-grid { grid-template-columns: repeat(2, 1fr); }
 
     .main-content {
         padding: 2rem 1rem;
@@ -1053,6 +1060,14 @@ a:hover {
     .contact-form-section {
         padding: 2rem 1rem;
     }
+
+    /* Reduce fixed thumbnail heights on small screens */
+    .thumbnail-container { height: 220px; }
+
+    /* About section: stack with image below text */
+    .about-section .about-item { flex-direction: column; align-items: flex-start; }
+    .about-section .about-item img { order: 2; width: 100%; max-width: 420px; align-self: center; }
+    .about-section .about-item > div { order: 1; width: 100%; }
 }
 
 /* Dark mode support */
@@ -1238,6 +1253,9 @@ a:hover {
     .gallery-grid {
         grid-template-columns: 1fr;
     }
+
+    /* On very small phones, allow projects to stack */
+    .projects-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {

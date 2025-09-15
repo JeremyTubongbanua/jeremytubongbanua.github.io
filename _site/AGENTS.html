@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Links | Jeremy Tubongbanua</title>
+    <title>Repository Guidelines | Jeremy Tubongbanua</title>
     <meta name="description" content="Personal portfolio website showcasing projects, experiences, awards, and certifications in software engineering, IoT, embedded systems, and robotics.">
     <link rel="icon" type="image/png" href="/assets/4.png">
     <link rel="shortcut icon" type="image/png" href="/assets/4.png">
@@ -11,20 +11,20 @@
     <link rel="stylesheet" href="/css/main.css">
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4001/feed.xml" title="Jeremy Tubongbanua" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Links | Jeremy Tubongbanua</title>
+<title>Repository Guidelines | Jeremy Tubongbanua</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Links" />
+<meta property="og:title" content="Repository Guidelines" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Personal portfolio website showcasing projects, experiences, awards, and certifications in software engineering, IoT, embedded systems, and robotics." />
 <meta property="og:description" content="Personal portfolio website showcasing projects, experiences, awards, and certifications in software engineering, IoT, embedded systems, and robotics." />
-<link rel="canonical" href="http://localhost:4001/assets/experiences/team_escort_2019/content.html" />
-<meta property="og:url" content="http://localhost:4001/assets/experiences/team_escort_2019/content.html" />
+<link rel="canonical" href="http://localhost:4001/AGENTS.html" />
+<meta property="og:url" content="http://localhost:4001/AGENTS.html" />
 <meta property="og:site_name" content="Jeremy Tubongbanua" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Links" />
+<meta property="twitter:title" content="Repository Guidelines" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"Personal portfolio website showcasing projects, experiences, awards, and certifications in software engineering, IoT, embedded systems, and robotics.","headline":"Links","url":"http://localhost:4001/assets/experiences/team_escort_2019/content.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"Personal portfolio website showcasing projects, experiences, awards, and certifications in software engineering, IoT, embedded systems, and robotics.","headline":"Repository Guidelines","url":"http://localhost:4001/AGENTS.html"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -42,7 +42,7 @@
         <ul class="nav-menu">
             <li><a href="/" >Home</a></li>
             <li><a href="/projects/" >Projects</a></li>
-            <li><a href="/experiences/" class="active">Experiences</a></li>
+            <li><a href="/experiences/" >Experiences</a></li>
             <li><a href="/awards/" >Awards</a></li>
             <li><a href="/certifications/" >Certifications</a></li>
             <li><a href="/contact/" >Contact</a></li>
@@ -52,16 +52,42 @@
 
     <main class="main-content">
         <div class="page-header">
-    <h1 class="page-title">Links</h1>
+    <h1 class="page-title">Repository Guidelines</h1>
     
 </div>
 
 <div class="page-content">
-    <p>#</p>
+    <h1 id="repository-guidelines">Repository Guidelines</h1>
 
-<h2 id="links">Links</h2>
+<p>This guide helps contributors work efficiently in this repository.</p>
 
-<p>-</p>
+<h2 id="project-structure--module-organization">Project Structure &amp; Module Organization</h2>
+
+<ul>
+  <li>Root contains site sources for a static site (GitHub Pages) using Jekyll as the framework.</li>
+  <li><code class="language-plaintext highlighter-rouge">index.html</code>, <code class="language-plaintext highlighter-rouge">assets/</code> (contains <code class="language-plaintext highlighter-rouge">experiences/</code>, <code class="language-plaintext highlighter-rouge">projects/</code>, <code class="language-plaintext highlighter-rouge">awards/</code> and <code class="language-plaintext highlighter-rouge">certifications/</code>)
+    <ul>
+      <li>each of these folders contain more folders in them</li>
+      <li>in each of those folders, there will be a metadata.yml file which contains data of the project/item</li>
+      <li>as well as a content.md where the user can click on this item and learn more and show more content about it.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="build-test-and-development-commands">Build, Test, and Development Commands</h2>
+
+<ul>
+  <li>Local preview <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve --port 4001</code></li>
+  <li>To rebuild the data, <code class="language-plaintext highlighter-rouge">ruby generate_all_pages.rb</code></li>
+</ul>
+
+<h2 id="testing-guidelines">Testing Guidelines</h2>
+
+<ul>
+  <li>Manual checks: load locally, verify links, images, and console is clean.</li>
+  <li>Accessibility: ensure alt text, labels, and sufficient color contrast.</li>
+  <li>Link check (optional): run a link checker tool locally before PRs.</li>
+</ul>
 
 </div>
     </main>

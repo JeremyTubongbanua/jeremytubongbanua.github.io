@@ -9,7 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="/assets/4.png">
     <link rel="apple-touch-icon" href="/assets/4.png">
     <link rel="stylesheet" href="/css/main.css">
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jeremy Tubongbanua" />
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4001/feed.xml" title="Jeremy Tubongbanua" />
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Amazon Toronto Tour | Jeremy Tubongbanua</title>
 <meta name="generator" content="Jekyll v3.10.0" />
@@ -17,15 +17,15 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Received a tour of the Amazon Tour in Toronto, Ontario, Canada organized by Ontario Tech’s Co-op/Career Office! Won 1st place among 3 teams in their innovation challenge involving developing an algorithm related to recommending products given a CSV dataset." />
 <meta property="og:description" content="Received a tour of the Amazon Tour in Toronto, Ontario, Canada organized by Ontario Tech’s Co-op/Career Office! Won 1st place among 3 teams in their innovation challenge involving developing an algorithm related to recommending products given a CSV dataset." />
-<link rel="canonical" href="http://localhost:4000/experiences/amazon_tour/" />
-<meta property="og:url" content="http://localhost:4000/experiences/amazon_tour/" />
+<link rel="canonical" href="http://localhost:4001/experiences/amazon_tour/" />
+<meta property="og:url" content="http://localhost:4001/experiences/amazon_tour/" />
 <meta property="og:site_name" content="Jeremy Tubongbanua" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-09-14T22:19:36-04:00" />
+<meta property="article:published_time" content="2025-09-15T08:27:57-04:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Amazon Toronto Tour" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-14T22:19:36-04:00","datePublished":"2025-09-14T22:19:36-04:00","description":"Received a tour of the Amazon Tour in Toronto, Ontario, Canada organized by Ontario Tech’s Co-op/Career Office! Won 1st place among 3 teams in their innovation challenge involving developing an algorithm related to recommending products given a CSV dataset.","headline":"Amazon Toronto Tour","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/experiences/amazon_tour/"},"url":"http://localhost:4000/experiences/amazon_tour/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-09-15T08:27:57-04:00","datePublished":"2025-09-15T08:27:57-04:00","description":"Received a tour of the Amazon Tour in Toronto, Ontario, Canada organized by Ontario Tech’s Co-op/Career Office! Won 1st place among 3 teams in their innovation challenge involving developing an algorithm related to recommending products given a CSV dataset.","headline":"Amazon Toronto Tour","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4001/experiences/amazon_tour/"},"url":"http://localhost:4001/experiences/amazon_tour/"}</script>
 <!-- End Jekyll SEO tag -->
 
 </head>
@@ -115,5 +115,25 @@
         </div>
     </div>
 </footer>
+    <script>
+    // Mobile nav toggle
+    (function() {
+      var toggle = document.querySelector('.nav-toggle');
+      var menu = document.querySelector('.nav-menu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', function() {
+        menu.classList.toggle('active');
+        var expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', (!expanded).toString());
+      });
+      // Close menu when clicking a link (mobile)
+      menu.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A' && menu.classList.contains('active')) {
+          menu.classList.remove('active');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+    </script>
 </body>
 </html>
