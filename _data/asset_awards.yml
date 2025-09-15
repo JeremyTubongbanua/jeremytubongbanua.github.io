@@ -116,3 +116,8 @@
   thumbnail: "/assets/awards/uw_blockchain_hackathon_2021/thumbnail.png"
   gallery: []
   folder: uw_blockchain_hackathon_2021
+- id: template
+  title: template
+  subtitle: ''
+  description: ''
+  folder: template

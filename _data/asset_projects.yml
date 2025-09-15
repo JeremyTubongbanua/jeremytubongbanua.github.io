@@ -112,34 +112,6 @@
   - "/assets/projects/custom_inhaler_case/gallery/IMG_3799.JPG"
   - "/assets/projects/custom_inhaler_case/gallery/image.PNG"
   folder: custom_inhaler_case
-- id: jeremymark_ca
-  title: jeremymark.ca
-  subtitle: ''
-  description: Portfolio page for Jeremy Mark. Built in React, Tailwind and hosted
-    on a VPS
-  date: '2024-09-05'
-  languages:
-  - HTML/CSS
-  - JavaScript
-  field:
-  - Web Development
-  tech:
-  - Docker
-  - Figma
-  - Linux
-  - Node.js
-  - React
-  progress: In-Progress
-  association: Hobby
-  thumbnail: "/assets/projects/jeremymark_ca/thumbnail.png"
-  gallery:
-  - "/assets/projects/jeremymark_ca/gallery/thumbnail.png"
-  - "/assets/projects/jeremymark_ca/gallery/4.png"
-  - "/assets/projects/jeremymark_ca/gallery/5.png"
-  - "/assets/projects/jeremymark_ca/gallery/2.png"
-  - "/assets/projects/jeremymark_ca/gallery/3.png"
-  - "/assets/projects/jeremymark_ca/gallery/1.png"
-  folder: jeremymark_ca
 - id: codecraft
   title: codecraft.io
   subtitle: ''
@@ -816,3 +788,13 @@
   - "/assets/projects/timber/gallery/5.png"
   - "/assets/projects/timber/gallery/3.png"
   folder: timber
+- id: jeremytubongbanua_github_io
+  title: jeremytubongbanua github io
+  subtitle: ''
+  description: ''
+  folder: jeremytubongbanua_github_io
+- id: template
+  title: template
+  subtitle: ''
+  description: ''
+  folder: template

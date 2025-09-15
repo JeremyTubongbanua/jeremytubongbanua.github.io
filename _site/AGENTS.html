@@ -64,12 +64,16 @@
 <h2 id="project-structure--module-organization">Project Structure &amp; Module Organization</h2>
 
 <ul>
-  <li>Root contains site sources for a static site (GitHub Pages) using Jekyll as the framework.</li>
-  <li><code class="language-plaintext highlighter-rouge">index.html</code>, <code class="language-plaintext highlighter-rouge">assets/</code> (contains <code class="language-plaintext highlighter-rouge">experiences/</code>, <code class="language-plaintext highlighter-rouge">projects/</code>, <code class="language-plaintext highlighter-rouge">awards/</code> and <code class="language-plaintext highlighter-rouge">certifications/</code>)
+  <li>Static site built with Jekyll.</li>
+  <li>Content sources:
     <ul>
-      <li>each of these folders contain more folders in them</li>
-      <li>in each of those folders, there will be a metadata.yml file which contains data of the project/item</li>
-      <li>as well as a content.md where the user can click on this item and learn more and show more content about it.</li>
+      <li><code class="language-plaintext highlighter-rouge">_data/asset_{projects,experiences,awards,certifications}.yml</code> — master lists with <code class="language-plaintext highlighter-rouge">folder</code> slugs.</li>
+      <li><code class="language-plaintext highlighter-rouge">assets/{projects,experiences,awards,certifications}/&lt;folder&gt;/</code> — per-item <code class="language-plaintext highlighter-rouge">metadata.yml</code>, <code class="language-plaintext highlighter-rouge">content.md</code>, optional <code class="language-plaintext highlighter-rouge">gallery/</code> and <code class="language-plaintext highlighter-rouge">thumbnail.png</code>.</li>
+    </ul>
+  </li>
+  <li>Generated collections (do not hand-edit):
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">_{projects,experiences,awards,certifications}/&lt;folder&gt;.md</code> — produced by generators.</li>
     </ul>
   </li>
 </ul>
@@ -77,8 +81,26 @@
 <h2 id="build-test-and-development-commands">Build, Test, and Development Commands</h2>
 
 <ul>
-  <li>Local preview <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve --port 4001</code></li>
-  <li>To rebuild the data, <code class="language-plaintext highlighter-rouge">ruby generate_all_pages.rb</code></li>
+  <li>Rebuild data with pruning: <code class="language-plaintext highlighter-rouge">ruby generate_all_pages.rb</code>
+    <ul>
+      <li>Generates <code class="language-plaintext highlighter-rouge">_{collection}/&lt;folder&gt;.md</code> and prunes stale pages no longer in <code class="language-plaintext highlighter-rouge">_data</code>/<code class="language-plaintext highlighter-rouge">assets</code>.</li>
+    </ul>
+  </li>
+  <li>Local preview: <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve --port 4001</code></li>
+  <li>Clean site output/cache (optional): <code class="language-plaintext highlighter-rouge">bundle exec jekyll clean</code></li>
+</ul>
+
+<h2 id="data-generation-details">Data Generation Details</h2>
+
+<ul>
+  <li>Script: <code class="language-plaintext highlighter-rouge">generate_all_pages.rb</code>
+    <ul>
+      <li>Reads <code class="language-plaintext highlighter-rouge">_data</code> YAML + <code class="language-plaintext highlighter-rouge">assets/.../&lt;folder&gt;/</code> to compose pages.</li>
+      <li>Writes <code class="language-plaintext highlighter-rouge">thumbnail</code> as <code class="language-plaintext highlighter-rouge">/assets/.../&lt;folder&gt;/thumbnail.png</code> and adds gallery items if present.</li>
+      <li>Prunes any <code class="language-plaintext highlighter-rouge">_{collection}/*.md</code> whose slug isn’t listed in the corresponding <code class="language-plaintext highlighter-rouge">_data</code> file.</li>
+      <li>Output example: “Generated 35 projects pages — Pruned 1 stale projects pages”.</li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="testing-guidelines">Testing Guidelines</h2>

@@ -16,7 +16,11 @@ permalink: /projects/
 
 <div class="projects-container">
     <div class="projects-grid">
-        {% for project in site.data.asset_projects %}
+        {% assign sorted_projects = site.data.asset_projects | sort: 'date' | reverse %}
+        {% for project in sorted_projects %}
+            {% if project.folder == 'template' %}
+                {% continue %}
+            {% endif %}
             <article class="project-card"
                      data-languages="{{ project.languages | join: ',' | downcase }}"
                      data-field="{{ project.field | join: ',' | downcase }}">

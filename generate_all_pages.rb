@@ -9,12 +9,38 @@ def generate_pages(collection_name, data_file, asset_folder)
   FileUtils.mkdir_p(collection_dir)
 
   # Read the data
-  data = YAML.load_file(data_file)
+  data = File.exist?(data_file) ? YAML.load_file(data_file) : []
+  data = [] unless data.is_a?(Array)
+
+  # Discover asset folders actually present on disk
+  asset_slugs = Dir.exist?(asset_folder) ? Dir.children(asset_folder).select { |d| File.directory?(File.join(asset_folder, d)) } : []
+
+  # Ensure every asset folder has a corresponding entry in data (auto-add minimal entries)
+  known_slugs = data.map { |i| i['folder'] }.compact
+  # Filter out template folders
+  asset_slugs = asset_slugs.reject { |s| s == 'template' }
+  missing = asset_slugs - known_slugs
+  unless missing.empty?
+    missing.each do |slug|
+      data << {
+        'id' => slug,
+        'title' => slug.tr('_', ' '),
+        'subtitle' => '',
+        'description' => '',
+        'folder' => slug
+      }
+    end
+    # Persist updated data back to the YAML file
+    File.write(data_file, data.to_yaml)
+    puts "Added #{missing.size} new #{collection_name} to #{data_file} based on assets"
+  end
 
   count = 0
+  expected_slugs = []
   data.each do |item|
     folder = item['folder']
     next unless folder
+    expected_slugs << folder
 
     # Read the content.md file if it exists
     content_path = "#{asset_folder}/#{folder}/content.md"
@@ -31,37 +57,48 @@ def generate_pages(collection_name, data_file, asset_folder)
       gallery_images = Dir.glob("#{gallery_path}/*").map { |f| "/#{f}" }
     end
 
-    # Create the page
+    # Merge fields to prefer data.yml values, falling back to per-asset metadata
+    merged = metadata.merge(item) rescue item
+
+    # Ensure data has a thumbnail path if the file exists
+    thumb_path = "/#{asset_folder}/#{folder}/thumbnail.png"
+    if File.exist?(File.join(asset_folder, folder, 'thumbnail.png'))
+      merged['thumbnail'] ||= thumb_path
+      # Also backfill into data so listings that read site.data can use it
+      item['thumbnail'] ||= thumb_path
+    end
+
+    # Create/update the page
     File.open("#{collection_dir}/#{folder}.md", 'w') do |f|
       f.puts "---"
       f.puts "layout: #{collection_name.chomp('s')}"
-      f.puts "title: \"#{item['title'] || metadata['title']}\""
-      f.puts "subtitle: \"#{item['subtitle'] || metadata['subtitle']}\"" if item['subtitle'] || metadata['subtitle']
-      f.puts "description: \"#{item['description'] || metadata['description']}\""
-      f.puts "date: #{item['date'] || metadata['date']}" if item['date'] || metadata['date']
+      f.puts "title: \"#{merged['title']}\""
+      f.puts "subtitle: \"#{merged['subtitle']}\"" if merged['subtitle']
+      f.puts "description: \"#{merged['description']}\""
+      f.puts "date: #{merged['date']}" if merged['date']
 
       # Collection-specific fields
       case collection_name
       when 'projects'
-        f.puts "languages: #{item['languages']}" if item['languages']
-        f.puts "field: #{item['field']}" if item['field']
-        f.puts "tech: #{item['tech']}" if item['tech']
-        f.puts "progress: #{item['progress']}" if item['progress']
-        f.puts "association: #{item['association']}" if item['association']
+        f.puts "languages: #{merged['languages']}" if merged['languages']
+        f.puts "field: #{merged['field']}" if merged['field']
+        f.puts "tech: #{merged['tech']}" if merged['tech']
+        f.puts "progress: #{merged['progress']}" if merged['progress']
+        f.puts "association: #{merged['association']}" if merged['association']
       when 'experiences'
-        f.puts "roles: #{item['roles'] || metadata['roles']}" if item['roles'] || metadata['roles']
-        f.puts "industries: #{item['industries'] || metadata['industries']}" if item['industries'] || metadata['industries']
-        f.puts "fromdate: #{item['fromdate'] || metadata['fromdate']}" if item['fromdate'] || metadata['fromdate']
-        f.puts "todate: #{item['todate'] || metadata['todate']}" if item['todate'] || metadata['todate']
-        f.puts "category: #{item['category'] || metadata['category']}" if item['category'] || metadata['category']
+        f.puts "roles: #{merged['roles']}" if merged['roles']
+        f.puts "industries: #{merged['industries']}" if merged['industries']
+        f.puts "fromdate: #{merged['fromdate']}" if merged['fromdate']
+        f.puts "todate: #{merged['todate']}" if merged['todate']
+        f.puts "category: #{merged['category']}" if merged['category']
       when 'awards'
-        f.puts "placement: #{item['placement'] || metadata['placement']}" if item['placement'] || metadata['placement']
+        f.puts "placement: #{merged['placement']}" if merged['placement']
       when 'certifications'
-        f.puts "issuer: #{item['issuer'] || metadata['issuer']}" if item['issuer'] || metadata['issuer']
-        f.puts "credential_id: #{item['credential_id'] || metadata['credential_id']}" if item['credential_id'] || metadata['credential_id']
+        f.puts "issuer: #{merged['issuer']}" if merged['issuer']
+        f.puts "credential_id: #{merged['credential_id']}" if merged['credential_id']
       end
 
-      f.puts "thumbnail: /#{asset_folder}/#{folder}/thumbnail.png"
+      f.puts "thumbnail: #{merged['thumbnail'] || thumb_path}"
       f.puts "gallery: #{gallery_images}" if gallery_images.any?
       f.puts "permalink: /#{collection_name}/#{folder}/"
       f.puts "---"
@@ -71,7 +108,16 @@ def generate_pages(collection_name, data_file, asset_folder)
     count += 1
   end
 
+  # Prune outdated generated pages that no longer have assets/data
+  existing = Dir.glob(File.join(collection_dir, '*.md')).map { |p| File.basename(p, '.md') }
+  existing = existing.reject { |s| s == 'template' }
+  stale = existing - expected_slugs
+  stale.each do |slug|
+    FileUtils.rm_f(File.join(collection_dir, "#{slug}.md"))
+  end
+
   puts "Generated #{count} #{collection_name} pages"
+  puts "Pruned #{stale.size} stale #{collection_name} pages" if stale.any?
 end
 
 # Generate pages for all collections

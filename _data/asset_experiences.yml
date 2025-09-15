@@ -343,3 +343,8 @@
   category: Robotics
   thumbnail: "/assets/experiences/referee_2016/thumbnail.png"
   folder: referee_2016
+- id: template
+  title: template
+  subtitle: ''
+  description: ''
+  folder: template
