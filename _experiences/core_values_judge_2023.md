@@ -7,7 +7,6 @@ fromdate:
 todate: 2023-01-13
 category: Robotics
 thumbnail: /assets/experiences/core_values_judge_2023/thumbnail.png
-gallery: ["/assets/experiences/core_values_judge_2023/gallery/gallery.json"]
 permalink: /experiences/core_values_judge_2023/
 ---
 

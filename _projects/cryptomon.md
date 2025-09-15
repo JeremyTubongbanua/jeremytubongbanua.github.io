@@ -10,7 +10,7 @@ tech: []
 progress: Finished
 association: Hackathon
 thumbnail: /assets/projects/cryptomon/thumbnail.png
-gallery: ["/assets/projects/cryptomon/gallery/1.jpg", "/assets/projects/cryptomon/gallery/2.jpg", "/assets/projects/cryptomon/gallery/3.jpg", "/assets/projects/cryptomon/gallery/4.jpg", "/assets/projects/cryptomon/gallery/5.jpg", "/assets/projects/cryptomon/gallery/6.jpg", "/assets/projects/cryptomon/gallery/7.jpg", "/assets/projects/cryptomon/gallery/8.jpg", "/assets/projects/cryptomon/gallery/gallery.json", "/assets/projects/cryptomon/gallery/thumbnail.png"]
+gallery: ["/assets/projects/cryptomon/gallery/1.jpg", "/assets/projects/cryptomon/gallery/2.jpg", "/assets/projects/cryptomon/gallery/3.jpg", "/assets/projects/cryptomon/gallery/4.jpg", "/assets/projects/cryptomon/gallery/5.jpg", "/assets/projects/cryptomon/gallery/6.jpg", "/assets/projects/cryptomon/gallery/7.jpg", "/assets/projects/cryptomon/gallery/8.jpg", "/assets/projects/cryptomon/gallery/thumbnail.png"]
 permalink: /projects/cryptomon/
 ---
 

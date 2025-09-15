@@ -10,7 +10,7 @@ tech: ["Docker", "Linux"]
 progress: Finished
 association: Hobby
 thumbnail: /assets/projects/connect_py/thumbnail.png
-gallery: ["/assets/projects/connect_py/gallery/2.png", "/assets/projects/connect_py/gallery/3.png", "/assets/projects/connect_py/gallery/4.png", "/assets/projects/connect_py/gallery/5.png", "/assets/projects/connect_py/gallery/gallery.json", "/assets/projects/connect_py/gallery/thumbnail.png"]
+gallery: ["/assets/projects/connect_py/gallery/2.png", "/assets/projects/connect_py/gallery/3.png", "/assets/projects/connect_py/gallery/4.png", "/assets/projects/connect_py/gallery/5.png", "/assets/projects/connect_py/gallery/thumbnail.png"]
 permalink: /projects/connect_py/
 ---
 

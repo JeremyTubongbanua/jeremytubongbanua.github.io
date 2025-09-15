@@ -10,7 +10,6 @@ tech: []
 progress: Finished
 association: Hackathon
 thumbnail: /assets/projects/split/thumbnail.png
-gallery: ["/assets/projects/split/gallery/gallery.json"]
 permalink: /projects/split/
 ---
 

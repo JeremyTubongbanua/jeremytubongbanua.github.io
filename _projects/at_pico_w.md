@@ -10,7 +10,6 @@ tech: []
 progress: Finished
 association: Atsign
 thumbnail: /assets/projects/at_pico_w/thumbnail.png
-gallery: ["/assets/projects/at_pico_w/gallery/gallery.json"]
 permalink: /projects/at_pico_w/
 ---
 

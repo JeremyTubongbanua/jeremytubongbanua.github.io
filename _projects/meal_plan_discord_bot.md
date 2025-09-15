@@ -10,7 +10,7 @@ tech: ["Linux"]
 progress: Finished
 association: Hobby
 thumbnail: /assets/projects/meal_plan_discord_bot/thumbnail.png
-gallery: ["/assets/projects/meal_plan_discord_bot/gallery/1.png", "/assets/projects/meal_plan_discord_bot/gallery/2.png", "/assets/projects/meal_plan_discord_bot/gallery/gallery.json"]
+gallery: ["/assets/projects/meal_plan_discord_bot/gallery/1.png", "/assets/projects/meal_plan_discord_bot/gallery/2.png"]
 permalink: /projects/meal_plan_discord_bot/
 ---
 

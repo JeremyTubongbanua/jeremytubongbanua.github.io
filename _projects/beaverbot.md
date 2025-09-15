@@ -10,7 +10,7 @@ tech: ["Node.js"]
 progress: Finished
 association: Hackathon
 thumbnail: /assets/projects/beaverbot/thumbnail.png
-gallery: ["/assets/projects/beaverbot/gallery/1.png", "/assets/projects/beaverbot/gallery/2.png", "/assets/projects/beaverbot/gallery/3.png", "/assets/projects/beaverbot/gallery/4.png", "/assets/projects/beaverbot/gallery/gallery.json", "/assets/projects/beaverbot/gallery/thumbnail.png"]
+gallery: ["/assets/projects/beaverbot/gallery/1.png", "/assets/projects/beaverbot/gallery/2.png", "/assets/projects/beaverbot/gallery/3.png", "/assets/projects/beaverbot/gallery/4.png", "/assets/projects/beaverbot/gallery/thumbnail.png"]
 permalink: /projects/beaverbot/
 ---
 

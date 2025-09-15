@@ -10,7 +10,7 @@ tech: []
 progress: Finished
 association: Hackathon
 thumbnail: /assets/projects/climatecrusaders/thumbnail.png
-gallery: ["/assets/projects/climatecrusaders/gallery/1.png", "/assets/projects/climatecrusaders/gallery/2.png", "/assets/projects/climatecrusaders/gallery/3.png", "/assets/projects/climatecrusaders/gallery/gallery.json"]
+gallery: ["/assets/projects/climatecrusaders/gallery/1.png", "/assets/projects/climatecrusaders/gallery/2.png", "/assets/projects/climatecrusaders/gallery/3.png"]
 permalink: /projects/climatecrusaders/
 ---
 

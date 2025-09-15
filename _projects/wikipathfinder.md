@@ -9,7 +9,7 @@ tech: ["Node.js", "React"]
 progress: Finished
 association: Hackathon
 thumbnail: /assets/projects/wikipathfinder/thumbnail.png
-gallery: ["/assets/projects/wikipathfinder/gallery/1.png", "/assets/projects/wikipathfinder/gallery/2.png", "/assets/projects/wikipathfinder/gallery/gallery.json"]
+gallery: ["/assets/projects/wikipathfinder/gallery/1.png", "/assets/projects/wikipathfinder/gallery/2.png"]
 permalink: /projects/wikipathfinder/
 ---
 

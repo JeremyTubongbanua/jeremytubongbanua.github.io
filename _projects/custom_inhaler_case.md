@@ -10,7 +10,7 @@ tech: ["Fusion 360"]
 progress: Finished
 association: Hobby
 thumbnail: /assets/projects/custom_inhaler_case/thumbnail.png
-gallery: ["/assets/projects/custom_inhaler_case/gallery/IMG_3781.JPG", "/assets/projects/custom_inhaler_case/gallery/IMG_3782.JPG", "/assets/projects/custom_inhaler_case/gallery/IMG_3783.JPG", "/assets/projects/custom_inhaler_case/gallery/IMG_3797.JPG", "/assets/projects/custom_inhaler_case/gallery/IMG_3798.JPG", "/assets/projects/custom_inhaler_case/gallery/IMG_3799.JPG", "/assets/projects/custom_inhaler_case/gallery/gallery.json", "/assets/projects/custom_inhaler_case/gallery/image.PNG"]
+gallery: ["/assets/projects/custom_inhaler_case/gallery/IMG_3781.JPG", "/assets/projects/custom_inhaler_case/gallery/IMG_3782.JPG", "/assets/projects/custom_inhaler_case/gallery/IMG_3783.JPG", "/assets/projects/custom_inhaler_case/gallery/IMG_3797.JPG", "/assets/projects/custom_inhaler_case/gallery/IMG_3798.JPG", "/assets/projects/custom_inhaler_case/gallery/IMG_3799.JPG", "/assets/projects/custom_inhaler_case/gallery/image.PNG"]
 permalink: /projects/custom_inhaler_case/
 ---
 

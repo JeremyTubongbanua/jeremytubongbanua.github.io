@@ -10,7 +10,6 @@ tech: ["Espressif (ESP-IDF)"]
 progress: Finished
 association: Atsign
 thumbnail: /assets/projects/at_esp32/thumbnail.png
-gallery: ["/assets/projects/at_esp32/gallery/gallery.json"]
 permalink: /projects/at_esp32/
 ---
 

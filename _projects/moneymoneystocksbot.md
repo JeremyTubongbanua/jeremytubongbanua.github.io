@@ -10,7 +10,7 @@ tech: ["Node.js"]
 progress: Finished
 association: Hackathon
 thumbnail: /assets/projects/moneymoneystocksbot/thumbnail.png
-gallery: ["/assets/projects/moneymoneystocksbot/gallery/1.jpg", "/assets/projects/moneymoneystocksbot/gallery/2.jpg", "/assets/projects/moneymoneystocksbot/gallery/3.jpg", "/assets/projects/moneymoneystocksbot/gallery/4.jpg", "/assets/projects/moneymoneystocksbot/gallery/gallery.json", "/assets/projects/moneymoneystocksbot/gallery/thumbnail.png"]
+gallery: ["/assets/projects/moneymoneystocksbot/gallery/1.jpg", "/assets/projects/moneymoneystocksbot/gallery/2.jpg", "/assets/projects/moneymoneystocksbot/gallery/3.jpg", "/assets/projects/moneymoneystocksbot/gallery/4.jpg", "/assets/projects/moneymoneystocksbot/gallery/thumbnail.png"]
 permalink: /projects/moneymoneystocksbot/
 ---
 

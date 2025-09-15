@@ -10,7 +10,7 @@ tech: ["Flutter"]
 progress: Finished
 association: Hackathon
 thumbnail: /assets/projects/masterchef/thumbnail.png
-gallery: ["/assets/projects/masterchef/gallery/1.png", "/assets/projects/masterchef/gallery/2.png", "/assets/projects/masterchef/gallery/3.png", "/assets/projects/masterchef/gallery/4.png", "/assets/projects/masterchef/gallery/5.png", "/assets/projects/masterchef/gallery/gallery.json", "/assets/projects/masterchef/gallery/image.png"]
+gallery: ["/assets/projects/masterchef/gallery/1.png", "/assets/projects/masterchef/gallery/2.png", "/assets/projects/masterchef/gallery/3.png", "/assets/projects/masterchef/gallery/4.png", "/assets/projects/masterchef/gallery/5.png", "/assets/projects/masterchef/gallery/image.png"]
 permalink: /projects/masterchef/
 ---
 

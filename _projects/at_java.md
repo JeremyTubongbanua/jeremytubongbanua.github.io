@@ -10,7 +10,6 @@ tech: []
 progress: Finished
 association: Atsign
 thumbnail: /assets/projects/at_java/thumbnail.png
-gallery: ["/assets/projects/at_java/gallery/gallery.json"]
 permalink: /projects/at_java/
 ---
 

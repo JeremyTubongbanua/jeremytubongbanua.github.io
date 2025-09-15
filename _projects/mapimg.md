@@ -10,7 +10,7 @@ tech: ["Spigot"]
 progress: Finished
 association: Hobby
 thumbnail: /assets/projects/mapimg/thumbnail.png
-gallery: ["/assets/projects/mapimg/gallery/1.jpeg", "/assets/projects/mapimg/gallery/gallery.json"]
+gallery: ["/assets/projects/mapimg/gallery/1.jpeg"]
 permalink: /projects/mapimg/
 ---
 

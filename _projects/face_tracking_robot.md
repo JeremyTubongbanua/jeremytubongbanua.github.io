@@ -10,7 +10,7 @@ tech: ["Fusion360", "Linux"]
 progress: Finished
 association: Hobby
 thumbnail: /assets/projects/face_tracking_robot/thumbnail.png
-gallery: ["/assets/projects/face_tracking_robot/gallery/IMG_4192.JPG", "/assets/projects/face_tracking_robot/gallery/IMG_4232.jpg", "/assets/projects/face_tracking_robot/gallery/IMG_4246.JPG", "/assets/projects/face_tracking_robot/gallery/gallery.json"]
+gallery: ["/assets/projects/face_tracking_robot/gallery/IMG_4192.JPG", "/assets/projects/face_tracking_robot/gallery/IMG_4232.jpg", "/assets/projects/face_tracking_robot/gallery/IMG_4246.JPG"]
 permalink: /projects/face_tracking_robot/
 ---
 

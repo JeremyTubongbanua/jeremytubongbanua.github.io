@@ -10,7 +10,7 @@ tech: ["Figma", "React"]
 progress: Finished
 association: Hackathon
 thumbnail: /assets/projects/restart/thumbnail.png
-gallery: ["/assets/projects/restart/gallery/1.jpg", "/assets/projects/restart/gallery/2.jpg", "/assets/projects/restart/gallery/3.jpg", "/assets/projects/restart/gallery/4.jpg", "/assets/projects/restart/gallery/5.jpg", "/assets/projects/restart/gallery/6.jpg", "/assets/projects/restart/gallery/7.jpg", "/assets/projects/restart/gallery/gallery.json"]
+gallery: ["/assets/projects/restart/gallery/1.jpg", "/assets/projects/restart/gallery/2.jpg", "/assets/projects/restart/gallery/3.jpg", "/assets/projects/restart/gallery/4.jpg", "/assets/projects/restart/gallery/5.jpg", "/assets/projects/restart/gallery/6.jpg", "/assets/projects/restart/gallery/7.jpg"]
 permalink: /projects/restart/
 ---
 

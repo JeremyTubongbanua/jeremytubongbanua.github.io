@@ -10,7 +10,7 @@ tech: []
 progress: Finished
 association: High School
 thumbnail: /assets/projects/frc2020robot/thumbnail.png
-gallery: ["/assets/projects/frc2020robot/gallery/1.png", "/assets/projects/frc2020robot/gallery/2.png", "/assets/projects/frc2020robot/gallery/3.png", "/assets/projects/frc2020robot/gallery/gallery.json"]
+gallery: ["/assets/projects/frc2020robot/gallery/1.png", "/assets/projects/frc2020robot/gallery/2.png", "/assets/projects/frc2020robot/gallery/3.png"]
 permalink: /projects/frc2020robot/
 ---
 

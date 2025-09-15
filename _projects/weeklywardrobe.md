@@ -10,7 +10,7 @@ tech: ["Docker", "Linux", "Node.js", "React"]
 progress: Finished
 association: Hackathon
 thumbnail: /assets/projects/weeklywardrobe/thumbnail.png
-gallery: ["/assets/projects/weeklywardrobe/gallery/1.png", "/assets/projects/weeklywardrobe/gallery/2.png", "/assets/projects/weeklywardrobe/gallery/3.png", "/assets/projects/weeklywardrobe/gallery/4.png", "/assets/projects/weeklywardrobe/gallery/5.png", "/assets/projects/weeklywardrobe/gallery/6.png", "/assets/projects/weeklywardrobe/gallery/gallery.json", "/assets/projects/weeklywardrobe/gallery/thumbnail.png"]
+gallery: ["/assets/projects/weeklywardrobe/gallery/1.png", "/assets/projects/weeklywardrobe/gallery/2.png", "/assets/projects/weeklywardrobe/gallery/3.png", "/assets/projects/weeklywardrobe/gallery/4.png", "/assets/projects/weeklywardrobe/gallery/5.png", "/assets/projects/weeklywardrobe/gallery/6.png", "/assets/projects/weeklywardrobe/gallery/thumbnail.png"]
 permalink: /projects/weeklywardrobe/
 ---
 

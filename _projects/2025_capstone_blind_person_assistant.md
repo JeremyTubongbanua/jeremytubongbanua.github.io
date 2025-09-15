@@ -10,7 +10,7 @@ tech: ["Fusion360", "Docker", "Linux"]
 progress: Finished
 association: Hackathon
 thumbnail: /assets/projects/2025_capstone_blind_person_assistant/thumbnail.png
-gallery: ["/assets/projects/2025_capstone_blind_person_assistant/gallery/cane.png", "/assets/projects/2025_capstone_blind_person_assistant/gallery/gallery.json", "/assets/projects/2025_capstone_blind_person_assistant/gallery/headset.png", "/assets/projects/2025_capstone_blind_person_assistant/gallery/poster.png", "/assets/projects/2025_capstone_blind_person_assistant/gallery/sys_gateway.png", "/assets/projects/2025_capstone_blind_person_assistant/gallery/us.png"]
+gallery: ["/assets/projects/2025_capstone_blind_person_assistant/gallery/cane.png", "/assets/projects/2025_capstone_blind_person_assistant/gallery/headset.png", "/assets/projects/2025_capstone_blind_person_assistant/gallery/poster.png", "/assets/projects/2025_capstone_blind_person_assistant/gallery/sys_gateway.png", "/assets/projects/2025_capstone_blind_person_assistant/gallery/us.png"]
 permalink: /projects/2025_capstone_blind_person_assistant/
 ---
 

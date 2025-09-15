@@ -10,7 +10,7 @@ tech: ["Flutter"]
 progress: Finished
 association: Hobby
 thumbnail: /assets/projects/instagramclone/thumbnail.png
-gallery: ["/assets/projects/instagramclone/gallery/1.png", "/assets/projects/instagramclone/gallery/gallery.json"]
+gallery: ["/assets/projects/instagramclone/gallery/1.png"]
 permalink: /projects/instagramclone/
 ---
 

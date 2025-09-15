@@ -10,7 +10,7 @@ tech: ["Docker", "Linux", "Node.js", "React"]
 progress: Finished
 association: Ontario Tech
 thumbnail: /assets/projects/supercooljobs/thumbnail.png
-gallery: ["/assets/projects/supercooljobs/gallery/1.png", "/assets/projects/supercooljobs/gallery/2.png", "/assets/projects/supercooljobs/gallery/3.png", "/assets/projects/supercooljobs/gallery/4.png", "/assets/projects/supercooljobs/gallery/5.png", "/assets/projects/supercooljobs/gallery/6.png", "/assets/projects/supercooljobs/gallery/gallery.json"]
+gallery: ["/assets/projects/supercooljobs/gallery/1.png", "/assets/projects/supercooljobs/gallery/2.png", "/assets/projects/supercooljobs/gallery/3.png", "/assets/projects/supercooljobs/gallery/4.png", "/assets/projects/supercooljobs/gallery/5.png", "/assets/projects/supercooljobs/gallery/6.png"]
 permalink: /projects/supercooljobs/
 ---
 

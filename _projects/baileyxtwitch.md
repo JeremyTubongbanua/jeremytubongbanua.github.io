@@ -10,7 +10,7 @@ tech: ["Linux", "Node.js"]
 progress: Finished
 association: Hobby
 thumbnail: /assets/projects/baileyxtwitch/thumbnail.png
-gallery: ["/assets/projects/baileyxtwitch/gallery/1.png", "/assets/projects/baileyxtwitch/gallery/2.png", "/assets/projects/baileyxtwitch/gallery/3.png", "/assets/projects/baileyxtwitch/gallery/gallery.json"]
+gallery: ["/assets/projects/baileyxtwitch/gallery/1.png", "/assets/projects/baileyxtwitch/gallery/2.png", "/assets/projects/baileyxtwitch/gallery/3.png"]
 permalink: /projects/baileyxtwitch/
 ---
 

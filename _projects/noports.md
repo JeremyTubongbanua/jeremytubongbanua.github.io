@@ -10,7 +10,6 @@ tech: ["CMake", "Linux"]
 progress: In-Progress
 association: Atsign
 thumbnail: /assets/projects/noports/thumbnail.png
-gallery: ["/assets/projects/noports/gallery/gallery.json"]
 permalink: /projects/noports/
 ---
 

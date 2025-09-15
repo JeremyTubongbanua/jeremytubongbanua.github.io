@@ -9,7 +9,7 @@ tech: ["Spigot"]
 progress: Finished
 association: Hobby
 thumbnail: /assets/projects/mailbox/thumbnail.png
-gallery: ["/assets/projects/mailbox/gallery/1.png", "/assets/projects/mailbox/gallery/2.png", "/assets/projects/mailbox/gallery/gallery.json"]
+gallery: ["/assets/projects/mailbox/gallery/1.png", "/assets/projects/mailbox/gallery/2.png"]
 permalink: /projects/mailbox/
 ---
 

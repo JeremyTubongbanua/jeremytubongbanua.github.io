@@ -10,7 +10,7 @@ tech: ["Fusion360", "Linux"]
 progress: Finished
 association: Atsign
 thumbnail: /assets/projects/qt_atsign_plant/thumbnail.png
-gallery: ["/assets/projects/qt_atsign_plant/gallery/1.png", "/assets/projects/qt_atsign_plant/gallery/2.png", "/assets/projects/qt_atsign_plant/gallery/3.png", "/assets/projects/qt_atsign_plant/gallery/4.png", "/assets/projects/qt_atsign_plant/gallery/gallery.json", "/assets/projects/qt_atsign_plant/gallery/thumbnail.png"]
+gallery: ["/assets/projects/qt_atsign_plant/gallery/1.png", "/assets/projects/qt_atsign_plant/gallery/2.png", "/assets/projects/qt_atsign_plant/gallery/3.png", "/assets/projects/qt_atsign_plant/gallery/4.png", "/assets/projects/qt_atsign_plant/gallery/thumbnail.png"]
 permalink: /projects/qt_atsign_plant/
 ---
 

@@ -10,7 +10,7 @@ tech: ["React", "Linux"]
 progress: Finished
 association: Hackathon
 thumbnail: /assets/projects/mappingx/thumbnail.png
-gallery: ["/assets/projects/mappingx/gallery/1.png", "/assets/projects/mappingx/gallery/2.png", "/assets/projects/mappingx/gallery/3.png", "/assets/projects/mappingx/gallery/4.png", "/assets/projects/mappingx/gallery/gallery.json"]
+gallery: ["/assets/projects/mappingx/gallery/1.png", "/assets/projects/mappingx/gallery/2.png", "/assets/projects/mappingx/gallery/3.png", "/assets/projects/mappingx/gallery/4.png"]
 permalink: /projects/mappingx/
 ---
 

@@ -9,7 +9,7 @@ tech: ["Node.js", "React"]
 progress: Finished
 association: Ontario Tech
 thumbnail: /assets/projects/supercooljobs0/thumbnail.png
-gallery: ["/assets/projects/supercooljobs0/gallery/1.png", "/assets/projects/supercooljobs0/gallery/2.png", "/assets/projects/supercooljobs0/gallery/gallery.json"]
+gallery: ["/assets/projects/supercooljobs0/gallery/1.png", "/assets/projects/supercooljobs0/gallery/2.png"]
 permalink: /projects/supercooljobs0/
 ---
 

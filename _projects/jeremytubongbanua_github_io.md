@@ -10,7 +10,6 @@ tech: []
 progress: Finished
 association: Hobby
 thumbnail: /assets/projects/jeremytubongbanua_github_io/thumbnail.png
-gallery: ["/assets/projects/jeremytubongbanua_github_io/gallery/gallery.json"]
 permalink: /projects/jeremytubongbanua_github_io/
 ---
 

@@ -53,7 +53,11 @@ def generate_pages(collection_name, data_file, asset_folder)
     gallery_path = "#{asset_folder}/#{folder}/gallery"
     gallery_images = []
     if Dir.exist?(gallery_path)
-      gallery_images = Dir.glob("#{gallery_path}/*").map { |f| "/#{f}" }
+      allowed = %w[.png .jpg .jpeg .gif .webp .svg]
+      gallery_images = Dir.glob(File.join(gallery_path, '*'))
+                           .select { |f| File.file?(f) && allowed.include?(File.extname(f).downcase) }
+                           .sort
+                           .map { |f| "/#{f}" }
     end
 
     # Merge fields to prefer data.yml values, falling back to per-asset metadata

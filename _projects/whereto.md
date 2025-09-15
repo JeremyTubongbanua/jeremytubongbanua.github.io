@@ -10,7 +10,7 @@ tech: ["Figma", "React"]
 progress: Finished
 association: Hackathon
 thumbnail: /assets/projects/whereto/thumbnail.png
-gallery: ["/assets/projects/whereto/gallery/1.jpg", "/assets/projects/whereto/gallery/2.jpg", "/assets/projects/whereto/gallery/3.jpg", "/assets/projects/whereto/gallery/4.jpg", "/assets/projects/whereto/gallery/gallery.json"]
+gallery: ["/assets/projects/whereto/gallery/1.jpg", "/assets/projects/whereto/gallery/2.jpg", "/assets/projects/whereto/gallery/3.jpg", "/assets/projects/whereto/gallery/4.jpg"]
 permalink: /projects/whereto/
 ---
 

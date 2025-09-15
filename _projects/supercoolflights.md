@@ -10,7 +10,7 @@ tech: ["Docker", "Linux", "Node.js"]
 progress: Finished
 association: Ontario Tech
 thumbnail: /assets/projects/supercoolflights/thumbnail.png
-gallery: ["/assets/projects/supercoolflights/gallery/1.png", "/assets/projects/supercoolflights/gallery/10.png", "/assets/projects/supercoolflights/gallery/11.png", "/assets/projects/supercoolflights/gallery/2.png", "/assets/projects/supercoolflights/gallery/3.png", "/assets/projects/supercoolflights/gallery/4.png", "/assets/projects/supercoolflights/gallery/5.png", "/assets/projects/supercoolflights/gallery/6.png", "/assets/projects/supercoolflights/gallery/7.png", "/assets/projects/supercoolflights/gallery/8.png", "/assets/projects/supercoolflights/gallery/gallery.json", "/assets/projects/supercoolflights/gallery/thumbnail.png"]
+gallery: ["/assets/projects/supercoolflights/gallery/1.png", "/assets/projects/supercoolflights/gallery/10.png", "/assets/projects/supercoolflights/gallery/11.png", "/assets/projects/supercoolflights/gallery/2.png", "/assets/projects/supercoolflights/gallery/3.png", "/assets/projects/supercoolflights/gallery/4.png", "/assets/projects/supercoolflights/gallery/5.png", "/assets/projects/supercoolflights/gallery/6.png", "/assets/projects/supercoolflights/gallery/7.png", "/assets/projects/supercoolflights/gallery/8.png", "/assets/projects/supercoolflights/gallery/thumbnail.png"]
 permalink: /projects/supercoolflights/
 ---
 

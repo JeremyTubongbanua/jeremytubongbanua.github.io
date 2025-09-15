@@ -10,7 +10,7 @@ tech: ["Figma"]
 progress: Finished
 association: Hackathon
 thumbnail: /assets/projects/connect/thumbnail.png
-gallery: ["/assets/projects/connect/gallery/1.jpg", "/assets/projects/connect/gallery/10.jpg", "/assets/projects/connect/gallery/11.png", "/assets/projects/connect/gallery/12.png", "/assets/projects/connect/gallery/2.jpg", "/assets/projects/connect/gallery/3.jpg", "/assets/projects/connect/gallery/4.jpg", "/assets/projects/connect/gallery/5.jpg", "/assets/projects/connect/gallery/6.jpg", "/assets/projects/connect/gallery/7.jpg", "/assets/projects/connect/gallery/8.jpg", "/assets/projects/connect/gallery/9.jpg", "/assets/projects/connect/gallery/gallery.json"]
+gallery: ["/assets/projects/connect/gallery/1.jpg", "/assets/projects/connect/gallery/10.jpg", "/assets/projects/connect/gallery/11.png", "/assets/projects/connect/gallery/12.png", "/assets/projects/connect/gallery/2.jpg", "/assets/projects/connect/gallery/3.jpg", "/assets/projects/connect/gallery/4.jpg", "/assets/projects/connect/gallery/5.jpg", "/assets/projects/connect/gallery/6.jpg", "/assets/projects/connect/gallery/7.jpg", "/assets/projects/connect/gallery/8.jpg", "/assets/projects/connect/gallery/9.jpg"]
 permalink: /projects/connect/
 ---
 

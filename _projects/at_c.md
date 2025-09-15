@@ -10,7 +10,7 @@ tech: ["CMake", "Docker", "Espressif (ESP-IDF)", "Linux"]
 progress: In-Progress
 association: Atsign
 thumbnail: /assets/projects/at_c/thumbnail.png
-gallery: ["/assets/projects/at_c/gallery/1.png", "/assets/projects/at_c/gallery/gallery.json"]
+gallery: ["/assets/projects/at_c/gallery/1.png"]
 permalink: /projects/at_c/
 ---
 

@@ -10,7 +10,7 @@ tech: ["Spigot"]
 progress: Finished
 association: Hobby
 thumbnail: /assets/projects/timber/thumbnail.png
-gallery: ["/assets/projects/timber/gallery/1.gif", "/assets/projects/timber/gallery/2.gif", "/assets/projects/timber/gallery/3.png", "/assets/projects/timber/gallery/5.png", "/assets/projects/timber/gallery/gallery.json"]
+gallery: ["/assets/projects/timber/gallery/1.gif", "/assets/projects/timber/gallery/2.gif", "/assets/projects/timber/gallery/3.png", "/assets/projects/timber/gallery/5.png"]
 permalink: /projects/timber/
 ---
 

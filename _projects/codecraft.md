@@ -10,7 +10,7 @@ tech: ["Docker", "Node.js", "React"]
 progress: Finished
 association: Hackathon
 thumbnail: /assets/projects/codecraft/thumbnail.png
-gallery: ["/assets/projects/codecraft/gallery/ai-chat-bot.jpg", "/assets/projects/codecraft/gallery/debugging.jpg", "/assets/projects/codecraft/gallery/gallery.json", "/assets/projects/codecraft/gallery/image.png", "/assets/projects/codecraft/gallery/questions.jpg", "/assets/projects/codecraft/gallery/thumbnail.png"]
+gallery: ["/assets/projects/codecraft/gallery/ai-chat-bot.jpg", "/assets/projects/codecraft/gallery/debugging.jpg", "/assets/projects/codecraft/gallery/image.png", "/assets/projects/codecraft/gallery/questions.jpg", "/assets/projects/codecraft/gallery/thumbnail.png"]
 permalink: /projects/codecraft/
 ---
 
