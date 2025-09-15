@@ -27,6 +27,7 @@
   industries:
   - Healthcare
   - Innovation
+  thumbnail: "/assets/experiences/brilliant_catalyst_2025/thumbnail.png"
   folder: brilliant_catalyst_2025
 - id: oec_2025
   title: Ontario Engineering Competition 2025
@@ -59,6 +60,7 @@
   industries:
   - Technology
   - E-commerce
+  thumbnail: "/assets/experiences/amazon_tour/thumbnail.png"
   folder: amazon_tour
 - id: csa
   title: Canadian Space Agency Tour
