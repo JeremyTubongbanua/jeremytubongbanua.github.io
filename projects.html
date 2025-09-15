@@ -1,0 +1,109 @@
+---
+layout: page
+title: Projects
+subtitle: Software projects, open source contributions, and technical experiments
+permalink: /projects/
+---
+
+<div class="projects-filter">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="iot">IoT/Embedded</button>
+    <button class="filter-btn" data-filter="web">Web Development</button>
+    <button class="filter-btn" data-filter="mobile">Mobile</button>
+    <button class="filter-btn" data-filter="robotics">Robotics</button>
+    <button class="filter-btn" data-filter="ai">AI/ML</button>
+</div>
+
+<div class="projects-container">
+    <div class="projects-grid">
+        {% for project in site.data.asset_projects %}
+            <article class="project-card"
+                     data-languages="{{ project.languages | join: ',' | downcase }}"
+                     data-field="{{ project.field | join: ',' | downcase }}">
+
+                {% if project.thumbnail %}
+                    <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}" class="project-thumbnail">
+                {% endif %}
+
+                <div class="project-content">
+                    <h3 class="project-title">
+                        <a href="{{ '/projects/' | append: project.folder | relative_url }}">{{ project.title }}</a>
+                    </h3>
+
+                    {% if project.subtitle %}
+                        <p class="project-subtitle">{{ project.subtitle }}</p>
+                    {% endif %}
+
+                    {% if project.description %}
+                        <p class="project-description">{{ project.description | truncate: 150 }}</p>
+                    {% endif %}
+
+                    <div class="project-meta">
+                        {% if project.progress %}
+                            <span class="project-status status-{{ project.progress | downcase | replace: ' ', '-' }}">
+                                {{ project.progress }}
+                            </span>
+                        {% endif %}
+
+                        {% if project.date %}
+                            <span class="project-date">{{ project.date | date: "%B %Y" }}</span>
+                        {% endif %}
+                    </div>
+
+                    {% if project.languages %}
+                        <div class="project-languages">
+                            {% for lang in project.languages %}
+                                <span class="lang-tag">{{ lang }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    {% if project.tech %}
+                        <div class="project-tech">
+                            {% for tech in project.tech %}
+                                <span class="tech-tag">{{ tech }}</span>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    {% if project.association %}
+                        <div class="project-association">
+                            <small>{{ project.association }}</small>
+                        </div>
+                    {% endif %}
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            // Filter projects
+            projectCards.forEach(card => {
+                if (filter === 'all') {
+                    card.style.display = 'block';
+                } else {
+                    const fields = card.getAttribute('data-field');
+                    if (fields && fields.toLowerCase().includes(filter)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                }
+            });
+        });
+    });
+});
+</script>

@@ -1,0 +1,69 @@
+# Site settings
+title: Jeremy Tubongbanua
+email: jeremybanua@gmail.com
+description: >-
+  Personal portfolio website showcasing projects, experiences, awards, and certifications
+  in software engineering, IoT, embedded systems, and robotics.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://jeremytubongbanua.github.io" # the base hostname & protocol for your site
+twitter_username:
+github_username: JeremyTubongbanua
+linkedin_username: jeremytubongbanua
+
+# Build settings
+markdown: kramdown
+# Remove theme for GitHub Pages (we'll use custom layouts)
+# theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  experiences:
+    output: true
+    permalink: /experiences/:name/
+  awards:
+    output: true
+    permalink: /awards/:name/
+  certifications:
+    output: true
+    permalink: /certifications/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "experiences"
+    values:
+      layout: "experience"
+  - scope:
+      path: ""
+      type: "awards"
+    values:
+      layout: "award"
+  - scope:
+      path: ""
+      type: "certifications"
+    values:
+      layout: "certification"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md

@@ -1,0 +1,52 @@
+---
+layout: page
+title: Certifications
+subtitle: Professional certifications and credentials
+permalink: /certifications/
+---
+
+<div class="certifications-container">
+    <div class="certifications-grid">
+        {% for cert in site.data.asset_certifications %}
+            <article class="certification-card">
+                {% if cert.thumbnail %}
+                    <img src="{{ cert.thumbnail | relative_url }}" alt="{{ cert.title }}" class="cert-thumbnail">
+                {% endif %}
+
+                <div class="cert-content">
+                    <h3 class="cert-title">
+                        <a href="{{ '/certifications/' | append: cert.folder | relative_url }}">{{ cert.title }}</a>
+                    </h3>
+
+                    {% if cert.issuer %}
+                        <p class="cert-issuer">Issued by: {{ cert.issuer }}</p>
+                    {% endif %}
+
+                    {% if cert.description %}
+                        <p class="cert-description">{{ cert.description }}</p>
+                    {% endif %}
+
+                    <div class="cert-meta">
+                        {% if cert.issue_date %}
+                            <span class="cert-date">Issued: {{ cert.issue_date | date: "%B %Y" }}</span>
+                        {% endif %}
+
+                        {% if cert.expiry_date %}
+                            <span class="cert-expiry">Expires: {{ cert.expiry_date | date: "%B %Y" }}</span>
+                        {% endif %}
+
+                        {% if cert.credential_id %}
+                            <span class="cert-id">ID: {{ cert.credential_id }}</span>
+                        {% endif %}
+                    </div>
+
+                    {% if cert.verify_url %}
+                        <a href="{{ cert.verify_url }}" target="_blank" rel="noopener" class="cert-verify">
+                            Verify Credential →
+                        </a>
+                    {% endif %}
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+</div>

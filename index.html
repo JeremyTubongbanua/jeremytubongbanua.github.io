@@ -1,0 +1,111 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+    <div class="hero-content">
+        <h1 class="hero-title">Jeremy Tubongbanua</h1>
+        <p class="hero-subtitle">Software Engineer | IoT & Embedded Systems Developer</p>
+        <p class="hero-description">
+            Passionate about building innovative solutions in IoT, embedded systems, and robotics.
+            Currently working as a Software Engineer at Atsign, specializing in C/C++ development,
+            DevOps, and secure communication protocols.
+        </p>
+        <div class="hero-actions">
+            <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary">View Projects</a>
+            <a href="{{ '/assets/JeremyTubongbanua_Resume.pdf' | relative_url }}" class="btn btn-secondary" target="_blank">Download Resume</a>
+        </div>
+    </div>
+</section>
+
+<section class="highlights">
+    <h2>Recent Highlights</h2>
+    <div class="highlights-grid">
+        <div class="highlight-card">
+            <h3>Latest Projects</h3>
+            <ul>
+                {% for project in site.data.asset_projects limit:3 %}
+                    <li>
+                        <a href="{{ '/projects/' | append: project.folder | relative_url }}">{{ project.title }}</a>
+                        <span class="date">{{ project.date | date: "%B %Y" }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+            <a href="{{ '/projects/' | relative_url }}" class="view-all">View all projects →</a>
+        </div>
+
+        <div class="highlight-card">
+            <h3>Recent Awards</h3>
+            <ul>
+                {% for award in site.data.asset_awards limit:3 %}
+                    <li>
+                        <a href="{{ '/awards/' | append: award.folder | relative_url }}">{{ award.title }}</a>
+                        <span class="date">{{ award.date | date: "%B %Y" }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+            <a href="{{ '/awards/' | relative_url }}" class="view-all">View all awards →</a>
+        </div>
+
+        <div class="highlight-card">
+            <h3>Experience</h3>
+            <ul>
+                {% for experience in site.data.asset_experiences limit:3 %}
+                    <li>
+                        <a href="{{ '/experiences/' | append: experience.folder | relative_url }}">{{ experience.title }}</a>
+                        <span class="date">
+                            {% if experience.todate == nil or experience.todate == "" %}
+                                {{ experience.fromdate | date: "%Y" }} - Present
+                            {% elsif experience.fromdate %}
+                                {{ experience.fromdate | date: "%Y" }} - {{ experience.todate | date: "%Y" }}
+                            {% else %}
+                                {{ experience.todate | date: "%Y" }}
+                            {% endif %}
+                        </span>
+                    </li>
+                {% endfor %}
+            </ul>
+            <a href="{{ '/experiences/' | relative_url }}" class="view-all">View all experiences →</a>
+        </div>
+    </div>
+</section>
+
+<section class="skills">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-category">
+            <h3>Languages</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">C/C++</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Dart/Flutter</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">TypeScript</span>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h3>Technologies</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">IoT/Embedded Systems</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">CMake</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">CI/CD</span>
+            </div>
+        </div>
+
+        <div class="skill-category">
+            <h3>Platforms</h3>
+            <div class="skill-tags">
+                <span class="skill-tag">ESP32</span>
+                <span class="skill-tag">Raspberry Pi Pico W</span>
+                <span class="skill-tag">Arduino</span>
+                <span class="skill-tag">Raspberry Pi</span>
+            </div>
+        </div>
+    </div>
+</section>

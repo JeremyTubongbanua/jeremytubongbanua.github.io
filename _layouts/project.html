@@ -1,0 +1,43 @@
+---
+layout: default
+---
+<article class="project">
+    <header class="project-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}
+            <p class="subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+
+        <div class="project-meta">
+            {% if page.date %}
+                <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
+            {% endif %}
+            {% if page.languages %}
+                <div class="languages">
+                    {% for lang in page.languages %}
+                        <span class="language-tag">{{ lang }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </header>
+
+    {% if page.thumbnail %}
+        <img src="{{ page.thumbnail | relative_url }}" alt="{{ page.title }}" class="project-thumbnail">
+    {% endif %}
+
+    <div class="project-content">
+        {{ content }}
+    </div>
+
+    {% if page.gallery %}
+        <div class="project-gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                {% for image in page.gallery %}
+                    <img src="{{ image | relative_url }}" alt="Gallery image">
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+</article>

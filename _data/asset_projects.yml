@@ -1,0 +1,840 @@
+---
+- id: meal_plan_discord_bot
+  title: Meal Plan Discord Bot
+  subtitle: ''
+  description: Calls South Village Dining Hall API and outputs the daily menu in a
+    discord bot
+  date: '2024-10-10'
+  languages:
+  - Python
+  field: []
+  tech:
+  - Linux
+  progress: Finished
+  association: Hobby
+  thumbnail: "/assets/projects/meal_plan_discord_bot/thumbnail.png"
+  gallery:
+  - "/assets/projects/meal_plan_discord_bot/gallery/2.png"
+  - "/assets/projects/meal_plan_discord_bot/gallery/1.png"
+  folder: meal_plan_discord_bot
+- id: mappingx
+  title: Mapping X
+  subtitle: 1st Place Overall
+  description: Draw a rectangle on a map and an STL mesh will be generated from DEM
+    and/or SWOT data taken from open-source NASA Earthview data
+  date: '2024-10-06'
+  languages:
+  - Python
+  - JavaScript
+  field:
+  - Web Development
+  tech:
+  - React
+  - Linux
+  progress: Finished
+  association: Hackathon
+  thumbnail: "/assets/projects/mappingx/thumbnail.png"
+  gallery:
+  - "/assets/projects/mappingx/gallery/4.png"
+  - "/assets/projects/mappingx/gallery/2.png"
+  - "/assets/projects/mappingx/gallery/3.png"
+  - "/assets/projects/mappingx/gallery/1.png"
+  folder: mappingx
+- id: face_tracking_robot
+  title: Face Tracking Robot
+  subtitle: ''
+  description: A 2-axis (yaw/pitch) face tracking robot powered by a Luxonis Oak-D
+    Lite and 2 Micro Servo Motors using Python, Flask, DepthAI, OpenCV, and Raspbery
+    Pi
+  date: '2024-10-02'
+  languages:
+  - Python
+  field:
+  - AI/ML
+  - Robotics
+  tech:
+  - Fusion360
+  - Linux
+  progress: Finished
+  association: Hobby
+  thumbnail: "/assets/projects/face_tracking_robot/thumbnail.png"
+  gallery:
+  - "/assets/projects/face_tracking_robot/gallery/IMG_4192.JPG"
+  - "/assets/projects/face_tracking_robot/gallery/IMG_4232.jpg"
+  - "/assets/projects/face_tracking_robot/gallery/IMG_4246.JPG"
+  folder: face_tracking_robot
+- id: connect_py
+  title: connect.py
+  subtitle: Hack The North 2024 submission
+  description: Secure remote access to a Jetson Nano without opening any ports in
+    an air-gapped environment
+  date: '2024-09-15'
+  languages:
+  - C
+  - Python
+  field:
+  - Cybersecurity
+  - IoT/Embedded
+  - Networking
+  tech:
+  - Docker
+  - Linux
+  progress: Finished
+  association: Hobby
+  thumbnail: "/assets/projects/connect_py/thumbnail.png"
+  gallery:
+  - "/assets/projects/connect_py/gallery/thumbnail.png"
+  - "/assets/projects/connect_py/gallery/4.png"
+  - "/assets/projects/connect_py/gallery/5.png"
+  - "/assets/projects/connect_py/gallery/2.png"
+  - "/assets/projects/connect_py/gallery/3.png"
+  folder: connect_py
+- id: custom_inhaler_case
+  title: Custom Inhaler Case
+  subtitle: ''
+  description: I designed and printed my own case for my asthma inhaler. It was fully
+    designed by myself and I used 6x2mm magnets to hold the case together.
+  date: '2024-09-06'
+  languages: []
+  field:
+  - 3D Printing
+  tech:
+  - Fusion 360
+  progress: Finished
+  association: Hobby
+  thumbnail: "/assets/projects/custom_inhaler_case/thumbnail.png"
+  gallery:
+  - "/assets/projects/custom_inhaler_case/gallery/IMG_3783.JPG"
+  - "/assets/projects/custom_inhaler_case/gallery/IMG_3797.JPG"
+  - "/assets/projects/custom_inhaler_case/gallery/IMG_3782.JPG"
+  - "/assets/projects/custom_inhaler_case/gallery/IMG_3781.JPG"
+  - "/assets/projects/custom_inhaler_case/gallery/IMG_3798.JPG"
+  - "/assets/projects/custom_inhaler_case/gallery/IMG_3799.JPG"
+  - "/assets/projects/custom_inhaler_case/gallery/image.PNG"
+  folder: custom_inhaler_case
+- id: jeremymark_ca
+  title: jeremymark.ca
+  subtitle: ''
+  description: Portfolio page for Jeremy Mark. Built in React, Tailwind and hosted
+    on a VPS
+  date: '2024-09-05'
+  languages:
+  - HTML/CSS
+  - JavaScript
+  field:
+  - Web Development
+  tech:
+  - Docker
+  - Figma
+  - Linux
+  - Node.js
+  - React
+  progress: In-Progress
+  association: Hobby
+  thumbnail: "/assets/projects/jeremymark_ca/thumbnail.png"
+  gallery:
+  - "/assets/projects/jeremymark_ca/gallery/thumbnail.png"
+  - "/assets/projects/jeremymark_ca/gallery/4.png"
+  - "/assets/projects/jeremymark_ca/gallery/5.png"
+  - "/assets/projects/jeremymark_ca/gallery/2.png"
+  - "/assets/projects/jeremymark_ca/gallery/3.png"
+  - "/assets/projects/jeremymark_ca/gallery/1.png"
+  folder: jeremymark_ca
+- id: simple_garbage_holder
+  title: Simple Garbage Holder
+  subtitle: ''
+  description: A simple model to hold my small garbage plastic bags near our kitchen
+    sink
+  date: '2024-08-23'
+  languages: []
+  field:
+  - 3D Printing
+  tech:
+  - Fusion360
+  progress: Finished
+  association: Hobby
+  thumbnail: "/assets/projects/simple_garbage_holder/thumbnail.png"
+  gallery:
+  - "/assets/projects/simple_garbage_holder/gallery/4.png"
+  - "/assets/projects/simple_garbage_holder/gallery/5.JPG"
+  - "/assets/projects/simple_garbage_holder/gallery/2.png"
+  - "/assets/projects/simple_garbage_holder/gallery/3.png"
+  - "/assets/projects/simple_garbage_holder/gallery/1.png"
+  folder: simple_garbage_holder
+- id: codecraft
+  title: codecraft.io
+  subtitle: ''
+  description: Ignition Hacks 2024; AI assisted coding learning platform
+  date: '2024-08-18'
+  languages:
+  - C
+  - HTML/CSS
+  - JavaScript
+  - Python
+  field:
+  - AI/ML
+  - DevOps
+  - Web Development
+  tech:
+  - Docker
+  - Node.js
+  - React
+  progress: Finished
+  association: Hackathon
+  thumbnail: "/assets/projects/codecraft/thumbnail.png"
+  gallery:
+  - "/assets/projects/codecraft/gallery/ai-chat-bot.jpg"
+  - "/assets/projects/codecraft/gallery/debugging.jpg"
+  - "/assets/projects/codecraft/gallery/questions.jpg"
+  - "/assets/projects/codecraft/gallery/thumbnail.png"
+  - "/assets/projects/codecraft/gallery/image.png"
+  folder: codecraft
+- id: creality_k1_mods
+  title: Creality K1 Mods
+  subtitle: ''
+  description: 18 mods that I personally use for my Creality K1 3D printer. Some mods
+    are custom made by me and some mods are downloaded from Printables.
+  date: '2024-07-23'
+  languages: []
+  field:
+  - 3D Printing
+  tech:
+  - Fusion360
+  progress: Finished
+  association: Hobby
+  thumbnail: "/assets/projects/creality_k1_mods/thumbnail.png"
+  gallery:
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3657.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3656.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3668.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3654.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3655.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3669.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3652.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3653.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3663.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3661.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3674.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3660.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3664.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3670.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3658.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3659.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3671.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3665.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3673.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3667.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3666.JPG"
+  - "/assets/projects/creality_k1_mods/gallery/IMG_3672.JPG"
+  folder: creality_k1_mods
+- id: weeklywardrobe
+  title: WeekyWardrobe
+  subtitle: ''
+  description: HawkHacks 2024 Submission; demo clothing platform for weekly outfits
+  date: '2024-05-19'
+  languages:
+  - HTML/CSS
+  - JavaScript
+  - Python
+  field:
+  - Blockchain
+  - DevOps
+  - Web Development
+  tech:
+  - Docker
+  - Linux
+  - Node.js
+  - React
+  progress: Finished
+  association: Hackathon
+  thumbnail: "/assets/projects/weeklywardrobe/thumbnail.png"
+  gallery:
+  - "/assets/projects/weeklywardrobe/gallery/thumbnail.png"
+  - "/assets/projects/weeklywardrobe/gallery/4.png"
+  - "/assets/projects/weeklywardrobe/gallery/5.png"
+  - "/assets/projects/weeklywardrobe/gallery/6.png"
+  - "/assets/projects/weeklywardrobe/gallery/2.png"
+  - "/assets/projects/weeklywardrobe/gallery/3.png"
+  - "/assets/projects/weeklywardrobe/gallery/1.png"
+  folder: weeklywardrobe
+- id: supercoolflights
+  title: SuperCoolFlights
+  subtitle: ''
+  description: SOFE 3980U Final; Flight booking web application
+  date: '2024-04-02'
+  languages:
+  - HTML/CSS
+  - JavaScript
+  field:
+  - DevOps
+  - Web Development
+  tech:
+  - Docker
+  - Linux
+  - Node.js
+  progress: Finished
+  association: Ontario Tech
+  thumbnail: "/assets/projects/supercoolflights/thumbnail.png"
+  gallery:
+  - "/assets/projects/supercoolflights/gallery/8.png"
+  - "/assets/projects/supercoolflights/gallery/11.png"
+  - "/assets/projects/supercoolflights/gallery/10.png"
+  - "/assets/projects/supercoolflights/gallery/thumbnail.png"
+  - "/assets/projects/supercoolflights/gallery/4.png"
+  - "/assets/projects/supercoolflights/gallery/5.png"
+  - "/assets/projects/supercoolflights/gallery/7.png"
+  - "/assets/projects/supercoolflights/gallery/6.png"
+  - "/assets/projects/supercoolflights/gallery/2.png"
+  - "/assets/projects/supercoolflights/gallery/3.png"
+  - "/assets/projects/supercoolflights/gallery/1.png"
+  folder: supercoolflights
+- id: qt_atsign_plant
+  title: Qt/Atsign Plant
+  subtitle: CES 2024 Booth Demo
+  description: Joint IoT demo with Qt and Atsign demonstrating secure plant IoT monitoring
+  date: '2024-01-10'
+  languages:
+  - Python
+  field:
+  - 3D Printing
+  - IoT/Embedded
+  - Robotics
+  tech:
+  - Fusion360
+  - Linux
+  progress: Finished
+  association: Atsign
+  thumbnail: "/assets/projects/qt_atsign_plant/thumbnail.png"
+  gallery:
+  - "/assets/projects/qt_atsign_plant/gallery/thumbnail.png"
+  - "/assets/projects/qt_atsign_plant/gallery/4.png"
+  - "/assets/projects/qt_atsign_plant/gallery/2.png"
+  - "/assets/projects/qt_atsign_plant/gallery/3.png"
+  - "/assets/projects/qt_atsign_plant/gallery/1.png"
+  folder: qt_atsign_plant
+- id: supercooljobs
+  title: SuperCoolJobs
+  subtitle: ''
+  description: SOFE 3700U Final; Job recruitment web application
+  date: '2023-11-23'
+  languages:
+  - HTML/CSS
+  - JavaScript
+  - MySQL
+  field:
+  - Web Development
+  tech:
+  - Docker
+  - Linux
+  - Node.js
+  - React
+  progress: Finished
+  association: Ontario Tech
+  thumbnail: "/assets/projects/supercooljobs/thumbnail.png"
+  gallery:
+  - "/assets/projects/supercooljobs/gallery/4.png"
+  - "/assets/projects/supercooljobs/gallery/5.png"
+  - "/assets/projects/supercooljobs/gallery/6.png"
+  - "/assets/projects/supercooljobs/gallery/2.png"
+  - "/assets/projects/supercooljobs/gallery/3.png"
+  - "/assets/projects/supercooljobs/gallery/1.png"
+  folder: supercooljobs
+- id: climatecrusaders
+  title: Climate Crusaders
+  subtitle: 3rd Place & People's Choice Award
+  description: NASA Space Apps 2023 Submission; Python game using NASA Data API
+  date: '2023-09-08'
+  languages:
+  - Python
+  field: []
+  tech: []
+  progress: Finished
+  association: Hackathon
+  thumbnail: "/assets/projects/climatecrusaders/thumbnail.png"
+  gallery:
+  - "/assets/projects/climatecrusaders/gallery/2.png"
+  - "/assets/projects/climatecrusaders/gallery/3.png"
+  - "/assets/projects/climatecrusaders/gallery/1.png"
+  folder: climatecrusaders
+- id: at_pico_w
+  title: at_pico_w
+  subtitle: ''
+  description: atProtocol implementation re-written in Micropython for Raspberry Pi
+    Pico W
+  date: '2023-06-20'
+  languages:
+  - Micropython
+  field:
+  - Cryptography
+  - Cybersecurity
+  - IoT/Embedded
+  - Networking
+  tech: []
+  progress: Finished
+  association: Atsign
+  thumbnail: "/assets/projects/at_pico_w/thumbnail.png"
+  gallery: []
+  folder: at_pico_w
+- id: cleanchoice
+  title: CleanChoice
+  subtitle: 2nd Place and Best UI/UX Award
+  description: Schulich Hacks 2023
+  date: '2023-04-29'
+  languages:
+  - JavaScript
+  field:
+  - App Development
+  tech:
+  - Node.js
+  progress: Finished
+  association: Hackathon
+  thumbnail: "/assets/projects/cleanchoice/thumbnail.png"
+  gallery:
+  - "/assets/projects/cleanchoice/gallery/8.png"
+  - "/assets/projects/cleanchoice/gallery/9.png"
+  - "/assets/projects/cleanchoice/gallery/14.png"
+  - "/assets/projects/cleanchoice/gallery/15.png"
+  - "/assets/projects/cleanchoice/gallery/17.png"
+  - "/assets/projects/cleanchoice/gallery/16.png"
+  - "/assets/projects/cleanchoice/gallery/12.png"
+  - "/assets/projects/cleanchoice/gallery/13.png"
+  - "/assets/projects/cleanchoice/gallery/11.png"
+  - "/assets/projects/cleanchoice/gallery/10.png"
+  - "/assets/projects/cleanchoice/gallery/21.png"
+  - "/assets/projects/cleanchoice/gallery/20.png"
+  - "/assets/projects/cleanchoice/gallery/22.png"
+  - "/assets/projects/cleanchoice/gallery/18.png"
+  - "/assets/projects/cleanchoice/gallery/19.png"
+  - "/assets/projects/cleanchoice/gallery/4.png"
+  - "/assets/projects/cleanchoice/gallery/5.png"
+  - "/assets/projects/cleanchoice/gallery/7.png"
+  - "/assets/projects/cleanchoice/gallery/6.png"
+  - "/assets/projects/cleanchoice/gallery/2.png"
+  - "/assets/projects/cleanchoice/gallery/3.png"
+  - "/assets/projects/cleanchoice/gallery/1.png"
+  folder: cleanchoice
+- id: at_esp32
+  title: at_esp32
+  subtitle: ''
+  description: atProtocol implementation re-written in C++ for ESP32 Arduino
+  date: '2023-04-26'
+  languages:
+  - C++
+  field:
+  - Cryptography
+  - Cybersecurity
+  - IoT/Embedded
+  - Networking
+  tech:
+  - Espressif (ESP-IDF)
+  progress: Finished
+  association: Atsign
+  thumbnail: "/assets/projects/at_esp32/thumbnail.png"
+  gallery: []
+  folder: at_esp32
+- id: at_java
+  title: at_java
+  subtitle: ''
+  description: atProtocol implementation re-written in Java
+  date: '2023-04-23'
+  languages:
+  - Java
+  field:
+  - Cryptography
+  - Cybersecurity
+  - DevOps
+  - Networking
+  tech: []
+  progress: Finished
+  association: Atsign
+  thumbnail: "/assets/projects/at_java/thumbnail.png"
+  gallery: []
+  folder: at_java
+- id: split
+  title: Split
+  subtitle: ''
+  description: Demo Fest 2023 Submission; Secure distributed computing application
+  date: '2023-03-20'
+  languages:
+  - Java
+  field:
+  - App Development
+  - Networking
+  tech: []
+  progress: Finished
+  association: Hackathon
+  thumbnail: "/assets/projects/split/thumbnail.png"
+  gallery: []
+  folder: split
+- id: at_c
+  title: at_c
+  subtitle: ''
+  description: atProtocol implementation re-written in C for ESP32 and Embedded Devices
+    with SSL and cryptography features
+  date: '2023-02-18'
+  languages:
+  - C
+  field:
+  - Cryptography
+  - Cybersecurity
+  - DevOps
+  - IoT/Embedded
+  - Networking
+  tech:
+  - CMake
+  - Docker
+  - Espressif (ESP-IDF)
+  - Linux
+  progress: In-Progress
+  association: Atsign
+  thumbnail: "/assets/projects/at_c/thumbnail.png"
+  gallery:
+  - "/assets/projects/at_c/gallery/1.png"
+  folder: at_c
+- id: supercooljobs0
+  title: SuperCoolJobs
+  description: SOFE 2800U Final; Job recruitment web application
+  date: '2022-12-05'
+  languages:
+  - HTML/CSS
+  - JavaScript
+  - MySQL
+  field:
+  - Web Development
+  tech:
+  - Node.js
+  - React
+  progress: Finished
+  association: Ontario Tech
+  thumbnail: "/assets/projects/supercooljobs0/thumbnail.png"
+  gallery:
+  - "/assets/projects/supercooljobs0/gallery/2.png"
+  - "/assets/projects/supercooljobs0/gallery/1.png"
+  folder: supercooljobs0
+- id: baileyxtwitch
+  title: Bailey x Twitch
+  subtitle: ''
+  description: IoT plant that is watered by Twitch chat
+  date: '2022-09-22'
+  languages:
+  - JavaScript
+  - Python
+  field:
+  - IoT/Embedded
+  - Robotics
+  tech:
+  - Linux
+  - Node.js
+  progress: Finished
+  association: Hobby
+  thumbnail: "/assets/projects/baileyxtwitch/thumbnail.png"
+  gallery:
+  - "/assets/projects/baileyxtwitch/gallery/2.png"
+  - "/assets/projects/baileyxtwitch/gallery/3.png"
+  - "/assets/projects/baileyxtwitch/gallery/1.png"
+  folder: baileyxtwitch
+- id: instagramclone
+  title: Instagram Clone
+  subtitle: ''
+  description: Visual clone of the Instagram app
+  date: '2022-05-15'
+  languages:
+  - Dart
+  field:
+  - App Development
+  tech:
+  - Flutter
+  progress: Finished
+  association: Hobby
+  thumbnail: "/assets/projects/instagramclone/thumbnail.png"
+  gallery:
+  - "/assets/projects/instagramclone/gallery/1.png"
+  folder: instagramclone
+- id: noports
+  title: noports
+  subtitle: ''
+  description: Establish TCP connections without opening ports
+  date: '2022-05-04'
+  languages:
+  - Dart
+  - C
+  field:
+  - Cybersecurity
+  - DevOps
+  - IoT/Embedded
+  - Networking
+  tech:
+  - CMake
+  - Linux
+  progress: In-Progress
+  association: Atsign
+  thumbnail: "/assets/projects/noports/thumbnail.png"
+  gallery: []
+  folder: noports
+- id: whereto
+  title: WhereTo?
+  subtitle: ''
+  description: CalgaryHacks 2022 Submission; App that helps you optimize time and
+    money on commuting
+  date: '2022-02-20'
+  languages:
+  - JavaScript
+  field:
+  - App Development
+  tech:
+  - Figma
+  - React
+  progress: Finished
+  association: Hackathon
+  thumbnail: "/assets/projects/whereto/thumbnail.png"
+  gallery:
+  - "/assets/projects/whereto/gallery/4.jpg"
+  - "/assets/projects/whereto/gallery/2.jpg"
+  - "/assets/projects/whereto/gallery/3.jpg"
+  - "/assets/projects/whereto/gallery/1.jpg"
+  folder: whereto
+- id: masterchef
+  title: Masterchef
+  subtitle: ''
+  description: UofT Hacks IX Submission; Food tracking with recipe suggestions
+  date: '2022-02-07'
+  languages:
+  - Dart
+  field:
+  - App Development
+  tech:
+  - Flutter
+  progress: Finished
+  association: Hackathon
+  thumbnail: "/assets/projects/masterchef/thumbnail.png"
+  gallery:
+  - "/assets/projects/masterchef/gallery/4.png"
+  - "/assets/projects/masterchef/gallery/5.png"
+  - "/assets/projects/masterchef/gallery/2.png"
+  - "/assets/projects/masterchef/gallery/3.png"
+  - "/assets/projects/masterchef/gallery/1.png"
+  - "/assets/projects/masterchef/gallery/image.png"
+  folder: masterchef
+- id: wikipathfinder
+  title: WikiPathFinder
+  description: Hack The Job 2022 Submission; Uses Distributed Computing to find the
+    shortest path between two Wikipedia articles
+  date: '2022-01-09'
+  languages:
+  - HTML/CSS
+  - JavaScript
+  field:
+  - Web Development
+  tech:
+  - Node.js
+  - React
+  progress: Finished
+  association: Hackathon
+  thumbnail: "/assets/projects/wikipathfinder/thumbnail.png"
+  gallery:
+  - "/assets/projects/wikipathfinder/gallery/2.png"
+  - "/assets/projects/wikipathfinder/gallery/1.png"
+  folder: wikipathfinder
+- id: connect
+  title: Connect
+  subtitle: ''
+  description: Cal Hacks 8.0 Submission; App that helps you connect with others at
+    the same event
+  date: '2021-10-23'
+  languages: []
+  field: []
+  tech:
+  - Figma
+  progress: Finished
+  association: Hackathon
+  thumbnail: "/assets/projects/connect/thumbnail.png"
+  gallery:
+  - "/assets/projects/connect/gallery/8.jpg"
+  - "/assets/projects/connect/gallery/9.jpg"
+  - "/assets/projects/connect/gallery/12.png"
+  - "/assets/projects/connect/gallery/11.png"
+  - "/assets/projects/connect/gallery/10.jpg"
+  - "/assets/projects/connect/gallery/4.jpg"
+  - "/assets/projects/connect/gallery/5.jpg"
+  - "/assets/projects/connect/gallery/7.jpg"
+  - "/assets/projects/connect/gallery/6.jpg"
+  - "/assets/projects/connect/gallery/2.jpg"
+  - "/assets/projects/connect/gallery/3.jpg"
+  - "/assets/projects/connect/gallery/1.jpg"
+  folder: connect
+- id: moneymoneystocksbot
+  title: MoneyMoneyStocksBot
+  subtitle: Best Veteran Hack
+  description: XHacks 2021 Submission; Discord bot that provides stock information
+  date: '2021-08-08'
+  languages:
+  - JavaScript
+  field: []
+  tech:
+  - Node.js
+  progress: Finished
+  association: Hackathon
+  thumbnail: "/assets/projects/moneymoneystocksbot/thumbnail.png"
+  gallery:
+  - "/assets/projects/moneymoneystocksbot/gallery/thumbnail.png"
+  - "/assets/projects/moneymoneystocksbot/gallery/4.jpg"
+  - "/assets/projects/moneymoneystocksbot/gallery/2.jpg"
+  - "/assets/projects/moneymoneystocksbot/gallery/3.jpg"
+  - "/assets/projects/moneymoneystocksbot/gallery/1.jpg"
+  folder: moneymoneystocksbot
+- id: cryptomon
+  title: Cryptomon
+  subtitle: 1st Place Winner
+  description: UW Hacks 2021 Submission; cryptocurrency trading discord game
+  date: '2021-05-16'
+  languages:
+  - Python
+  field:
+  - Blockchain
+  tech: []
+  progress: Finished
+  association: Hackathon
+  thumbnail: "/assets/projects/cryptomon/thumbnail.png"
+  gallery:
+  - "/assets/projects/cryptomon/gallery/8.jpg"
+  - "/assets/projects/cryptomon/gallery/thumbnail.png"
+  - "/assets/projects/cryptomon/gallery/4.jpg"
+  - "/assets/projects/cryptomon/gallery/5.jpg"
+  - "/assets/projects/cryptomon/gallery/7.jpg"
+  - "/assets/projects/cryptomon/gallery/6.jpg"
+  - "/assets/projects/cryptomon/gallery/2.jpg"
+  - "/assets/projects/cryptomon/gallery/3.jpg"
+  - "/assets/projects/cryptomon/gallery/1.jpg"
+  folder: cryptomon
+- id: restart
+  title: Re:Start
+  subtitle: ''
+  description: RU Hacks 2021 Submission; Clock app that optimizes your sleeping to
+    wake you up at the end of a sleep cycle
+  date: '2021-05-02'
+  languages:
+  - HTML/CSS
+  - JavaScript
+  field:
+  - AI/ML
+  - Web Development
+  tech:
+  - Figma
+  - React
+  progress: Finished
+  association: Hackathon
+  thumbnail: "/assets/projects/restart/thumbnail.png"
+  gallery:
+  - "/assets/projects/restart/gallery/4.jpg"
+  - "/assets/projects/restart/gallery/5.jpg"
+  - "/assets/projects/restart/gallery/7.jpg"
+  - "/assets/projects/restart/gallery/6.jpg"
+  - "/assets/projects/restart/gallery/2.jpg"
+  - "/assets/projects/restart/gallery/3.jpg"
+  - "/assets/projects/restart/gallery/1.jpg"
+  folder: restart
+- id: beaverbot
+  title: BeaverBot
+  subtitle: 2nd Place Winner
+  description: Calgary Hacks 2021 Submission; discord bot that connects new students
+    together
+  date: '2021-02-14'
+  languages: []
+  field: []
+  tech:
+  - Node.js
+  progress: Finished
+  association: Hackathon
+  thumbnail: "/assets/projects/beaverbot/thumbnail.png"
+  gallery:
+  - "/assets/projects/beaverbot/gallery/thumbnail.png"
+  - "/assets/projects/beaverbot/gallery/4.png"
+  - "/assets/projects/beaverbot/gallery/2.png"
+  - "/assets/projects/beaverbot/gallery/3.png"
+  - "/assets/projects/beaverbot/gallery/1.png"
+  folder: beaverbot
+- id: frc2020robot
+  title: FRC 2020 Robot
+  subtitle: 6 ball autonomous
+  description: 2020 Robot for FIRST Robotics that never competed due to COVID-19
+  date: '2020-06-23'
+  languages:
+  - Java
+  field:
+  - Robotics
+  tech: []
+  progress: Finished
+  association: High School
+  thumbnail: "/assets/projects/frc2020robot/thumbnail.png"
+  gallery:
+  - "/assets/projects/frc2020robot/gallery/2.png"
+  - "/assets/projects/frc2020robot/gallery/3.png"
+  - "/assets/projects/frc2020robot/gallery/1.png"
+  folder: frc2020robot
+- id: mapimg
+  title: MapImg
+  subtitle: ''
+  description: Converts images to maps items
+  date: '2019-11-19'
+  languages:
+  - Java
+  field: []
+  tech:
+  - Spigot
+  progress: Finished
+  association: Hobby
+  thumbnail: "/assets/projects/mapimg/thumbnail.png"
+  gallery:
+  - "/assets/projects/mapimg/gallery/1.jpeg"
+  folder: mapimg
+- id: frc2019robot
+  title: FRC 2019 Robot
+  subtitle: ''
+  description: 2019 Robot for FIRST Robotics that competed in the 2019 season
+  date: '2019-06-23'
+  languages:
+  - Java
+  field:
+  - Robotics
+  tech: []
+  progress: Finished
+  association: High School
+  thumbnail: "/assets/projects/frc2019robot/thumbnail.png"
+  gallery:
+  - "/assets/projects/frc2019robot/gallery/thumbnail.png"
+  folder: frc2019robot
+- id: mailbox
+  title: MailBox
+  description: Spigot plugin that got 1 donation
+  date: '2019-05-07'
+  languages:
+  - Java
+  field: []
+  tech:
+  - Spigot
+  progress: Finished
+  association: Hobby
+  thumbnail: "/assets/projects/mailbox/thumbnail.png"
+  gallery:
+  - "/assets/projects/mailbox/gallery/2.png"
+  - "/assets/projects/mailbox/gallery/1.png"
+  folder: mailbox
+- id: timber
+  title: Timber
+  subtitle: 2.6k+ Downloads
+  description: Recursively break logs in Minecraft
+  date: '2019-04-27'
+  languages:
+  - Java
+  field: []
+  tech:
+  - Spigot
+  progress: Finished
+  association: Hobby
+  thumbnail: "/assets/projects/timber/thumbnail.png"
+  gallery:
+  - "/assets/projects/timber/gallery/5.png"
+  - "/assets/projects/timber/gallery/3.png"
+  folder: timber
+- id: oec_2025
+  folder: oec_2025

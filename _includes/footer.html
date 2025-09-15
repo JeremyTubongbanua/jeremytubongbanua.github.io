@@ -1,0 +1,24 @@
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+            <div class="social-links">
+                {% if site.github_username %}
+                    <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">
+                        GitHub
+                    </a>
+                {% endif %}
+                {% if site.linkedin_username %}
+                    <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener">
+                        LinkedIn
+                    </a>
+                {% endif %}
+                {% if site.email %}
+                    <a href="mailto:{{ site.email }}">
+                        Email
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</footer>

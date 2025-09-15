@@ -1,0 +1,24 @@
+---
+- id: pytorch
+  title: PyTorch Course
+  subtitle: 52 hour Course
+  description: Currently taking a 52 hour course on PyTorch Machine Learning by Andrei
+    Neagoie
+  issuer: Andrei Neagoie
+  issue_date: ''
+  expiry_date: ''
+  credential_id: ''
+  status: Ongoing
+  thumbnail: "/assets/certifications/pytorch/thumbnail.png"
+  folder: pytorch
+- id: first_aid_2023_2026
+  title: First Aid & CPR/AED Level C
+  subtitle: Canadian Red Cross Certification
+  description: Certified in Standard First Aid and CPR Level C with AED training.
+    Issued in Ontario, Canada.
+  issuer: Canadian Red Cross
+  issue_date: '2023-12-23'
+  expiry_date: '2026-12-25'
+  credential_id: '104653133'
+  thumbnail: "/assets/certifications/first_aid_2023_2026/thumbnail.png"
+  folder: first_aid_2023_2026

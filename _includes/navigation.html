@@ -1,0 +1,20 @@
+<nav class="site-nav">
+    <div class="nav-container">
+        <a href="{{ '/' | relative_url }}" class="site-logo">Jeremy Tubongbanua</a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu">
+            <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
+            <li><a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects' %}class="active"{% endif %}>Projects</a></li>
+            <li><a href="{{ '/experiences/' | relative_url }}" {% if page.url contains '/experiences' %}class="active"{% endif %}>Experiences</a></li>
+            <li><a href="{{ '/awards/' | relative_url }}" {% if page.url contains '/awards' %}class="active"{% endif %}>Awards</a></li>
+            <li><a href="{{ '/certifications/' | relative_url }}" {% if page.url contains '/certifications' %}class="active"{% endif %}>Certifications</a></li>
+            <li><a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact' %}class="active"{% endif %}>Contact</a></li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,48 @@
+---
+layout: default
+---
+<article class="experience-detail">
+    <header class="detail-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.subtitle %}
+            <p class="subtitle">{{ page.subtitle }}</p>
+        {% endif %}
+
+        <div class="detail-meta">
+            {% if page.fromdate %}
+                <span class="duration">
+                    {{ page.fromdate | date: "%B %Y" }} -
+                    {% if page.todate %}
+                        {{ page.todate | date: "%B %Y" }}
+                    {% else %}
+                        Present
+                    {% endif %}
+                </span>
+            {% endif %}
+
+            {% if page.roles %}
+                <div class="roles">
+                    {% for role in page.roles %}
+                        <span class="role-tag">{{ role }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+
+            {% if page.industries %}
+                <div class="industries">
+                    {% for industry in page.industries %}
+                        <span class="industry-tag">{{ industry }}</span>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </header>
+
+    {% if page.thumbnail %}
+        <img src="{{ page.thumbnail | relative_url }}" alt="{{ page.title }}" class="detail-thumbnail">
+    {% endif %}
+
+    <div class="detail-content">
+        {{ content }}
+    </div>
+</article>

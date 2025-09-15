@@ -1,0 +1,127 @@
+---
+layout: page
+title: Experiences
+subtitle: Professional work, volunteer experiences, conferences, and hackathons
+permalink: /experiences/
+---
+
+<div class="experiences-container">
+    {% assign ongoing = "" | split: "" %}
+    {% assign completed = "" | split: "" %}
+
+    {% for exp in site.data.asset_experiences %}
+        {% if exp.todate == nil or exp.todate == "" %}
+            {% assign ongoing = ongoing | push: exp %}
+        {% else %}
+            {% assign completed = completed | push: exp %}
+        {% endif %}
+    {% endfor %}
+
+    {% if ongoing.size > 0 %}
+        <section class="experience-section">
+            <h2>Current Positions</h2>
+            <div class="experiences-list">
+                {% for exp in ongoing %}
+                    <article class="experience-card">
+                        {% if exp.thumbnail %}
+                            <img src="{{ exp.thumbnail | relative_url }}" alt="{{ exp.title }}" class="exp-thumbnail">
+                        {% endif %}
+
+                        <div class="exp-content">
+                            <h3 class="exp-title">
+                                <a href="{{ '/experiences/' | append: exp.folder | relative_url }}">{{ exp.title }}</a>
+                            </h3>
+
+                            {% if exp.subtitle %}
+                                <p class="exp-subtitle">{{ exp.subtitle }}</p>
+                            {% endif %}
+
+                            {% if exp.description %}
+                                <p class="exp-description">{{ exp.description | truncate: 200 }}</p>
+                            {% endif %}
+
+                            <div class="exp-meta">
+                                <span class="exp-duration">
+                                    {{ exp.fromdate | date: "%B %Y" }} - Present
+                                </span>
+
+                                {% if exp.roles %}
+                                    <div class="exp-roles">
+                                        {% for role in exp.roles %}
+                                            <span class="role-tag">{{ role }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+
+                                {% if exp.industries %}
+                                    <div class="exp-industries">
+                                        {% for industry in exp.industries %}
+                                            <span class="industry-tag">{{ industry }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+
+    {% if completed.size > 0 %}
+        <section class="experience-section">
+            <h2>Past Experiences</h2>
+            <div class="experiences-list">
+                {% for exp in completed %}
+                    <article class="experience-card">
+                        {% if exp.thumbnail %}
+                            <img src="{{ exp.thumbnail | relative_url }}" alt="{{ exp.title }}" class="exp-thumbnail">
+                        {% endif %}
+
+                        <div class="exp-content">
+                            <h3 class="exp-title">
+                                <a href="{{ '/experiences/' | append: exp.folder | relative_url }}">{{ exp.title }}</a>
+                            </h3>
+
+                            {% if exp.subtitle %}
+                                <p class="exp-subtitle">{{ exp.subtitle }}</p>
+                            {% endif %}
+
+                            {% if exp.description %}
+                                <p class="exp-description">{{ exp.description | truncate: 200 }}</p>
+                            {% endif %}
+
+                            <div class="exp-meta">
+                                <span class="exp-duration">
+                                    {% if exp.fromdate == exp.todate %}
+                                        {{ exp.todate | date: "%B %d, %Y" }}
+                                    {% elsif exp.fromdate %}
+                                        {{ exp.fromdate | date: "%B %Y" }} - {{ exp.todate | date: "%B %Y" }}
+                                    {% else %}
+                                        {{ exp.todate | date: "%B %d, %Y" }}
+                                    {% endif %}
+                                </span>
+
+                                {% if exp.roles %}
+                                    <div class="exp-roles">
+                                        {% for role in exp.roles %}
+                                            <span class="role-tag">{{ role }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+
+                                {% if exp.industries %}
+                                    <div class="exp-industries">
+                                        {% for industry in exp.industries %}
+                                            <span class="industry-tag">{{ industry }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+</div>

@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<article class="certification-detail">
+    <header class="detail-header">
+        <h1>{{ page.title }}</h1>
+        {% if page.issuer %}
+            <p class="issuer">Issued by {{ page.issuer }}</p>
+        {% endif %}
+
+        <div class="detail-meta">
+            {% if page.issue_date %}
+                <span class="issue-date">Issued: {{ page.issue_date | date: "%B %Y" }}</span>
+            {% endif %}
+
+            {% if page.expiry_date %}
+                <span class="expiry-date">Expires: {{ page.expiry_date | date: "%B %Y" }}</span>
+            {% endif %}
+
+            {% if page.credential_id %}
+                <span class="credential-id">ID: {{ page.credential_id }}</span>
+            {% endif %}
+        </div>
+    </header>
+
+    {% if page.thumbnail %}
+        <img src="{{ page.thumbnail | relative_url }}" alt="{{ page.title }}" class="detail-thumbnail">
+    {% endif %}
+
+    <div class="detail-content">
+        {{ content }}
+    </div>
+
+    {% if page.verify_url %}
+        <div class="certification-verify">
+            <a href="{{ page.verify_url }}" target="_blank" rel="noopener" class="btn btn-primary">
+                Verify Credential →
+            </a>
+        </div>
+    {% endif %}
+</article>

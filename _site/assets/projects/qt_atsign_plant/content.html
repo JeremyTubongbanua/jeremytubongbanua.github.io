@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qt/Atsign Plant Demo | Jeremy Tubongbanua</title>
+    <meta name="description" content="Personal portfolio website showcasing projects, experiences, awards, and certifications in software engineering, IoT, embedded systems, and robotics.">
+    <link rel="stylesheet" href="/css/main.css">
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jeremy Tubongbanua" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Qt/Atsign Plant Demo | Jeremy Tubongbanua</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Qt/Atsign Plant Demo" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Personal portfolio website showcasing projects, experiences, awards, and certifications in software engineering, IoT, embedded systems, and robotics." />
+<meta property="og:description" content="Personal portfolio website showcasing projects, experiences, awards, and certifications in software engineering, IoT, embedded systems, and robotics." />
+<link rel="canonical" href="http://localhost:4000/assets/projects/qt_atsign_plant/content.html" />
+<meta property="og:url" content="http://localhost:4000/assets/projects/qt_atsign_plant/content.html" />
+<meta property="og:site_name" content="Jeremy Tubongbanua" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Qt/Atsign Plant Demo" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"Personal portfolio website showcasing projects, experiences, awards, and certifications in software engineering, IoT, embedded systems, and robotics.","headline":"Qt/Atsign Plant Demo","url":"http://localhost:4000/assets/projects/qt_atsign_plant/content.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+    <nav class="site-nav">
+    <div class="nav-container">
+        <a href="/" class="site-logo">Jeremy Tubongbanua</a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu">
+            <li><a href="/" >Home</a></li>
+            <li><a href="/projects/" class="active">Projects</a></li>
+            <li><a href="/experiences/" >Experiences</a></li>
+            <li><a href="/awards/" >Awards</a></li>
+            <li><a href="/certifications/" >Certifications</a></li>
+            <li><a href="/contact/" >Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <main class="main-content">
+        <div class="page-header">
+    <h1 class="page-title">Qt/Atsign Plant Demo</h1>
+    
+</div>
+
+<div class="page-content">
+    <h1 id="qtatsign-plant-demo">Qt/Atsign Plant Demo</h1>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/JeremyTubongbanua/at_demos/tree/trunk/demos/qt_atsign_plant_demo">Source Code GitHub</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.linkedin.com/posts/atsigncompany_cybersecurity-remoteaccess-security-ugcPost-7180945780306841601-PsNL?utm_source=share&amp;utm_medium=member_desktop">Atsign LinkedIn Post</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.youtube.com/watch?v=2cHUCFewl0I">Video Demo at CES 2024</a></p>
+  </li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>This was a joint demo with the Qt Company. The demo was showcased at Qt’s booth at CES 2024 in Las Vegas. I was flown by Atsign to set up the demo at their booth and had the opportunity to present the booth to attendees and executives.</p>
+
+<p>The demo was comprised of two parts:</p>
+
+<ol>
+  <li>The Qt Application written in Python Qt QML</li>
+  <li>Atsign Plant written in Python using at_python</li>
+</ol>
+
+<h2 id="qt-application">Qt Application</h2>
+
+<p>The Qt Application ran on a Raspberry Pi that ran a screen. It was a simple UI that could control/monitor the plant using atSign’s end-to-end encrypted control plane.</p>
+
+<h2 id="atsign-plant">Atsign Plant</h2>
+
+<p>The plant itself was comprised of many physical and software components.</p>
+
+<p>Physically, it was using a 5V DC Water pump motor to pump water from the reservoir to the plant. Sensors like soil moisture and water level sensors were used to measure various metrics of the plant. Other electrical componennts like breadboard, jumper wires, and relays were used.</p>
+
+<p>The special pot was customly designed using Fusion360 and printed in PLA.</p>
+
+<p>As for the software, it was all running on a Raspberry Pi 4 running Raspberry Pi OS. The code was written in Python and used our at_python SDK which is the atProtocol client implementation written in Python. This SDK allowed the Pi to communicate with the Qt application and send end-to-end encrypted messages back and forth. This was how monitoring and control of the plant was done securely.</p>
+
+<h2 id="cad">CAD</h2>
+
+<p><img src="https://i.imgur.com/a0Ktn4c.png" alt="Qt/Atsign physical CAD" /></p>
+
+<p>The above image shows you the final iteration of the plant. The water reservoir sits below the plant pot. Then it is pumped to the plant using the water pump motor.</p>
+
+</div>
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <p>&copy; 2025 Jeremy Tubongbanua. All rights reserved.</p>
+            <div class="social-links">
+                
+                    <a href="https://github.com/JeremyTubongbanua" target="_blank" rel="noopener">
+                        GitHub
+                    </a>
+                
+                
+                    <a href="https://linkedin.com/in/jeremytubongbanua" target="_blank" rel="noopener">
+                        LinkedIn
+                    </a>
+                
+                
+                    <a href="mailto:jeremybanua@gmail.com">
+                        Email
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

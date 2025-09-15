@@ -1,0 +1,101 @@
+---
+- id: adc_figma
+  title: 1st Place - Figma Challenge
+  subtitle: Figma Challenge - Ontario Tech Automated Drive Club
+  description: Won 1st place overall in ADC's Figma Challenge. Designed car dashboard
+    and tablet Figma prototypes for accessible semi-automated vehicles.
+  date: '2025-03-07'
+  placement: 1st Place
+  thumbnail: "/assets/awards/adc_figma/thumbnail.png"
+  folder: adc_figma
+- id: brilliant_catalyst_2025
+  title: Top 9 Finalists
+  subtitle: Brilliant Catalyst Challenge
+  description: Qualified for final pitch, presented to a panel of Lakeridge Health
+    Judges and awarded $325 each for participation.
+  date: '2025-01-31'
+  placement: Top 9 Finalists
+  thumbnail: "/assets/awards/brilliant_catalyst_2025/thumbnail.png"
+  folder: brilliant_catalyst_2025
+- id: oec_2025
+  title: 3rd Place Programming
+  subtitle: Ontario Engineering Competition
+  description: Won 3rd Place in the Programming category in the province at Ontario
+    Engineering Competition Engineering hosted by McMaster's Engineering Society located
+    in Hamilton, Ontario. Won 3rd place out of 14 programming teams.
+  date: '2025-01-26'
+  placement: 3rd Place
+  thumbnail: "/assets/awards/oec_2025/thumbnail.png"
+  folder: oec_2025
+- id: amazon_tour_024
+  title: 1st Place Innovation Challenge
+  subtitle: Amazon Tour - Ontario Tech Career Bus
+  description: Won 1st place out of 4 teams in their 1 hour long innovation challenge.
+    The challenge was to come up with a recommendation algorithm for products on Amazon.
+    Prizes were an amazon-themed wireless charger, mouse, and button pin.
+  date: '2025-01-20'
+  placement: 1st Place
+  thumbnail: "/assets/awards/amazon_tour_024/thumbnail.png"
+  folder: amazon_tour_024
+- id: iec_2024
+  title: 1st Place Programming - IEC 2024
+  description: 1st Place Overall
+  date: '2024-11-03'
+  thumbnail: "/assets/awards/iec_2024/thumbnail.png"
+  folder: iec_2024
+- id: nasa_space_apps_2024
+  title: 1st Place and Global Nominee - NASA Space Apps 2024
+  description: 1st Place Overall
+  date: '2024-10-06'
+  thumbnail: "/assets/awards/nasa_space_apps_2024/thumbnail.png"
+  folder: nasa_space_apps_2024
+- id: smart_cities_2024
+  title: Top 6 Finalists - Smart Cities
+  description: Top 6 finalists among 12 teams. Awarded $2,625 in prizes
+  date: '2024-03-01'
+  thumbnail: "/assets/awards/smart_cities_2024/thumbnail.png"
+  gallery: []
+  folder: smart_cities_2024
+- id: iec_2023
+  title: 1st Place - IEC Consulting
+  description: 1st Place in Consulting & 2nd Place Overall
+  date: '2023-11-05'
+  thumbnail: "/assets/awards/iec_2023/thumbnail.png"
+  gallery: []
+  folder: iec_2023
+- id: nasa_space_apps_2023
+  title: 3rd Place - NASA Space Apps
+  description: 3rd Place Overall & People's Choice Award
+  date: '2023-10-05'
+  thumbnail: "/assets/awards/nasa_space_apps_2023/thumbnail.png"
+  gallery: []
+  folder: nasa_space_apps_2023
+- id: schulich_hacks_2023
+  title: 2nd Place - Schulich Hacks (Calgary)
+  description: 2nd Place Overall & Best UI/UX. Sponsored to attend Schulich Hacks
+    2023 in Calgary in-person, awarded $3000 in prizes
+  date: '2023-04-29'
+  thumbnail: "/assets/awards/schulich_hacks_2023/thumbnail.png"
+  gallery: []
+  folder: schulich_hacks_2023
+- id: calgary_hacks_2021
+  title: 2nd Place - Calgary Hacks 2021
+  description: 2nd Place Overall among 700+ participants. Awarded $750 in prizes
+  date: '2021-07-01'
+  thumbnail: "/assets/awards/calgary_hacks_2021/thumbnail.png"
+  gallery: []
+  folder: calgary_hacks_2021
+- id: xhacks_2021
+  title: Best Veteran Hack - XHacks2021
+  description: Best Veteran Hack
+  date: '2021-07-01'
+  thumbnail: "/assets/awards/xhacks_2021/thumbnail.png"
+  gallery: []
+  folder: xhacks_2021
+- id: uw_blockchain_hackathon_2021
+  title: 1st Place - University of Washington Blockchain Hackathon
+  description: 1st Place Overall among 15 teams. Awarded $750 in prizes.
+  date: '2021-05-16'
+  thumbnail: "/assets/awards/uw_blockchain_hackathon_2021/thumbnail.png"
+  gallery: []
+  folder: uw_blockchain_hackathon_2021

@@ -1,0 +1,50 @@
+---
+layout: page
+title: Awards
+subtitle: Achievements and recognitions from competitions, hackathons, and academic events
+permalink: /awards/
+---
+
+<div class="awards-container">
+    {% assign awards_by_year = site.data.asset_awards | group_by_exp: 'award', 'award.date | date: "%Y"' | reverse %}
+
+    {% for year in awards_by_year %}
+        <section class="year-section">
+            <h2 class="year-header">{{ year.name }}</h2>
+
+            <div class="awards-grid">
+                {% for award in year.items %}
+                    <article class="award-card">
+                        {% if award.thumbnail %}
+                            <img src="{{ award.thumbnail | relative_url }}" alt="{{ award.title }}" class="award-thumbnail">
+                        {% endif %}
+
+                        <div class="award-content">
+                            <h3 class="award-title">
+                                <a href="{{ '/awards/' | append: award.folder | relative_url }}">{{ award.title }}</a>
+                            </h3>
+
+                            {% if award.subtitle %}
+                                <p class="award-subtitle">{{ award.subtitle }}</p>
+                            {% endif %}
+
+                            {% if award.description %}
+                                <p class="award-description">{{ award.description | truncate: 150 }}</p>
+                            {% endif %}
+
+                            <div class="award-meta">
+                                {% if award.date %}
+                                    <span class="award-date">{{ award.date | date: "%B %d, %Y" }}</span>
+                                {% endif %}
+
+                                {% if award.placement %}
+                                    <span class="award-placement">{{ award.placement }}</span>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+    {% endfor %}
+</div>

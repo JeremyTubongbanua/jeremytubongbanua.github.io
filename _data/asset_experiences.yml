@@ -1,0 +1,422 @@
+---
+- id: adc_figma
+  title: Figma Challenge with Automated Drive Club at Ontario Tech
+  subtitle: 1st Place Overall
+  description: Won 1st place overall in ADC's Figma Challenge. Designed car dashboard
+    and tablet Figma prototypes for accessible semi-automated vehicles.
+  fromdate: '2025-03-07'
+  todate: '2025-03-07'
+  roles:
+  - Winner
+  - Designer
+  industries:
+  - Design
+  - Automotive
+  thumbnail: "/assets/experiences/adc_figma/thumbnail.png"
+  folder: adc_figma
+- id: brilliant_catalyst_2025
+  title: Brilliant Catalyst Challenge with Lakeridge Health
+  subtitle: Top 9 out of 18 teams
+  description: Placed top 9 finalists out of 18 teams in Brilliant Catalyst's Pitch
+    Challenge in tackling Lakeridge Health challenges
+  fromdate: '2025-01-23'
+  todate: '2025-01-31'
+  roles:
+  - Finalist
+  - Participant
+  industries:
+  - Healthcare
+  - Innovation
+  folder: brilliant_catalyst_2025
+- id: oec_2025
+  title: Ontario Engineering Competition 2025
+  subtitle: 3rd Place Programming out of 14 teams
+  description: Won 3rd place overall in the province of Ontario in the programming
+    category at the Ontario Engineering Competition of 2025. Competition was located
+    at McMaster University at Hamilton, Ontario, Canada.
+  fromdate: '2025-01-24'
+  todate: '2025-01-26'
+  roles:
+  - Competitor
+  - Winner
+  industries:
+  - Engineering
+  - Programming
+  thumbnail: "/assets/experiences/oec_2025/thumbnail.png"
+  folder: oec_2025
+- id: amazon_tour
+  title: Amazon Toronto Tour
+  subtitle: 1st Place in Innovation Challenge
+  description: Received a tour of the Amazon Tour in Toronto, Ontario, Canada organized
+    by Ontario Tech's Co-op/Career Office! Won 1st place among 3 teams in their innovation
+    challenge involving developing an algorithm related to recommending products given
+    a CSV dataset.
+  fromdate: '2025-01-22'
+  todate: '2025-01-22'
+  roles:
+  - Winner
+  - Participant
+  industries:
+  - Technology
+  - E-commerce
+  folder: amazon_tour
+- id: csa
+  title: Canadian Space Agency Tour
+  subtitle: Longueuille, Quebec, Canada
+  description: Received a tour of the Canadian Space Agency in Longueuille Quebec,
+    Canada
+  fromdate: '2024-12-17'
+  todate: '2024-12-17'
+  roles:
+  - Participant
+  industries:
+  - Space
+  - Technology
+  thumbnail: "/assets/experiences/csa/thumbnail.png"
+  folder: csa
+- id: judge_2024
+  title: Judge
+  subtitle: Judge for Mary Ward FLL Qualifier
+  description: Lead judge for my pod and judged three robotics teams for the day,
+    and also assisted in judge deliberation and score tabulation.
+  fromdate: '2024-11-30'
+  todate: '2024-11-30'
+  roles:
+  - Judge
+  - Volunteer
+  industries:
+  - Robotics
+  - Education
+  thumbnail: "/assets/experiences/judge_2024/thumbnail.png"
+  folder: judge_2024
+- id: iec_2024_programming
+  title: IEC 2024
+  subtitle: 1st Place in Programming
+  description: 1st Place in Programming
+  fromdate: '2024-11-02'
+  todate: '2024-11-03'
+  roles:
+  - ''
+  industries:
+  - Software
+  thumbnail: "/assets/experiences/iec_2024_programming/thumbnail.png"
+  folder: iec_2024_programming
+- id: sector_2024
+  title: SecTor 2024
+  subtitle: ''
+  description: Atsign representative at SecTor 2024
+  fromdate: '2024-10-23'
+  todate: '2024-10-24'
+  roles:
+  - Atsign Engineer
+  industries:
+  - Software
+  thumbnail: "/assets/experiences/sector_2024/thumbnail.png"
+  folder: sector_2024
+- id: space_apps_2024
+  title: NASA Space Apps 2024
+  subtitle: 1st Place Overall
+  description: 1st Place Overall at NASA Space Apps 204
+  fromdate: '2024-10-05'
+  todate: '2024-10-06'
+  roles:
+  - Atsign Engineer
+  industries:
+  - Software
+  thumbnail: "/assets/experiences/space_apps_2024/thumbnail.png"
+  folder: space_apps_2024
+- id: hackthenorth_2024
+  title: HackTheNorth 2024
+  subtitle: ''
+  description: Participated at Canada's largest hackathon, HackTheNorth, in 2024.
+  fromdate: '2024-09-13'
+  todate: '2024-09-15'
+  roles: []
+  industries:
+  - Software
+  thumbnail: "/assets/experiences/hackthenorth_2024/thumbnail.png"
+  folder: hackthenorth_2024
+- id: feas_orientation_volunteer
+  title: FEAS Orientation Volunteer
+  subtitle: ''
+  description: Volunteered as an engineering station leader for engineering orientation
+  fromdate: ''
+  todate: '2024-09-02'
+  roles:
+  - Volunteer
+  industries: []
+  thumbnail: "/assets/experiences/feas_orientation_volunteer/thumbnail.png"
+  folder: feas_orientation_volunteer
+- id: hawkhacks_2024
+  title: HawkHacks 2024
+  subtitle: ''
+  description: Participated in HawkHacks Wilfrid Laurier University hackathon in 2024
+  fromdate: '2024-05-17'
+  todate: '2024-05-19'
+  roles: []
+  industries:
+  - Software
+  thumbnail: "/assets/experiences/hawkhacks_2024/thumbnail.png"
+  folder: hawkhacks_2024
+- id: vp_communications
+  title: VP Communications
+  subtitle: ''
+  description: OTU CS Club
+  fromdate: '2023-04-01'
+  todate: '2024-04-01'
+  roles: []
+  industries:
+  - Software
+  thumbnail: "/assets/experiences/vp_communications/thumbnail.png"
+  folder: vp_communications
+- id: smart_cities_finalists
+  title: Smart Cities Finalists
+  subtitle: ''
+  description: Top 6 finalists in Smart Cities 2024 competition. Received $525 for
+    participation
+  fromdate: '2024-03-01'
+  todate: '2024-03-29'
+  roles: []
+  industries:
+  - Software
+  thumbnail: "/assets/experiences/smart_cities_finalists/thumbnail.png"
+  folder: smart_cities_finalists
+- id: innovation_project_judge
+  title: Innovation Project Provincial Judge
+  subtitle: ''
+  description: Provincials Judge for FLL Ontario East Provincials at Durham College
+    for the Innovation Project category
+  fromdate: ''
+  todate: '2024-01-21'
+  roles:
+  - Volunteer
+  industries:
+  - Robotics
+  thumbnail: "/assets/experiences/innovation_project_judge/thumbnail.png"
+  folder: innovation_project_judge
+- id: core_values_judge
+  title: Core Values Provincial Judge
+  subtitle: ''
+  description: Provincials Judge for FLL Ontario West Provincials at Durham College
+    for the Core Values category
+  fromdate: ''
+  todate: '2024-01-20'
+  roles:
+  - Volunteer
+  industries:
+  - Robotics
+  thumbnail: "/assets/experiences/core_values_judge/thumbnail.png"
+  gallery: []
+  folder: core_values_judge
+- id: ces_2024
+  title: CES 2024
+  subtitle: ''
+  description: Atsign representative at CES 2024 Held joint partnership demo with
+    Qt
+  fromdate: '2024-01-09'
+  todate: '2024-01-12'
+  roles:
+  - Atsign Engineer
+  industries:
+  - Software
+  thumbnail: "/assets/experiences/ces_2024/thumbnail.png"
+  gallery: []
+  folder: ces_2024
+- id: judgeadvisor0
+  title: Judge Advisor
+  subtitle: ''
+  description: Judge Advisor for Mary Ward FLL Qualifier
+  fromdate: ''
+  todate: '2023-12-02'
+  roles:
+  - Volunteer
+  industries:
+  - Robotics
+  thumbnail: "/assets/experiences/judgeadvisor0/thumbnail.png"
+  folder: judgeadvisor0
+- id: iec_consulting_1st_place
+  title: 1st Place IEC Consulting
+  subtitle: 1st place
+  description: 1st Place in Internal Engineering Competition in the Consulting Category,
+    hosted by EngSoc
+  fromdate: ''
+  todate: '2023-11-05'
+  roles: []
+  industries: []
+  thumbnail: "/assets/experiences/iec_consulting_1st_place/thumbnail.png"
+  folder: iec_consulting_1st_place
+- id: space_apps_2023
+  title: '3rd Place & People''s Choice Award '
+  subtitle: ''
+  description: Placed 3rd and received the People's Choice Award at NASA Space Apps
+    Hackathon 2023 Oshawa
+  fromdate: '2023-10-07'
+  todate: '2023-10-08'
+  roles: []
+  industries:
+  - Software
+  thumbnail: "/assets/experiences/space_apps_2023/thumbnail.png"
+  folder: space_apps_2023
+- id: cpp_north_lightning_talk
+  title: Cpp North Lightning Talk & Volunteer
+  subtitle: ''
+  description: Presented my own lightning talk on my experiences with carpal tunnel
+    syndrome
+  fromdate: ''
+  todate: '2023-07-15'
+  roles:
+  - Volunteer
+  industries:
+  - Software
+  thumbnail: "/assets/experiences/cpp_north_lightning_talk/thumbnail.png"
+  folder: cpp_north_lightning_talk
+- id: sensors_converge_2023
+  title: Sensors Converge 2023
+  subtitle: Atsign representative at Sensors Converge 2023 in San Francisco
+  description: Represented Atsign at Sensors Converge 2023 in San Francisco, showcasing
+    secure IoT edge communication to industry professionals.
+  fromdate: '2023-06-19'
+  todate: '2023-06-21'
+  roles:
+  - Representative
+  - Presenter
+  industries:
+  - IoT
+  - Technology
+  thumbnail: "/assets/experiences/sensors_converge_2023/thumbnail.png"
+  folder: sensors_converge_2023
+- id: schulich_hacks_2023
+  title: 2nd Place & Best UI/UX
+  subtitle: ''
+  description: Placed 2nd overall and received the best UI/UX award at Schulich Hacks
+    2023 in Calgary, Alberta (in-person)
+  fromdate: '2023-04-27'
+  todate: '2023-04-29'
+  roles: []
+  industries:
+  - Software
+  thumbnail: "/assets/experiences/schulich_hacks_2023/thumbnail.png"
+  folder: schulich_hacks_2023
+- id: provincial_judge
+  title: Provincial Judge
+  subtitle: ''
+  description: Provincial Level Judge for FTC at Centennial College
+  fromdate: ''
+  todate: '2023-02-26'
+  roles:
+  - Volunteer
+  industries:
+  - Robotics
+  thumbnail: "/assets/experiences/provincial_judge/thumbnail.png"
+  folder: provincial_judge
+- id: core_values_judge_2023_2
+  title: Core Values Provincials Judge
+  subtitle: ''
+  description: Provincials Judge for FLL Ontario East Provincials at Durham College
+    for the Core Values category
+  fromdate: ''
+  todate: '2023-01-14'
+  roles:
+  - Volunteer
+  industries:
+  - Robotics
+  thumbnail: "/assets/experiences/core_values_judge_2023_2/thumbnail.png"
+  folder: core_values_judge_2023_2
+- id: core_values_judge_2023
+  title: Core Values Provincial Judge
+  subtitle: ''
+  description: Provincials Judge for FLL Ontario West Provincials at Durham College
+    for the Core Values category
+  fromdate: ''
+  todate: '2023-01-13'
+  roles:
+  - Volunteer
+  industries:
+  - Robotics
+  thumbnail: "/assets/experiences/core_values_judge_2023/thumbnail.png"
+  gallery: []
+  folder: core_values_judge_2023
+- id: judgeadvisor1
+  title: Judge Advisor
+  subtitle: ''
+  description: Judge Advisor for Mary Ward FLL Qualifier
+  fromdate: ''
+  todate: '2022-11-26'
+  roles:
+  - Volunteer
+  industries:
+  - Robotics
+  thumbnail: "/assets/experiences/judgeadvisor1/thumbnail.png"
+  folder: judgeadvisor1
+- id: team_escort_2019
+  title: Team Escort
+  subtitle: ''
+  description: Team Escort for Mary Ward FLL Qualifier
+  fromdate: ''
+  todate: '2019-12-01'
+  roles:
+  - Volunteer
+  industries:
+  - Robotics
+  thumbnail: "/assets/experiences/team_escort_2019/thumbnail.png"
+  folder: team_escort_2019
+- id: mentor_coach
+  title: Mentor/Coach
+  subtitle: ''
+  description: FLL Mentor for Holy Spirit Catholic School Team
+  fromdate: '2017-09-01'
+  todate: '2019-06-29'
+  roles:
+  - Volunteer
+  industries:
+  - Robotics
+  thumbnail: "/assets/experiences/mentor_coach/thumbnail.png"
+  folder: mentor_coach
+- id: referee_2018
+  title: Referee
+  subtitle: ''
+  description: Refereefor Mary Ward FLL Qualifier
+  fromdate: ''
+  todate: '2018-12-01'
+  roles:
+  - Volunteer
+  industries:
+  - Robotics
+  thumbnail: "/assets/experiences/referee_2018/thumbnail.png"
+  folder: referee_2018
+- id: referee_2017
+  title: Referee
+  subtitle: ''
+  description: Referee for Mary Ward FLL Qualifier
+  fromdate: ''
+  todate: '2017-12-02'
+  roles:
+  - Volunteer
+  industries:
+  - Robotics
+  thumbnail: "/assets/experiences/referee_2017/thumbnail.png"
+  folder: referee_2017
+- id: referee_2016
+  title: Referee
+  subtitle: ''
+  description: Referee for Mary Ward FLL Qualifier
+  fromdate: ''
+  todate: '2016-12-03'
+  roles:
+  - Volunteer
+  industries:
+  - Robotics
+  thumbnail: "/assets/experiences/referee_2016/thumbnail.png"
+  folder: referee_2016
+- id: software_engineer_atsign
+  title: Software Engineer
+  subtitle: ''
+  description: Contracted software engineer at Atsign, previously an intern
+  fromdate: '2022-06-05'
+  todate: ''
+  roles:
+  - Atsign Engineer
+  industries:
+  - Software
+  thumbnail: "/assets/experiences/software_engineer_atsign/thumbnail.png"
+  folder: software_engineer_atsign
