@@ -116,3 +116,11 @@
   thumbnail: "/assets/awards/uw_blockchain_hackathon_2021/thumbnail.png"
   gallery: []
   folder: uw_blockchain_hackathon_2021
+- id: 2025_capstone
+  title: 1st Place Capstone
+  subtitle: Ontario Tech University Engineering Capstone Exhibition
+  description: Won 1st place out of 32 capstone teams with best electrical/computer
+    engineering capstone made over the course of 8 months
+  folder: 2025_capstone
+  date: '2025-04-07'
+  thumbnail: "/assets/awards/2025_capstone/thumbnail.png"

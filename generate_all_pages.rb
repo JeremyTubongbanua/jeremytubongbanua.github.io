@@ -57,13 +57,14 @@ def generate_pages(collection_name, data_file, asset_folder)
     end
 
     # Merge fields to prefer data.yml values, falling back to per-asset metadata
-    merged = (metadata || {}).merge(item || {})
+    # Prefer metadata values over data for display fields when present
+    merged = (item || {}).merge(metadata || {})
 
     # Helper lambdas to check blank/present
     is_blank = ->(v) { v.nil? || (v.respond_to?(:empty?) && v.empty?) }
     is_present = ->(v) { !is_blank.call(v) }
 
-    %w[title subtitle description date languages field tech progress association].each do |key|
+    %w[subtitle description date languages field tech progress association].each do |key|
       item_val = item[key]
       meta_val = metadata[key] rescue nil
       # If the value in data is blank but metadata has a value, backfill from metadata
@@ -71,6 +72,13 @@ def generate_pages(collection_name, data_file, asset_folder)
         item[key] = meta_val
         changed = true
       end
+    end
+
+    # Always sync title from metadata when provided (even if data has a placeholder)
+    meta_title = metadata['title'] rescue nil
+    if is_present.call(meta_title) && item['title'] != meta_title
+      item['title'] = meta_title
+      changed = true
     end
 
     # Ensure data has a thumbnail path if the file exists

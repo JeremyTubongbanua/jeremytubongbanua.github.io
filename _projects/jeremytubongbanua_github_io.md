@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "jeremytubongbanua github io"
+title: "jeremytubongbanua.github.io"
 subtitle: ""
 description: "Portfolio website that you're viewing right now"
 date: 2025-09-15
