@@ -32,3 +32,5 @@ jobs:
         git add _data/*.yml
         git add _projects/*.md _experiences/*.md _awards/*.md _certifications/*.md
         git diff --quiet && git diff --staged --quiet || (git commit -m "Update data files and pages from assets [skip ci]" && git push)
+      env: 
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
