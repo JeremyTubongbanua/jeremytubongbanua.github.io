@@ -2,7 +2,7 @@
 layout: project
 title: "jeremytubongbanua github io"
 subtitle: ""
-description: ""
+description: "Portfolio website that you're viewing right now"
 date: 2025-09-15
 languages: ["HTML", "CSS", "JavaScript", "Ruby"]
 field: ["Web Development"]
