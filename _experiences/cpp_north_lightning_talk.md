@@ -3,7 +3,7 @@ layout: experience
 title: "Cpp North Lightning Talk & Volunteer"
 subtitle: ""
 description: "Presented my own lightning talk on my experiences with carpal tunnel syndrome"
-roles: ["Volunteer"]
+roles: ["Presenter", "Volunteer"]
 industries: ["Software"]
 fromdate: 
 todate: 2023-07-15

@@ -41,6 +41,20 @@ permalink: /awards/
 
                                 {% if award.placement %}
                                     <span class="award-placement">{{ award.placement }}</span>
+                                {% elsif award.title contains "1st Place" or award.title contains "First Place" %}
+                                    <span class="award-placement">1st Place</span>
+                                {% elsif award.title contains "2nd Place" or award.title contains "Second Place" %}
+                                    <span class="award-placement">2nd Place</span>
+                                {% elsif award.title contains "3rd Place" or award.title contains "Third Place" %}
+                                    <span class="award-placement">3rd Place</span>
+                                {% elsif award.title contains "Winner" %}
+                                    <span class="award-placement">Winner</span>
+                                {% elsif award.title contains "Top" %}
+                                    {% assign title_parts = award.title | split: " - " %}
+                                    <span class="award-placement">{{ title_parts[0] }}</span>
+                                {% elsif award.title contains "Best" %}
+                                    {% assign title_parts = award.title | split: " - " %}
+                                    <span class="award-placement">{{ title_parts[0] }}</span>
                                 {% endif %}
                             </div>
                         </div>

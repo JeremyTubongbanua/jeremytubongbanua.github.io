@@ -267,6 +267,7 @@
   fromdate: ''
   todate: '2023-07-15'
   roles:
+  - Presenter
   - Volunteer
   industries:
   - Software
@@ -281,7 +282,6 @@
   todate: '2023-06-21'
   roles:
   - Representative
-  - Presenter
   industries:
   - IoT
   - Technology
