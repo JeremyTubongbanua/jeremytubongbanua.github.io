@@ -21,41 +21,34 @@ permalink: /projects/
             {% if project.folder == 'template' %}
                 {% continue %}
             {% endif %}
-            <article class="project-card"
+            <article class="project-card project-card--stacked"
                      data-languages="{{ project.languages | join: ',' | downcase }}"
                      data-field="{{ project.field | join: ',' | downcase }}">
-
-                {% if project.thumbnail %}
-                    <a href="{{ '/projects/' | append: project.folder | relative_url }}" class="thumbnail-container">
-                        <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}" class="project-thumbnail">
-                        <div class="thumbnail-overlay">
-                            <span class="overlay-text">Click to learn more</span>
+                <a class="project-card__link" href="{{ '/projects/' | append: project.folder | relative_url }}">
+                    <!-- Header above the image -->
+                    <div class="project-card__header">
+                        <div class="header-left">
+                            <h3 class="project-title">{{ project.title }}</h3>
+                            {% assign sub = project.subtitle %}
+                            {% if sub == nil or sub == '' %}
+                                {% assign sub = ' ' %}
+                            {% endif %}
+                            <p class="project-subtitle">{{ sub }}</p>
                         </div>
-                    </a>
-                {% endif %}
-
-                <div class="project-content">
-                    <div class="project-header">
-                        <h3 class="project-title">
-                            <a href="{{ '/projects/' | append: project.folder | relative_url }}">{{ project.title }}</a>
-                        </h3>
-                        {% if project.association %}
-                            <span class="project-association">{{ project.association }}</span>
-                        {% endif %}
+                        <div class="header-right">
+                            {% if project.date %}
+                                <span class="date-badge date-badge--light">{{ project.date | date: "%b %-d, %Y" }}</span>
+                            {% endif %}
+                        </div>
                     </div>
 
-                    {% if project.subtitle %}
-                        <p class="project-subtitle">{{ project.subtitle }}</p>
-                    {% endif %}
-
-                    {% assign desc = project.description %}
-                    {% if desc == nil or desc == '' %}
-                        {% assign desc = 'No description provided.' %}
-                    {% endif %}
-                    <p class="project-description">{{ desc | truncate: 150 }}</p>
-
-                    {% if project.languages or project.field or project.tech %}
-                        <div class="project-tags">
+                    <!-- Image with overlayed badges and hover CTA -->
+                    <div class="project-card__image-wrap">
+                        {% if project.thumbnail %}
+                            <img class="project-card__image" src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}">
+                        {% endif %}
+                        {% if project.languages or project.field or project.tech %}
+                        <div class="project-card__badges">
                             {% for lang in project.languages %}
                                 <span class="lang-tag">{{ lang }}</span>
                             {% endfor %}
@@ -66,20 +59,25 @@ permalink: /projects/
                                 <span class="tech-tag">{{ tech }}</span>
                             {% endfor %}
                         </div>
-                    {% endif %}
-
-                    <div class="project-meta">
-                        {% if project.date %}
-                            <span class="project-date">{{ project.date | date: "%B %-d, %Y" }}</span>
                         {% endif %}
-
-                        {% if project.progress %}
-                            <span class="project-status status-{{ project.progress | downcase | replace: ' ', '-' }}">
-                                {{ project.progress }}
-                            </span>
-                        {% endif %}
+                        <div class="project-card__hover"><span class="overlay-text">Click to learn more</span></div>
                     </div>
-                </div>
+
+                    <!-- Footer below the image: description + status/date -->
+                    <div class="project-card__footer">
+                        <div class="footer-left">
+                            {% assign desc = project.description %}
+                            {% if desc == nil or desc == '' %}
+                                {% assign desc = 'Description coming soon.' %}
+                            {% endif %}
+                            <p class="project-description">{{ desc }}</p>
+                        </div>
+                        <div class="footer-right"></div>
+                    </div>
+                </a>
+                {% if project.progress %}
+                    <span class="project-status project-status--fixed status-{{ project.progress | downcase | replace: ' ', '-' }}">{{ project.progress }}</span>
+                {% endif %}
             </article>
         {% endfor %}
     </div>

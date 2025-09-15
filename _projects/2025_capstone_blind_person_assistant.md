@@ -22,8 +22,4 @@ permalink: /projects/2025_capstone_blind_person_assistant/
 
 <https://www.youtube.com/watch?v=-XyYb4GPD1U>
 
-Capstone Poster
-
-![alt text](image.png)
-
-<https://engineering.ontariotechu.ca/current-students/current-undergraduate/capstone/2025-ecse-capstone-projects.php>
+Official Ontario Tech Website: <https://engineering.ontariotechu.ca/current-students/current-undergraduate/capstone/2025-ecse-capstone-projects.php>
