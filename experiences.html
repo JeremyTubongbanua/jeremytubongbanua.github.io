@@ -25,8 +25,27 @@ permalink: /experiences/
         {% endif %}
     {% endfor %}
 
+    <!-- Jump to navigation -->
+    <div class="jump-to-nav" style="text-align: center; margin-bottom: 3rem; padding: 1.5rem; background: var(--bg-secondary); border-radius: var(--border-radius);">
+        <h3 style="margin-bottom: 1rem; color: var(--text-color);">Jump to Section</h3>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            {% if competition.size > 0 %}
+                <a href="#competition-section" class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">Competition ({{ competition.size }})</a>
+            {% endif %}
+            {% if conference.size > 0 %}
+                <a href="#conference-section" class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">Conference ({{ conference.size }})</a>
+            {% endif %}
+            {% if general.size > 0 %}
+                <a href="#general-section" class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">General ({{ general.size }})</a>
+            {% endif %}
+            {% if robotics.size > 0 %}
+                <a href="#robotics-section" class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">Robotics ({{ robotics.size }})</a>
+            {% endif %}
+        </div>
+    </div>
+
     {% if competition.size > 0 %}
-        <section class="experience-section">
+        <section class="experience-section" id="competition-section">
             <h2>Competition</h2>
             <div class="experiences-list">
                 {% for exp in competition %}
@@ -94,7 +113,7 @@ permalink: /experiences/
     {% endif %}
 
     {% if conference.size > 0 %}
-        <section class="experience-section">
+        <section class="experience-section" id="conference-section">
             <h2>Conference</h2>
             <div class="experiences-list">
                 {% for exp in conference %}
@@ -162,7 +181,7 @@ permalink: /experiences/
     {% endif %}
 
     {% if general.size > 0 %}
-        <section class="experience-section">
+        <section class="experience-section" id="general-section">
             <h2>General</h2>
             <div class="experiences-list">
                 {% for exp in general %}
@@ -230,7 +249,7 @@ permalink: /experiences/
     {% endif %}
 
     {% if robotics.size > 0 %}
-        <section class="experience-section">
+        <section class="experience-section" id="robotics-section">
             <h2>Robotics</h2>
             <div class="experiences-list">
                 {% for exp in robotics %}

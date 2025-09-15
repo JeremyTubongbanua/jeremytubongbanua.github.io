@@ -9,8 +9,18 @@ permalink: /awards/
     {% assign awards_by_year = site.data.asset_awards | group_by_exp: 'award', 'award.date | date: "%Y"' %}
     {% assign sorted_years = awards_by_year | sort: 'name' | reverse %}
 
+    <!-- Jump to navigation -->
+    <div class="jump-to-nav" style="text-align: center; margin-bottom: 3rem; padding: 1.5rem; background: var(--bg-secondary); border-radius: var(--border-radius);">
+        <h3 style="margin-bottom: 1rem; color: var(--text-color);">Jump to Year</h3>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+            {% for year in sorted_years %}
+                <a href="#year-{{ year.name }}" class="btn btn-secondary" style="padding: 0.5rem 1.5rem;">{{ year.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
+
     {% for year in sorted_years %}
-        <section class="year-section">
+        <section class="year-section" id="year-{{ year.name }}">
             <h2 class="year-header">{{ year.name }}</h2>
 
             <div class="awards-grid">

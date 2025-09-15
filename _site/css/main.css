@@ -349,12 +349,19 @@ a:hover {
     margin-top: 2rem;
 }
 
-/* 2-column grids for awards, experiences, and certifications */
+/* 2-column grids for awards and certifications */
 .awards-grid,
-.experiences-list,
 .certifications-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* 3-column grid for experiences */
+.experiences-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 2rem;
 }
