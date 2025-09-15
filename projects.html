@@ -48,9 +48,11 @@ permalink: /projects/
                         <p class="project-subtitle">{{ project.subtitle }}</p>
                     {% endif %}
 
-                    {% if project.description %}
-                        <p class="project-description">{{ project.description | truncate: 150 }}</p>
+                    {% assign desc = project.description %}
+                    {% if desc == nil or desc == '' %}
+                        {% assign desc = 'No description provided.' %}
                     {% endif %}
+                    <p class="project-description">{{ desc | truncate: 150 }}</p>
 
                     {% if project.languages or project.field or project.tech %}
                         <div class="project-tags">

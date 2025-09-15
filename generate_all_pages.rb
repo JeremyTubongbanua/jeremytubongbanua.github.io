@@ -30,13 +30,12 @@ def generate_pages(collection_name, data_file, asset_folder)
         'folder' => slug
       }
     end
-    # Persist updated data back to the YAML file
-    File.write(data_file, data.to_yaml)
-    puts "Added #{missing.size} new #{collection_name} to #{data_file} based on assets"
+    puts "Added #{missing.size} new #{collection_name} to data (pending backfill)"
   end
 
   count = 0
   expected_slugs = []
+  changed = false
   data.each do |item|
     folder = item['folder']
     next unless folder
@@ -58,14 +57,31 @@ def generate_pages(collection_name, data_file, asset_folder)
     end
 
     # Merge fields to prefer data.yml values, falling back to per-asset metadata
-    merged = metadata.merge(item) rescue item
+    merged = (metadata || {}).merge(item || {})
+
+    # Helper lambdas to check blank/present
+    is_blank = ->(v) { v.nil? || (v.respond_to?(:empty?) && v.empty?) }
+    is_present = ->(v) { !is_blank.call(v) }
+
+    %w[title subtitle description date languages field tech progress association].each do |key|
+      item_val = item[key]
+      meta_val = metadata[key] rescue nil
+      # If the value in data is blank but metadata has a value, backfill from metadata
+      if is_blank.call(item_val) && is_present.call(meta_val)
+        item[key] = meta_val
+        changed = true
+      end
+    end
 
     # Ensure data has a thumbnail path if the file exists
     thumb_path = "/#{asset_folder}/#{folder}/thumbnail.png"
     if File.exist?(File.join(asset_folder, folder, 'thumbnail.png'))
       merged['thumbnail'] ||= thumb_path
       # Also backfill into data so listings that read site.data can use it
-      item['thumbnail'] ||= thumb_path
+      if item['thumbnail'].nil? || item['thumbnail'] == ''
+        item['thumbnail'] = thumb_path
+        changed = true
+      end
     end
 
     # Create/update the page
@@ -106,6 +122,17 @@ def generate_pages(collection_name, data_file, asset_folder)
       f.puts content
     end
     count += 1
+  end
+
+  # Remove any template entries from data before save
+  before_size = data.size
+  data.reject! { |i| i['folder'] == 'template' }
+  changed = true if data.size != before_size
+
+  # Persist updated data back to the YAML file if anything changed
+  if changed
+    File.write(data_file, data.to_yaml)
+    puts "Backfilled and saved updates to #{data_file}"
   end
 
   # Prune outdated generated pages that no longer have assets/data
