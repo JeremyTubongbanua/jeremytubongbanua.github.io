@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>at_esp32 | Jeremy Tubongbanua</title>
+    <meta name="description" content="atProtocol implementation re-written in C++ for ESP32 Arduino">
+    <link rel="stylesheet" href="/css/main.css">
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jeremy Tubongbanua" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>at_esp32 | Jeremy Tubongbanua</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="at_esp32" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="atProtocol implementation re-written in C++ for ESP32 Arduino" />
+<meta property="og:description" content="atProtocol implementation re-written in C++ for ESP32 Arduino" />
+<link rel="canonical" href="http://localhost:4000/projects/at_esp32/" />
+<meta property="og:url" content="http://localhost:4000/projects/at_esp32/" />
+<meta property="og:site_name" content="Jeremy Tubongbanua" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-04-26T00:00:00-04:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="at_esp32" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-04-26T00:00:00-04:00","datePublished":"2023-04-26T00:00:00-04:00","description":"atProtocol implementation re-written in C++ for ESP32 Arduino","headline":"at_esp32","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/at_esp32/"},"url":"http://localhost:4000/projects/at_esp32/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+    <nav class="site-nav">
+    <div class="nav-container">
+        <a href="/" class="site-logo">Jeremy Tubongbanua</a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu">
+            <li><a href="/" >Home</a></li>
+            <li><a href="/projects/" class="active">Projects</a></li>
+            <li><a href="/experiences/" >Experiences</a></li>
+            <li><a href="/awards/" >Awards</a></li>
+            <li><a href="/certifications/" >Certifications</a></li>
+            <li><a href="/contact/" >Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <main class="main-content">
+        <article class="project">
+    <header class="project-header">
+        <h1>at_esp32</h1>
+        
+            <p class="subtitle"></p>
+        
+
+        <div class="project-meta">
+            
+                <span class="date">April 26, 2023</span>
+            
+            
+                <div class="languages">
+                    
+                        <span class="language-tag">C++</span>
+                    
+                </div>
+            
+        </div>
+    </header>
+
+    
+        <img src="/assets/projects/at_esp32/thumbnail.png" alt="at_esp32" class="project-thumbnail">
+    
+
+    <div class="project-content">
+        <h1 id="at_esp32">at_esp32</h1>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/JeremyTubongbanua/at_esp32">https://github.com/JeremyTubongbanua/at_esp32</a></p>
+  </li>
+  <li>
+    <p><a href="https://www.youtube.com/playlist?list=PLkZCny-S3rfC93_Xqd_HBkK_dAjDzQ9Et">Video tutorial playlist of at_esp32</a></p>
+  </li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>The SDK for the ESP32 microcontroller written in C++ for Arduino. This SDK allows ESP32 Arduino devices to communicate with their atServers with edge encryption.</p>
+
+<p>I had the opportunity to implement various low-level cryptographic functions that the atProtocol required such as :</p>
+
+<ul>
+  <li>RSA 2048 encrypt/decrypt</li>
+  <li>AES 256 CTR encrypt/decrypt</li>
+  <li>RSA 2048 sign</li>
+  <li>RSA 2048 key importing</li>
+</ul>
+
+<p>and Atclient implementations such as:</p>
+
+<ul>
+  <li>AtClient put</li>
+  <li>AtClient get</li>
+  <li>AtClient delete</li>
+  <li>AtClient pkam authentication</li>
+</ul>
+
+<h2 id="umass-boston-winter-2022">UMass Boston Winter 2022</h2>
+
+<p>This SDK was primarily written so that UMass Boston students could use it in their final CS project. Their final project involved creating a simple actuator/sesnor ESP32 demo using the atPlatform.</p>
+
+<p>They needed an app (written in Flutter or Java) that could send commands or read data from an ESP32 (running at_esp32).</p>
+
+<p>I played a strong role in the development of this SDK and the success of the students who used it. I also had to hold things like workshops and office hours to help students understand how to use the SDK. A video playlist tutorial was also created, which can be viewed <a href="https://www.youtube.com/playlist?list=PLkZCny-S3rfC93_Xqd_HBkK_dAjDzQ9Et">here</a>.</p>
+
+    </div>
+
+    
+        <div class="project-gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                
+                    <img src="/assets/projects/at_esp32/gallery/gallery.json" alt="Gallery image">
+                
+            </div>
+        </div>
+    
+</article>
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <p>&copy; 2025 Jeremy Tubongbanua. All rights reserved.</p>
+            <div class="social-links">
+                
+                    <a href="https://github.com/JeremyTubongbanua" target="_blank" rel="noopener">
+                        GitHub
+                    </a>
+                
+                
+                    <a href="https://linkedin.com/in/jeremytubongbanua" target="_blank" rel="noopener">
+                        LinkedIn
+                    </a>
+                
+                
+                    <a href="mailto:jeremybanua@gmail.com">
+                        Email
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

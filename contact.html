@@ -12,71 +12,38 @@ permalink: /contact/
             Feel free to reach out through any of the channels below.
         </p>
 
-        <div class="contact-methods">
+        <div class="contact-grid">
             <div class="contact-card">
-                <h3>Email</h3>
-                <p>For professional inquiries and opportunities</p>
                 <a href="mailto:{{ site.email }}" class="contact-link">
-                    {{ site.email }}
+                    <img src="{{ '/assets/icons/gmail_logo.png' | relative_url }}" alt="Email" class="contact-icon">
+                    <h3>Email</h3>
+                    <p>{{ site.email }}</p>
                 </a>
             </div>
 
             <div class="contact-card">
-                <h3>GitHub</h3>
-                <p>Check out my open source projects and contributions</p>
                 <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" class="contact-link">
-                    github.com/{{ site.github_username }}
+                    <img src="{{ '/assets/icons/github_logo.png' | relative_url }}" alt="GitHub" class="contact-icon">
+                    <h3>GitHub</h3>
+                    <p>@{{ site.github_username }}</p>
                 </a>
             </div>
 
             <div class="contact-card">
-                <h3>LinkedIn</h3>
-                <p>Connect with me professionally</p>
                 <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener" class="contact-link">
-                    linkedin.com/in/{{ site.linkedin_username }}
+                    <img src="{{ '/assets/icons/linkedin_logo.png' | relative_url }}" alt="LinkedIn" class="contact-icon">
+                    <h3>LinkedIn</h3>
+                    <p>/in/{{ site.linkedin_username }}</p>
                 </a>
             </div>
-        </div>
 
-        <div class="contact-form-section">
-            <h2>Send a Message</h2>
-            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="_replyto" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-
-                <input type="hidden" name="_subject" value="New contact form submission">
-                <input type="text" name="_gotcha" style="display:none">
-
-                <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-            <p class="form-note">
-                <small>Note: You'll need to set up a form handler service like Formspree, Netlify Forms, or similar to process form submissions.</small>
-            </p>
-        </div>
-
-        <div class="resume-section">
-            <h2>Resume</h2>
-            <p>Download my latest resume for a comprehensive overview of my experience and skills.</p>
-            <a href="{{ '/assets/JeremyTubongbanua_Resume.pdf' | relative_url }}" class="btn btn-secondary" target="_blank">
-                Download Resume (PDF)
-            </a>
+            <div class="contact-card">
+                <a href="{{ '/assets/JeremyTubongbanua_Resume.pdf' | relative_url }}" target="_blank" class="contact-link">
+                    <img src="{{ '/assets/icons/resume_icon.png' | relative_url }}" alt="Resume" class="contact-icon">
+                    <h3>Resume</h3>
+                    <p>Download PDF</p>
+                </a>
+            </div>
         </div>
     </div>
 </div>

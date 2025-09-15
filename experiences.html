@@ -42,7 +42,7 @@ permalink: /experiences/
 
                             <div class="exp-meta">
                                 <span class="exp-duration">
-                                    {{ exp.fromdate | date: "%B %Y" }} - Present
+                                    {{ exp.fromdate | date: "%B %-d, %Y" }} - Present
                                 </span>
 
                                 {% if exp.roles %}
@@ -94,11 +94,21 @@ permalink: /experiences/
                             <div class="exp-meta">
                                 <span class="exp-duration">
                                     {% if exp.fromdate == exp.todate %}
-                                        {{ exp.todate | date: "%B %d, %Y" }}
+                                        {{ exp.todate | date: "%B %-d, %Y" }}
                                     {% elsif exp.fromdate %}
-                                        {{ exp.fromdate | date: "%B %Y" }} - {{ exp.todate | date: "%B %Y" }}
+                                        {% assign from_year = exp.fromdate | date: "%Y" %}
+                                        {% assign to_year = exp.todate | date: "%Y" %}
+                                        {% assign from_month = exp.fromdate | date: "%B" %}
+                                        {% assign to_month = exp.todate | date: "%B" %}
+                                        {% if from_year == to_year and from_month == to_month %}
+                                            {{ exp.fromdate | date: "%B %-d" }}-{{ exp.todate | date: "%-d, %Y" }}
+                                        {% elsif from_year == to_year %}
+                                            {{ exp.fromdate | date: "%B %-d" }} - {{ exp.todate | date: "%B %-d, %Y" }}
+                                        {% else %}
+                                            {{ exp.fromdate | date: "%B %-d, %Y" }} - {{ exp.todate | date: "%B %-d, %Y" }}
+                                        {% endif %}
                                     {% else %}
-                                        {{ exp.todate | date: "%B %d, %Y" }}
+                                        {{ exp.todate | date: "%B %-d, %Y" }}
                                     {% endif %}
                                 </span>
 

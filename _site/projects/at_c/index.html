@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>at_c | Jeremy Tubongbanua</title>
+    <meta name="description" content="atProtocol implementation re-written in C for ESP32 and Embedded Devices with SSL and cryptography features">
+    <link rel="stylesheet" href="/css/main.css">
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jeremy Tubongbanua" />
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>at_c | Jeremy Tubongbanua</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="at_c" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="atProtocol implementation re-written in C for ESP32 and Embedded Devices with SSL and cryptography features" />
+<meta property="og:description" content="atProtocol implementation re-written in C for ESP32 and Embedded Devices with SSL and cryptography features" />
+<link rel="canonical" href="http://localhost:4000/projects/at_c/" />
+<meta property="og:url" content="http://localhost:4000/projects/at_c/" />
+<meta property="og:site_name" content="Jeremy Tubongbanua" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-02-18T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="at_c" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-02-18T00:00:00-05:00","datePublished":"2023-02-18T00:00:00-05:00","description":"atProtocol implementation re-written in C for ESP32 and Embedded Devices with SSL and cryptography features","headline":"at_c","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/projects/at_c/"},"url":"http://localhost:4000/projects/at_c/"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+<body>
+    <nav class="site-nav">
+    <div class="nav-container">
+        <a href="/" class="site-logo">Jeremy Tubongbanua</a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-menu">
+            <li><a href="/" >Home</a></li>
+            <li><a href="/projects/" class="active">Projects</a></li>
+            <li><a href="/experiences/" >Experiences</a></li>
+            <li><a href="/awards/" >Awards</a></li>
+            <li><a href="/certifications/" >Certifications</a></li>
+            <li><a href="/contact/" >Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+    <main class="main-content">
+        <article class="project">
+    <header class="project-header">
+        <h1>at_c</h1>
+        
+            <p class="subtitle"></p>
+        
+
+        <div class="project-meta">
+            
+                <span class="date">February 18, 2023</span>
+            
+            
+                <div class="languages">
+                    
+                        <span class="language-tag">C</span>
+                    
+                </div>
+            
+        </div>
+    </header>
+
+    
+        <img src="/assets/projects/at_c/thumbnail.png" alt="at_c" class="project-thumbnail">
+    
+
+    <div class="project-content">
+        <h1 id="at_c">at_c</h1>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li><a href="https://github.com/JeremyTubongbanua/at_c/tree/trunk">https://github.com/JeremyTubongbanua/at_c/tree/trunk</a></li>
+</ul>
+
+<h2 id="description">Description</h2>
+
+<p>at_c is the client implementation of the atProtocol. Kind of like how you need a library to talk the HTTP protocol, you will need an atSDK to communicate in the atProtocol.</p>
+
+<p>Since the atProtocol alone is not inherently useful, a client SDK is needed to do things like edge encryption, server authentication, and encapsulating the protocol in a more user-friendly manner.</p>
+
+<p>This is just one of the few SDKs that I helped implement from scratch. I have also had a hand in implementing at_java, at_pico_w, and at_esp32, which are all atSDKs like at_c.</p>
+
+<p>However, at_c flourished to be a more complete SDK compared to others due to customer attraction and need.</p>
+
+<p>By August 2024, we were able to make our first v0.1.0 beta release.</p>
+
+<h2 id="cryptography-features">Cryptography Features</h2>
+
+<p>I had the opportunity (with the help of a team) to implement low-level cryptographic features using MbedTLS as a dependency:</p>
+
+<ul>
+  <li>RSA 2048 encrypt/decrypt</li>
+  <li>RSA 2048 sign/verify</li>
+  <li>AES 256 CTR encrypt/decrypt</li>
+  <li>AES key generation</li>
+  <li>RSA 2048 key importing</li>
+  <li>SHA 256 hashing</li>
+</ul>
+
+<h2 id="atprotocol-features">atProtocol Features</h2>
+
+<p>I had the opportunity of implementing:</p>
+
+<ul>
+  <li>CRUD operations
+    <ul>
+      <li>Put</li>
+      <li>Get</li>
+      <li>Delete</li>
+    </ul>
+  </li>
+  <li>Events
+    <ul>
+      <li>Notify</li>
+      <li>Monitor</li>
+    </ul>
+  </li>
+  <li>AtKey
+    <ul>
+      <li>metadata</li>
+      <li>to/from string</li>
+    </ul>
+  </li>
+  <li>Authentication
+    <ul>
+      <li>PKAM authentication</li>
+    </ul>
+  </li>
+</ul>
+
+    </div>
+
+    
+        <div class="project-gallery">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                
+                    <img src="/assets/projects/at_c/gallery/1.png" alt="Gallery image">
+                
+                    <img src="/assets/projects/at_c/gallery/gallery.json" alt="Gallery image">
+                
+            </div>
+        </div>
+    
+</article>
+    </main>
+
+    <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <p>&copy; 2025 Jeremy Tubongbanua. All rights reserved.</p>
+            <div class="social-links">
+                
+                    <a href="https://github.com/JeremyTubongbanua" target="_blank" rel="noopener">
+                        GitHub
+                    </a>
+                
+                
+                    <a href="https://linkedin.com/in/jeremytubongbanua" target="_blank" rel="noopener">
+                        LinkedIn
+                    </a>
+                
+                
+                    <a href="mailto:jeremybanua@gmail.com">
+                        Email
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

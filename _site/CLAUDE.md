@@ -26,3 +26,5 @@ Projects should be a grid view of 3 columns
 Experiences 2
 Awards 2
 Certifications 2
+
+Note: if a todate is defined, but a fromdate is not defined, simply display the todate (and assume it was a one day thing).

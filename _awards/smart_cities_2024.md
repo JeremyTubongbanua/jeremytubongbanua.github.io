@@ -1,0 +1,15 @@
+---
+layout: award
+title: "Top 6 Finalists - Smart Cities"
+description: "Top 6 finalists among 12 teams. Awarded $2,625 in prizes"
+date: 2024-03-01
+thumbnail: /assets/awards/smart_cities_2024/thumbnail.png
+gallery: ["/assets/awards/smart_cities_2024/gallery/gallery.json"]
+permalink: /awards/smart_cities_2024/
+---
+
+#
+
+## Links
+
+-
