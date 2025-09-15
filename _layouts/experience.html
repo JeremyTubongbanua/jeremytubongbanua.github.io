@@ -39,7 +39,9 @@ layout: default
     </header>
 
     {% if page.thumbnail %}
-        <img src="{{ page.thumbnail | relative_url }}" alt="{{ page.title }}" class="detail-thumbnail">
+        <div class="detail-thumbnail-container">
+            <img src="{{ page.thumbnail | relative_url }}" alt="{{ page.title }}" class="detail-thumbnail">
+        </div>
     {% endif %}
 
     <div class="detail-content">

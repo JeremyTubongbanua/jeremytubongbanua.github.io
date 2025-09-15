@@ -1,50 +1,4 @@
 ---
-- id: at_c
-  title: at_c
-  subtitle: ''
-  description: atProtocol implementation re-written in C for ESP32 and Embedded Devices
-    with SSL and cryptography features
-  date: '2023-02-18'
-  languages:
-  - C
-  field:
-  - Cryptography
-  - Cybersecurity
-  - DevOps
-  - IoT/Embedded
-  - Networking
-  tech:
-  - CMake
-  - Docker
-  - Espressif (ESP-IDF)
-  - Linux
-  progress: In-Progress
-  association: Atsign
-  thumbnail: "/assets/projects/at_c/thumbnail.png"
-  gallery:
-  - "/assets/projects/at_c/gallery/1.png"
-  folder: at_c
-- id: noports
-  title: noports
-  subtitle: ''
-  description: Establish TCP connections without opening ports
-  date: '2022-05-04'
-  languages:
-  - Dart
-  - C
-  field:
-  - Cybersecurity
-  - DevOps
-  - IoT/Embedded
-  - Networking
-  tech:
-  - CMake
-  - Linux
-  progress: In-Progress
-  association: Atsign
-  thumbnail: "/assets/projects/noports/thumbnail.png"
-  gallery: []
-  folder: noports
 - id: meal_plan_discord_bot
   title: Meal Plan Discord Bot
   subtitle: ''
@@ -158,6 +112,34 @@
   - "/assets/projects/custom_inhaler_case/gallery/IMG_3799.JPG"
   - "/assets/projects/custom_inhaler_case/gallery/image.PNG"
   folder: custom_inhaler_case
+- id: jeremymark_ca
+  title: jeremymark.ca
+  subtitle: ''
+  description: Portfolio page for Jeremy Mark. Built in React, Tailwind and hosted
+    on a VPS
+  date: '2024-09-05'
+  languages:
+  - HTML/CSS
+  - JavaScript
+  field:
+  - Web Development
+  tech:
+  - Docker
+  - Figma
+  - Linux
+  - Node.js
+  - React
+  progress: In-Progress
+  association: Hobby
+  thumbnail: "/assets/projects/jeremymark_ca/thumbnail.png"
+  gallery:
+  - "/assets/projects/jeremymark_ca/gallery/thumbnail.png"
+  - "/assets/projects/jeremymark_ca/gallery/4.png"
+  - "/assets/projects/jeremymark_ca/gallery/5.png"
+  - "/assets/projects/jeremymark_ca/gallery/2.png"
+  - "/assets/projects/jeremymark_ca/gallery/3.png"
+  - "/assets/projects/jeremymark_ca/gallery/1.png"
+  folder: jeremymark_ca
 - id: codecraft
   title: codecraft.io
   subtitle: ''
@@ -355,7 +337,7 @@
   folder: climatecrusaders
 - id: at_pico_w
   title: at_pico_w
-  subtitle: ''
+  subtitle: Atsign Project
   description: atProtocol implementation re-written in Micropython for Raspberry Pi
     Pico W
   date: '2023-06-20'
@@ -412,7 +394,7 @@
   folder: cleanchoice
 - id: at_esp32
   title: at_esp32
-  subtitle: ''
+  subtitle: Atsign Project
   description: atProtocol implementation re-written in C++ for ESP32 Arduino
   date: '2023-04-26'
   languages:
@@ -431,7 +413,7 @@
   folder: at_esp32
 - id: at_java
   title: at_java
-  subtitle: ''
+  subtitle: Atsign Project
   description: atProtocol implementation re-written in Java
   date: '2023-04-23'
   languages:
@@ -463,6 +445,31 @@
   thumbnail: "/assets/projects/split/thumbnail.png"
   gallery: []
   folder: split
+- id: at_c
+  title: at_c
+  subtitle: Atsign Project
+  description: atProtocol implementation re-written in C for ESP32 and Embedded Devices
+    with SSL and cryptography features
+  date: '2023-02-18'
+  languages:
+  - C
+  field:
+  - Cryptography
+  - Cybersecurity
+  - DevOps
+  - IoT/Embedded
+  - Networking
+  tech:
+  - CMake
+  - Docker
+  - Espressif (ESP-IDF)
+  - Linux
+  progress: In-Progress
+  association: Atsign
+  thumbnail: "/assets/projects/at_c/thumbnail.png"
+  gallery:
+  - "/assets/projects/at_c/gallery/1.png"
+  folder: at_c
 - id: supercooljobs0
   title: SuperCoolJobs
   description: SOFE 2800U Final; Job recruitment web application
@@ -522,6 +529,28 @@
   gallery:
   - "/assets/projects/instagramclone/gallery/1.png"
   folder: instagramclone
+- id: noports
+  title: noports
+  subtitle: ''
+  description: Establish TCP connections to devices on the Internet without opening
+    ports on external interfaces
+  date: '2022-05-04'
+  languages:
+  - Dart
+  - C
+  field:
+  - Cybersecurity
+  - DevOps
+  - IoT/Embedded
+  - Networking
+  tech:
+  - CMake
+  - Linux
+  progress: In-Progress
+  association: Atsign
+  thumbnail: "/assets/projects/noports/thumbnail.png"
+  gallery: []
+  folder: noports
 - id: whereto
   title: WhereTo?
   subtitle: ''
@@ -787,3 +816,5 @@
   - "/assets/projects/timber/gallery/5.png"
   - "/assets/projects/timber/gallery/3.png"
   folder: timber
+- id: oec_2025
+  folder: oec_2025

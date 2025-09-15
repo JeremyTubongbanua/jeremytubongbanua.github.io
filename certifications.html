@@ -10,7 +10,12 @@ permalink: /certifications/
         {% for cert in site.data.asset_certifications %}
             <article class="certification-card">
                 {% if cert.thumbnail %}
-                    <img src="{{ cert.thumbnail | relative_url }}" alt="{{ cert.title }}" class="cert-thumbnail">
+                    <a href="{{ '/certifications/' | append: cert.folder | relative_url }}" class="thumbnail-container">
+                        <img src="{{ cert.thumbnail | relative_url }}" alt="{{ cert.title }}" class="cert-thumbnail">
+                        <div class="thumbnail-overlay">
+                            <span class="overlay-text">Click to learn more</span>
+                        </div>
+                    </a>
                 {% endif %}
 
                 <div class="cert-content">

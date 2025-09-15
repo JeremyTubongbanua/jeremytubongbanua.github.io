@@ -2,7 +2,7 @@
 layout: project
 title: "noports"
 subtitle: ""
-description: "Establish TCP connections without opening ports"
+description: "Establish TCP connections to devices on the Internet without opening ports on external interfaces"
 date: 2022-05-04
 languages: ["Dart", "C"]
 field: ["Cybersecurity", "DevOps", "IoT/Embedded", "Networking"]

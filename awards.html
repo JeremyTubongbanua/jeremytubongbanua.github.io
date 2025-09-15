@@ -18,7 +18,12 @@ permalink: /awards/
                 {% for award in sorted_awards %}
                     <article class="award-card">
                         {% if award.thumbnail %}
-                            <img src="{{ award.thumbnail | relative_url }}" alt="{{ award.title }}" class="award-thumbnail">
+                            <a href="{{ '/awards/' | append: award.folder | relative_url }}" class="thumbnail-container">
+                                <img src="{{ award.thumbnail | relative_url }}" alt="{{ award.title }}" class="award-thumbnail">
+                                <div class="thumbnail-overlay">
+                                    <span class="overlay-text">Click to learn more</span>
+                                </div>
+                            </a>
                         {% endif %}
 
                         <div class="award-content">

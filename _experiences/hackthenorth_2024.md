@@ -3,10 +3,9 @@ layout: experience
 title: "HackTheNorth 2024"
 subtitle: ""
 description: "Participated at Canada's largest hackathon, HackTheNorth, in 2024."
-roles: []
-industries: ["Software"]
 fromdate: 2024-09-13
 todate: 2024-09-15
+category: Competition
 thumbnail: /assets/experiences/hackthenorth_2024/thumbnail.png
 permalink: /experiences/hackthenorth_2024/
 ---

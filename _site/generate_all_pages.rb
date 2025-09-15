@@ -53,6 +53,7 @@ def generate_pages(collection_name, data_file, asset_folder)
         f.puts "industries: #{item['industries'] || metadata['industries']}" if item['industries'] || metadata['industries']
         f.puts "fromdate: #{item['fromdate'] || metadata['fromdate']}" if item['fromdate'] || metadata['fromdate']
         f.puts "todate: #{item['todate'] || metadata['todate']}" if item['todate'] || metadata['todate']
+        f.puts "category: #{item['category'] || metadata['category']}" if item['category'] || metadata['category']
       when 'awards'
         f.puts "placement: #{item['placement'] || metadata['placement']}" if item['placement'] || metadata['placement']
       when 'certifications'

@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "at_c"
-subtitle: ""
+subtitle: "Atsign Project"
 description: "atProtocol implementation re-written in C for ESP32 and Embedded Devices with SSL and cryptography features"
 date: 2023-02-18
 languages: ["C"]

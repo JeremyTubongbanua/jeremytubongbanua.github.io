@@ -23,19 +23,23 @@ layout: default
     </header>
 
     {% if page.thumbnail %}
-        <img src="{{ page.thumbnail | relative_url }}" alt="{{ page.title }}" class="project-thumbnail">
+        <div class="detail-thumbnail-container">
+            <img src="{{ page.thumbnail | relative_url }}" alt="{{ page.title }}" class="detail-thumbnail">
+        </div>
     {% endif %}
 
-    <div class="project-content">
+    <div class="detail-content">
         {{ content }}
     </div>
 
     {% if page.gallery %}
-        <div class="project-gallery">
+        <div class="detail-gallery">
             <h2>Gallery</h2>
             <div class="gallery-grid">
                 {% for image in page.gallery %}
-                    <img src="{{ image | relative_url }}" alt="Gallery image">
+                    <div class="gallery-item">
+                        <img src="{{ image | relative_url }}" alt="Gallery image" class="gallery-image">
+                    </div>
                 {% endfor %}
             </div>
         </div>

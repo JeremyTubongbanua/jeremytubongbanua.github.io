@@ -8,104 +8,119 @@ title: Home
         <h1 class="hero-title">Jeremy Tubongbanua</h1>
         <p class="hero-subtitle">Software Engineer | IoT & Embedded Systems Developer</p>
         <p class="hero-description">
-            Passionate about building innovative solutions in IoT, embedded systems, and robotics.
-            Currently working as a Software Engineer at Atsign, specializing in C/C++ development,
-            DevOps, and secure communication protocols.
+            Recent software engineering graduate from Ontario Tech University, passionate about building solutions in IoT, embedded systems, robotics, DevOps, and in C.
         </p>
-        <div class="hero-actions">
-            <a href="{{ '/projects/' | relative_url }}" class="btn btn-primary">View Projects</a>
-            <a href="{{ '/assets/JeremyTubongbanua_Resume.pdf' | relative_url }}" class="btn btn-secondary" target="_blank">Download Resume</a>
+
+        <img src="{{ '/assets/sunset.jpg' | relative_url }}" alt="Sunset" style="width: 100%; max-width: 800px; height: auto; margin: 2rem auto; display: block; border-radius: 8px;">
+
+        <div class="hero-contact-grid">
+            <div class="hero-contact-card">
+                <a href="mailto:{{ site.email }}" class="contact-link">
+                    <img src="{{ '/assets/icons/gmail_logo.png' | relative_url }}" alt="Email" class="contact-icon">
+                    <h3>Email</h3>
+                    <p>{{ site.email }}</p>
+                </a>
+            </div>
+
+            <div class="hero-contact-card">
+                <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" class="contact-link">
+                    <img src="{{ '/assets/icons/github_logo.png' | relative_url }}" alt="GitHub" class="contact-icon">
+                    <h3>GitHub</h3>
+                    <p>@{{ site.github_username }}</p>
+                </a>
+            </div>
+
+            <div class="hero-contact-card">
+                <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener" class="contact-link">
+                    <img src="{{ '/assets/icons/linkedin_logo.png' | relative_url }}" alt="LinkedIn" class="contact-icon">
+                    <h3>LinkedIn</h3>
+                    <p>/in/{{ site.linkedin_username }}</p>
+                </a>
+            </div>
+
+            <div class="hero-contact-card">
+                <a href="{{ '/assets/JeremyTubongbanua_Resume.pdf' | relative_url }}" target="_blank" class="contact-link">
+                    <img src="{{ '/assets/icons/resume_icon.png' | relative_url }}" alt="Resume" class="contact-icon">
+                    <h3>Resume</h3>
+                    <p>Download PDF</p>
+                </a>
+            </div>
         </div>
     </div>
 </section>
 
-<section class="highlights">
-    <h2>Recent Highlights</h2>
-    <div class="highlights-grid">
-        <div class="highlight-card">
-            <h3>Latest Projects</h3>
-            <ul>
-                {% for project in site.data.asset_projects limit:3 %}
-                    <li>
-                        <a href="{{ '/projects/' | append: project.folder | relative_url }}">{{ project.title }}</a>
-                        <span class="date">{{ project.date | date: "%B %Y" }}</span>
-                    </li>
-                {% endfor %}
-            </ul>
-            <a href="{{ '/projects/' | relative_url }}" class="view-all">View all projects →</a>
-        </div>
+<section class="about-section" style="padding: 3rem 2rem; margin: 2rem 0;">
+    <h2 style="text-align: center; margin-bottom: 3rem; color: var(--text-color);">About Me</h2>
 
-        <div class="highlight-card">
-            <h3>Recent Awards</h3>
-            <ul>
-                {% for award in site.data.asset_awards limit:3 %}
-                    <li>
-                        <a href="{{ '/awards/' | append: award.folder | relative_url }}">{{ award.title }}</a>
-                        <span class="date">{{ award.date | date: "%B %Y" }}</span>
-                    </li>
-                {% endfor %}
-            </ul>
-            <a href="{{ '/awards/' | relative_url }}" class="view-all">View all awards →</a>
+    <div class="about-item" style="display: flex; align-items: center; margin-bottom: 3rem; gap: 2rem;">
+        <div style="flex: 1;">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Recent Software Engineering Graduate</h3>
+            <p style="line-height: 1.6;">
+                I am a recent software engineering graduate from Ontario Tech University, earning a Bachelor's in Software Engineering (Honours)
+                with Highest Distinction. I finished with a 3.94 cGPA (4.3 Scale) and won multiple competitions including 1st place Capstone
+                Project in the Faculty of Engineering Electrical, Computer, and Software Engineering out of 32 projects. I won 1st place in NASA
+                Space Apps Hackathon 2024 and was nominated as the Global Nominee representing Ontario Tech on the global scale,
+                which led to a CSA internship offer. Most recently, I won 3rd place at Ontario Engineering Competition in 2025,
+                representing Ontario Tech in the Programming category.
+            </p>
         </div>
+        <img src="{{ '/assets/2.png' | relative_url }}" alt="Ontario Tech University" style="width: 300px; height: auto; border-radius: 8px;">
+    </div>
 
-        <div class="highlight-card">
-            <h3>Experience</h3>
-            <ul>
-                {% for experience in site.data.asset_experiences limit:3 %}
-                    <li>
-                        <a href="{{ '/experiences/' | append: experience.folder | relative_url }}">{{ experience.title }}</a>
-                        <span class="date">
-                            {% if experience.todate == nil or experience.todate == "" %}
-                                {{ experience.fromdate | date: "%Y" }} - Present
-                            {% elsif experience.fromdate %}
-                                {{ experience.fromdate | date: "%Y" }} - {{ experience.todate | date: "%Y" }}
-                            {% else %}
-                                {{ experience.todate | date: "%Y" }}
-                            {% endif %}
-                        </span>
-                    </li>
-                {% endfor %}
-            </ul>
-            <a href="{{ '/experiences/' | relative_url }}" class="view-all">View all experiences →</a>
+    <div class="about-item" style="display: flex; align-items: center; margin-bottom: 3rem; gap: 2rem;">
+        <img src="{{ '/assets/qt.png' | relative_url }}" alt="Atsign" style="width: 300px; height: auto; border-radius: 8px;">
+        <div style="flex: 1;">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">Software Engineer at Atsign</h3>
+            <p style="line-height: 1.6;">
+                I am a Software Engineer at Atsign, taking the lead on projects in C/C++, Embedded Systems, IoT, DevOps,
+                Automated Testing, and App Development. I started as an intern in June 2022, was brought on as a core engineer,
+                and now work as a full-time engineer. I've led projects including the C SDK, C++ SDK, and contributed to our
+                flagship product NoPorts in the C Daemon section and NoPorts Desktop (Flutter app). As one of the lead intern
+                coordinators and talent acquisitioners, I lead recruitment and intern mentorship. I've represented Atsign at
+                conferences including Sensors Converge 2023, CES 2024 (Consumer Electronics Show), and SecTor 2024.
+            </p>
         </div>
+    </div>
+
+    <div class="about-item" style="display: flex; align-items: center; margin-bottom: 3rem; gap: 2rem;">
+        <div style="flex: 1;">
+            <h3 style="color: var(--primary-color); margin-bottom: 1rem;">3D Printing Enthusiast & Robotics Mentor</h3>
+            <p style="line-height: 1.6;">
+                I mentor FRC team 5596 in Scarborough, Ontario, focusing on robotics, computer vision, and Java programming.
+                I've served as a judge advisor for multiple FIRST Lego League competitions and continue to support young engineers
+                in their robotics journey. As a 3D printing enthusiast, I own a Bambu Lab X1C with 2 AMS units, exploring the
+                intersection of rapid prototyping and robotics development.
+            </p>
+        </div>
+        <img src="{{ '/assets/frc.png' | relative_url }}" alt="FIRST Robotics" style="width: 300px; height: auto; border-radius: 8px;">
     </div>
 </section>
 
-<section class="skills">
-    <h2>Technical Skills</h2>
-    <div class="skills-grid">
-        <div class="skill-category">
-            <h3>Languages</h3>
-            <div class="skill-tags">
-                <span class="skill-tag">C/C++</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">Dart/Flutter</span>
-                <span class="skill-tag">JavaScript</span>
-                <span class="skill-tag">TypeScript</span>
-            </div>
-        </div>
+<section class="explore-section">
+    <h2 style="text-align: center; margin-bottom: 2rem; color: var(--text-color);">Explore My Work</h2>
+    <div class="explore-grid">
+        <a href="{{ '/projects/' | relative_url }}" class="explore-card">
+            <div class="explore-count">{{ site.data.asset_projects | size }}</div>
+            <div class="explore-title">Projects</div>
+            <div class="explore-description">Software projects, open source contributions, and technical experiments</div>
+        </a>
 
-        <div class="skill-category">
-            <h3>Technologies</h3>
-            <div class="skill-tags">
-                <span class="skill-tag">IoT/Embedded Systems</span>
-                <span class="skill-tag">Linux</span>
-                <span class="skill-tag">Docker</span>
-                <span class="skill-tag">CMake</span>
-                <span class="skill-tag">Git</span>
-                <span class="skill-tag">CI/CD</span>
-            </div>
-        </div>
+        <a href="{{ '/experiences/' | relative_url }}" class="explore-card">
+            <div class="explore-count">{{ site.data.asset_experiences | size }}</div>
+            <div class="explore-title">Experiences</div>
+            <div class="explore-description">Professional roles, internships, and volunteer positions</div>
+        </a>
 
-        <div class="skill-category">
-            <h3>Platforms</h3>
-            <div class="skill-tags">
-                <span class="skill-tag">ESP32</span>
-                <span class="skill-tag">Raspberry Pi Pico W</span>
-                <span class="skill-tag">Arduino</span>
-                <span class="skill-tag">Raspberry Pi</span>
-            </div>
-        </div>
+        <a href="{{ '/awards/' | relative_url }}" class="explore-card">
+            <div class="explore-count">{{ site.data.asset_awards | size }}</div>
+            <div class="explore-title">Awards</div>
+            <div class="explore-description">Competition wins, hackathon achievements, and recognitions</div>
+        </a>
+
+        <a href="{{ '/certifications/' | relative_url }}" class="explore-card">
+            <div class="explore-count">{{ site.data.asset_certifications | size }}</div>
+            <div class="explore-title">Certifications</div>
+            <div class="explore-description">Professional certifications and completed courses</div>
+        </a>
     </div>
 </section>

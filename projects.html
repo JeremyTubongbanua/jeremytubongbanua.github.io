@@ -22,7 +22,12 @@ permalink: /projects/
                      data-field="{{ project.field | join: ',' | downcase }}">
 
                 {% if project.thumbnail %}
-                    <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}" class="project-thumbnail">
+                    <a href="{{ '/projects/' | append: project.folder | relative_url }}" class="thumbnail-container">
+                        <img src="{{ project.thumbnail | relative_url }}" alt="{{ project.title }}" class="project-thumbnail">
+                        <div class="thumbnail-overlay">
+                            <span class="overlay-text">Click to learn more</span>
+                        </div>
+                    </a>
                 {% endif %}
 
                 <div class="project-content">

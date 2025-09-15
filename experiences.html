@@ -6,25 +6,38 @@ permalink: /experiences/
 ---
 
 <div class="experiences-container">
-    {% assign ongoing = "" | split: "" %}
-    {% assign completed = "" | split: "" %}
+    {% assign general = "" | split: "" %}
+    {% assign robotics = "" | split: "" %}
+    {% assign competition = "" | split: "" %}
+    {% assign conference = "" | split: "" %}
 
     {% for exp in site.data.asset_experiences %}
-        {% if exp.todate == nil or exp.todate == "" %}
-            {% assign ongoing = ongoing | push: exp %}
+        {% assign category = exp.category | downcase %}
+
+        {% if category == "robotics" %}
+            {% assign robotics = robotics | push: exp %}
+        {% elsif category == "competition" %}
+            {% assign competition = competition | push: exp %}
+        {% elsif category == "conference" %}
+            {% assign conference = conference | push: exp %}
         {% else %}
-            {% assign completed = completed | push: exp %}
+            {% assign general = general | push: exp %}
         {% endif %}
     {% endfor %}
 
-    {% if ongoing.size > 0 %}
+    {% if competition.size > 0 %}
         <section class="experience-section">
-            <h2>Current Positions</h2>
+            <h2>Competition</h2>
             <div class="experiences-list">
-                {% for exp in ongoing %}
+                {% for exp in competition %}
                     <article class="experience-card">
                         {% if exp.thumbnail %}
-                            <img src="{{ exp.thumbnail | relative_url }}" alt="{{ exp.title }}" class="exp-thumbnail">
+                            <a href="{{ '/experiences/' | append: exp.folder | relative_url }}" class="thumbnail-container">
+                                <img src="{{ exp.thumbnail | relative_url }}" alt="{{ exp.title }}" class="exp-thumbnail">
+                                <div class="thumbnail-overlay">
+                                    <span class="overlay-text">Click to learn more</span>
+                                </div>
+                            </a>
                         {% endif %}
 
                         <div class="exp-content">
@@ -42,60 +55,17 @@ permalink: /experiences/
 
                             <div class="exp-meta">
                                 <span class="exp-duration">
-                                    {{ exp.fromdate | date: "%B %-d, %Y" }} - Present
-                                </span>
-
-                                {% if exp.roles %}
-                                    <div class="exp-roles">
-                                        {% for role in exp.roles %}
-                                            <span class="role-tag">{{ role }}</span>
-                                        {% endfor %}
-                                    </div>
-                                {% endif %}
-
-                                {% if exp.industries %}
-                                    <div class="exp-industries">
-                                        {% for industry in exp.industries %}
-                                            <span class="industry-tag">{{ industry }}</span>
-                                        {% endfor %}
-                                    </div>
-                                {% endif %}
-                            </div>
-                        </div>
-                    </article>
-                {% endfor %}
-            </div>
-        </section>
-    {% endif %}
-
-    {% if completed.size > 0 %}
-        <section class="experience-section">
-            <h2>Past Experiences</h2>
-            <div class="experiences-list">
-                {% for exp in completed %}
-                    <article class="experience-card">
-                        {% if exp.thumbnail %}
-                            <img src="{{ exp.thumbnail | relative_url }}" alt="{{ exp.title }}" class="exp-thumbnail">
-                        {% endif %}
-
-                        <div class="exp-content">
-                            <h3 class="exp-title">
-                                <a href="{{ '/experiences/' | append: exp.folder | relative_url }}">{{ exp.title }}</a>
-                            </h3>
-
-                            {% if exp.subtitle %}
-                                <p class="exp-subtitle">{{ exp.subtitle }}</p>
-                            {% endif %}
-
-                            {% if exp.description %}
-                                <p class="exp-description">{{ exp.description | truncate: 200 }}</p>
-                            {% endif %}
-
-                            <div class="exp-meta">
-                                <span class="exp-duration">
-                                    {% if exp.fromdate == exp.todate %}
+                                    {% if exp.todate == nil or exp.todate == "" %}
+                                        {% if exp.fromdate and exp.fromdate != "" %}
+                                            {{ exp.fromdate | date: "%B %-d, %Y" }} - Present
+                                        {% else %}
+                                            Present
+                                        {% endif %}
+                                    {% elsif exp.fromdate == nil or exp.fromdate == "" %}
                                         {{ exp.todate | date: "%B %-d, %Y" }}
-                                    {% elsif exp.fromdate %}
+                                    {% elsif exp.fromdate == exp.todate %}
+                                        {{ exp.todate | date: "%B %-d, %Y" }}
+                                    {% else %}
                                         {% assign from_year = exp.fromdate | date: "%Y" %}
                                         {% assign to_year = exp.todate | date: "%Y" %}
                                         {% assign from_month = exp.fromdate | date: "%B" %}
@@ -107,24 +77,216 @@ permalink: /experiences/
                                         {% else %}
                                             {{ exp.fromdate | date: "%B %-d, %Y" }} - {{ exp.todate | date: "%B %-d, %Y" }}
                                         {% endif %}
-                                    {% else %}
-                                        {{ exp.todate | date: "%B %-d, %Y" }}
                                     {% endif %}
                                 </span>
 
-                                {% if exp.roles %}
-                                    <div class="exp-roles">
-                                        {% for role in exp.roles %}
-                                            <span class="role-tag">{{ role }}</span>
-                                        {% endfor %}
+                                {% if exp.category %}
+                                    <div class="exp-category" style="position: absolute; bottom: 1rem; right: 1rem;">
+                                        <span class="category-badge" style="background-color: #4da6ff; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">{{ exp.category }}</span>
                                     </div>
                                 {% endif %}
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
 
-                                {% if exp.industries %}
-                                    <div class="exp-industries">
-                                        {% for industry in exp.industries %}
-                                            <span class="industry-tag">{{ industry }}</span>
-                                        {% endfor %}
+    {% if conference.size > 0 %}
+        <section class="experience-section">
+            <h2>Conference</h2>
+            <div class="experiences-list">
+                {% for exp in conference %}
+                    <article class="experience-card">
+                        {% if exp.thumbnail %}
+                            <a href="{{ '/experiences/' | append: exp.folder | relative_url }}" class="thumbnail-container">
+                                <img src="{{ exp.thumbnail | relative_url }}" alt="{{ exp.title }}" class="exp-thumbnail">
+                                <div class="thumbnail-overlay">
+                                    <span class="overlay-text">Click to learn more</span>
+                                </div>
+                            </a>
+                        {% endif %}
+
+                        <div class="exp-content">
+                            <h3 class="exp-title">
+                                <a href="{{ '/experiences/' | append: exp.folder | relative_url }}">{{ exp.title }}</a>
+                            </h3>
+
+                            {% if exp.subtitle %}
+                                <p class="exp-subtitle">{{ exp.subtitle }}</p>
+                            {% endif %}
+
+                            {% if exp.description %}
+                                <p class="exp-description">{{ exp.description | truncate: 200 }}</p>
+                            {% endif %}
+
+                            <div class="exp-meta">
+                                <span class="exp-duration">
+                                    {% if exp.todate == nil or exp.todate == "" %}
+                                        {% if exp.fromdate and exp.fromdate != "" %}
+                                            {{ exp.fromdate | date: "%B %-d, %Y" }} - Present
+                                        {% else %}
+                                            Present
+                                        {% endif %}
+                                    {% elsif exp.fromdate == nil or exp.fromdate == "" %}
+                                        {{ exp.todate | date: "%B %-d, %Y" }}
+                                    {% elsif exp.fromdate == exp.todate %}
+                                        {{ exp.todate | date: "%B %-d, %Y" }}
+                                    {% else %}
+                                        {% assign from_year = exp.fromdate | date: "%Y" %}
+                                        {% assign to_year = exp.todate | date: "%Y" %}
+                                        {% assign from_month = exp.fromdate | date: "%B" %}
+                                        {% assign to_month = exp.todate | date: "%B" %}
+                                        {% if from_year == to_year and from_month == to_month %}
+                                            {{ exp.fromdate | date: "%B %-d" }}-{{ exp.todate | date: "%-d, %Y" }}
+                                        {% elsif from_year == to_year %}
+                                            {{ exp.fromdate | date: "%B %-d" }} - {{ exp.todate | date: "%B %-d, %Y" }}
+                                        {% else %}
+                                            {{ exp.fromdate | date: "%B %-d, %Y" }} - {{ exp.todate | date: "%B %-d, %Y" }}
+                                        {% endif %}
+                                    {% endif %}
+                                </span>
+
+                                {% if exp.category %}
+                                    <div class="exp-category" style="position: absolute; bottom: 1rem; right: 1rem;">
+                                        <span class="category-badge" style="background-color: #4da6ff; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">{{ exp.category }}</span>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+
+    {% if general.size > 0 %}
+        <section class="experience-section">
+            <h2>General</h2>
+            <div class="experiences-list">
+                {% for exp in general %}
+                    <article class="experience-card">
+                        {% if exp.thumbnail %}
+                            <a href="{{ '/experiences/' | append: exp.folder | relative_url }}" class="thumbnail-container">
+                                <img src="{{ exp.thumbnail | relative_url }}" alt="{{ exp.title }}" class="exp-thumbnail">
+                                <div class="thumbnail-overlay">
+                                    <span class="overlay-text">Click to learn more</span>
+                                </div>
+                            </a>
+                        {% endif %}
+
+                        <div class="exp-content">
+                            <h3 class="exp-title">
+                                <a href="{{ '/experiences/' | append: exp.folder | relative_url }}">{{ exp.title }}</a>
+                            </h3>
+
+                            {% if exp.subtitle %}
+                                <p class="exp-subtitle">{{ exp.subtitle }}</p>
+                            {% endif %}
+
+                            {% if exp.description %}
+                                <p class="exp-description">{{ exp.description | truncate: 200 }}</p>
+                            {% endif %}
+
+                            <div class="exp-meta">
+                                <span class="exp-duration">
+                                    {% if exp.todate == nil or exp.todate == "" %}
+                                        {% if exp.fromdate and exp.fromdate != "" %}
+                                            {{ exp.fromdate | date: "%B %-d, %Y" }} - Present
+                                        {% else %}
+                                            Present
+                                        {% endif %}
+                                    {% elsif exp.fromdate == nil or exp.fromdate == "" %}
+                                        {{ exp.todate | date: "%B %-d, %Y" }}
+                                    {% elsif exp.fromdate == exp.todate %}
+                                        {{ exp.todate | date: "%B %-d, %Y" }}
+                                    {% else %}
+                                        {% assign from_year = exp.fromdate | date: "%Y" %}
+                                        {% assign to_year = exp.todate | date: "%Y" %}
+                                        {% assign from_month = exp.fromdate | date: "%B" %}
+                                        {% assign to_month = exp.todate | date: "%B" %}
+                                        {% if from_year == to_year and from_month == to_month %}
+                                            {{ exp.fromdate | date: "%B %-d" }}-{{ exp.todate | date: "%-d, %Y" }}
+                                        {% elsif from_year == to_year %}
+                                            {{ exp.fromdate | date: "%B %-d" }} - {{ exp.todate | date: "%B %-d, %Y" }}
+                                        {% else %}
+                                            {{ exp.fromdate | date: "%B %-d, %Y" }} - {{ exp.todate | date: "%B %-d, %Y" }}
+                                        {% endif %}
+                                    {% endif %}
+                                </span>
+
+                                {% if exp.category %}
+                                    <div class="exp-category" style="position: absolute; bottom: 1rem; right: 1rem;">
+                                        <span class="category-badge" style="background-color: #4da6ff; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">{{ exp.category }}</span>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </article>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+
+    {% if robotics.size > 0 %}
+        <section class="experience-section">
+            <h2>Robotics</h2>
+            <div class="experiences-list">
+                {% for exp in robotics %}
+                    <article class="experience-card">
+                        {% if exp.thumbnail %}
+                            <a href="{{ '/experiences/' | append: exp.folder | relative_url }}" class="thumbnail-container">
+                                <img src="{{ exp.thumbnail | relative_url }}" alt="{{ exp.title }}" class="exp-thumbnail">
+                                <div class="thumbnail-overlay">
+                                    <span class="overlay-text">Click to learn more</span>
+                                </div>
+                            </a>
+                        {% endif %}
+
+                        <div class="exp-content">
+                            <h3 class="exp-title">
+                                <a href="{{ '/experiences/' | append: exp.folder | relative_url }}">{{ exp.title }}</a>
+                            </h3>
+
+                            {% if exp.subtitle %}
+                                <p class="exp-subtitle">{{ exp.subtitle }}</p>
+                            {% endif %}
+
+                            {% if exp.description %}
+                                <p class="exp-description">{{ exp.description | truncate: 200 }}</p>
+                            {% endif %}
+
+                            <div class="exp-meta">
+                                <span class="exp-duration">
+                                    {% if exp.todate == nil or exp.todate == "" %}
+                                        {% if exp.fromdate and exp.fromdate != "" %}
+                                            {{ exp.fromdate | date: "%B %-d, %Y" }} - Present
+                                        {% else %}
+                                            Present
+                                        {% endif %}
+                                    {% elsif exp.fromdate == nil or exp.fromdate == "" %}
+                                        {{ exp.todate | date: "%B %-d, %Y" }}
+                                    {% elsif exp.fromdate == exp.todate %}
+                                        {{ exp.todate | date: "%B %-d, %Y" }}
+                                    {% else %}
+                                        {% assign from_year = exp.fromdate | date: "%Y" %}
+                                        {% assign to_year = exp.todate | date: "%Y" %}
+                                        {% assign from_month = exp.fromdate | date: "%B" %}
+                                        {% assign to_month = exp.todate | date: "%B" %}
+                                        {% if from_year == to_year and from_month == to_month %}
+                                            {{ exp.fromdate | date: "%B %-d" }}-{{ exp.todate | date: "%-d, %Y" }}
+                                        {% elsif from_year == to_year %}
+                                            {{ exp.fromdate | date: "%B %-d" }} - {{ exp.todate | date: "%B %-d, %Y" }}
+                                        {% else %}
+                                            {{ exp.fromdate | date: "%B %-d, %Y" }} - {{ exp.todate | date: "%B %-d, %Y" }}
+                                        {% endif %}
+                                    {% endif %}
+                                </span>
+
+                                {% if exp.category %}
+                                    <div class="exp-category" style="position: absolute; bottom: 1rem; right: 1rem;">
+                                        <span class="category-badge" style="background-color: #4da6ff; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">{{ exp.category }}</span>
                                     </div>
                                 {% endif %}
                             </div>

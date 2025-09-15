@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "at_java"
-subtitle: ""
+subtitle: "Atsign Project"
 description: "atProtocol implementation re-written in Java"
 date: 2023-04-23
 languages: ["Java"]
