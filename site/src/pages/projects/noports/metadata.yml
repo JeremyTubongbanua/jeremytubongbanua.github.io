@@ -1,0 +1,9 @@
+title: "noports"
+subtitle: ""
+description: "Establish TCP connections to devices on the Internet without opening ports on external interfaces"
+date: "2022-05-04"
+languages: ["Dart", "C"]
+field: ["Cybersecurity", "DevOps", "IoT/Embedded", "Networking"]
+tech: ["CMake", "Linux"]
+progress: "In-Progress"
+association: "Atsign"

@@ -36,9 +36,59 @@ const routes = [
 ---
 
 <nav>
-  {routes.map(
+  <ul class="navigation-bar">
+    {routes.map(
     (route) =>
-  <li>
-    <a href={route.route}>{route.pageTitle}</a></li>
-  )}
+      <li class="navigation-item">
+        <a href={route.route}>{route.pageTitle}</a>
+      </li>
+    )}
+  </ul>
 </nav>
+
+<style>
+  .navigation-bar {
+    /* this changes how the elements behave */
+    /** block = elements stack vertically, take full available width by default,
+      * examples are paragraphs, headers, and sections */
+    /** flex = one-dimensional layout (arranges in row or columns)
+      * children become flex items
+      * default is horizontal
+      * change via flex-direction
+      * justify-content will justify how children are spaced around along main axis
+      * align-items will change how they are spaced around along secondary axis
+      * flex-grow, flex-shrink, flex-basis for growing/shrinking items
+      */
+    /* grid = children become grid items
+     * grid-template-rows, grid-template-columns
+     * grid-column, grid-row
+     */
+    display: flex; /* make this container a flex box */
+
+    justify-content: space-around;
+    /* since `ul` has a weird indent by default, let's remove that */
+    margin: 0;
+    padding: 0;
+    list-style-type: none; /* remove bullet from li */
+
+    background-color: #0e0e0e;
+  }
+
+  .navigation-item {
+    padding: 1em;
+  }
+
+  /* .navigation-item:hover { */
+  /*   color: #FE4A49 */
+  /* } */
+
+  .navigation-item a {
+    text-decoration: none; /* remove the purple + underline that comes default with anchors */
+    color: white;
+  }
+
+  .navigation-item a:hover {
+    color: #FE4A49;
+  }
+
+</style>

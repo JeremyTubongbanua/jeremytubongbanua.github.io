@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+const projects =
+Object.values(import.meta.glob('../projects/**/index.md', {eager: true}));
+console.log(projects);
+---
+<BaseLayout pageTitle="Projects">
+  <ul>
+    {projects.map((project) => project.frontmatter.hidden ? '' :
+    <li><a href=`${project.url}`>{project.frontmatter.title}</a></li>)}
+  </ul>
+</BaseLayout>
+
