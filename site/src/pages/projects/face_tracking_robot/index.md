@@ -1,0 +1,18 @@
+---
+title: "Face Tracking Robot"
+subtitle: ""
+description: "A 2-axis (yaw/pitch) face tracking robot powered by a Luxonis Oak-D Lite and 2 Micro Servo Motors using Python, Flask, DepthAI, OpenCV, and Raspbery Pi"
+date: "2024-10-02"
+languages: ["Python"]
+field: ["AI/ML", "Robotics"]
+tech: ["Fusion360", "Linux"]
+progress: "Finished"
+association: "Hobby"
+---
+
+# Face Tracking 2-axis Robot
+
+## Links
+
+- GitHub Repository: <https://github.com/JeremyTubongbanua/Face-Tracking-Robot>
+- YouTube Demo: <https://youtube.com/shorts/XLtfobL6sic>
