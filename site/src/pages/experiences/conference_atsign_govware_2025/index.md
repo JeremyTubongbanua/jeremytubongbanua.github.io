@@ -1,0 +1,9 @@
+---
+title: "GovWare 2025"
+subtitle: "Singapore Trip"
+description: "Represented Atsign at GovWare 2025 in Singapore as a Sales Engineer, talking to customers and partners"
+fromdate: "2025-10-21"
+todate: "2025-10-23"
+category: "Conference"
+---
+

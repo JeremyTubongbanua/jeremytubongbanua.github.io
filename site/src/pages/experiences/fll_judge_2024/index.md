@@ -1,0 +1,8 @@
+---
+title: "Judge"
+subtitle: ""
+description: "Lead judge for my pod and judged three robotics teams for the day, and also assisted in judge deliberation and score tabulation."
+fromdate: ""
+todate: "2024-11-30"
+category: "Robotics"
+---
