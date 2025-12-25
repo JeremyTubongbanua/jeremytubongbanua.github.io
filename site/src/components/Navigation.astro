@@ -1,0 +1,44 @@
+---
+const routes = [
+  {
+    route: '/',
+    pageTitle: 'Home',
+  },
+  {
+    route: '/blog/',
+    pageTitle: 'Blog',
+  },
+  { 
+    route: '/projects/',
+    pageTitle: 'Projects',
+  },
+  {
+    route: '/experiences/',
+    pageTitle: 'Experiences',
+  },
+  {
+    route: '/awards/',
+    pageTitle: 'Awards',
+  },
+  {
+    route: '/resume/',
+    pageTitle: 'Resume',
+  },
+  {
+    route: '/certifications/',
+    pageTitle: 'Certifications',
+  },
+  {
+    route: '/contact/',
+    pageTitle: 'Contact',
+  },
+];
+---
+
+<nav>
+  {routes.map(
+    (route) =>
+  <li>
+    <a href={route.route}>{route.pageTitle}</a></li>
+  )}
+</nav>
