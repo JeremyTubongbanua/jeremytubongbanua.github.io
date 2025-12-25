@@ -8,7 +8,7 @@ field: []
 tech: ["Node.js"]
 progress: "Finished"
 association: "Hackathon"
-hidden: false
+hidden: true
 layout: ../../../layouts/Project.astro
 ---
 

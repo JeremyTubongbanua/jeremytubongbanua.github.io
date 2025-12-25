@@ -8,7 +8,10 @@ field: ["AI/ML", "DevOps", "Web Development"]
 tech: ["Docker", "Node.js", "React"]
 progress: "Finished"
 association: "Hackathon"
+hidden: true
+layout: ../../../layouts/Project.astro
 ---
+
 # codecraft.io
 
 ## Links

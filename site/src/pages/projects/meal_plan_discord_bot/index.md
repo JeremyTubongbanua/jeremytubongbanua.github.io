@@ -8,6 +8,8 @@ field: []
 tech: ["Linux"]
 progress: "Finished"
 association: "Hobby"
+hidden: true
+layout: ../../../layouts/Project.astro
 ---
 
 #

@@ -8,6 +8,8 @@ field: ["Blockchain"]
 tech: []
 progress: "Finished"
 association: "Hackathon"
+hidden: true
+layout: ../../../layouts/Project.astro
 ---
 
 # Cryptomon

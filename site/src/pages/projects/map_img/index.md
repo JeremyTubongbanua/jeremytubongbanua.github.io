@@ -8,7 +8,7 @@ field: []
 tech: ["Spigot"]
 progress: "Finished"
 association: "Hobby"
-hidden: false
+hidden: true
 layout: ../../../layouts/Project.astro
 ---
 

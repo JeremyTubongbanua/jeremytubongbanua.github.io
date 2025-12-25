@@ -8,6 +8,8 @@ field: ["AI/ML", "Robotics"]
 tech: ["Fusion360", "Linux"]
 progress: "Finished"
 association: "Hobby"
+hidden: false
+layout: ../../../layouts/Project.astro
 ---
 
 # Face Tracking 2-axis Robot

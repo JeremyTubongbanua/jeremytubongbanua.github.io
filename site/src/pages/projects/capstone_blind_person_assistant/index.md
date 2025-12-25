@@ -8,6 +8,8 @@ field: ["IoT/Embedded", "Networking", "AI/ML"]
 tech: ["Fusion360", "Docker", "Linux"]
 progress: "Finished"
 association: "Hackathon"
+hidden: false
+layout: ../../../layouts/Project.astro
 ---
 
 # Blind Person Assistant

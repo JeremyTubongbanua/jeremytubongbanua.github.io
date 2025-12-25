@@ -8,6 +8,8 @@ field: ["3D Printing"]
 tech: ["Fusion360"]
 progress: "Finished"
 association: "Hobby"
+hidden: false
+layout: ../../../layouts/Project.astro
 ---
 
 # Creality K1 Mods
