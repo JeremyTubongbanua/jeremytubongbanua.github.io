@@ -9,7 +9,7 @@ tech: ["Flutter"]
 progress: "Finished"
 association: "Hobby"
 hidden: true
-layout: ../../../layouts/Project.astro
+layout: ../../../layouts/ProjectLayout.astro
 ---
 
 # Instagram Clone

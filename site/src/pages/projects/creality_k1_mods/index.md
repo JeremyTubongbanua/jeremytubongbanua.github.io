@@ -9,7 +9,7 @@ tech: ["Fusion360"]
 progress: "Finished"
 association: "Hobby"
 hidden: false
-layout: ../../../layouts/Project.astro
+layout: ../../../layouts/ProjectLayout.astro
 ---
 
 # Creality K1 Mods

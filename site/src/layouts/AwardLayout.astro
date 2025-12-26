@@ -1,2 +1,37 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const { title, subtitle, description,
+  date, placement, hidden, layout } = Astro.props.frontmatter;
+// Astro.props:
+// {
+//   file: '/Users/jeremytubongbanua/GitHub/jeremytubongbanua.github.io/site/src/pages/awards/adc_figma_2025/index.md',
+//   url: '/awards/adc_figma_2025',
+//   content: {
+//     title: '1st Place Overall',
+//     subtitle: 'Figma Challenge - Ontario Tech Automated Drive Club',
+//     description: "Won 1st place overall in ADC's Figma Challenge. Designed car dashboard and tablet Figma prototypes for accessible semi-automated vehicles.",
+//     date: '2025-03-07',
+//     placement: '1st Place',
+//     hidden: false,
+//     file: '/Users/jeremytubongbanua/GitHub/jeremytubongbanua.github.io/site/src/pages/awards/adc_figma_2025/index.md',
+//     url: '/awards/adc_figma_2025'
+//   },
+//   frontmatter: {
+//     title: '1st Place Overall',
+//     subtitle: 'Figma Challenge - Ontario Tech Automated Drive Club',
+//     description: "Won 1st place overall in ADC's Figma Challenge. Designed car dashboard and tablet Figma prototypes for accessible semi-automated vehicles.",
+//     date: '2025-03-07',
+//     placement: '1st Place',
+//     hidden: false,
+//     file: '/Users/jeremytubongbanua/GitHub/jeremytubongbanua.github.io/site/src/pages/awards/adc_figma_2025/index.md',
+//     url: '/awards/adc_figma_2025'
+//   },
+//   headings: [],
+//   rawContent: [Function: rawContent],
+//   compiledContent: [AsyncFunction: compiledContent],
+//   'server:root': true
+// }
 ---
+<BaseLayout pageTitle={title}>
+  <slot/>
+</BaseLayout>

@@ -9,7 +9,7 @@ tech: ["Fusion360", "Linux"]
 progress: "Finished"
 association: "Atsign"
 hidden: false
-layout: ../../../layouts/Project.astro
+layout: ../../../layouts/ProjectLayout.astro
 ---
 
 # Qt/Atsign Plant Demo

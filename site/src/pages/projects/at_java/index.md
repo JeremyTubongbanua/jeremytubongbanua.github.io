@@ -8,7 +8,7 @@ field: ["Cryptography", "Cybersecurity", "DevOps", "Networking"]
 tech: []
 progress: "Finished"
 association: "Atsign"
-layout: ../../../layouts/Project.astro
+layout: ../../../layouts/ProjectLayout.astro
 hidden: true
 ---
 

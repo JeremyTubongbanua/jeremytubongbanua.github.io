@@ -9,7 +9,7 @@ tech: []
 progress: "Finished"
 association: "High School"
 hidden: true
-layout: ../../../layouts/Project.astro
+layout: ../../../layouts/ProjectLayout.astro
 ---
 
 # FRC 2019 Robot

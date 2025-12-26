@@ -8,7 +8,7 @@ field: ["Cryptography", "Cybersecurity", "DevOps", "IoT/Embedded", "Networking"]
 tech: ["CMake", "Docker", "Espressif (ESP-IDF)", "Linux"]
 progress: "In-Progress"
 association: "Atsign"
-layout: ../../../layouts/Project.astro
+layout: ../../../layouts/ProjectLayout.astro
 hidden: true
 ---
 

@@ -9,7 +9,7 @@ tech: ["Fusion360", "Docker", "Linux"]
 progress: "Finished"
 association: "Hackathon"
 hidden: false
-layout: ../../../layouts/Project.astro
+layout: ../../../layouts/ProjectLayout.astro
 ---
 
 # Blind Person Assistant

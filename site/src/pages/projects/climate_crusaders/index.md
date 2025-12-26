@@ -8,7 +8,9 @@ field: []
 tech: []
 progress: "Finished"
 association: "Hackathon"
----
+hidden: true
+layout: ../../../layouts/ProjectLayout.astro
+--
 
 # Climate Crusaders
 

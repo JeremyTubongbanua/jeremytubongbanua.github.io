@@ -9,7 +9,7 @@ tech: ["Spigot"]
 progress: "Finished"
 association: "Hobby"
 hidden: false
-layout: ../../../layouts/Project.astro
+layout: ../../../layouts/ProjectLayout.astro
 ---
 
 # Timber

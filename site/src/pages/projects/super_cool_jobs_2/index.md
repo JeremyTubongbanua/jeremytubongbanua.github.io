@@ -9,7 +9,7 @@ tech: ["Docker", "Linux", "Node.js", "React"]
 progress: "Finished"
 association: "Ontario Tech"
 hidden: true
-layout: ../../../layouts/Project.astro
+layout: ../../../layouts/ProjectLayout.astro
 ---
 
 # SuperCoolJobs

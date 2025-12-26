@@ -8,7 +8,7 @@ tech: ["Node.js", "React"]
 progress: "Finished"
 association: "Hackathon"
 hidden: true
-layout: ../../../layouts/Project.astro
+layout: ../../../layouts/ProjectLayout.astro
 ---
 
 # WikiPathFinder

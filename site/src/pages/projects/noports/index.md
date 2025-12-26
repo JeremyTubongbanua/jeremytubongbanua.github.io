@@ -9,7 +9,7 @@ tech: ["CMake", "Linux"]
 progress: "In-Progress"
 association: "Atsign"
 hidden: true
-layout: ../../../layouts/Project.astro
+layout: ../../../layouts/ProjectLayout.astro
 ---
 
 # noports

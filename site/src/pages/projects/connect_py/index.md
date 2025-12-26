@@ -9,7 +9,7 @@ tech: ["Docker", "Linux"]
 progress: "Finished"
 association: "Hobby"
 hidden: true
-layout: ../../../layouts/Project.astro
+layout: ../../../layouts/ProjectLayout.astro
 ---
 
 # connect.py
