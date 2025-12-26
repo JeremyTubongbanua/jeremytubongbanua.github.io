@@ -7,6 +7,8 @@ todate: "2024-09-15"
 category: "Competition"
 ---
 
+![HackTheNorth 2024](./thumbnail.png)
+
 #
 
 ## Links

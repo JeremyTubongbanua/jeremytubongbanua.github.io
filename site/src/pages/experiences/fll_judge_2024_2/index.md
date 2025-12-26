@@ -1,5 +1,5 @@
 ---
-title: "core values provincial judge"
+title: "Core values provincial judge"
 subtitle: ""
 description: "provincials judge for fll ontario west provincials at durham college for the core values category"
 fromdate: ""

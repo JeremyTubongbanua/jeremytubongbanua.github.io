@@ -10,7 +10,7 @@ progress: "Finished"
 association: "Hackathon"
 hidden: true
 layout: ../../../layouts/ProjectLayout.astro
---
+---
 
 # Climate Crusaders
 
@@ -25,3 +25,4 @@ The project was written in Python and used the Pygame library to create a simple
 - [GitHub - JeremyTubongbanua/nasa-space-apps-2023](https://github.com/JeremyTubongbanua/nasa-space-apps-2023)
 - [Space Apps Challenge - Team Wesley](https://www.spaceappschallenge.org/2023/find-a-team/team-wesley/?tab=project)
 - [YouTube - Project Demo](https://youtu.be/2MLvS3TZ3bc)
+

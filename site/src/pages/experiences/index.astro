@@ -1,5 +1,18 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+const experiences =
+  Object.values(import.meta.glob('./**/index.md', {eager: true}));
 ---
 <BaseLayout pageTitle="Experiences">
+  <h2>Experiences</h2>
+  <ul>
+    {experiences.map((experience) => experience.frontmatter.hidden ? '' :
+      <li><a href=`${experience.url}`>{experience.frontmatter.title}</a></li>)}
+  </ul>
 </BaseLayout>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+</style>

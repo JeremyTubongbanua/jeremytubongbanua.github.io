@@ -1,5 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+const awards = Object.values(import.meta.glob('./**/index.md', {eager: true}));
 ---
 <BaseLayout pageTitle="Awards">
+  <h2>Awards</h2>
+  <ul>
+    {awards.map((award) => award.frontmatter.hidden ? '' : <li><a href=`${award.frontmatter.url}`>{award.frontmatter.title}</a></li>)}
+  </ul>
 </BaseLayout>
+
+<style>
+  a {
+    text-decoration: none;
+  }
+</style>
+

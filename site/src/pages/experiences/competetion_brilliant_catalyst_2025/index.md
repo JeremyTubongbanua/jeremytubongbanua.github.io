@@ -6,3 +6,5 @@ fromdate: "2025-01-23"
 todate: "2025-01-31"
 category: "Competition"
 ---
+
+![Thumbnail](./thumbnail.png)

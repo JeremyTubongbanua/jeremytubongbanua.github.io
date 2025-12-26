@@ -7,6 +7,8 @@ field: ["Web Development"]
 tech: ["Node.js", "React"]
 progress: "Finished"
 association: "Ontario Tech"
+hidden: true
+layout: ../../../layouts/ProjectLayout.astro
 ---
 
 # SOFE2800
