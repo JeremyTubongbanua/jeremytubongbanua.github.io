@@ -4,8 +4,6 @@ subtitle: ""
 description: "A simple model to hold my small garbage plastic bags near our kitchen sink"
 date: "2024-08-23"
 languages: []
-field: ["3D Printing"]
-tech: ["Fusion360"]
 progress: "Finished"
 association: "Hobby"
 hidden: true

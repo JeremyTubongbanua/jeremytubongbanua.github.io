@@ -3,9 +3,7 @@ title: "WhereTo?"
 subtitle: ""
 description: "CalgaryHacks 2022 Submission; App that helps you optimize time and money on commuting"
 date: "2022-02-20"
-languages: ["JavaScript"]
-field: ["App Development"]
-tech: ["Figma", "React"]
+languages: ["HTML/CSS/JavaScript"]
 progress: "Finished"
 association: "Hackathon"
 hidden: true

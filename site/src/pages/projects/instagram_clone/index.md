@@ -4,8 +4,6 @@ subtitle: ""
 description: "Visual clone of the Instagram app"
 date: "2022-05-15"
 languages: ["Dart"]
-field: ["App Development"]
-tech: ["Flutter"]
 progress: "Finished"
 association: "Hobby"
 hidden: true

@@ -4,8 +4,6 @@ subtitle: "1st Place Winner"
 description: "UW Hacks 2021 Submission; cryptocurrency trading discord game"
 date: "2021-05-16"
 languages: ["Python"]
-field: ["Blockchain"]
-tech: []
 progress: "Finished"
 association: "Hackathon"
 hidden: true

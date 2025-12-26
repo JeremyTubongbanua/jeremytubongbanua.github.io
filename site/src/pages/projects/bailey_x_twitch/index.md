@@ -3,9 +3,7 @@ title: "Bailey x Twitch"
 subtitle: ""
 description: "IoT plant that is watered by Twitch chat"
 date: "2022-09-22"
-languages: ["JavaScript", "Python"]
-field: ["IoT/Embedded", "Robotics"]
-tech: ["Linux", "Node.js"]
+languages: ["HTML/CSS/JavaScript", "Python"]
 progress: "Finished"
 association: "Hobby"
 hidden: false

@@ -3,8 +3,6 @@ title: "MailBox"
 description: "Spigot plugin that got 1 donation"
 date: "2019-05-07"
 languages: ["Java"]
-field: []
-tech: ["Spigot"]
 progress: "Finished"
 association: "Hobby"
 hidden: false

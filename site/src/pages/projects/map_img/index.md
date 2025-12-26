@@ -4,8 +4,6 @@ subtitle: ""
 description: "Converts images to maps items"
 date: "2019-11-19"
 languages: ["Java"]
-field: []
-tech: ["Spigot"]
 progress: "Finished"
 association: "Hobby"
 hidden: true

@@ -1,19 +1,24 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const projects =
+import ProjectCanvas from '../../components/ProjectList';
+const allProjects =
   Object.values(import.meta.glob('../projects/**/index.md', {eager: true}));
+
+/**
+  * project.frontmatter.
+  *   title
+  *   subtitle
+  *   description
+  *   date
+  *   languages: []
+  *   progress: {In-Progress, Finished}
+  *   association: {Atsign, Hobby, Hackathon}
+  *   layout
+  *   hidden: {true, false}
+  */
 ---
 <BaseLayout pageTitle="Projects">
-  <h2>Projects</h2>
-  <ul>
-    {projects.map((project) => project.frontmatter.hidden ? '' :
-      <li><a href=`${project.url}`>{project.frontmatter.title}</a></li>)}
-  </ul>
+  <ProjectCanvas client:load allProjects={allProjects}/>
 </BaseLayout>
 
-<style>
-  a {
-    text-decoration: none;
-  }
-</style>
 

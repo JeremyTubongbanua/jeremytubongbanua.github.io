@@ -3,11 +3,9 @@ title: "SuperCoolJobs"
 subtitle: ""
 description: "SOFE 3700U Final; Job recruitment web application"
 date: "2023-11-23"
-languages: ["HTML/CSS", "JavaScript", "MySQL"]
-field: ["Web Development"]
-tech: ["Docker", "Linux", "Node.js", "React"]
+languages: ["HTML/CSS/JavaScript"]
 progress: "Finished"
-association: "Ontario Tech"
+association: "School"
 hidden: true
 layout: ../../../layouts/ProjectLayout.astro
 ---

@@ -4,8 +4,6 @@ subtitle: ""
 description: "A 2-axis (yaw/pitch) face tracking robot powered by a Luxonis Oak-D Lite and 2 Micro Servo Motors using Python, Flask, DepthAI, OpenCV, and Raspbery Pi"
 date: "2024-10-02"
 languages: ["Python"]
-field: ["AI/ML", "Robotics"]
-tech: ["Fusion360", "Linux"]
 progress: "Finished"
 association: "Hobby"
 hidden: false

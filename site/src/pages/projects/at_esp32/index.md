@@ -4,8 +4,6 @@ subtitle: "Atsign Project"
 description: "atProtocol implementation re-written in C++ for ESP32 Arduino"
 date: "2023-04-26"
 languages: ["C++"]
-field: ["Cryptography", "Cybersecurity", "IoT/Embedded", "Networking"]
-tech: ["Espressif (ESP-IDF)"]
 progress: "Finished"
 association: "Atsign"
 layout: ../../../layouts/ProjectLayout.astro

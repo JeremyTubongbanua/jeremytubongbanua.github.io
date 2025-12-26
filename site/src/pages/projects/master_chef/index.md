@@ -1,12 +1,9 @@
-
 ---
 title: "Masterchef"
 subtitle: ""
 description: "UofT Hacks IX Submission; Food tracking with recipe suggestions"
 date: "2022-02-07"
 languages: ["Dart"]
-field: ["App Development"]
-tech: ["Flutter"]
 progress: "Finished"
 association: "Hackathon"
 hidden: true

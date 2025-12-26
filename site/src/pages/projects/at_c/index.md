@@ -4,8 +4,6 @@ subtitle: "Atsign Project"
 description: "atProtocol implementation re-written in C for ESP32 and Embedded Devices with SSL and cryptography features"
 date: "2023-02-18"
 languages: ["C"]
-field: ["Cryptography", "Cybersecurity", "DevOps", "IoT/Embedded", "Networking"]
-tech: ["CMake", "Docker", "Espressif (ESP-IDF)", "Linux"]
 progress: "In-Progress"
 association: "Atsign"
 layout: ../../../layouts/ProjectLayout.astro

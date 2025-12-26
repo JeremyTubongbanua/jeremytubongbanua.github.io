@@ -3,9 +3,7 @@ title: "codecraft.io"
 subtitle: ""
 description: "Ignition Hacks 2024; AI assisted coding learning platform"
 date: "2024-08-18"
-languages: ["C", "HTML/CSS", "JavaScript", "Python"]
-field: ["AI/ML", "DevOps", "Web Development"]
-tech: ["Docker", "Node.js", "React"]
+languages: ["C", "HTML/CSS/JavaScript", "Python"]
 progress: "Finished"
 association: "Hackathon"
 hidden: true

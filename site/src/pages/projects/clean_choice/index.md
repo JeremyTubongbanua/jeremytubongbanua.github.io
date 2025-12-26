@@ -3,9 +3,7 @@ title: "CleanChoice"
 subtitle: "2nd Place and Best UI/UX Award"
 description: "Schulich Hacks 2023"
 date: "2023-04-29"
-languages: ["JavaScript"]
-field: ["App Development"]
-tech: ["Node.js"]
+languages: ["HTML/CSS/JavaScript"]
 progress: "Finished"
 association: "Hackathon"
 hidden: true

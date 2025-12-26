@@ -4,8 +4,6 @@ subtitle: "3rd Place & People's Choice Award"
 description: "NASA Space Apps 2023 Submission; Python game using NASA Data API"
 date: "2023-09-08"
 languages: ["Python"]
-field: []
-tech: []
 progress: "Finished"
 association: "Hackathon"
 hidden: true

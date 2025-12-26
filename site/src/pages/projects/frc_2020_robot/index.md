@@ -4,10 +4,8 @@ subtitle: "6 ball autonomous"
 description: "2020 Robot for FIRST Robotics that never competed due to COVID-19"
 date: "2020-06-23"
 languages: ["Java"]
-field: ["Robotics"]
-tech: []
 progress: "Finished"
-association: "High School"
+association: "School"
 hidden: false
 layout: ../../../layouts/ProjectLayout.astro
 ---

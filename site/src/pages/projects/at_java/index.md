@@ -4,8 +4,6 @@ subtitle: "Atsign Project"
 description: "atProtocol implementation re-written in Java"
 date: "2023-04-23"
 languages: ["Java"]
-field: ["Cryptography", "Cybersecurity", "DevOps", "Networking"]
-tech: []
 progress: "Finished"
 association: "Atsign"
 layout: ../../../layouts/ProjectLayout.astro

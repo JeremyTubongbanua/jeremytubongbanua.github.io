@@ -4,8 +4,6 @@ subtitle: "2.6k+ Downloads"
 description: "Recursively break logs in Minecraft"
 date: "2019-04-27"
 languages: ["Java"]
-field: []
-tech: ["Spigot"]
 progress: "Finished"
 association: "Hobby"
 hidden: false

@@ -3,9 +3,7 @@ title: "MoneyMoneyStocksBot"
 subtitle: "Best Veteran Hack"
 description: "XHacks 2021 Submission; Discord bot that provides stock information"
 date: "2021-08-08"
-languages: ["JavaScript"]
-field: []
-tech: ["Node.js"]
+languages: ["HTML/CSS/JavaScript"]
 progress: "Finished"
 association: "Hackathon"
 hidden: true

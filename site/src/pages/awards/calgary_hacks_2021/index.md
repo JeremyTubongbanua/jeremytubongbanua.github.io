@@ -1,7 +1,8 @@
 ---
-title: "2nd Place Overall"
-subtitle: "Calgary Hacks 2021 - among 700+ participants. Awarded $750 in prizes"
-description: ""
+title: "Calgary Hacks 2021"
+placement: "2nd Place"
+subtitle: "Calgary Hacks"
+description: "Won 2nd among 700+ participants; awarded $750 in prizes"
 date: "2021-07-01"
 ---
 

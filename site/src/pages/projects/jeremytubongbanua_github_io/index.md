@@ -2,9 +2,7 @@
 title: "jeremytubongbanua.github.io"
 description: "Portfolio website that you're viewing right now"
 date: "2025-09-15"
-languages: ["HTML", "CSS", "JavaScript", "Ruby"]
-field: ["Web Development"]
-tech: []
+languages: ["HTML/CSS/JavaScript"]
 progress: "Finished"
 association: "Hobby"
 hidden: true

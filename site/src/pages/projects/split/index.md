@@ -4,8 +4,6 @@ subtitle: ""
 description: "Demo Fest 2023 Submission; Secure distributed computing application"
 date: "2023-03-20"
 languages: ["Java"]
-field: ["App Development", "Networking"]
-tech: []
 progress: "Finished"
 association: "Hackathon"
 hidden: true

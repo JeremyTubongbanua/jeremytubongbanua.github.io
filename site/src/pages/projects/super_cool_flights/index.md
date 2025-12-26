@@ -3,11 +3,9 @@ title: "SuperCoolFlights"
 subtitle: ""
 description: "SOFE 3980U Final; Flight booking web application"
 date: "2024-04-02"
-languages: ["HTML/CSS", "JavaScript"]
-field: ["DevOps", "Web Development"]
-tech: ["Docker", "Linux", "Node.js"]
+languages: ["HTML/CSS/JavaScript"]
 progress: "Finished"
-association: "Ontario Tech"
+association: "School"
 hidden: true
 layout: ../../../layouts/ProjectLayout.astro
 ---

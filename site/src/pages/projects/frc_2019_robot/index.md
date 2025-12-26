@@ -4,10 +4,8 @@ subtitle: ""
 description: "2019 Robot for FIRST Robotics that competed in the 2019 season"
 date: "2019-06-23"
 languages: ["Java"]
-field: ["Robotics"]
-tech: []
 progress: "Finished"
-association: "High School"
+association: "School"
 hidden: true
 layout: ../../../layouts/ProjectLayout.astro
 ---

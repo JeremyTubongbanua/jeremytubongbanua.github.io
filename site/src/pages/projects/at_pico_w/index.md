@@ -3,9 +3,7 @@ title: "at_pico_w"
 subtitle: "Atsign Project"
 description: "atProtocol implementation re-written in Micropython for Raspberry Pi Pico W"
 date: "2023-06-20"
-languages: ["Micropython"]
-field: ["Cryptography", "Cybersecurity", "IoT/Embedded", "Networking"]
-tech: []
+languages: ["Python"]
 progress: "Finished"
 association: "Atsign"
 layout: ../../../layouts/ProjectLayout.astro
