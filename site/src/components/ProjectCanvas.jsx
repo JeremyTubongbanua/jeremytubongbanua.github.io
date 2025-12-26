@@ -38,7 +38,7 @@ const ProjectCanvas = ({allProjects}) => {
     languages: ['Python', 'C', 'C++', 'Dart', 'Java', 'HTML/CSS/JavaScript', 'No Programming Language'],
     progress: ['In-Progress', 'Finished'],
     association: ['Hackathon', 'Atsign', 'Hobby', 'School'],
-    showHidden: true,
+    showHidden: false,
   });
 
   const [filteredProjects, setFilteredProjects] = useState([]);
@@ -64,10 +64,11 @@ const ProjectCanvas = ({allProjects}) => {
   }, [filter]);
 
   return (
-    <React.Fragment>
+    <div>
+      <h2>Projects</h2>
       <ProjectListFilter filter={filter} setFilter={setFilter} />
       <ProjectList filteredProjects={filteredProjects} />
-    </React.Fragment>
+    </div>
   );
 }
 

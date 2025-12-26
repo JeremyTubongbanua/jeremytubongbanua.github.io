@@ -6,7 +6,7 @@ date: "2024-07-23"
 languages: []
 progress: "Finished"
 association: "Hobby"
-hidden: false
+hidden: true
 layout: ../../../layouts/ProjectLayout.astro
 ---
 
