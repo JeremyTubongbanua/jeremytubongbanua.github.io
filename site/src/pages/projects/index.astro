@@ -2,8 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProjectsCanvas from '../../components/ProjectsCanvas.astro';
 const allProjects =
-  Object.values(import.meta.glob('../projects/**/index.md', {eager: true}));
+Object.values(import.meta.glob('../projects/**/index.md', {eager: true}));
 
+const languages = ['C', 'C++', 'Dart', 'Python', 'Java', 'HTML/CSS/JavaScript', 'No Programming Language'];
+const progresses = ['In-Progress', 'Finished'];
+const associations = ['Hackathon', 'Atsign', 'Hobby', 'School'];
+const bys = ['Date', 'Title', 'Association', 'Progress'];
+const orders = ['Ascending', 'Descending'];
 /**
   * project.frontmatter.
   *   title
@@ -18,7 +23,217 @@ const allProjects =
   */
 ---
 <BaseLayout pageTitle="Projects">
-  <ProjectsCanvas allProjects={allProjects}/>
+  <div id="projects-canvas">
+    <h2>Projects</h2>
+
+    <div class="project-filter">
+      <fieldset>
+        <legend>Filter</legend>
+        <div>
+          <label>Toggle Hidden:</label>
+          <button id="toggle-hidden">Enable</button>
+        </div>
+        Programming Language:
+        {languages.map((language) => (
+        <label>
+          <input type="checkbox" class="filter-language" value={language} checked />
+          {language}
+        </label>
+        ))}
+        <br/>
+        Progress:
+        {progresses.map((progress) => (
+        <label>
+          <input type="checkbox" class="filter-progress" value={progress} checked />
+          {progress}
+        </label>
+        ))}
+        <br/>
+        Association:
+        {associations.map((association) => (
+        <label>
+          <input type="checkbox" class="filter-association" value={association} checked />
+          {association}
+        </label>
+        ))}
+      </fieldset>
+    </div>
+
+    <fieldset id="project-sort">
+      <legend>Sort</legend>
+      <label>
+        Sort By:
+        <select id="sort-by">
+          {bys.map((by) => (
+          <option value={by} selected={by === 'Title'}>{by}</option>
+          ))}
+        </select>
+      </label>
+      <label>
+        Order By:
+        <select id="sort-order">
+          {orders.map((order) => (
+          <option value={order} selected={order === 'Ascending'}>{order}</option>
+          ))}
+        </select>
+      </label>
+    </fieldset>
+
+    <div id="project-list">
+      <h2>Viewing: <span id="project-count">0</span> projects out of {allProjects.length}</h2>
+      <button id="show-all">Show All</button>
+      <ul id="projects-ul"></ul>
+    </div>
+  </div>
+
+<script is:inline define:vars={{ allProjects, languages, progresses, associations, bys, orders }}>
+const state = {
+  filter: {
+    languages: [...languages],
+    progresses: [...progresses],
+    associations: [...associations],
+    showHidden: false,
+  },
+  sort: {
+    by: bys[1], // 'Title'
+    order: orders[0], // 'Ascending'
+  }
+};
+
+const toggleHiddenBtn = document.getElementById('toggle-hidden');
+const languageCheckboxes = document.querySelectorAll('.filter-language');
+const progressCheckboxes = document.querySelectorAll('.filter-progress');
+const associationCheckboxes = document.querySelectorAll('.filter-association');
+const sortBySelect = document.getElementById('sort-by');
+const sortOrderSelect = document.getElementById('sort-order');
+const projectsUl = document.getElementById('projects-ul');
+const projectCount = document.getElementById('project-count');
+const showAllBtn = document.getElementById('show-all');
+
+function processProjects() {
+  const filteredProjects = allProjects.filter((project) => {
+    const shouldBeShown = !project.frontmatter.hidden || state.filter.showHidden;
+    const matchesLanguages = project.frontmatter.languages.length === 0
+      ? state.filter.languages.includes('No Programming Language')
+      : project.frontmatter.languages.some((language) => state.filter.languages.includes(language));
+    const matchesProgress = state.filter.progresses.includes(project.frontmatter.progress);
+    const matchesAssociation = state.filter.associations.includes(project.frontmatter.association);
+    return shouldBeShown && matchesLanguages && matchesProgress && matchesAssociation;
+  });
+
+  const sortedProjects = filteredProjects.sort((projectA, projectB) => {
+    const multiplier = state.sort.order === orders[0] ? 1 : -1;
+    let value = 0;
+    if (state.sort.by === bys[0]) {
+      value = multiplier * (new Date(projectA.frontmatter.date) - new Date(projectB.frontmatter.date));
+    } else if (state.sort.by === bys[1]) {
+      value = multiplier * projectA.frontmatter.title.localeCompare(projectB.frontmatter.title);
+    } else if (state.sort.by === bys[2]) {
+      value = multiplier * projectA.frontmatter.association.localeCompare(projectB.frontmatter.association);
+    } else if (state.sort.by === bys[3]) {
+      value = multiplier * projectA.frontmatter.progress.localeCompare(projectB.frontmatter.progress);
+    }
+    return value;
+  });
+
+  return sortedProjects;
+}
+
+function render() {
+  const processedProjects = processProjects();
+
+  projectCount.textContent = processedProjects.length;
+
+  projectsUl.innerHTML = processedProjects.map((project) => `
+<li>
+<a href="${project.url}">
+${project.frontmatter.title}
+</a>
+</li>
+`).join('');
+}
+
+toggleHiddenBtn.addEventListener('click', () => {
+  state.filter.showHidden = !state.filter.showHidden;
+  toggleHiddenBtn.textContent = state.filter.showHidden ? 'Disable' : 'Enable';
+  render();
+});
+
+languageCheckboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', (e) => {
+    const language = e.target.value;
+    if (e.target.checked) {
+      state.filter.languages.push(language);
+    } else {
+      state.filter.languages = state.filter.languages.filter((l) => l !== language);
+    }
+    render();
+  });
+});
+
+progressCheckboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', (e) => {
+    const progress = e.target.value;
+    if (!e.target.checked && state.filter.progresses.length === 1) {
+      alert('At least one progress must be checked at all times');
+      e.target.checked = true;
+      return;
+    }
+    if (e.target.checked) {
+      state.filter.progresses.push(progress);
+    } else {
+      state.filter.progresses = state.filter.progresses.filter((p) => p !== progress);
+    }
+    render();
+  });
+});
+
+associationCheckboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', (e) => {
+    const association = e.target.value;
+    if (!e.target.checked && state.filter.associations.length === 1) {
+      alert('At least one association must be selected at all times');
+      e.target.checked = true;
+      return;
+    }
+    if (e.target.checked) {
+      state.filter.associations.push(association);
+    } else {
+      state.filter.associations = state.filter.associations.filter((a) => a !== association);
+    }
+    render();
+  });
+});
+
+sortBySelect.addEventListener('change', (e) => {
+  state.sort.by = e.target.value;
+  render();
+});
+
+sortOrderSelect.addEventListener('change', (e) => {
+  state.sort.order = e.target.value;
+  render();
+});
+
+showAllBtn.addEventListener('click', () => {
+  state.filter.languages = [...languages];
+  state.filter.progresses = [...progresses];
+  state.filter.associations = [...associations];
+  state.filter.showHidden = true;
+  toggleHiddenBtn.textContent = 'Disable';
+
+  languageCheckboxes.forEach((cb) => cb.checked = true);
+  progressCheckboxes.forEach((cb) => cb.checked = true);
+  associationCheckboxes.forEach((cb) => cb.checked = true);
+
+  render();
+});
+
+render();
+</script>
+
+
+
 </BaseLayout>
 
 
