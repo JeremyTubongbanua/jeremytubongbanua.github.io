@@ -1,5 +1,5 @@
 ---
-title: "Figma Challenge"
+title: "1st Place - Figma Challenge 2025"
 subtitle: "Ontario Tech Automated Drive Club"
 placement: "1st Place"
 description: "Won 1st place overall in ADC's Figma Challenge. Designed car dashboard and tablet Figma prototypes for accessible semi-automated vehicles."

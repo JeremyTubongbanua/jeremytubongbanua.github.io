@@ -20,7 +20,7 @@ const orders = ['Ascending', 'Descending'];
     Placement:
     {placements.map((placement) => 
     <label>
-      <input type="checkbox" checked="true" />
+      <input class="placement-checkbox" type="checkbox" value={placement} checked />
       {placement}
     </label>)}
   </fieldset>
@@ -42,22 +42,80 @@ const orders = ['Ascending', 'Descending'];
   <ul id="awards-ul"></ul>
 </BaseLayout>
 
-<script is:inline define:vars={{allAwards}}>
+<script is:inline define:vars={{allAwards, placements}}>
 const awardsUl = document.getElementById("awards-ul");
 const sortBySelect = document.getElementById('sort-by');
 const orderBySelect = document.getElementById('order-by');
+const placementCheckBoxes = document.querySelectorAll('.placement-checkbox');
+
+const state = {
+  filter: {
+    placements: placements
+  },
+  sort: {
+    by: 'Date',
+    order: 'Descending',
+  }
+};
 
 const getProcessedAwards = () => {
-}
+  const filteredAwards = allAwards.filter((award) => {
+    const matchesPlacements = state.filter.placements.includes(award.frontmatter.placement);
+    const result = matchesPlacements;
+    return result;
+  });
+
+  const sortedAwards = [...filteredAwards].sort((awardA, awardB) => {
+    const multiplier = state.sort.order === 'Ascending' ? 1 : -1;
+    let value = 0;
+    if(state.sort.by === 'Date') {
+      value = multiplier * (new Date(awardA.frontmatter.date) - new Date(awardB.frontmatter.date));
+    } else if(state.sort.by === 'Title') {
+      value = multiplier * awardA.frontmatter.title.localeCompare(awardB.frontmatter.title);
+    }
+    return value;
+  });
+
+  return sortedAwards;
+};
 
 const render = () => {
-  let processedAwards = allAwards;
+  let processedAwards = getProcessedAwards();
   awardsUl.innerHTML = processedAwards.map((award) => `
     <li>
       <a href=${award.url}>${award.frontmatter.title}</a>
     </li>
   `).join('');
 }
+
+placementCheckBoxes.forEach((cb) => {
+  cb.addEventListener('change', (e) => {
+    const isChecked = e.target.checked;
+    const value = e.target.value;
+    if(!isChecked) {
+      // we just unchecked it, remove it
+      state.filter.placements = state.filter.placements.filter((p) => p !== value);
+      console.log(state.filter.placements);
+    } else {
+      // we just checked it, add it
+      state.filter.placements = [...state.filter.placements, value];
+      console.log(state.filter.placements);
+    }
+    render();
+  });
+});
+
+sortBySelect.addEventListener('change', (e) => {
+  state.sort.by = e.target.value;
+  render();
+});
+
+orderBySelect.addEventListener('change', (e) => {
+  state.sort.order = e.target.value;
+  render();
+});
+
+render();
 </script>
 
 <style>
