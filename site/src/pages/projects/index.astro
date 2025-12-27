@@ -110,7 +110,7 @@ const projectsUl = document.getElementById('projects-ul');
 const projectCount = document.getElementById('project-count');
 const showAllBtn = document.getElementById('show-all');
 
-function processProjects() {
+const processProjects = () => {
   const filteredProjects = allProjects.filter((project) => {
     const shouldBeShown = !project.frontmatter.hidden || state.filter.showHidden;
     const matchesLanguages = project.frontmatter.languages.length === 0
@@ -121,7 +121,7 @@ function processProjects() {
     return shouldBeShown && matchesLanguages && matchesProgress && matchesAssociation;
   });
 
-  const sortedProjects = filteredProjects.sort((projectA, projectB) => {
+  const sortedProjects = [...filteredProjects].sort((projectA, projectB) => {
     const multiplier = state.sort.order === orders[0] ? 1 : -1;
     let value = 0;
     if (state.sort.by === bys[0]) {
@@ -139,7 +139,57 @@ function processProjects() {
   return sortedProjects;
 }
 
-function render() {
+const updateURL = () => {
+  const params = new URLSearchParams();
+
+  params.set('languages', state.filter.languages.join(','));
+  params.set('progresses', state.filter.progresses.join(','));
+  params.set('associations', state.filter.associations.join(','));
+  params.set('showHidden', state.filter.showHidden);
+  params.set('by', state.sort.by);
+  params.set('order', state.sort.order);
+
+  window.history.replaceState({}, '', `?${params.toString()}`);
+}
+
+const loadStateFromURL = () => {
+  const params = new URLSearchParams(window.location.search);
+
+  if(params.has('languages')) {
+    state.filter.languages = params.get('languages').split(',').filter(Boolean);
+  }
+
+  if(params.has('progresses')) {
+    state.filter.progresses = params.get('progresses').split(',').filter(Boolean);
+  }
+
+  if(params.has('associations')) {
+    state.filter.associations = params.get('associations').split(',').filter(Boolean);
+  }
+
+  if(params.has('showHidden')) {
+    state.filter.showHidden = params.get('showHidden') === 'true';
+  }
+
+  if(params.has('by')) {
+    state.sort.by = params.get('by');
+  }
+
+  if(params.has('order')) {
+    state.sort.order = params.get('order');
+  }
+
+  languageCheckboxes.forEach((cb) => cb.checked = state.filter.languages.includes(cb.value));
+  progressCheckboxes.forEach((cb) => cb.checked = state.filter.progresses.includes(cb.value));
+  associationCheckboxes.forEach((cb) => cb.checked = state.filter.associations.includes(cb.value));
+
+  toggleHiddenBtn.textContent = state.filter.showHidden ? 'Disable' : 'Enable';
+
+  sortBySelect.value = state.sort.by;
+  sortOrderSelect.value = state.sort.order;
+}
+
+const render = () => {
   const processedProjects = processProjects();
 
   projectCount.textContent = processedProjects.length;
@@ -156,6 +206,7 @@ ${project.frontmatter.title}
 toggleHiddenBtn.addEventListener('click', () => {
   state.filter.showHidden = !state.filter.showHidden;
   toggleHiddenBtn.textContent = state.filter.showHidden ? 'Disable' : 'Enable';
+  updateURL();
   render();
 });
 
@@ -163,10 +214,11 @@ languageCheckboxes.forEach((checkbox) => {
   checkbox.addEventListener('change', (e) => {
     const language = e.target.value;
     if (e.target.checked) {
-      state.filter.languages.push(language);
+      state.filter.languages = [...state.filter.languages, language];
     } else {
       state.filter.languages = state.filter.languages.filter((l) => l !== language);
     }
+    updateURL();
     render();
   });
 });
@@ -180,10 +232,11 @@ progressCheckboxes.forEach((checkbox) => {
       return;
     }
     if (e.target.checked) {
-      state.filter.progresses.push(progress);
+      state.filter.progresses = [...state.filter.progresses, progress];
     } else {
       state.filter.progresses = state.filter.progresses.filter((p) => p !== progress);
     }
+    updateURL();
     render();
   });
 });
@@ -197,21 +250,24 @@ associationCheckboxes.forEach((checkbox) => {
       return;
     }
     if (e.target.checked) {
-      state.filter.associations.push(association);
+      state.filter.associations = [...state.filter.associations, association];
     } else {
       state.filter.associations = state.filter.associations.filter((a) => a !== association);
     }
+    updateURL();
     render();
   });
 });
 
 sortBySelect.addEventListener('change', (e) => {
   state.sort.by = e.target.value;
+  updateURL();
   render();
 });
 
 sortOrderSelect.addEventListener('change', (e) => {
   state.sort.order = e.target.value;
+  updateURL();
   render();
 });
 
@@ -226,14 +282,13 @@ showAllBtn.addEventListener('click', () => {
   progressCheckboxes.forEach((cb) => cb.checked = true);
   associationCheckboxes.forEach((cb) => cb.checked = true);
 
+  updateURL();
   render();
 });
 
+loadStateFromURL();
 render();
 </script>
-
-
-
 </BaseLayout>
 
 

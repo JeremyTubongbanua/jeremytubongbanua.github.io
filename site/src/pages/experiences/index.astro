@@ -13,6 +13,7 @@ allExperiences.forEach((experience: any) => {
 
 let bys = ['Title', 'From Date', 'To Date', 'Category'];
 let orders = ['Ascending', 'Descending'];
+
 ---
 <BaseLayout pageTitle={pageTitle}>
   <div id="experiences-canvas">
@@ -20,13 +21,13 @@ let orders = ['Ascending', 'Descending'];
     <div>
       <fieldset>
         <legend>Filter</legend>
-          Category:
-          {categories.map((category: any) => (
-          <label>
+        Category:
+        {categories.map((category: any) => (
+        <label>
           <input type="checkbox" class="filter-category" value={category} checked />
           {category}
-          </label>
-          ))}
+        </label>
+        ))}
         <br/>
         <label>
           Toggle Hidden:
@@ -39,7 +40,7 @@ let orders = ['Ascending', 'Descending'];
           Sort By:
           <select id="sort-by">
             {bys.map((by) => (
-              <option value={by} selected={by === 'Title'}>{by}</option>
+            <option value={by} selected={by === 'Title'}>{by}</option>
             ))}
           </select>
         </label>
@@ -58,9 +59,8 @@ let orders = ['Ascending', 'Descending'];
       <ul id="experiences-ul"></ul>
     </div>
   </div>
-</BaseLayout>
 
-<script is:inline define:vars={{ allExperiences, categories }}>
+  <script is:inline define:vars={{ allExperiences, categories }}>
 const state = {
   filter: {
     showHidden: false,
@@ -88,21 +88,24 @@ categoryCheckboxes.forEach((checkbox) => {
       return;
     }
     if(e.target.checked) {
-      state.filter.categories.push(category);
+      state.filter.categories = [...state.filter.categories, category];
     } else {
       state.filter.categories = state.filter.categories.filter((c) => c !== category);
     }
+    updateURL();
     render();
   });
 });
 
 sortBySelect.addEventListener('change', (e) => {
   state.sort.by = e.target.value;
+  updateURL();
   render();
 });
 
 orderBySelect.addEventListener('change', (e) => {
   state.sort.order = e.target.value;
+  updateURL();
   render();
 });
 
@@ -110,19 +113,21 @@ toggleHiddenBtn.addEventListener('click', (e) => {
   state.filter = {
     ...state.filter,
     showHidden: !state.filter.showHidden,
-  },
+  };
   toggleHiddenBtn.textContent = state.filter.showHidden ? 'Disable' : 'Enable';
+  updateURL();
   render();
 });
 
 const getProcessedExperiences = () => {
   const filteredExperiences = allExperiences.filter((experience) => {
     const shouldBeShown = !experience.frontmatter.hidden || state.filter.showHidden;
-    const result = shouldBeShown;
+    const matchesCategory = state.filter.categories.includes(experience.frontmatter.category);
+    const result = shouldBeShown && matchesCategory;
     return result;
   })
 
-  const sortedExperiences = filteredExperiences.sort((experienceA, experienceB) => {
+  const sortedExperiences = [...filteredExperiences].sort((experienceA, experienceB) => {
     const order = state.sort.order;
     const multiplier = order === 'Ascending' ? 1 : -1;
 
@@ -151,18 +156,56 @@ const getProcessedExperiences = () => {
   return sortedExperiences;
 }
 
+const updateURL = () => {
+  const params = new URLSearchParams();
+
+  params.set('showHidden', state.filter.showHidden);
+  params.set('categories', state.filter.categories.join(','));
+  params.set('by', state.sort.by);
+  params.set('order', state.sort.order);
+
+  window.history.replaceState({}, '', `?${params.toString()}`);
+}
+
+const loadStateFromURL = () => {
+  const params = new URLSearchParams(window.location.search);
+
+  if(params.has('showHidden')) {
+    state.filter.showHidden = params.get('showHidden') === 'true';
+  }
+
+  if(params.has('categories')) {
+    state.filter.categories = params.get('categories').split(',').filter(Boolean);
+  }
+
+  if(params.has('by')) {
+    state.sort.by = params.get('by');
+  }
+
+  if(params.has('order')) {
+    state.sort.order = params.get('order');
+  }
+
+  categoryCheckboxes.forEach((cb) => cb.checked = state.filter.categories.includes(cb.value));
+  toggleHiddenBtn.textContent = state.filter.showHidden ? 'Disable' : 'Enable';
+  sortBySelect.value = state.sort.by;
+  orderBySelect.value = state.sort.order;
+}
+
 const render = () => {
   const processedExperiences = getProcessedExperiences();
   experienceUl.innerHTML = processedExperiences.map((experience) => `
-    <li>
-      <a href="${experience.url}">
-        ${experience.frontmatter.title}
-      </a>
-    </li>
-  `).join('');
+<li>
+<a href="${experience.url}">
+${experience.frontmatter.title}
+</a>
+</li>
+`).join('');
   experienceCount.textContent = processedExperiences.length;
 }
 
+loadStateFromURL();
 render();
 </script>
+</BaseLayout>
 
