@@ -1,17 +1,68 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const awards = Object.values(import.meta.glob('./**/index.md', {eager: true}));
+const allAwards = Object.values(import.meta.glob('./**/index.md', {eager: true}));
+
+let placements = [];
+allAwards.forEach((award) => {
+  if(!placements.includes(award.frontmatter.placement)) {
+    placements = [...placements, award.frontmatter.placement];
+  }
+});
+placements.sort((a, b) => a.localeCompare(b));
+
+const bys = ['Title', 'Date'];
+const orders = ['Ascending', 'Descending'];
 ---
 <BaseLayout pageTitle="Awards">
   <h2>Awards</h2>
-  <ul>
-    {awards.map((award) => award.frontmatter.hidden ? '' : <li><a href=`${award.frontmatter.url}`>{award.frontmatter.title}</a></li>)}
-  </ul>
+  <fieldset id="award-filter">
+    <legend>Filter</legend>
+    Placement:
+    {placements.map((placement) => 
+    <label>
+      <input type="checkbox" checked="true" />
+      {placement}
+    </label>)}
+  </fieldset>
+  <fieldset>
+    <legend>Sort</legend>
+    <label>
+      Sort By:
+      <select id="sort-by">
+      {bys.map((by) => <option selected={by === 'Date'} value={by}>{by}</option>)}
+      </select>
+    </label>
+    <label>
+      Order By:
+      <select id="order-by">
+        {orders.map((order) => <option selected={order === 'Descending'} value={order}>{order}</option>)}
+      </select>
+    </label>
+  </fieldset>
+  <ul id="awards-ul"></ul>
 </BaseLayout>
 
+<script is:inline define:vars={{allAwards}}>
+const awardsUl = document.getElementById("awards-ul");
+const sortBySelect = document.getElementById('sort-by');
+const orderBySelect = document.getElementById('order-by');
+
+const getProcessedAwards = () => {
+}
+
+const render = () => {
+  let processedAwards = allAwards;
+  awardsUl.innerHTML = processedAwards.map((award) => `
+    <li>
+      <a href=${award.url}>${award.frontmatter.title}</a>
+    </li>
+  `).join('');
+}
+</script>
+
 <style>
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 </style>
 

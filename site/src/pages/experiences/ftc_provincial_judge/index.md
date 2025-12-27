@@ -1,5 +1,5 @@
 ---
-title: "Provincial Judge"
+title: "FTC Provincial Judge 2023"
 subtitle: ""
 description: "Provincial Level Judge for FTC at Centennial College"
 fromdate: ""

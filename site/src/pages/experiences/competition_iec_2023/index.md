@@ -4,7 +4,7 @@ subtitle: "1st place"
 description: "1st Place in Internal Engineering Competition in the Consulting Category, hosted by EngSoc"
 fromdate: ""
 todate: "2023-11-05"
-category: "Competition"
+category: "In-Person Competition"
 hidden: true
 ---
 

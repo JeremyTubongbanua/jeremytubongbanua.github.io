@@ -21,18 +21,22 @@ let orders = ['Ascending', 'Descending'];
     <div>
       <fieldset>
         <legend>Filter</legend>
-        Category:
-        {categories.map((category: any) => (
-        <label>
-          <input type="checkbox" class="filter-category" value={category} checked />
-          {category}
-        </label>
-        ))}
-        <br/>
-        <label>
-          Toggle Hidden:
-          <button id="toggle-hidden">Enable</button>
-        </label>
+        <button id="show-all-btn">Show All</button>
+        <div>
+          Category:
+          {categories.map((category: any) => (
+          <label>
+            <input type="checkbox" class="filter-category" value={category} checked />
+            {category}
+          </label>
+          ))}
+        </div>
+        <div>
+          <label>
+            Toggle Hidden:
+            <button id="toggle-hidden">Enable</button>
+          </label>
+        </div>
       </fieldset>
       <fieldset>
         <legend>Sort</legend>
@@ -78,6 +82,7 @@ const orderBySelect = document.getElementById('order-by');
 const experienceUl = document.getElementById('experiences-ul');
 const experienceCount = document.getElementById('experience-count');
 const toggleHiddenBtn = document.getElementById('toggle-hidden');
+const showAllBtn = document.getElementById('show-all-btn');
 
 categoryCheckboxes.forEach((checkbox) => {
   checkbox.addEventListener('change', (e) => {
@@ -115,6 +120,17 @@ toggleHiddenBtn.addEventListener('click', (e) => {
     showHidden: !state.filter.showHidden,
   };
   toggleHiddenBtn.textContent = state.filter.showHidden ? 'Disable' : 'Enable';
+  updateURL();
+  render();
+});
+
+showAllBtn.addEventListener('click', (e) => {
+  state.filter.categories = [...categories];
+  state.filter.showHidden = true;
+
+  toggleHiddenBtn.textContent = 'Disable';
+  categoryCheckboxes.forEach((cb) => cb.checked = true);
+
   updateURL();
   render();
 });

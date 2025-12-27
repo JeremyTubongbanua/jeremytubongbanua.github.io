@@ -1,11 +1,11 @@
 ---
-title: "Innovation Project Provincial Judge"
+title: "FLL Provincials Judge 2024"
 subtitle: ""
 description: "Provincials Judge for FLL Ontario East Provincials at Durham College for the Innovation Project category"
 fromdate: ""
 todate: "2024-01-21"
 category: "Robotics"
-hidden: true
+hidden: false
 ---
 
 #

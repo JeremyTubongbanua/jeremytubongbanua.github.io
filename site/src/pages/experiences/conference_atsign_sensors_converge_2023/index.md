@@ -5,7 +5,7 @@ description: "Represented Atsign at Sensors Converge 2023 in San Francisco, show
 fromdate: "2023-06-19"
 todate: "2023-06-21"
 category: "Conference"
-hidden: true
+hidden: false
 ---
 
 # 

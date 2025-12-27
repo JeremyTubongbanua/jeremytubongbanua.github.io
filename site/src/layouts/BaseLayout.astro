@@ -12,6 +12,14 @@ const { pageTitle } = Astro.props;
   <body>
     <Header/>
     <Navigation/>
-    <slot/>
+    <div class="base-layout-div">
+      <slot/>
+    </div>
+
+    <style>
+      .base-layout-div {
+        margin: 4em;
+      }
+    </style>
 	</body>
 </html>

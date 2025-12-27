@@ -1,11 +1,11 @@
 ---
-title: "Referee"
+title: "FLL Referee 2018"
 subtitle: ""
-description: "Refereefor Mary Ward FLL Qualifier"
+description: "Referee for Mary Ward FLL Qualifier"
 fromdate: ""
 todate: "2018-12-01"
 category: "Robotics"
-hidden: true
+hidden: false
 ---
 
 #

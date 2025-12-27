@@ -1,11 +1,11 @@
 ---
-title: "Engineer"
+title: "Atsign - Engineer"
 subtitle: "Atsign"
 description: "Full-time core engineer at Atsign. Doing lots of stuff with Linux currently."
 fromdate: "2025-05-01"
 todate: ""
-category: "General"
-hidden: true
+category: "Job"
+hidden: false
 ---
 
 # Engineer at Atsign

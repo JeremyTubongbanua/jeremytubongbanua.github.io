@@ -1,9 +1,9 @@
 ---
-title: "Judge"
+title: "FLL Judge 2024"
 subtitle: ""
 description: "Lead judge for my pod and judged three robotics teams for the day, and also assisted in judge deliberation and score tabulation."
 fromdate: ""
 todate: "2024-11-30"
 category: "Robotics"
-hidden: true
+hidden: false
 ---

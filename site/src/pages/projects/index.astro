@@ -1,12 +1,32 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ProjectsCanvas from '../../components/ProjectsCanvas.astro';
 const allProjects =
 Object.values(import.meta.glob('../projects/**/index.md', {eager: true}));
 
-const languages = ['C', 'C++', 'Dart', 'Python', 'Java', 'HTML/CSS/JavaScript', 'No Programming Language'];
-const progresses = ['In-Progress', 'Finished'];
-const associations = ['Hackathon', 'Atsign', 'Hobby', 'School'];
+let languages = ['No Programming Language'];
+allProjects.forEach((project) => {
+  let langs = project.frontmatter.languages;
+  langs.forEach((lang) => {
+    if(!languages.includes(lang)) {
+      languages = [...languages, lang];
+    }
+  });
+});
+
+let progresses = [];
+allProjects.forEach((project) => {
+  if(!progresses.includes(project.frontmatter.progress)) {
+    progresses = [...progresses, project.frontmatter.progress];
+  }
+});
+
+let associations = [];
+allProjects.forEach((project) => {
+  if(!associations.includes(project.frontmatter.association)) {
+    associations = [...associations, project.frontmatter.association];
+  }
+});
+
 const bys = ['Date', 'Title', 'Association', 'Progress'];
 const orders = ['Ascending', 'Descending'];
 /**
@@ -23,70 +43,68 @@ const orders = ['Ascending', 'Descending'];
   */
 ---
 <BaseLayout pageTitle="Projects">
-  <div id="projects-canvas">
-    <h2>Projects</h2>
+  <h2>Projects</h2>
 
-    <div class="project-filter">
-      <fieldset>
-        <legend>Filter</legend>
-        <div>
-          <label>Toggle Hidden:</label>
-          <button id="toggle-hidden">Enable</button>
-        </div>
-        Programming Language:
-        {languages.map((language) => (
-        <label>
-          <input type="checkbox" class="filter-language" value={language} checked />
-          {language}
-        </label>
-        ))}
-        <br/>
-        Progress:
-        {progresses.map((progress) => (
-        <label>
-          <input type="checkbox" class="filter-progress" value={progress} checked />
-          {progress}
-        </label>
-        ))}
-        <br/>
-        Association:
-        {associations.map((association) => (
-        <label>
-          <input type="checkbox" class="filter-association" value={association} checked />
-          {association}
-        </label>
-        ))}
-      </fieldset>
-    </div>
-
-    <fieldset id="project-sort">
-      <legend>Sort</legend>
-      <label>
-        Sort By:
-        <select id="sort-by">
-          {bys.map((by) => (
-          <option value={by} selected={by === 'Title'}>{by}</option>
-          ))}
-        </select>
-      </label>
-      <label>
-        Order By:
-        <select id="sort-order">
-          {orders.map((order) => (
-          <option value={order} selected={order === 'Ascending'}>{order}</option>
-          ))}
-        </select>
-      </label>
-    </fieldset>
-
-    <div id="project-list">
-      <h2>Viewing: <span id="project-count">0</span> projects out of {allProjects.length}</h2>
+  <div class="project-filter">
+    <fieldset>
+      <legend>Filter</legend>
       <button id="show-all">Show All</button>
-      <ul id="projects-ul"></ul>
-    </div>
+      <div>
+        <label>Toggle Hidden:</label>
+        <button id="toggle-hidden">Enable</button>
+      </div>
+      Programming Language:
+      {languages.map((language) => (
+      <label>
+        <input type="checkbox" class="filter-language" value={language} checked />
+        {language}
+      </label>
+      ))}
+      <br/>
+      Progress:
+      {progresses.map((progress) => (
+      <label>
+        <input type="checkbox" class="filter-progress" value={progress} checked />
+        {progress}
+      </label>
+      ))}
+      <br/>
+      Association:
+      {associations.map((association) => (
+      <label>
+        <input type="checkbox" class="filter-association" value={association} checked />
+        {association}
+      </label>
+      ))}
+    </fieldset>
   </div>
 
-<script is:inline define:vars={{ allProjects, languages, progresses, associations, bys, orders }}>
+  <fieldset id="project-sort">
+    <legend>Sort</legend>
+    <label>
+      Sort By:
+      <select id="sort-by">
+        {bys.map((by) => (
+        <option value={by} selected={by === 'Title'}>{by}</option>
+        ))}
+      </select>
+    </label>
+    <label>
+      Order By:
+      <select id="sort-order">
+        {orders.map((order) => (
+        <option value={order} selected={order === 'Ascending'}>{order}</option>
+        ))}
+      </select>
+    </label>
+  </fieldset>
+
+  <div id="project-list">
+    <h3>Viewing: <span id="project-count">0</span> projects out of {allProjects.length}</h3>
+    <ul id="projects-ul"></ul>
+  </div>
+
+  <script is:inline define:vars={{ allProjects, languages, progresses, associations, bys, orders }}>
 const state = {
   filter: {
     languages: [...languages],
@@ -183,7 +201,7 @@ const loadStateFromURL = () => {
   progressCheckboxes.forEach((cb) => cb.checked = state.filter.progresses.includes(cb.value));
   associationCheckboxes.forEach((cb) => cb.checked = state.filter.associations.includes(cb.value));
 
-  toggleHiddenBtn.textContent = state.filter.showHidden ? 'Disable' : 'Enable';
+  toggleHiddenBtn.textContent = state.filter.showHidden ? 'Hide' : 'Show';
 
   sortBySelect.value = state.sort.by;
   sortOrderSelect.value = state.sort.order;
@@ -205,7 +223,7 @@ ${project.frontmatter.title}
 
 toggleHiddenBtn.addEventListener('click', () => {
   state.filter.showHidden = !state.filter.showHidden;
-  toggleHiddenBtn.textContent = state.filter.showHidden ? 'Disable' : 'Enable';
+  toggleHiddenBtn.textContent = state.filter.showHidden ? 'Hide' : 'Show';
   updateURL();
   render();
 });
@@ -226,11 +244,6 @@ languageCheckboxes.forEach((checkbox) => {
 progressCheckboxes.forEach((checkbox) => {
   checkbox.addEventListener('change', (e) => {
     const progress = e.target.value;
-    if (!e.target.checked && state.filter.progresses.length === 1) {
-      alert('At least one progress must be checked at all times');
-      e.target.checked = true;
-      return;
-    }
     if (e.target.checked) {
       state.filter.progresses = [...state.filter.progresses, progress];
     } else {
@@ -244,11 +257,6 @@ progressCheckboxes.forEach((checkbox) => {
 associationCheckboxes.forEach((checkbox) => {
   checkbox.addEventListener('change', (e) => {
     const association = e.target.value;
-    if (!e.target.checked && state.filter.associations.length === 1) {
-      alert('At least one association must be selected at all times');
-      e.target.checked = true;
-      return;
-    }
     if (e.target.checked) {
       state.filter.associations = [...state.filter.associations, association];
     } else {
@@ -276,8 +284,8 @@ showAllBtn.addEventListener('click', () => {
   state.filter.progresses = [...progresses];
   state.filter.associations = [...associations];
   state.filter.showHidden = true;
-  toggleHiddenBtn.textContent = 'Disable';
 
+  toggleHiddenBtn.textContent = 'Hide';
   languageCheckboxes.forEach((cb) => cb.checked = true);
   progressCheckboxes.forEach((cb) => cb.checked = true);
   associationCheckboxes.forEach((cb) => cb.checked = true);
@@ -288,7 +296,7 @@ showAllBtn.addEventListener('click', () => {
 
 loadStateFromURL();
 render();
-</script>
+  </script>
 </BaseLayout>
 
 

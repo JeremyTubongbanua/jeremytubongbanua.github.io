@@ -3,7 +3,7 @@ title: "Best Veteran Hack - XHacks2021"
 subtitle: "XHacks2021"
 description: "Won best veteran hack"
 date: "2021-07-01"
-placement: "Best Veteran Hack"
+placement: "1st Place"
 ---
 
 #

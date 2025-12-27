@@ -1,9 +1,9 @@
 ---
-title: "Mentor/Coach"
+title: "FRC Mentor/Coach"
 subtitle: ""
-description: "FLL Mentor for Holy Spirit Catholic School Team"
-fromdate: "2017-09-01"
-todate: "2019-06-29"
+description: "FRC Mentor/Coach for Wolverine Robotics 5596 at Mary Ward"
+fromdate: "2021-09-01"
+todate: "2025-12-31"
 category: "Robotics"
 hidden: true
 ---
