@@ -11,9 +11,8 @@ allExperiences.forEach((experience: any) => {
   }
 });
 
-let bys = ['Title', 'Date', 'Category'];
+let bys = ['Title', 'From Date', 'To Date', 'Category'];
 let orders = ['Ascending', 'Descending'];
-
 ---
 <BaseLayout pageTitle={pageTitle}>
   <div id="experiences-canvas">
@@ -131,8 +130,16 @@ const getProcessedExperiences = () => {
     let value = 0;
     if(by === 'Title') {
       value = multiplier * experienceA.frontmatter.title.localeCompare(experienceB.frontmatter.title);
-    } else if (by === 'Date') {
-      value = multiplier * (new Date(experienceA.frontmatter.todate) - new Date(experienceB.frontmatter.todate));
+    } else if (by === 'From Date') {
+      // For one-day events (no fromdate), use todate as the event date
+      const dateA = experienceA.frontmatter.fromdate || experienceA.frontmatter.todate;
+      const dateB = experienceB.frontmatter.fromdate || experienceB.frontmatter.todate;
+      value = multiplier * (new Date(dateA) - new Date(dateB));
+    } else if (by === 'To Date') {
+      // For ongoing events (no todate), use current date (represents "present")
+      const dateA = experienceA.frontmatter.todate || new Date().toISOString();
+      const dateB = experienceB.frontmatter.todate || new Date().toISOString();
+      value = multiplier * (new Date(dateA) - new Date(dateB));
     } else if(by === 'Category') {
       value = multiplier * experienceA.frontmatter.category.localeCompare(experienceB.frontmatter.category);
     }
