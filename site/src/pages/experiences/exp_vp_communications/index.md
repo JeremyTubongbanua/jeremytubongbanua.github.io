@@ -5,6 +5,7 @@ description: "Volunteered as vice president of communications for the Ontario Te
 fromdate: "2023-04-01"
 todate: "2024-04-01"
 category: "General"
+hidden: true
 ---
 
 #

@@ -5,4 +5,5 @@ description: "Went on another business trip to Singapore for Atsign: visited cli
 fromdate: "2025-12-01"
 todate: "2025-12-06"
 category: "Conference"
+hidden: false
 ---

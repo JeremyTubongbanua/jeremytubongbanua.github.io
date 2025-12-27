@@ -5,4 +5,5 @@ description: "1st Place Overall at NASA Space Apps 2024"
 fromdate: "2025-10-04"
 todate: "2025-10-05"
 category: "Competition"
+hidden: true
 ---

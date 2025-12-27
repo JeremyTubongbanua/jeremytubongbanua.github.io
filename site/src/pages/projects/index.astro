@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import ProjectsCanvas from '../../components/ProjectsCanvas.jsx';
+import ProjectsCanvas from '../../components/ProjectsCanvas.astro';
 const allProjects =
   Object.values(import.meta.glob('../projects/**/index.md', {eager: true}));
 
@@ -18,7 +18,7 @@ const allProjects =
   */
 ---
 <BaseLayout pageTitle="Projects">
-  <ProjectsCanvas client:load allProjects={allProjects}/>
+  <ProjectsCanvas allProjects={allProjects}/>
 </BaseLayout>
 
 

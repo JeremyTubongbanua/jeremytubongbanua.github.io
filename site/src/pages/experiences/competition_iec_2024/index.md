@@ -5,6 +5,7 @@ description: "1st Place in Programming at Ontario Tech University's Internal Eng
 fromdate: "2024-11-02"
 todate: "2024-11-03"
 category: "Competition"
+hidden: true
 ---
 
 #

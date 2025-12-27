@@ -5,4 +5,5 @@ description: "Lead judge for my pod and judged three robotics teams for the day,
 fromdate: ""
 todate: "2024-11-30"
 category: "Robotics"
+hidden: true
 ---

@@ -5,6 +5,7 @@ description: "Won 3rd place overall in the province of Ontario in the programmin
 fromdate: "2025-01-24"
 todate: "2025-01-26"
 category: "Competition"
+hidden: true
 ---
 
 # 

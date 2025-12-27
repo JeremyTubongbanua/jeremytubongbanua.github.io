@@ -1,13 +1,64 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-const experiences =
-  Object.values(import.meta.glob('./**/index.md', {eager: true}));
+const pageTitle = "Experiences";
+const allExperiences = Object.values(
+  import.meta.glob('./**/index.md', {eager: true}));
+
+let categories: any = []; // "Conference", "Competition", "General", "Robotics"
+allExperiences.forEach((experience: any) => {
+  if(!categories.includes(experience.frontmatter.category)) {
+    categories = [...categories, experience.frontmatter.category];
+  }
+});
+
+let orders = ['Ascending', 'Descending'];
+let bys = ['Title', 'Date', 'Category'];
+
 ---
-<BaseLayout pageTitle="Experiences">
-  <h2>Experiences</h2>
-  <ul>
-    {experiences.map((experience) => experience.frontmatter.hidden ? '' :
-      <li><a href=`${experience.url}`>{experience.frontmatter.title}</a></li>)}
-  </ul>
+<BaseLayout pageTitle={pageTitle}>
+  <div id="experiences-canvas">
+    <h2>Experiences</h2>
+    <div>
+      <h3>Showing <span id="experience-count">0</span> experiences out of {allExperiences.length}</h3>
+      <ul id="experience-list"></ul>
+    </div>
+  </div>
 </BaseLayout>
 
+<script is:inline define:vars={{ allExperiences, categories }}>
+const state = {
+  filter: {
+    showHidden: false,
+    categories: [...categories],
+  }
+}
+
+const experienceList = document.getElementById('experience-list');
+const experienceCount = document.getElementById('experience-count');
+
+const getProcessedExperiences = () => {
+  let processedExperiences = [];
+  allExperiences.forEach((experience) => {
+    const shouldBeShown = !experience.frontmatter.hidden || state.filter.showHidden;
+    const result = shouldBeShown;
+    if(result) {
+      processedExperiences = [...processedExperiences, experience];
+    }
+  })
+  return processedExperiences;
+}
+
+const render = () => {
+  const processedExperiences = getProcessedExperiences();
+  experienceList.innerHTML = processedExperiences.map((experience) => `
+    <li>
+      <a href="${experience.url}"
+        ${experience.frontmatter.title}
+      </a>
+    </li>
+  `).join('');
+  experienceCount.textContent = processedExperiences.length;
+}
+
+render();
+</script>

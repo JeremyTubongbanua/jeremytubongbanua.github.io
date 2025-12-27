@@ -5,6 +5,7 @@ description: "Placed 2nd overall and received the best UI/UX award at Schulich H
 fromdate: "2023-04-27"
 todate: "2023-04-29"
 category: "Competition"
+hidden: true
 ---
 
 #

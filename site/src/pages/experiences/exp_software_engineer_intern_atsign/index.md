@@ -5,6 +5,7 @@ description: "Interned at Atsign for 2 months. Did stuff with Java, Maven CI/CD,
 fromdate: "2022-06-05"
 todate: "2022-07-29"
 category: "General"
+hidden: true
 ---
 
 # Software Engineer Intern at Atsign

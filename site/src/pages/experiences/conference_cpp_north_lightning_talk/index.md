@@ -5,6 +5,7 @@ description: "Presented my own lightning talk on my experiences with carpal tunn
 fromdate: ""
 todate: "2023-07-15"
 category: "Conference"
+hidden: true
 ---
 
 #

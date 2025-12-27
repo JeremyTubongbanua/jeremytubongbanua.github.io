@@ -5,6 +5,7 @@ description: "Placed 3rd and received the People's Choice Award at NASA Space Ap
 fromdate: "2023-10-07"
 todate: "2023-10-08"
 category: "Competition"
+hidden: true
 ---
 
 #

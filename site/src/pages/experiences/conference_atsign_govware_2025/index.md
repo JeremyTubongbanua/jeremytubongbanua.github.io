@@ -5,5 +5,6 @@ description: "Represented Atsign at GovWare 2025 in Singapore as a Sales Enginee
 fromdate: "2025-10-21"
 todate: "2025-10-23"
 category: "Conference"
+hidden: true
 ---
 

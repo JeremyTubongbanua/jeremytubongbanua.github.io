@@ -5,6 +5,7 @@ description: "Full-time core engineer at Atsign. Doing lots of stuff with Linux 
 fromdate: "2025-05-01"
 todate: ""
 category: "General"
+hidden: true
 ---
 
 # Engineer at Atsign

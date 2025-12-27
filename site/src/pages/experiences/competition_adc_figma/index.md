@@ -5,4 +5,5 @@ description: "Won 1st place overall in ADC's Figma Challenge. Designed car dashb
 fromdate: "2025-03-07"
 todate: "2025-03-07"
 category: "Competition"
+hidden: true
 ---

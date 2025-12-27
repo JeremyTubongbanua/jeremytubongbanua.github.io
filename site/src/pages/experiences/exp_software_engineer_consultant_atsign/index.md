@@ -5,6 +5,7 @@ description: "Software engineer consultant for Atsign for 2yrs 9months. Did work
 fromdate: "2022-08-01"
 todate: "2025-04-30"
 category: "General"
+hidden: true
 ---
 
 # Software Engineer Consultant at Atsign

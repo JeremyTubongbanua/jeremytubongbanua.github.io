@@ -5,4 +5,5 @@ description: "Received a tour of the Amazon Tour in Toronto, Ontario, Canada org
 fromdate: "2025-01-22"
 todate: "2025-01-22"
 category: "Competition"
+hidden: true
 ---

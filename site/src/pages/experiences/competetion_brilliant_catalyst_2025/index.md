@@ -5,6 +5,7 @@ description: "Placed top 9 finalists out of 18 teams in Brilliant Catalyst's Pit
 fromdate: "2025-01-23"
 todate: "2025-01-31"
 category: "Competition"
+hidden: true
 ---
 
 ![Thumbnail](./thumbnail.png)

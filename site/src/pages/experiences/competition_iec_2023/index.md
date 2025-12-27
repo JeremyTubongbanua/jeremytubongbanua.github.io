@@ -5,6 +5,7 @@ description: "1st Place in Internal Engineering Competition in the Consulting Ca
 fromdate: ""
 todate: "2023-11-05"
 category: "Competition"
+hidden: true
 ---
 
 #

@@ -5,6 +5,7 @@ description: "Participated in HawkHacks Wilfrid Laurier University hackathon in 
 fromdate: "2024-05-17"
 todate: "2024-05-19"
 category: "Competition"
+hidden: true
 ---
 
 #

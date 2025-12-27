@@ -5,4 +5,5 @@ description: "Received a tour of the Canadian Space Agency in Longueuille Quebec
 fromdate: ""
 todate: "2024-12-17"
 category: "General"
+hidden: true
 ---

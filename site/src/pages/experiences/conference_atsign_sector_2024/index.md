@@ -5,6 +5,7 @@ description: "Atsign representative at SecTor 2024"
 fromdate: "2024-10-23"
 todate: "2024-10-24"
 category: "Conference"
+hidden: true
 ---
 
 #
