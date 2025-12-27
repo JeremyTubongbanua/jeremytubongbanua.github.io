@@ -11,16 +11,52 @@ allExperiences.forEach((experience: any) => {
   }
 });
 
-let orders = ['Ascending', 'Descending'];
 let bys = ['Title', 'Date', 'Category'];
+let orders = ['Ascending', 'Descending'];
 
 ---
 <BaseLayout pageTitle={pageTitle}>
   <div id="experiences-canvas">
     <h2>Experiences</h2>
     <div>
+      <fieldset>
+        <legend>Filter</legend>
+          Category:
+          {categories.map((category: any) => (
+          <label>
+          <input type="checkbox" class="filter-category" value={category} checked />
+          {category}
+          </label>
+          ))}
+        <br/>
+        <label>
+          Toggle Hidden:
+          <button id="toggle-hidden">Enable</button>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Sort</legend>
+        <label>
+          Sort By:
+          <select id="sort-by">
+            {bys.map((by) => (
+              <option value={by} selected={by === 'Title'}>{by}</option>
+            ))}
+          </select>
+        </label>
+        <label>
+          Order By:
+          <select id="order-by">
+            {orders.map((order) => (
+            <option value={order} selected={order === 'Descending'}>{order}</option>
+            ))}
+          </select>
+        </label>
+      </fieldset>
+    </div>
+    <div id="experiences-list">
       <h3>Showing <span id="experience-count">0</span> experiences out of {allExperiences.length}</h3>
-      <ul id="experience-list"></ul>
+      <ul id="experiences-ul"></ul>
     </div>
   </div>
 </BaseLayout>
@@ -30,29 +66,89 @@ const state = {
   filter: {
     showHidden: false,
     categories: [...categories],
+  },
+  sort: {
+    by: 'Title',
+    order: 'Descending'
   }
 }
 
-const experienceList = document.getElementById('experience-list');
+const categoryCheckboxes = document.querySelectorAll('.filter-category');
+const sortBySelect = document.getElementById('sort-by');
+const orderBySelect = document.getElementById('order-by');
+const experienceUl = document.getElementById('experiences-ul');
 const experienceCount = document.getElementById('experience-count');
+const toggleHiddenBtn = document.getElementById('toggle-hidden');
+
+categoryCheckboxes.forEach((checkbox) => {
+  checkbox.addEventListener('change', (e) => {
+    const category = e.target.value;
+    if(!e.target.checked && state.filter.categories.length === 1) {
+      alert('At least one category must be selected at all times');
+      e.target.checked = true;
+      return;
+    }
+    if(e.target.checked) {
+      state.filter.categories.push(category);
+    } else {
+      state.filter.categories = state.filter.categories.filter((c) => c !== category);
+    }
+    render();
+  });
+});
+
+sortBySelect.addEventListener('change', (e) => {
+  state.sort.by = e.target.value;
+  render();
+});
+
+orderBySelect.addEventListener('change', (e) => {
+  state.sort.order = e.target.value;
+  render();
+});
+
+toggleHiddenBtn.addEventListener('click', (e) => {
+  state.filter = {
+    ...state.filter,
+    showHidden: !state.filter.showHidden,
+  },
+  toggleHiddenBtn.textContent = state.filter.showHidden ? 'Disable' : 'Enable';
+  render();
+});
 
 const getProcessedExperiences = () => {
-  let processedExperiences = [];
-  allExperiences.forEach((experience) => {
+  const filteredExperiences = allExperiences.filter((experience) => {
     const shouldBeShown = !experience.frontmatter.hidden || state.filter.showHidden;
     const result = shouldBeShown;
-    if(result) {
-      processedExperiences = [...processedExperiences, experience];
-    }
+    return result;
   })
-  return processedExperiences;
+
+  const sortedExperiences = filteredExperiences.sort((experienceA, experienceB) => {
+    const order = state.sort.order;
+    const multiplier = order === 'Ascending' ? 1 : -1;
+
+    const by = state.sort.by;
+    let value = 0;
+    if(by === 'Title') {
+      value = multiplier * experienceA.frontmatter.title.localeCompare(experienceB.frontmatter.title);
+    } else if (by === 'Date') {
+      value = multiplier * (new Date(experienceA.frontmatter.todate) - new Date(experienceB.frontmatter.todate));
+    } else if(by === 'Category') {
+      value = multiplier * experienceA.frontmatter.category.localeCompare(experienceB.frontmatter.category);
+    }
+    return value;
+  });
+
+  console.log(sortedExperiences);
+
+  return sortedExperiences;
 }
 
 const render = () => {
   const processedExperiences = getProcessedExperiences();
-  experienceList.innerHTML = processedExperiences.map((experience) => `
+  experienceUl.innerHTML = processedExperiences.map((experience) => `
     <li>
-      <a href="${experience.url}"
+      <a href="${experience.url}">
         ${experience.frontmatter.title}
       </a>
     </li>
@@ -62,3 +158,4 @@ const render = () => {
 
 render();
 </script>
+
