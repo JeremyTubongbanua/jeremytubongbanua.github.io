@@ -12,6 +12,10 @@ hidden: true
 
 ![Thumbnail](./thumbnail.png)
 
+The v0.1.0 alpha release
+
+![1.png](./1.png)
+
 # at_c
 
 ## Links

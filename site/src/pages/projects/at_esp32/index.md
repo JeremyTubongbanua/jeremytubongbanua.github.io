@@ -10,6 +10,10 @@ layout: ../../../layouts/ProjectLayout.astro
 hidden: true
 ---
 
+
+
+- ![thumbnail](./thumbnail.png)
+
 # at_esp32
 
 ## Links
