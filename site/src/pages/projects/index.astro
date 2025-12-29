@@ -4,23 +4,23 @@ const allProjects =
 Object.values(import.meta.glob('../projects/**/index.md', {eager: true}));
 
 let languages = ['No Programming Language'];
-allProjects.forEach((project) => {
+allProjects.forEach((project: any) => {
   let langs = project.frontmatter.languages;
-  langs.forEach((lang) => {
+  langs.forEach((lang: string) => {
     if(!languages.includes(lang)) {
       languages = [...languages, lang];
     }
   });
 });
 
-let progresses: any = [];
+let progresses: string[] = [];
 allProjects.forEach((project) => {
   if(!progresses.includes(project.frontmatter.progress)) {
     progresses = [...progresses, project.frontmatter.progress];
   }
 });
 
-let associations: any = [];
+let associations: string[] = [];
 allProjects.forEach((project) => {
   if(!associations.includes(project.frontmatter.association)) {
     associations = [...associations, project.frontmatter.association];
@@ -263,12 +263,7 @@ associationCheckboxes.forEach((checkbox) => {
 
 showHiddenCheckbox.addEventListener('change', (e) => {
   const isChecked = e.target.checked;
-  if(isChecked) {
-    // was just turned on, show hidden
-    state.filter.showHidden = true;
-  } else {
-    state.filter.showHidden = false;
-  }
+  state.filter.showHidden = isChecked;
   updateURL();
   render();
 });
