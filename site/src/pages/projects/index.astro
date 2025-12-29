@@ -13,14 +13,14 @@ allProjects.forEach((project) => {
   });
 });
 
-let progresses = [];
+let progresses: any = [];
 allProjects.forEach((project) => {
   if(!progresses.includes(project.frontmatter.progress)) {
     progresses = [...progresses, project.frontmatter.progress];
   }
 });
 
-let associations = [];
+let associations: any = [];
 allProjects.forEach((project) => {
   if(!associations.includes(project.frontmatter.association)) {
     associations = [...associations, project.frontmatter.association];
@@ -50,11 +50,13 @@ const orders = ['Ascending', 'Descending'];
       <legend>Filter</legend>
       <button id="show-all">Show All</button>
       <div>
-        <label>Toggle Hidden:</label>
-        <button id="toggle-hidden">Enable</button>
+        <label>
+          Show Hidden:
+          <input id="filter-show-hidden" type="checkbox" /> 
+        </label>
       </div>
       Programming Language:
-      {languages.map((language) => (
+      {languages.map((language: any) => (
       <label>
         <input type="checkbox" class="filter-language" value={language} checked />
         {language}
@@ -62,7 +64,7 @@ const orders = ['Ascending', 'Descending'];
       ))}
       <br/>
       Progress:
-      {progresses.map((progress) => (
+      {progresses.map((progress: any) => (
       <label>
         <input type="checkbox" class="filter-progress" value={progress} checked />
         {progress}
@@ -70,7 +72,7 @@ const orders = ['Ascending', 'Descending'];
       ))}
       <br/>
       Association:
-      {associations.map((association) => (
+      {associations.map((association: any) => (
       <label>
         <input type="checkbox" class="filter-association" value={association} checked />
         {association}
@@ -118,10 +120,10 @@ const state = {
   }
 };
 
-const toggleHiddenBtn = document.getElementById('toggle-hidden');
 const languageCheckboxes = document.querySelectorAll('.filter-language');
 const progressCheckboxes = document.querySelectorAll('.filter-progress');
 const associationCheckboxes = document.querySelectorAll('.filter-association');
+const showHiddenCheckbox = document.getElementById('filter-show-hidden');
 const sortBySelect = document.getElementById('sort-by');
 const sortOrderSelect = document.getElementById('sort-order');
 const projectsUl = document.getElementById('projects-ul');
@@ -200,8 +202,7 @@ const loadStateFromURL = () => {
   languageCheckboxes.forEach((cb) => cb.checked = state.filter.languages.includes(cb.value));
   progressCheckboxes.forEach((cb) => cb.checked = state.filter.progresses.includes(cb.value));
   associationCheckboxes.forEach((cb) => cb.checked = state.filter.associations.includes(cb.value));
-
-  toggleHiddenBtn.textContent = state.filter.showHidden ? 'Hide' : 'Show';
+  showHiddenCheckbox.checked = state.filter.showHidden;
 
   sortBySelect.value = state.sort.by;
   sortOrderSelect.value = state.sort.order;
@@ -220,13 +221,6 @@ ${project.frontmatter.title}
 </li>
 `).join('');
 }
-
-toggleHiddenBtn.addEventListener('click', () => {
-  state.filter.showHidden = !state.filter.showHidden;
-  toggleHiddenBtn.textContent = state.filter.showHidden ? 'Hide' : 'Show';
-  updateURL();
-  render();
-});
 
 languageCheckboxes.forEach((checkbox) => {
   checkbox.addEventListener('change', (e) => {
@@ -267,6 +261,18 @@ associationCheckboxes.forEach((checkbox) => {
   });
 });
 
+showHiddenCheckbox.addEventListener('change', (e) => {
+  const isChecked = e.target.checked;
+  if(isChecked) {
+    // was just turned on, show hidden
+    state.filter.showHidden = true;
+  } else {
+    state.filter.showHidden = false;
+  }
+  updateURL();
+  render();
+});
+
 sortBySelect.addEventListener('change', (e) => {
   state.sort.by = e.target.value;
   updateURL();
@@ -285,7 +291,7 @@ showAllBtn.addEventListener('click', () => {
   state.filter.associations = [...associations];
   state.filter.showHidden = true;
 
-  toggleHiddenBtn.textContent = 'Hide';
+  showHiddenCheckbox.checked = true;
   languageCheckboxes.forEach((cb) => cb.checked = true);
   progressCheckboxes.forEach((cb) => cb.checked = true);
   associationCheckboxes.forEach((cb) => cb.checked = true);
