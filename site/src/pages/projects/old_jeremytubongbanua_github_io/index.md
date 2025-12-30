@@ -4,7 +4,7 @@ subtitle: ""
 description: "2nd Iteration of my Portfolio Website"
 date: "2025-11-10"
 languages: ["HTML/CSS/JavaScript"]
-progress: "Completed"
+progress: "Finished"
 association: "Hobby"
 hidden: true
 layout: ../../../layouts/ProjectLayout.astro
@@ -24,17 +24,17 @@ My first iteration can be found [here](https://github.com/JeremyTubongbanua/jere
 
 ## Gallery
 
-![Home Page](../../../../../home_page.png)
-
-![About Section](../../../../../about_section.png)
-
-
-![Project Index](../../../../../project_index.png)
-
-
-![Award Page](../../../../../award_index.png)
-
-
-![Certifications](../../../../../certifications.png)
+<!-- ![Home Page](../../../../../home_page.png) -->
+<!---->
+<!-- ![About Section](../../../../../about_section.png) -->
+<!---->
+<!---->
+<!-- ![Project Index](../../../../../project_index.png) -->
+<!---->
+<!---->
+<!-- ![Award Page](../../../../../award_index.png) -->
+<!---->
+<!---->
+<!-- ![Certifications](../../../../../certifications.png) -->
 
 

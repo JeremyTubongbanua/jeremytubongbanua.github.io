@@ -3,7 +3,7 @@ title: "Blind Person Assistant"
 subtitle: "1st Place Capstone"
 description: "Won 1st place at Ontario Tech University's annual ECSE Capstone Exhibition of 2025 out of 32 other capstone projects over the course of 8 months"
 date: "2025-04-07"
-languages: ["Python"]
+languages: ["Python", "3D Printing"]
 progress: "Finished"
 association: "Hackathon"
 hidden: false

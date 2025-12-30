@@ -3,7 +3,7 @@ title: "Simple Garbage Holder"
 subtitle: ""
 description: "A simple model to hold my small garbage plastic bags near our kitchen sink"
 date: "2024-08-23"
-languages: []
+languages: ["3D Printing"]
 progress: "Finished"
 association: "Hobby"
 hidden: true

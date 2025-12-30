@@ -3,7 +3,7 @@ title: "jeremymark_ca"
 description: "Old Portfolio Website written in React, deployed on a VPS, had Spotify integration"
 date: "2025-11-06"
 languages: ["HTML/CSS/JavaScript"]
-progress: "Completed"
+progress: "Finished"
 association: "Hobby"
 hidden: true
 layout: ../../../layouts/ProjectLayout.astro

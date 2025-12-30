@@ -3,7 +3,7 @@ title: "Creality K1 Mods"
 subtitle: ""
 description: "18 mods that I personally use for my Creality K1 3D printer. Some mods are custom made by me and some mods are downloaded from Printables."
 date: "2024-07-23"
-languages: []
+languages: ["3D Printing"]
 progress: "Finished"
 association: "Hobby"
 hidden: true
