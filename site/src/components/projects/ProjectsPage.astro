@@ -1,8 +1,9 @@
 ---
 import { type Project, sortBys, orderBys } from '../../types/project.ts';
 
-import ProjectFilter from './ProjectFilter.astro';
-import ProjectSort from './ProjectSort.astro';
+import ProjectsQuickSelect from './ProjectsQuickSelect.astro';
+import ProjectsFilter from './ProjectsFilter.astro';
+import ProjectsSort from './ProjectsSort.astro';
 import ProjectsList from './ProjectsList.astro';
 
 interface Props {
@@ -15,12 +16,14 @@ interface Props {
 const { allProjects, allLanguages, allAssociations, allProgresses } = Astro.props;
 ---
 <h3>Projects</h3>
-<ProjectFilter
+<ProjectsQuickSelect
+/>
+<ProjectsFilter
   allLanguages={allLanguages}
   allAssociations={allAssociations}
   allProgresses={allProgresses}
 />
-<ProjectSort
+<ProjectsSort
   sortBys={sortBys}
   orderBys={orderBys}
 />
@@ -35,19 +38,101 @@ const { allProjects, allLanguages, allAssociations, allProgresses } = Astro.prop
   sortBys,
   orderBys,
 }}>
+  // quick select
+  const showAllButton = document.getElementById('projects-quick-select-show-all-button');
+  const defaultButton = document.getElementById('projects-quick-select-default-button');
+  const unselectAllButton = document.getElementById('projects-quick-select-unselect-all-button');
+
   // filter checkboxes
-  const showHiddenCheckbox = document.getElementById('show-hidden-checkbox');
+  const showHiddenCheckbox = document.getElementById('filter-show-hidden-checkbox');
   const allLanguageCheckboxes = document.querySelectorAll('.filter-language-checkbox');
   const allAssociationCheckboxes = document.querySelectorAll('.filter-association-checkbox');
   const allProgressCheckboxes = document.querySelectorAll('.filter-progress-checkbox');
 
   // sort selects
-  const sortBySelect = document.getElementById('sort-by-select');
-  const orderBySelect = document.getElementById('order-by-select');
+  const sortBySelect = document.getElementById('sort-sort-by-select');
+  const orderBySelect = document.getElementById('sort-order-by-select');
 
   // project list
   const projectsUl = document.getElementById('projects-ul');
   const projectCountSpan = document.getElementById('project-count-span');
+
+  const updateURL = () => {
+    const params = new URLSearchParams();
+
+    if(showHiddenCheckbox.checked) {
+      params.append('showHidden', 'true');
+    }
+
+    const selectedLanguages = Array.from(allLanguageCheckboxes)
+      .filter((checkbox) => checkbox.checked)
+      .map((checkbox) => checkbox.value);
+    if (selectedLanguages.length) {
+      params.append('languages', selectedLanguages.join(','));
+    }
+
+    const selectedAssociations = Array.from(allAssociationCheckboxes)
+      .filter((checkbox) => checkbox.checked)
+      .map((checkbox) => checkbox.value);
+    if (selectedAssociations.length) {
+      params.append('associations', selectedAssociations.join(','));
+    }
+
+    const selectedProgresses = Array.from(allProgressCheckboxes)
+      .filter((checkbox) => checkbox.checked)
+      .map((checkbox) => checkbox.value);
+    if (selectedProgresses.length) {
+      params.append('progress', selectedProgresses.join(','));
+    }
+
+    params.append('sortBy', sortBySelect.value);
+    params.append('orderBy', orderBySelect.value);
+
+    const newURL = params.toString()
+      ? `${window.location.pathname}?${params.toString()}`
+      : window.location.pathname;
+
+    window.history.replaceState({}, '', newURL);
+  }
+
+  const loadFromURL = () => {
+    const params = new URLSearchParams(window.location.search);
+
+    showHiddenCheckbox.checked = params.get('showHidden') === 'true';
+
+    const urlLanguages = params.get('languages')?.split(',').filter(Boolean) || [];
+    if (urlLanguages.length > 0) {
+      allLanguageCheckboxes.forEach((checkbox) => {
+        checkbox.checked = urlLanguages.includes(checkbox.value);
+      });
+    } else {
+      allLanguageCheckboxes.forEach((checkbox) => checkbox.checked = true);
+    }
+
+    const urlAssociations = params.get('associations')?.split(',').filter(Boolean) || [];
+    if (urlAssociations.length > 0) {
+      allAssociationCheckboxes.forEach((checkbox) => {
+        checkbox.checked = urlAssociations.includes(checkbox.value);
+      });
+    } else {
+      allAssociationCheckboxes.forEach((checkbox) => checkbox.checked = true);
+    }
+
+    const urlProgresses = params.get('progress')?.split(',').filter(Boolean) || [];
+    if (urlProgresses.length > 0) {
+      allProgressCheckboxes.forEach((checkbox) => {
+        checkbox.checked = urlProgresses.includes(checkbox.value);
+      });
+    } else {
+      allProgressCheckboxes.forEach((checkbox) => checkbox.checked = true);
+    }
+
+    // Load sort options
+    sortBySelect.value = params.get('sortBy') || sortBys[1]; // "Date"
+    orderBySelect.value = params.get('orderBy') || orderBys[1]; // "Descending"
+
+    projectCountSpan.textContent = `${allProjects.length}`;
+  }
 
   const applyDefaults = () => {
     showHiddenCheckbox.checked = false;
@@ -59,28 +144,10 @@ const { allProjects, allLanguages, allAssociations, allProgresses } = Astro.prop
     projectCountSpan.textContent = `${allProjects.length}`;
   }
 
-  const render = () => {
-    let selectedLanguages = [];
-    let selectedAssociations = [];
-    let selectedProgresses = [];
-
-    allLanguageCheckboxes.forEach((checkbox) => {
-      if(checkbox.checked) {
-        selectedLanguages = [...selectedLanguages, checkbox.value];
-      }
-    });
-
-    allAssociationCheckboxes.forEach((checkbox) => {
-      if(checkbox.checked) {
-        selectedAssociations = [...selectedAssociations, checkbox.value];
-      }
-    });
-
-    allProgressCheckboxes.forEach((checkbox) => {
-      if(checkbox.checked) {
-        selectedProgresses = [...selectedProgresses, checkbox.value];
-      }
-    });
+  const getProcessedProjects = () => {
+    const selectedLanguages = Array.from(allLanguageCheckboxes).filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value);
+    const selectedAssociations = Array.from(allAssociationCheckboxes).filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value);
+    const selectedProgresses = Array.from(allProgressCheckboxes).filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value);
 
     const filteredProjects = allProjects.filter((project) => {
       let shouldBeShown = false;
@@ -136,36 +203,91 @@ const { allProjects, allLanguages, allAssociations, allProgresses } = Astro.prop
       }
     });
 
+    return sortedProjects;
+  }
+
+  const render = () => {
+    const processedProjects = getProcessedProjects();
+
     projectsUl.innerHTML = 
       `
-  ${sortedProjects.map((project) => `
-  <li>
-    <a href="${project.url}">
-      ${project.frontmatter.title}
-    </a>
-  </li>
-  `).join('')}
-  `;
+        ${processedProjects.map((project) => `
+        <li>
+          <a href="${project.url}">
+            ${project.frontmatter.title}
+          </a>
+        </li>
+        `).join('')}
+      `;
 
-    projectCountSpan.textContent = `${sortedProjects.length}`;
+    projectCountSpan.textContent = `${processedProjects.length}`;
+  }
+
+  const update = () => {
+    render();
+    updateURL();
   }
 
   const applyEventListeners = () => {
-    showHiddenCheckbox.addEventListener('change', (e) => render());
+    showHiddenCheckbox.addEventListener('change', (e) => {
+      update();
+    });
     allLanguageCheckboxes.forEach((checkbox) => {
-      checkbox.addEventListener('change', (e) => render());
+      checkbox.addEventListener('change', (e) => {
+        update();
+      });
     });
     allAssociationCheckboxes.forEach((checkbox) => {
-      checkbox.addEventListener('change', (e) => render());
+      checkbox.addEventListener('change', (e) => {
+        update();
+      });
     });
     allProgressCheckboxes.forEach((checkbox) => {
-      checkbox.addEventListener('change', (e) => render());
+      checkbox.addEventListener('change', (e) => {
+        update();
+      });
     });
-    sortBySelect.addEventListener('change', (e) => render());
-    orderBySelect.addEventListener('change', (e) => render());
+    sortBySelect.addEventListener('change', (e) => { 
+      update();
+    });
+    orderBySelect.addEventListener('change', (e) => {
+      update();
+    });
+    showAllButton.addEventListener('click', (e) => {
+      showHiddenCheckbox.checked = true;
+      allLanguageCheckboxes.forEach((checkbox) => checkbox.checked = true);
+      allAssociationCheckboxes.forEach((checkbox) => checkbox.checked = true);
+      allProgressCheckboxes.forEach((checkbox) => checkbox.checked = true);
+      sortBySelect.value = sortBys[0];
+      orderBySelect.value = orderBys[0];
+      update();
+    });
+    defaultButton.addEventListener('click', (e) => {
+      showHiddenCheckbox.checked = false;
+      allLanguageCheckboxes.forEach((checkbox) => checkbox.checked = true);
+      allAssociationCheckboxes.forEach((checkbox) => checkbox.checked = true);
+      allProgressCheckboxes.forEach((checkbox) => checkbox.checked = true);
+      sortBySelect.value = sortBys[1];
+      orderBySelect.value = orderBys[1];
+      update();
+    });
+    unselectAllButton.addEventListener('click', (e) => {
+      showHiddenCheckbox.checked = false;
+      allLanguageCheckboxes.forEach((checkbox) => checkbox.checked = false);
+      allAssociationCheckboxes.forEach((checkbox) => checkbox.checked = false);
+      allProgressCheckboxes.forEach((checkbox) => checkbox.checked = false);
+      update();
+    })
   }
 
   applyEventListeners();
-  applyDefaults();
+
+  if (window.location.search) {
+    loadFromURL();
+  } else {
+    applyDefaults();
+  }
+
+  updateURL();
   render();
 </script>

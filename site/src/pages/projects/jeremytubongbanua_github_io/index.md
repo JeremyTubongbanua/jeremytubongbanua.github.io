@@ -23,6 +23,14 @@ The portfolio website you are currently viewing
 - [jeremymark.ca](https://github.com/JeremyTubongbanua/jeremymark_ca) - My oldest portfolio website written in React, deployed on a VPS using Nginx
 - [old-portfolio-2](https://github.com/JeremyTubongbanua/old-portfolio-2) - Portfolio website version 3 written in React, but deployed on GitHub pages
 
+## New Portfolio Website (this)
+
 The 3rd iteration of my portfolio website can be found on my github [here](https://github.com/JeremyTubongbanua/jeremytubongbanua.github.io) which uses Astro and is deployed on GitHub pages
 
 The difference between my 2nd iteration and 3rd iteration portfolio websites is that the 3rd iteration is not vibe coded and I genuinely took the time to learn Astro
+
+## Gallery
+
+Projects page as of December 31, 2025
+
+![Projects Page](projects_page.png)
