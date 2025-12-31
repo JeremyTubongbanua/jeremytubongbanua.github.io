@@ -5,7 +5,7 @@ description: "Secure remote access to a Jetson Nano without opening any ports in
 date: "2024-09-15"
 languages: ["Python"]
 progress: "Finished"
-association: "Hobby"
+association: "Hackathon"
 hidden: true
 layout: ../../../layouts/ProjectLayout.astro
 ---
