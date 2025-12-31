@@ -19,13 +19,3 @@ export type Experience = {
   frontmatter: ExperienceFrontmatter;
 }
 
-export type State = {
-  filter: {
-    categories: string[];
-    showHidden: boolean;
-  };
-  sort: {
-    sortBy: SortBy;
-    orderBy: OrderBy;
-  }
-}

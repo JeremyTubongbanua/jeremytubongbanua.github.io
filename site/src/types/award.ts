@@ -1,22 +1,20 @@
-export const sortBys = ['Title', 'Date', 'Association', 'Progress'] as const;
+export const sortBys = ['Title', 'Date'] as const;
 export type SortBy = typeof sortBys[number];
 
 export const orderBys = ['Ascending', 'Descending'] as const;
 export type OrderBy = typeof orderBys[number];
 
-export type ProjectFrontmatter = {
+export type AwardFrontmatter = {
   title: string;
   subtitle: string;
+  placement: string;
   description: string;
   date: string;
-  languages: string[];
-  progress: string;
-  association: string;
   hidden: boolean;
 }
 
-export type Project = {
+export type Award = {
   url: string;
-  frontmatter: ProjectFrontmatter;
+  frontmatter: AwardFrontmatter;
 }
 
