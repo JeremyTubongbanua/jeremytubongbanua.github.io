@@ -14,26 +14,27 @@ interface Props {
 
 const { allProjects, allLanguages, allAssociations, allProgresses } = Astro.props;
 ---
-<>
-  <h3>Projects</h3>
-  <ProjectFilter
-    allLanguages={allLanguages}
-    allAssociations={allAssociations}
-    allProgresses={allProgresses}
-  />
-  <ProjectSort
-    sortBys={sortBys}
-    orderBys={orderBys}
-  />
-  <ProjectsList/>
-  <script is:inline define:vars={{
-    allProjects,
-    allLanguages,
-    allAssociations,
-    allProgresses,
-    sortBys,
-    orderBys,
-  }}>
+<h3>Projects</h3>
+<ProjectFilter
+  allLanguages={allLanguages}
+  allAssociations={allAssociations}
+  allProgresses={allProgresses}
+/>
+<ProjectSort
+  sortBys={sortBys}
+  orderBys={orderBys}
+/>
+<ProjectsList
+  totalCount={allProjects.length}
+/>
+<script is:inline define:vars={{
+  allProjects,
+  allLanguages,
+  allAssociations,
+  allProgresses,
+  sortBys,
+  orderBys,
+}}>
   // filter checkboxes
   const showHiddenCheckbox = document.getElementById('show-hidden-checkbox');
   const allLanguageCheckboxes = document.querySelectorAll('.filter-language-checkbox');
@@ -46,6 +47,7 @@ const { allProjects, allLanguages, allAssociations, allProgresses } = Astro.prop
 
   // project list
   const projectsUl = document.getElementById('projects-ul');
+  const projectCountSpan = document.getElementById('project-count-span');
 
   const applyDefaults = () => {
     showHiddenCheckbox.checked = false;
@@ -54,6 +56,7 @@ const { allProjects, allLanguages, allAssociations, allProgresses } = Astro.prop
     allProgressCheckboxes.forEach((checkbox) => checkbox.checked = true);
     sortBySelect.value = sortBys[1]; // "Date"
     orderBySelect.value = orderBys[1]; // "Descending"
+    projectCountSpan.textContent = `${allProjects.length}`;
   }
 
   const render = () => {
@@ -135,14 +138,16 @@ const { allProjects, allLanguages, allAssociations, allProgresses } = Astro.prop
 
     projectsUl.innerHTML = 
       `
-        ${sortedProjects.map((project) => `
-          <li>
-            <a href="${project.url}">
-              ${project.frontmatter.title}
-            </a>
-          </li>
-        `).join('')}
-      `;
+  ${sortedProjects.map((project) => `
+  <li>
+    <a href="${project.url}">
+      ${project.frontmatter.title}
+    </a>
+  </li>
+  `).join('')}
+  `;
+
+    projectCountSpan.textContent = `${sortedProjects.length}`;
   }
 
   const applyEventListeners = () => {
@@ -163,5 +168,4 @@ const { allProjects, allLanguages, allAssociations, allProgresses } = Astro.prop
   applyEventListeners();
   applyDefaults();
   render();
-  </script>
-</>
+</script>

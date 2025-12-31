@@ -12,10 +12,16 @@ interface Props {
 const { allExperiences, allCategories } = Astro.props;
 ---
 <h3>Experiences</h3>
-<ExperienceFilter allCategories={allCategories} />
-<ExperienceSort sortBys={sortBys} orderBys={orderBys}/>
-<ExperiencesList />
-
+<ExperienceFilter 
+  allCategories={allCategories}
+/>
+<ExperienceSort 
+  sortBys={sortBys}
+  orderBys={orderBys}
+/>
+<ExperiencesList 
+  totalCount={allExperiences.length}
+/>
 <script is:inline define:vars={{
   allExperiences,
   allCategories,
@@ -27,6 +33,7 @@ const { allExperiences, allCategories } = Astro.props;
   const sortBySelect = document.getElementById('sort-by-select');
   const orderBySelect = document.getElementById('order-by-select');
   const experiencesUl = document.getElementById('experiences-ul');
+  const experienceCountSpan = document.getElementById('experience-count-span');
 
   const applyDefaults = () => {
     showHiddenCheckbox.checked = false;
@@ -35,6 +42,7 @@ const { allExperiences, allCategories } = Astro.props;
     });
     sortBySelect.value=sortBys[0]; // Title
     orderBySelect.value=orderBys[0]; // Ascending
+    experienceCountSpan.textContent = `${allExperiences.length}`;
   };
 
   const applyEventListeners = () => {
@@ -77,6 +85,8 @@ const { allExperiences, allCategories } = Astro.props;
       ${sortedExperiences.map((experience) => 
         `<li><a href="${experience.url}">${experience.frontmatter.title}</a></li>`).join('')}
     `;
+
+    experienceCountSpan.textContent = `${sortedExperiences.length}`;
   };
 
   applyDefaults();
