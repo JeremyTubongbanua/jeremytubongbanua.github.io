@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import type { Project } from '../../types/project';
-import ProjectsPage from '../../components/projects/ProjectsPage';
+import ProjectsPage from '../../components/projects/ProjectsPage.astro';
 
 const allProjects: Project[] = Object.values(import.meta.glob('../projects/**/index.md', {eager: true}));
 const allLanguages: string[] = [...new Set(allProjects.flatMap((project: Project) => project.frontmatter.languages))];
@@ -10,7 +10,6 @@ const allProgresses: string[] = [...new Set(allProjects.map((project: Project) =
 ---
 <BaseLayout pageTitle="Projects">
   <ProjectsPage
-    client:load
     allProjects={allProjects}
     allLanguages={allLanguages}
     allAssociations={allAssociations}

@@ -1,0 +1,47 @@
+---
+interface Props {
+  allLanguages: string[],
+  allAssociations: string[],
+  allProgresses: string[],
+}
+
+const { allLanguages, allAssociations, allProgresses } = Astro.props;
+---
+<fieldset>
+  <legend>
+    Filter
+  </legend>
+  <div>
+    <label>
+      Show Hidden:
+      <input id="show-hidden-checkbox" type="checkbox" />
+    </label>
+  </div>
+  <div>
+    Languge:
+    {allLanguages.map((language) => 
+      <label>
+        <input class="filter-language-checkbox" type="checkbox" value={language} />
+        {language}
+      </label>
+    )}
+  </div>  
+  <div>
+    Association:
+    {allAssociations.map((association) =>
+      <label>
+        <input class="filter-association-checkbox" type="checkbox" value={association}/>
+        {association}
+      </label>
+    )}
+  </div>
+  <div>
+    Progress:
+    {allProgresses.map((progress) =>
+      <label>
+        <input class="filter-progress-checkbox" type="checkbox" value={progress}/>
+        {progress}
+      </label>
+    )}
+  </div>
+</fieldset>

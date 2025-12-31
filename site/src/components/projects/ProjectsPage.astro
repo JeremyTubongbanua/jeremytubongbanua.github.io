@@ -7,12 +7,12 @@ import ProjectsList from './ProjectsList.astro';
 
 interface Props {
   allProjects: Project[],
+  allLanguages: string[],
+  allAssociations: string[],
+  allProgresses: string[],
 }
 
-const { allProjects } = Astro.props;
-const allLanguages = [...new Set(allProjects.flatMap((project: Project) => project.frontmatter.languages))];
-const allAssociations = [...new Set(allProjects.map((project: Project) => project.frontmatter.association))];
-const allProgresses = [...new Set(allProjects.map((project: Project) => project.frontmatter.progress))];
+const { allProjects, allLanguages, allAssociations, allProgresses } = Astro.props;
 ---
 <>
   <h3>Projects</h3>
