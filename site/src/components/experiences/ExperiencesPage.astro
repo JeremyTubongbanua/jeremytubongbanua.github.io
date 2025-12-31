@@ -1,5 +1,6 @@
 ---
 import { type Experience, sortBys, orderBys } from '../../types/experience.ts';
+import ExperiencesQuickSelect from './ExperiencesQuickSelect.astro';
 import ExperiencesFilter from './ExperiencesFilter.astro';
 import ExperiencesSort from './ExperiencesSort.astro';
 import ExperiencesList from './ExperiencesList.astro';
@@ -12,6 +13,7 @@ interface Props {
 const { allExperiences, allCategories } = Astro.props;
 ---
 <h3>Experiences</h3>
+<ExperiencesQuickSelect/>
 <ExperiencesFilter 
   allCategories={allCategories}
 />
@@ -22,12 +24,21 @@ const { allExperiences, allCategories } = Astro.props;
 <ExperiencesList 
   totalCount={allExperiences.length}
 />
-<script is:inline define:vars={{
-  allExperiences,
-  allCategories,
-  sortBys,
-  orderBys,
-}}>
+<script 
+  is:inline
+  define:vars={{
+    allExperiences,
+    allCategories,
+    sortBys,
+    orderBys,
+  }}
+>
+  const showAllButton = document.getElementById('experiences-quick-select-show-all-button');
+  const defaultButton = document.getElementById('experiences-quick-select-default-button');
+  const competitionsButton = document.getElementById('experiences-quick-select-competitions-button');
+  const conferencesButton = document.getElementById('experiences-quick-select-conferences-button');
+  const roboticsButton = document.getElementById('experiences-quick-select-robotics-button');
+
   const showHiddenCheckbox = document.getElementById('experiences-filter-show-hidden-checkbox');
   const allCategoryCheckboxes = document.querySelectorAll('.experiences-filter-category-checkbox');
   const sortBySelect = document.getElementById('experiences-sort-sort-by-select');
@@ -147,10 +158,60 @@ const { allExperiences, allCategories } = Astro.props;
     orderBySelect.addEventListener('change', (e) => {
       update();
     });
+    showAllButton.addEventListener('click', (e) => {
+      showHiddenCheckbox.checked = true;
+      allCategoryCheckboxes.forEach(cb => cb.checked = true);
+      sortBySelect.value=sortBys[0];
+      orderBySelect.value=orderBys[0];
+      update();
+    });
+    defaultButton.addEventListener('click', (e) => {
+      applyDefaults();
+      update();
+    });
+    competitionsButton.addEventListener('click', (e) => {
+      showHiddenCheckbox.checked = true;
+      allCategoryCheckboxes.forEach((checkbox) => {
+        if(['In-Person Competition', 'Virtual Competition'].includes(checkbox.value)) {
+          checkbox.checked = true;
+        } else {
+          checkbox.checked = false;
+        }
+      });
+      update();
+    });
+    conferencesButton.addEventListener('click', (e) => {
+      showHiddenCheckbox.checked = true;
+      allCategoryCheckboxes.forEach((checkbox) => {
+        if(['Conference'].includes(checkbox.value)) {
+          checkbox.checked = true;
+        } else {
+          checkbox.checked = false;
+        }
+      });
+      update();
+    });
+    roboticsButton.addEventListener('click', (e) => {
+      showHiddenCheckbox.checked = true;
+      allCategoryCheckboxes.forEach((checkbox) => {
+        if(['Robotics'].includes(checkbox.value)) {
+          checkbox.checked = true;
+        } else {
+          checkbox.checked = false;
+        }
+      });
+      update();
+    });
   };
 
-  applyDefaults();
   applyEventListeners();
-  render();
+
+  if(window.location.search) {
+    loadFromURL();
+  } else {
+    applyDefaults();
+  }
+
+  update();
 </script>
 
