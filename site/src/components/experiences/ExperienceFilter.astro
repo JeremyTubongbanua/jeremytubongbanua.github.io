@@ -1,0 +1,25 @@
+---
+interface Props {
+  allCategories: string[],
+}
+
+const { allCategories } = Astro.props;
+---
+<fieldset>
+  <legend>Filter</legend>
+  <div>
+    <label>
+      Show Hidden:
+      <input id="filter-show-hidden-checkbox" type="checkbox" />
+    </label>
+  </div>
+  <div>
+    Category: 
+    {allCategories.map((category) => 
+      <label>
+      <input class="filter-category-checkbox" type="checkbox" value={category}/>
+        {category}
+      </label>)}
+  </div>
+</fieldset>
+

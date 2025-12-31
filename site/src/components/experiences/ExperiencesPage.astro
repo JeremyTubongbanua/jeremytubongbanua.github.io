@@ -6,7 +6,7 @@ import ExperiencesList from './ExperiencesList.astro';
 
 interface Props {
   allExperiences: Experience[],
-  allCategories: string[]
+  allCategories: string[],
 }
 
 const { allExperiences, allCategories } = Astro.props;
@@ -22,7 +22,7 @@ const { allExperiences, allCategories } = Astro.props;
   sortBys,
   orderBys,
 }}>
-  const showHiddenCheckbox = document.getElementById('filter-show-hidden');
+  const showHiddenCheckbox = document.getElementById('filter-show-hidden-checkbox');
   const allCategoryCheckboxes = document.querySelectorAll('.filter-category-checkbox');
   const sortBySelect = document.getElementById('sort-by-select');
   const orderBySelect = document.getElementById('order-by-select');
