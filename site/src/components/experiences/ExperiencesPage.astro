@@ -1,7 +1,7 @@
 ---
 import { type Experience, sortBys, orderBys } from '../../types/experience.ts';
-import ExperienceFilter from './ExperienceFilter.astro';
-import ExperienceSort from './ExperienceSort.astro';
+import ExperiencesFilter from './ExperiencesFilter.astro';
+import ExperiencesSort from './ExperiencesSort.astro';
 import ExperiencesList from './ExperiencesList.astro';
 
 interface Props {
@@ -12,10 +12,10 @@ interface Props {
 const { allExperiences, allCategories } = Astro.props;
 ---
 <h3>Experiences</h3>
-<ExperienceFilter 
+<ExperiencesFilter 
   allCategories={allCategories}
 />
-<ExperienceSort 
+<ExperiencesSort 
   sortBys={sortBys}
   orderBys={orderBys}
 />
@@ -28,12 +28,58 @@ const { allExperiences, allCategories } = Astro.props;
   sortBys,
   orderBys,
 }}>
-  const showHiddenCheckbox = document.getElementById('filter-show-hidden-checkbox');
-  const allCategoryCheckboxes = document.querySelectorAll('.filter-category-checkbox');
-  const sortBySelect = document.getElementById('sort-by-select');
-  const orderBySelect = document.getElementById('order-by-select');
-  const experiencesUl = document.getElementById('experiences-ul');
-  const experienceCountSpan = document.getElementById('experience-count-span');
+  const showHiddenCheckbox = document.getElementById('experiences-filter-show-hidden-checkbox');
+  const allCategoryCheckboxes = document.querySelectorAll('.experiences-filter-category-checkbox');
+  const sortBySelect = document.getElementById('experiences-sort-sort-by-select');
+  const orderBySelect = document.getElementById('experiences-sort-order-by-select');
+  const experiencesUl = document.getElementById('experiences-list-ul');
+  const experiencesCountSpan = document.getElementById('experiences-list-count-span');
+
+  const getCheckedValues = (checkboxNodeList) => {
+    return Array.from(checkboxNodeList).filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value);
+  }
+
+  const updateURL = () => {
+    const params = new URLSearchParams();
+
+    if(showHiddenCheckbox.checked) {
+      params.append('showHidden', 'true');
+    }
+
+    const selectedCategories = getCheckedValues(allCategoryCheckboxes);
+    if(selectedCategories.length > 0) {
+      params.append('categories', selectedCategories.join(','));
+    }
+
+    params.append('sortBy', sortBySelect.value);
+    params.append('orderBy', orderBySelect.value);
+
+    const newURL = params.toString()
+    ? `${window.location.pathname}?${params.toString()}`
+      : window.location.pathname;
+
+    window.history.replaceState({}, '', newURL);
+  }
+
+  const loadFromURL = () => {
+    const params = new URLSearchParams(window.location.search);
+
+    showHiddenCheckbox.checked = params.get('showHidden') === 'true';
+
+    const urlCategories = params.get('categories')?.split(',').filter(Boolean) || [];
+    if(urlCategories.length > 0) {
+      allCategoryCheckboxes.forEach((checkbox) => {
+        checkbox.checked = urlCategories.includes(checkbox.value);
+      });
+    } else {
+      allCategoryCheckboxes.forEach((checkbox) => checkbox.checked = true);
+    }
+
+    sortBySelect.value = params.get('sortBy') || sortBys[1];
+    orderBySelect.value = params.get('orderBy') || orderBys[1];
+
+    experiencesCountSpan.textContent = `${allExperiences.length}`;
+  }
 
   const applyDefaults = () => {
     showHiddenCheckbox.checked = false;
@@ -42,26 +88,18 @@ const { allExperiences, allCategories } = Astro.props;
     });
     sortBySelect.value=sortBys[0]; // Title
     orderBySelect.value=orderBys[0]; // Ascending
-    experienceCountSpan.textContent = `${allExperiences.length}`;
-  };
-
-  const applyEventListeners = () => {
-    showHiddenCheckbox.addEventListener('change', (e) => render());
-    allCategoryCheckboxes.forEach((checkbox) => checkbox.addEventListener('change', (e) => render()));
-    sortBySelect.addEventListener('change', (e) => render());
-    orderBySelect.addEventListener('change', (e) => render());
+    experiencesCountSpan.textContent = `${allExperiences.length}`;
   };
 
   const render = () => {
-    let selectedCheckboxes = [];
-    allCategoryCheckboxes.forEach((checkbox) => {
-      if(checkbox.checked && !selectedCheckboxes.includes(checkbox.value)) {
-        selectedCheckboxes = [...selectedCheckboxes, checkbox.value];
-      }
-    });
+    const selectedCategories = getCheckedValues(allCategoryCheckboxes);
     const filteredExperiences = allExperiences.filter((experience) => {
       const shouldBeShown = !experience.frontmatter.hidden || showHiddenCheckbox.checked;
       if(!shouldBeShown) {
+        return false;
+      }
+      const matchesACategory = selectedCategories.includes(experience.frontmatter.category);
+      if(!matchesACategory) {
         return false;
       }
       return true;
@@ -86,7 +124,29 @@ const { allExperiences, allCategories } = Astro.props;
         `<li><a href="${experience.url}">${experience.frontmatter.title}</a></li>`).join('')}
     `;
 
-    experienceCountSpan.textContent = `${sortedExperiences.length}`;
+    experiencesCountSpan.textContent = `${sortedExperiences.length}`;
+  };
+
+  const update = () => {
+    updateURL();
+    render();
+  }
+
+  const applyEventListeners = () => {
+    showHiddenCheckbox.addEventListener('change', (e) => {
+      update();
+    });
+    allCategoryCheckboxes.forEach((checkbox) => {
+      checkbox.addEventListener('change', (e) => {
+        update();
+      });
+    });
+    sortBySelect.addEventListener('change', (e) => {
+      update();
+    });
+    orderBySelect.addEventListener('change', (e) => {
+      update();
+    });
   };
 
   applyDefaults();

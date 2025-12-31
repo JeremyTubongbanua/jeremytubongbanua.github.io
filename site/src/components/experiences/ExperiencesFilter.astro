@@ -10,14 +10,14 @@ const { allCategories } = Astro.props;
   <div>
     <label>
       Show Hidden:
-      <input id="filter-show-hidden-checkbox" type="checkbox" />
+      <input id="experiences-filter-show-hidden-checkbox" type="checkbox" />
     </label>
   </div>
   <div>
     Category: 
     {allCategories.map((category) => 
       <label>
-      <input class="filter-category-checkbox" type="checkbox" value={category}/>
+      <input class="experiences-filter-category-checkbox" type="checkbox" value={category}/>
         {category}
       </label>)}
   </div>
