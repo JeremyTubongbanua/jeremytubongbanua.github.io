@@ -5,7 +5,7 @@ description: "Won 1st place at Ontario Tech University's annual ECSE Capstone Ex
 date: "2025-04-07"
 languages: ["Python", "3D Printing"]
 progress: "Finished"
-association: "Hackathon"
+association: "School"
 hidden: false
 layout: ../../../layouts/ProjectLayout.astro
 ---
