@@ -1,5 +1,33 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface CertificationFrontmatter {
+  title: string;
+  subtitle: string;
+  description: string;
+  issuer: string;
+  issue_date: string;
+  status: "Ongoing" | "Finished";
+}
+
+interface Certification {
+  frontmatter: CertificationFrontmatter;
+  url: string;
+}
+
+const allCertifications: Certification[] = Object.values(import.meta.glob('./**/index.md', {eager: true}));
 ---
 <BaseLayout pageTitle="Certifications">
+  <h2>Certifications</h2>
+  <ul id="certifications-list-ul">
+    {allCertifications.map((certification: Certification) => {
+      return (
+        <li>
+          <a href={certification.url}>
+              {certification.frontmatter.title}
+          </a>
+        </li>
+      );
+    })}
+  </ul>
 </BaseLayout>

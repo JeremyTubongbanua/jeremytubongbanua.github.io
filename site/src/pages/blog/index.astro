@@ -1,5 +1,29 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface BlogFrontmatter {
+  title: string;
+  hidden: boolean;
+}
+
+interface Blog {
+  frontmatter: BlogFrontmatter;
+  url: string;
+}
+
+const allBlogs: Blog[] = Object.values(import.meta.glob('./**/index.md', { eager: true }));
 ---
 <BaseLayout pageTitle="Blog">
+  <h2>Blog</h2>
+  <ul id="blog-list-ul">
+    {allBlogs.map((blog: Blog) => {
+      return (
+        <li>
+          <a href={blog.url}>
+            {blog.frontmatter.title}
+          </a>
+        </li>
+      );
+    })}
+  </ul>
 </BaseLayout>
