@@ -41,7 +41,11 @@ const { allProjects, allLanguages, allAssociations, allProgresses } = Astro.prop
   // quick select
   const showAllButton = document.getElementById('projects-quick-select-show-all-button');
   const defaultButton = document.getElementById('projects-quick-select-default-button');
-  const unselectAllButton = document.getElementById('projects-quick-select-unselect-all-button');
+  const hobbyProjectsButton = document.getElementById('projects-quick-select-hobby-projects-button');
+  const hackathonProjectsButton = document.getElementById('projects-quick-select-hackathon-projects-button');
+  const schoolProjectsButton = document.getElementById('projects-quick-select-school-projects-button');
+  const threeDPrintingProjectsButton = document.getElementById('projects-quick-select-3d-printing-projects-button');
+  const cCppProjectsButton = document.getElementById('projects-quick-select-c-cpp-projects-button');
 
   // filter checkboxes
   const showHiddenCheckbox = document.getElementById('filter-show-hidden-checkbox');
@@ -271,13 +275,97 @@ const { allProjects, allLanguages, allAssociations, allProgresses } = Astro.prop
       orderBySelect.value = orderBys[1];
       update();
     });
-    unselectAllButton.addEventListener('click', (e) => {
-      showHiddenCheckbox.checked = false;
-      allLanguageCheckboxes.forEach((checkbox) => checkbox.checked = false);
-      allAssociationCheckboxes.forEach((checkbox) => checkbox.checked = false);
-      allProgressCheckboxes.forEach((checkbox) => checkbox.checked = false);
+    hobbyProjectsButton.addEventListener('click', (e) => {
+      showHiddenCheckbox.checked = true;
+      allLanguageCheckboxes.forEach((checkbox) => {
+        checkbox.checked = true;
+      });
+      allAssociationCheckboxes.forEach((checkbox) => {
+        if(['Hobby'].includes(checkbox.value)) {
+          checkbox.checked = true;
+        } else {
+          checkbox.checked = false;
+        }
+      });
+      allProgressCheckboxes.forEach((checkbox) => {
+        checkbox.checked = true;
+      });
+      sortBySelect.value = sortBys[1];
+      orderBySelect.value = orderBys[1];
       update();
-    })
+    });
+    hackathonProjectsButton.addEventListener('click', (e) => {
+      showHiddenCheckbox.checked = true;
+      allLanguageCheckboxes.forEach((checkbox) => {
+        checkbox.checked = true;
+      });
+      allAssociationCheckboxes.forEach((checkbox) => {
+        if(['Hackathon'].includes(checkbox.value)) {
+          checkbox.checked = true;
+        } else {
+          checkbox.checked = false;
+        }
+      });
+      allProgressCheckboxes.forEach((checkbox) => {
+        checkbox.checked = true;
+      });
+      sortBySelect.value = sortBys[1];
+      orderBySelect.value = orderBys[1];
+      update();
+    });
+    schoolProjectsButton.addEventListener('click', (e) => {
+      showHiddenCheckbox.checked = true;
+      allLanguageCheckboxes.forEach((checkbox) => {
+        checkbox.checked = true;
+      });
+      allAssociationCheckboxes.forEach((checkbox) => {
+        if(['School'].includes(checkbox.value)) {
+          checkbox.checked = true;
+        } else {
+          checkbox.checked = false;
+        }
+      });
+      allProgressCheckboxes.forEach((checkbox) => {
+        checkbox.checked = true;
+      });
+      sortBySelect.value = sortBys[1];
+      orderBySelect.value = orderBys[1];
+      update();
+    });
+    threeDPrintingProjectsButton.addEventListener('click', (e) => {
+      showHiddenCheckbox.checked = true;
+      allLanguageCheckboxes.forEach((checkbox) => {
+        if(['3D Printing'].includes(checkbox.value)) {
+          checkbox.checked = true;
+        } else {
+          checkbox.checked = false;
+        }
+      });
+      allAssociationCheckboxes.forEach((checkbox) => {
+        checkbox.checked = true;
+      });
+      allProgressCheckboxes.forEach((checkbox) => {
+        checkbox.checked = true;
+      });
+      update();
+    });
+    cCppProjectsButton.addEventListener('click', (e) => {
+      showHiddenCheckbox.checked = true;
+      allLanguageCheckboxes.forEach((checkbox) => {
+        if(['C', 'C++'].includes(checkbox.value)) {
+          checkbox.checked = true;
+        } else {
+          checkbox.checked = false;
+        }
+      });
+      allAssociationCheckboxes.forEach((checkbox) => {
+        checkbox.checked = true;
+      });
+      allProgressCheckboxes.forEach((checkbox) => {
+        checkbox.checked = true;
+      });
+      update();
+    });
   }
 
   applyEventListeners();
