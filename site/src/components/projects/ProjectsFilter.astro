@@ -14,14 +14,14 @@ const { allLanguages, allAssociations, allProgresses } = Astro.props;
   <div>
     <label>
       Show Hidden:
-      <input id="filter-show-hidden-checkbox" type="checkbox" />
+      <input id="projects-filter-show-hidden-checkbox" type="checkbox" />
     </label>
   </div>
   <div>
     Languge:
     {allLanguages.map((language) => 
       <label>
-        <input class="filter-language-checkbox" type="checkbox" value={language} />
+        <input class="projects-filter-language-checkbox" type="checkbox" value={language} />
         {language}
       </label>
     )}
@@ -30,7 +30,7 @@ const { allLanguages, allAssociations, allProgresses } = Astro.props;
     Association:
     {allAssociations.map((association) =>
       <label>
-        <input class="filter-association-checkbox" type="checkbox" value={association}/>
+        <input class="projects-filter-association-checkbox" type="checkbox" value={association}/>
         {association}
       </label>
     )}
@@ -39,7 +39,7 @@ const { allLanguages, allAssociations, allProgresses } = Astro.props;
     Progress:
     {allProgresses.map((progress) =>
       <label>
-        <input class="filter-progress-checkbox" type="checkbox" value={progress}/>
+        <input class="projects-filter-progress-checkbox" type="checkbox" value={progress}/>
         {progress}
       </label>
     )}

@@ -13,13 +13,13 @@ const { sortBys, orderBys } = Astro.props;
   <div>
     <label>
       Sort By:
-      <select id="sort-sort-by-select">
+      <select id="projects-sort-sort-by-select">
         {sortBys.map((sortBy) => <option value={sortBy}>{sortBy}</option>)}
       </select>
     </label>
     <label>
       Order By:
-      <select id="sort-order-by-select">
+      <select id="projects-sort-order-by-select">
         {orderBys.map((orderBy) => <option value={orderBy}>{orderBy}</option>)}
       </select>
     </label>

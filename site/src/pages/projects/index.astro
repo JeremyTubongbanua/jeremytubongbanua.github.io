@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import type { Project } from '../../types/project';
+import { type Project, sortBys, orderBys } from '../../types/project.ts';
 import ProjectsPage from '../../components/projects/ProjectsPage.astro';
 
 const allProjects: Project[] = Object.values(import.meta.glob('../projects/**/index.md', {eager: true}));
@@ -14,5 +14,7 @@ const allProgresses: string[] = [...new Set(allProjects.map((project: Project) =
     allLanguages={allLanguages}
     allAssociations={allAssociations}
     allProgresses={allProgresses}
+    sortBys={sortBys}
+    orderBys={orderBys}
   />
 </BaseLayout>

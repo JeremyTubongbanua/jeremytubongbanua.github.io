@@ -1,5 +1,5 @@
 ---
-import { type Project, sortBys, orderBys } from '../../types/project.ts';
+import { type Project, type SortBy, type OrderBy } from '../../types/project.ts';
 
 import ProjectsQuickSelect from './ProjectsQuickSelect.astro';
 import ProjectsFilter from './ProjectsFilter.astro';
@@ -11,9 +11,11 @@ interface Props {
   allLanguages: string[],
   allAssociations: string[],
   allProgresses: string[],
+  sortBys: readonly SortBy[];
+  orderBys: readonly OrderBy[];
 }
 
-const { allProjects, allLanguages, allAssociations, allProgresses } = Astro.props;
+const { allProjects, allLanguages, allAssociations, allProgresses, sortBys, orderBys } = Astro.props;
 ---
 <h2>Projects</h2>
 <ProjectsQuickSelect
@@ -48,18 +50,18 @@ const { allProjects, allLanguages, allAssociations, allProgresses } = Astro.prop
   const cCppProjectsButton = document.getElementById('projects-quick-select-c-cpp-projects-button');
 
   // filter checkboxes
-  const showHiddenCheckbox = document.getElementById('filter-show-hidden-checkbox');
-  const allLanguageCheckboxes = document.querySelectorAll('.filter-language-checkbox');
-  const allAssociationCheckboxes = document.querySelectorAll('.filter-association-checkbox');
-  const allProgressCheckboxes = document.querySelectorAll('.filter-progress-checkbox');
+  const showHiddenCheckbox = document.getElementById('projects-filter-show-hidden-checkbox');
+  const allLanguageCheckboxes = document.querySelectorAll('.projects-filter-language-checkbox');
+  const allAssociationCheckboxes = document.querySelectorAll('.projects-filter-association-checkbox');
+  const allProgressCheckboxes = document.querySelectorAll('.projects-filter-progress-checkbox');
 
   // sort selects
-  const sortBySelect = document.getElementById('sort-sort-by-select');
-  const orderBySelect = document.getElementById('sort-order-by-select');
+  const sortBySelect = document.getElementById('projects-sort-sort-by-select');
+  const orderBySelect = document.getElementById('projects-sort-order-by-select');
 
   // project list
-  const projectsUl = document.getElementById('projects-ul');
-  const projectCountSpan = document.getElementById('project-count-span');
+  const projectsUl = document.getElementById('projects-list-ul');
+  const projectCountSpan = document.getElementById('projects-list-count-span');
 
   const updateURL = () => {
     const params = new URLSearchParams();
