@@ -1,0 +1,16 @@
+---
+interface Props {
+  allPlacements: string[];
+}
+
+const { allPlacements } = Astro.props;
+---
+<fieldset>
+  <legend>Filter</legend>
+  Placement:
+  {allPlacements.map((placement) => 
+  <label>
+    <input class="awards-filter-placement-checkbox" type="checkbox" value={placement} />
+    {placement}
+  </label>)}
+</fieldset>

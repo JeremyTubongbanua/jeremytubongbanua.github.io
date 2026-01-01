@@ -1,0 +1,150 @@
+---
+import { type Award, type SortBy, type OrderBy } from '../../types/award.ts';
+import AwardsFilter from './AwardsFilter.astro';
+import AwardsSort from './AwardsSort.astro';
+import AwardsList from './AwardsList.astro';
+interface Props {
+  allAwards: Award[];
+  allPlacements: string[];
+  sortBys: readonly SortBy[];
+  orderBys: readonly OrderBy[];
+}
+const { allAwards, allPlacements, sortBys, orderBys } = Astro.props;
+---
+<h2>Awards</h2>
+<AwardsFilter
+  allPlacements={allPlacements}
+/>
+<AwardsSort
+  sortBys={sortBys}
+  orderBys={orderBys}
+/>
+<AwardsList
+  totalCount={allAwards.length}
+/>
+
+<script
+  is:inline 
+  define:vars={{
+    allAwards,
+    allPlacements,
+    sortBys,
+    orderBys,
+  }}
+>
+  const placementCheckboxes = document.querySelectorAll('.awards-filter-placement-checkbox');
+  const sortBySelect = document.getElementById('award-sort-sort-by');
+  const orderBySelect = document.getElementById('award-sort-order-by');
+  const awardsUl = document.getElementById('awards-list-ul');
+  const awardsCountSpan = document.getElementById('award-list-count');
+
+  const loadFromURL = () => {
+    const params = new URLSearchParams(window.location.search);
+
+    const urlPlacements = params.get('placements')?.split(',').filter(Boolean) || [];
+    if (urlPlacements.length > 0) {
+      placementCheckboxes.forEach((checkbox) => { 
+        checkbox.checked = urlPlacements.includes(checkbox.value);
+      });
+    } else {
+      placementCheckboxes.forEach((checkbox) => {
+        checkbox.checked = true;
+      });
+    }
+
+    const urlSortBy = params.get('sortBy');
+    if (urlSortBy) {
+      sortBySelect.value = urlSortBy;
+    } else {
+      sortBySelect.value = sortBys[0];
+    }
+
+    const urlOrderBy = params.get('orderBy');
+    if(urlOrderBy) {
+      orderBySelect.value = urlOrderBy;
+    } else {
+      orderBySelect.value = orderBys[0];
+    }
+  };
+
+  const updateURL = () => {
+    const params = new URLSearchParams();
+    params.append('placements', Array.from(placementCheckboxes).filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value).join(','));
+    params.append('sortBy', sortBySelect.value);
+    params.append('orderBy', orderBySelect.value);
+
+    const newURL = params.toString()
+      ? `${window.location.pathname}?${params.toString()}`
+      : `${window.location.pathname}`;
+
+    window.history.replaceState({}, '', newURL);
+  };
+
+  const getProcessedAwards = () => {
+    const filteredAwards = allAwards.filter((award) => {
+      const matchesAPlacements = Array.from(placementCheckboxes).filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value).includes(award.frontmatter.placement);
+      const result = matchesAPlacements;
+      return result;
+    });
+
+    const sortedAwards = [...filteredAwards].sort((awardA, awardB) => {
+      const multiplier = orderBySelect.value === orderBys[0] ? 1 : -1; // Ascending
+      let value = 0;
+      if(sortBySelect.value === sortBys[1]) {
+        value = multiplier * (new Date(awardA.frontmatter.date) - new Date(awardB.frontmatter.date));
+      } else if(sortBySelect.value === sortBys[0]) {
+        value = multiplier * awardA.frontmatter.title.localeCompare(awardB.frontmatter.title);
+      }
+      return value;
+    });
+
+    return sortedAwards;
+  };
+
+  const render = () => {
+    let processedAwards = getProcessedAwards();
+    awardsUl.innerHTML = processedAwards.map((award) => `
+      <li>
+        <a href=${award.url}>${award.frontmatter.title}</a>
+      </li>
+    `).join('');
+    awardsCountSpan.innerHTML = `${processedAwards.length}`;
+  };
+
+  const update = () => {
+    updateURL();
+    render();
+  }
+
+  const applyEventListeners = () => {
+    placementCheckboxes.forEach((checkbox) => {
+      checkbox.addEventListener('change', (e) => {
+        update();
+      });
+    });
+    sortBySelect.addEventListener('change', (e) => {
+      update();
+    });
+    orderBySelect.addEventListener('change', (e) => {
+      update();
+    });
+  }
+
+  const applyDefaults = () => {
+    placementCheckboxes.forEach((checkbox) => {
+      checkbox.checked = true;
+    });
+    sortBySelect.value = sortBys[0];
+    orderBySelect.value = orderBys[0];
+  }
+
+  applyEventListeners();
+
+  if(window.location.search) {
+    loadFromURL();
+  } else {
+    applyDefaults();
+  }
+
+  update();
+</script>
