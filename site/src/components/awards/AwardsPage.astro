@@ -69,7 +69,11 @@ const { allAwards, allPlacements, sortBys, orderBys } = Astro.props;
 
   const updateURL = () => {
     const params = new URLSearchParams();
-    params.append('placements', Array.from(placementCheckboxes).filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value).join(','));
+
+    const checkedPlacementValues = Array.from(placementCheckboxes).filter((checkbox) => checkbox.checked).map((checkbox) => checkbox.value);
+    if(checkedPlacementValues.length > 0) {
+      params.append('placements', checkedPlacementValues.join(','));
+    }
     params.append('sortBy', sortBySelect.value);
     params.append('orderBy', orderBySelect.value);
 
@@ -105,7 +109,7 @@ const { allAwards, allPlacements, sortBys, orderBys } = Astro.props;
     let processedAwards = getProcessedAwards();
     awardsUl.innerHTML = processedAwards.map((award) => `
       <li>
-        <a href=${award.url}>${award.frontmatter.title}</a>
+        <a href="${award.url}">${award.frontmatter.title}</a>
       </li>
     `).join('');
     awardsCountSpan.innerHTML = `${processedAwards.length}`;
