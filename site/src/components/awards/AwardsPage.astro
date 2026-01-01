@@ -33,10 +33,10 @@ const { allAwards, allPlacements, sortBys, orderBys } = Astro.props;
   }}
 >
   const placementCheckboxes = document.querySelectorAll('.awards-filter-placement-checkbox');
-  const sortBySelect = document.getElementById('award-sort-sort-by');
-  const orderBySelect = document.getElementById('award-sort-order-by');
+  const sortBySelect = document.getElementById('award-sort-sort-by-select');
+  const orderBySelect = document.getElementById('award-sort-order-by-select');
   const awardsUl = document.getElementById('awards-list-ul');
-  const awardsCountSpan = document.getElementById('award-list-count');
+  const awardsCountSpan = document.getElementById('awards-list-count');
 
   const loadFromURL = () => {
     const params = new URLSearchParams(window.location.search);

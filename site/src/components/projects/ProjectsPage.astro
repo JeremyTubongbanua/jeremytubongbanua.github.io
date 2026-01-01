@@ -349,6 +349,8 @@ const { allProjects, allLanguages, allAssociations, allProgresses, sortBys, orde
       allProgressCheckboxes.forEach((checkbox) => {
         checkbox.checked = true;
       });
+      sortBySelect.value = sortBys[0];
+      orderBySelect.value = orderBys[0];
       update();
     });
     cCppProjectsButton.addEventListener('click', (e) => {
@@ -366,6 +368,8 @@ const { allProjects, allLanguages, allAssociations, allProgresses, sortBys, orde
       allProgressCheckboxes.forEach((checkbox) => {
         checkbox.checked = true;
       });
+      sortBySelect.value = sortBys[0];
+      orderBySelect.value = orderBys[0];
       update();
     });
   }
