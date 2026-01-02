@@ -1,36 +1,9 @@
 ---
 title: "Jeremy's 2025 Wrapped"
-description: "Lots of 3D Printing, Capstoning, Graduating, and Singaporing..."
+description: "Won 4 competitions, graduated, built 2 PCs, went to Singapore twice, and pulled a PSA 10 Greninja ex SIR"
 date: "01-01-2026"
 layout: ../../../layouts/BlogLayout.astro
 ---
-
-<!--toc:start-->
-- [Intro](#intro)
-- [January 9, 2025 - Printing an AMS Stacker](#january-9-2025-printing-an-ams-stacker)
-- [January 12, 2025 - Capstone Prototype v1](#january-12-2025-capstone-prototype-v1)
-- [January 14, 2025 - 3rd Place in Ontario Engineering Competition](#january-14-2025-3rd-place-in-ontario-engineering-competition)
-- [February 4, 2025 - Capstone Prototype v2](#february-4-2025-capstone-prototype-v2)
-- [February 13, 2025 - Capstone Prototype v3](#february-13-2025-capstone-prototype-v3)
-- [March 1, 2025 - Capstone Prototype v4](#march-1-2025-capstone-prototype-v4)
-- [March 23, 2025 - 1st Place in Figma Challenge](#march-23-2025-1st-place-in-figma-challenge)
-- [March 28, 2025 - Pokemon Journey Together ETBs](#march-28-2025-pokemon-journey-together-etbs)
-- [April 4, 2025 - 1st Place in Capstone Exhibition](#april-4-2025-1st-place-in-capstone-exhibition)
-- [May 15, 2025 - Consensus Conference](#may-15-2025-consensus-conference)
-- [June 5, 2025 - Graduation](#june-5-2025-graduation)
-- [June 15, 2025 - Prince Edward Island](#june-15-2025-prince-edward-island)
-- [June 27, 2025 - Pulling a Greninja ex SIR](#june-27-2025-pulling-a-greninja-ex-sir)
-- [June 29, 2025 - Stray Kids Concert](#june-29-2025-stray-kids-concert)
-- [October 1, 2025 - Presenting at SecTor 2025](#october-1-2025-presenting-at-sector-2025)
-- [October 4, 2025 - 2nd Place NASA Space Apps 2025](#october-4-2025-2nd-place-nasa-space-apps-2025)
-- [October 17 to 24, 2025 - Singapore Trip 1](#october-17-to-24-2025-singapore-trip-1)
-- [November 18, 2025 - Building a new gaming PC](#november-18-2025-building-a-new-gaming-pc)
-- [November 29, 2025 - Making Trophies and Judge Advising for LEGO Robotics Tournament](#november-29-2025-making-trophies-and-judge-advising-for-lego-robotics-tournament)
-- [November 30 to December 7, 2025 - Singapore Trip 2](#november-30-to-december-7-2025-singapore-trip-2)
-- [December 14, 2025 - Building another PC for my other nephew](#december-14-2025-building-another-pc-for-my-other-nephew)
-- [December 21, 2025 - AMS v2 Stacker](#december-21-2025-ams-v2-stacker)
-- [December 23, 2025 - PSA 10 Greninja ex](#december-23-2025-psa-10-greninja-ex)
-<!--toc:end-->
 
 ## Intro
 
@@ -352,6 +325,8 @@ The filament of choice is [Polymaker's Black HT-PLA](https://ca.polymaker.com/pr
 
 The files are from Jaxel and can be found on [Makerworld](https://makerworld.com/en/models/1531539-v2-am4xs-ams-sliding-stacking-system#profileId-1610646).
 
+![](amsv2_1.png)
+
 ![](amsv2.png)
 
 ## December 23, 2025 - PSA 10 Greninja ex
@@ -364,4 +339,14 @@ I am not complaining though, because this card peaked at $1100 CAD but is now ar
 
 ![](psa10.png)
 
+## Conclusion
+
+Thank you for reading thus far, and especially thank you for making my 2025 amazing!
+
+My predictions this 2026:
+- I'll be super good at neovim (more on that on another blog)
+- I would have started some sort of tech YouTube channel and hit my first 1000 subscribers
+- XEQT hits $50 CAD/share 
+- I would have done my first V4 boulder
+- I'll have at least 3 more C++ projects in my portfolio
 
