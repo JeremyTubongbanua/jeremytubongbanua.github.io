@@ -5,6 +5,7 @@ description: "Certified in Standard First Aid and CPR Level C with AED training.
 issuer: "Canadian Red Cross"
 issue_date: "2023-12-23"
 status: "Finished"
+layout: ../../../layouts/CertificationLayout.astro
 ---
 
 ![Thumbnail](./thumbnail.png)

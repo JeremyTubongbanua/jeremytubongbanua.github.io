@@ -1,16 +1,37 @@
 ---
 import BaseLayout from './BaseLayout.astro';
-const { title, description, date } = Astro.params;
+const { title, description, date } = Astro.props.frontmatter;
 ---
 <BaseLayout pageTitle={title}>
-  <slot/>
+  <div id="blog-header-div">
+    <h1>{title}</h1>
+    <span>Date Posted: {(new Date(date)).toDateString()}</span>
+  </div>
+  <div id="blog-description-div">
+    <p>{description}</p>
+  </div>
+  <hr/>
+  <div id="blog-content">
+    <slot/>
+  </div>
 </BaseLayout>
 
 <style is:global>
   img {
-    max-width: 100%;
-    max-height: 400px;
+    width: 100%;
+    max-height: 500px;
     object-fit: contain;
   }
+
+  #blog-content {
+    display: block;
+  }
+
+  #blog-header-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
 </style>
 

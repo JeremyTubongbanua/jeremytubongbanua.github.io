@@ -3,6 +3,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 interface BlogFrontmatter {
   title: string;
+  description: string;
+  date: string;
   hidden: boolean;
 }
 
@@ -16,14 +18,16 @@ const allBlogs: Blog[] = Object.values(import.meta.glob('./**/index.md', { eager
 <BaseLayout pageTitle="Blog">
   <h2>Blog</h2>
   <ul id="blog-list-ul">
-    {allBlogs.map((blog: Blog) => {
-      return (
-        <li>
-          <a href={blog.url}>
-            {blog.frontmatter.title}
-          </a>
-        </li>
-      );
+    {allBlogs
+      .sort((a: Blog, b: Blog) => ((new Date(a.frontmatter.date).getDate()) - (new Date(b.frontmatter.date).getDate())))
+      .map((blog: Blog) => {
+        return (
+          <li>
+            <a href={blog.url}>
+              {blog.frontmatter.title}
+            </a>
+          </li>
+        );
     })}
   </ul>
 </BaseLayout>
