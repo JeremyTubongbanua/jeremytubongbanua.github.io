@@ -5,6 +5,7 @@ description: "Currently taking a 52 hour course on PyTorch Machine Learning by A
 issuer: "Andrei Neagoie"
 issue_date: ""
 status: "Ongoing"
+layout: ../../../layouts/CertificationLayout.astro
 ---
 
 ![Thumbnail](./thumbnail.png)
