@@ -1,13 +1,12 @@
 ---
 // github.com/rezahedi/rezahedi.dev/blob/main/src/components/TOC.astro
-import TOCHeading from './TOCHeading.astro';
 
 const { headings } = Astro.props;
 
 // code from https://medium.com/@rezahedi/how-to-build-table-of-contents-in-astro-and-sectionize-the-markdown-content-78bee84e6a7f
 const buildHierarchy = (headings: {slug: string; text: string; depth: number;}[]) => {
-  const toc: any[] = [];
-  const parentHeadings = new Map();
+  let toc: any[] = [];
+  let parentHeadings: any = {};
 
   if (!headings) {
     return toc;
@@ -15,13 +14,15 @@ const buildHierarchy = (headings: {slug: string; text: string; depth: number;}[]
 
   headings.forEach((h) => {
     const heading = { ...h, subheadings: [] };
-    parentHeadings.set(heading.depth, heading);
+    parentHeadings[heading.depth] = heading;
 
     // Change 2 to 1 if your markdown includes <h1>
     if(heading.depth == 2) {
       toc.push(heading);
     } else {
-      parentHeadings.get(heading.depth - 1).subheadings.push(heading);
+      if(parentHeadings[heading.depth -1]) {
+        parentHeadings[heading.depth - 1].subheadings = parentHeadings[heading.depth - 1].subheadings || [];
+      }
     }
   });
 
