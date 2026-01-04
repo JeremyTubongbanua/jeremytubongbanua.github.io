@@ -1,5 +1,6 @@
 ---
 title: "MailBox"
+subtitle: ""
 description: "Spigot plugin that got 1 donation"
 date: "2019-05-07"
 languages: ["Java"]

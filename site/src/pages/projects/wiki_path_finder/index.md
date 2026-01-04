@@ -1,5 +1,6 @@
 ---
 title: "WikiPathFinder"
+subtitle: ""
 description: "Hack The Job 2022 Submission; Uses Distributed Computing to find the shortest path between two Wikipedia articles"
 date: "2022-01-09"
 languages: ["HTML/CSS/JavaScript"]

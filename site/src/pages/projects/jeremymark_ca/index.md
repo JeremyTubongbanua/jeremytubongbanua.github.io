@@ -1,5 +1,6 @@
 ---
 title: "jeremymark_ca"
+subtitle: ""
 description: "Old Portfolio Website written in React, deployed on a VPS, had Spotify integration"
 date: "2025-11-06"
 languages: ["HTML/CSS/JavaScript"]

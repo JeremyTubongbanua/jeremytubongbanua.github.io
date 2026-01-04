@@ -1,6 +1,6 @@
 ---
 title: "at_esp32"
-subtitle: "Atsign Project"
+subtitle: ""
 description: "atProtocol implementation re-written in C++ for ESP32 Arduino"
 date: "2023-04-26"
 languages: ["C++"]
@@ -10,9 +10,7 @@ layout: ../../../layouts/ProjectLayout.astro
 hidden: true
 ---
 
-
-
-- ![thumbnail](./thumbnail.png)
+![thumbnail](./thumbnail.png)
 
 # at_esp32
 

@@ -1,6 +1,6 @@
 ---
 title: "BeaverBot"
-subtitle: "2nd Place Winner"
+subtitle: "2nd Place"
 description: "Calgary Hacks 2021 Submission; discord bot that connects new students together"
 date: "2021-02-14"
 languages: ["HTML/CSS/JavaScript"]

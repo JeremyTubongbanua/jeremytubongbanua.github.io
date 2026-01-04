@@ -1,5 +1,6 @@
 ---
 title: "SuperCoolJobs"
+subtitle: ""
 description: "SOFE 2800U Final; Job recruitment web application"
 date: "2022-12-05"
 languages: ["HTML/CSS/JavaScript"]

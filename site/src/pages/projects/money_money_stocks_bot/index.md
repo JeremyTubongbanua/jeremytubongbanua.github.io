@@ -1,6 +1,6 @@
 ---
 title: "MoneyMoneyStocksBot"
-subtitle: "Best Veteran Hack"
+subtitle: "Best Veteran Hack Award"
 description: "XHacks 2021 Submission; Discord bot that provides stock information"
 date: "2021-08-08"
 languages: ["HTML/CSS/JavaScript"]

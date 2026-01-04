@@ -1,6 +1,7 @@
 ---
 title: "jeremytubongbanua.github.io"
-description: "Portfolio website that you're viewing right now"
+subtitle: ""
+description: "Non vibe coded portfolio site using Astro"
 date: "2025-12-28"
 languages: ["HTML/CSS/JavaScript"]
 progress: "In-Progress"

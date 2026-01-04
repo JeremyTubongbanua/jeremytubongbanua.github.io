@@ -1,7 +1,7 @@
 ---
 title: "Jeremy's 2024 Wrapped"
 description: "My 2024 wrapped in one blog"
-date: "01-03-2024"
+date: "01-03-2025"
 layout: ../../../layouts/BlogLayout.astro
 ---
 

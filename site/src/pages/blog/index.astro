@@ -19,13 +19,17 @@ const allBlogs: Blog[] = Object.values(import.meta.glob('./**/index.md', { eager
   <h2>Blog</h2>
   <ul id="blog-list-ul">
     {allBlogs
-      .sort((a: Blog, b: Blog) => ((new Date(a.frontmatter.date).getDate()) - (new Date(b.frontmatter.date).getDate())))
+      .sort((a: Blog, b: Blog) => -1 * ((new Date(a.frontmatter.date).getTime()) - (new Date(b.frontmatter.date).getTime())))
       .map((blog: Blog) => {
         return (
           <li>
-            <a href={blog.url}>
-              {blog.frontmatter.title}
-            </a>
+            <span>
+              Posted on {blog.frontmatter.date && Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(blog.frontmatter.date))}
+              {' - '}
+              <a href={blog.url}>
+                {blog.frontmatter.title}
+              </a>
+            </span>
           </li>
         );
     })}

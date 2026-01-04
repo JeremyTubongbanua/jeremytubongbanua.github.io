@@ -219,9 +219,12 @@ const { allProjects, allLanguages, allAssociations, allProgresses, sortBys, orde
       `
         ${processedProjects.map((project) => `
         <li>
-          <a href="${project.url}">
-            ${project.frontmatter.title}
-          </a>
+          <span>
+            <a href="${project.url}">
+              ${project.frontmatter.title}
+            </a>
+            ${project.frontmatter.subtitle && `(${project.frontmatter.subtitle})`}
+          </span>
         </li>
         `).join('')}
       `;

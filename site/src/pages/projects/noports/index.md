@@ -24,3 +24,4 @@ noports is a company-wide project that aims to provide people the power to remot
 
 - Wrote the at_c C SDK that is a core dependency of noports' C SSHNPD.
 - Wrote the initial set of end-to-end tests using Docker that simulated the noports handshake process. Ports were closed on the Docker machines and simulated one Docker container SSH'ing into another.
+- Improved next set of end-to-end tests by parallelizing them using Bash &, allowing for them to run in parallel when PRs are submitted simulateneously to the noports repo.

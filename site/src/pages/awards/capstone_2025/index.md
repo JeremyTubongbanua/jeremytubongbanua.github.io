@@ -4,14 +4,19 @@ subtitle: "Ontario Tech University Engineering Capstone Exhibition"
 placement: "1st Place"
 description: "Won 1st place out of 32 capstone teams with best electrical/computer engineering capstone made over the course of 8 months"
 date: "2025-04-07"
+layout: ../../../layouts/AwardLayout.astro
 ---
 
 # Blind Person Assistant
 
-<https://github.com/JeremYtubongbanua/blind_person_assistant>
+![](./cert.png)
 
-3 minute video
+## Project
 
-<https://www.youtube.com/watch?v=-XyYb4GPD1U>
+[Project Link](/projects/capstone_blind_person_assistant/)
 
-Official Ontario Tech Website: <https://engineering.ontariotechu.ca/current-students/current-undergraduate/capstone/2025-ecse-capstone-projects.php>
+## Links
+
+- <https://github.com/JeremYtubongbanua/blind_person_assistant>
+- 3 minute video <https://www.youtube.com/watch?v=-XyYb4GPD1U>
+- Official Ontario Tech Website: <https://engineering.ontariotechu.ca/current-students/current-undergraduate/capstone/2025-ecse-capstone-projects.php>

@@ -1,7 +1,7 @@
 ---
 title: "Jeremy's 2025 Wrapped"
 description: "Won 4 competitions, graduated, built 2 PCs, went to Singapore twice, and pulled a PSA 10 Greninja ex SIR"
-date: "01-01-2026"
+date: "01-03-2026"
 layout: ../../../layouts/BlogLayout.astro
 ---
 
@@ -10,14 +10,8 @@ layout: ../../../layouts/BlogLayout.astro
 Happy New Year's everyone! Ever year I like to write a career wrap up blog.
 This marks my second wrap up blog.
 
-Check out last year's:
-"[Jeremy's 2024](https://medium.com/@madivoso/jeremys-2024-7694be03c79e)"
-on Medium.
-
-I like to mention at least one thing each month.
-
-If you have any questions, feel free to reach out to me on 
-[LinkedIn](https://jeremytubongbanua.github.io/contact)!
+Check out last year's wrapped on Medium:
+"[Jeremy's 2024](https://medium.com/@madivoso/jeremys-2024-7694be03c79e)". From now on, I will likely be writing the rest of my blogs on my website.
 
 ## January 9, 2025 - AMS v1 Stacker
 
@@ -36,11 +30,11 @@ While on that topic, I tried some other 3D printing mods like this lid riser and
 
 ## January 12, 2025 - Capstone Prototype v1
 
-January marked my final semester of my university undergraduate degree. All engineering disciplines require you to complete a final year eight month long capstone project. For my capstone project, we were tasked with creating a "Blind Person Assistant" which will assist the visually impaired with navigation.
+January marked my final semester of my university undergraduate degree. All engineering disciplines require you to complete a final year eight month long capstone project. For my capstone project, we were tasked with creating a "Blind Person Assistant" which would assist the visually impaired with navigation.
 
 More specifically, my group decided to focus on indoor navigation, as we felt there was a gap in that area of visually impaired navigation assistants. Our solution (as you will later find out) involves a smart headset (camera and sensors), a white cane attachments (buttons and motors) and a raspberry pi/router that clips onto your belt. The project involved machine learning, 3D printing, sensors and actuators, and Raspberry Pis.
 
-This is what the first prototype of my capstone looked like. Continue reading until April to see the final version of my capstone project. Below is a picture of my wearing the 3D printed headset with a [Luxonis Oak-D Lite](https://shop.luxonis.com/products/oak-d-lite-1?srsltid=AfmBOoo5z4KmMnoOSoCjYhDvwlmJbwvkKhePnjVQZcSx6laPt7XJblYL) mounted on.
+This is what the first prototype of my capstone looked like. Continue reading until April to see the final version of my capstone project. Below is a picture of my wearing the 3D printed headset with a [Luxonis Oak-D Lite](https://shop.luxonis.com/products/oak-d-lite-1?srsltid=AfmBOoo5z4KmMnoOSoCjYhDvwlmJbwvkKhePnjVQZcSx6laPt7XJblYL) mounted on. Later on, we added a couple more electronics to the headset. But for now, this was just a simple test to see how we would design the general form factor of the headset.
 
 ![Capstone Prototype](MeWithCapstoneOnMyHead.png)
 
@@ -77,7 +71,7 @@ The camera is now mounted upside down. Alongside that, there's also a speaker an
 
 ![Prototype 2 of Capstone Project](prototype2.png)
 
-As I continued the physical development of the capstone through 3D printing, I became very comforatble with tolerances between parts and designing modular 3D printed parts together using M3 heated inserts and screws.
+As I continued the physical development of the capstone through 3D printing, I became very comforatble with tolerances between parts and designing modular 3D printed parts that would be held together using M3 heated inserts and screws.
 
 ## February 13, 2025 - Capstone Prototype v3
 
@@ -99,6 +93,8 @@ Below is the Raspberry Pi and Mini Router that you would clip onto your belt.
 Hidden behind it is also a power bank to power both devices.
 
 ![Belt](belt.png)
+
+The overall idea here is to use the two IMUs (one on the headset and one on the cane) to determine the orientation of the user and the cane. Then using computer vision, we can detect objects and the relative angle of those objects to the direction that the user is facing. Finally, we can use the cane to give haptic feedback by vibrating and indicating the direction of the object.
 
 ## March 1, 2025 - Capstone Prototype v4
 
@@ -160,7 +156,7 @@ My degree that I spent $30,000 CAD and 4 years getting:
 
 ![My diploma opened it says Bachelor of Engineering (Honours) Software Engineering with Highest Distinction](DiplomaOpened.png)
 
-## June 15, 2025 - Prince Edward Island
+## June 13 to 16, 2025 - Prince Edward Island
 
 My family went on a weekend trip to Prince Edward Island. We visited lots of places and pokemon card shops.
 
@@ -178,7 +174,11 @@ Here are some nice photos from PEI. A local told us that the weekend we arrived 
 
 ![](SomeonesHouseInPEI.png)
 
+Cool scenery:
+
 ![](Scenery.png)
+
+Weather was amazing :)
 
 ## June 27, 2025 - Pulling a Greninja ex SIR
 
@@ -190,15 +190,21 @@ Raw, this card goes for $100-$200...
 
 ![Greninja EX SIR](GreninjaEX.png)
 
-## June 29, 2025 - Stray Kids Concert
-
-Went to my first ever concert - Stray Kids in Toronto.
-
-I went to a total of three concerts this year, and this was my favourite. I ended up having multiple SKZ songs in final year Spotify Wrapped.
-
-![](SKZ.png)
+<!-- ## June 29, 2025 - Stray Kids Concert -->
+<!---->
+<!-- Went to my first ever concert - Stray Kids in Toronto. -->
+<!---->
+<!-- I went to a total of three concerts this year, and this was my favourite. I ended up having multiple SKZ songs in final year Spotify Wrapped. -->
+<!---->
+<!-- ![](SKZ.png) -->
 
 ## October 1, 2025 - Presenting at SecTor 2025
+
+I represented Atsign at Blackhat SecTor 2025 in Toronto. Along with my colleagues, we did a 1hr30min long presentation called "Kill Open Ports: A New Era of Secure Connectivity" at the conference.
+
+More specifically, we were in the "Arsenal" area which is a place where open-source security tools/software are presented. Atsign's NoPorts is fully open source, so we presented alongside others. My presentation consisted of 30-40 slides and a live demo, where I SSH'd into a Linux container (running my homelab at home) and also showing the ports closed using nmap. Most people were impressed. I found that I lost the attention of many folks during the slides portion, but quickly gained attention and confused heads once the demo was presented. It's a typical response because there is nothing else like it out there.
+
+The more I go to conferences, the better I get at talking to people. I was nervous at first, but after maybe the first twenty minutes of presenting, it felt natural. My biggest takeaway is to just by myself and be organic and I find that less energy taxing on my mind and body.
 
 ![](2026-01-01-21-38-18.png)
 
@@ -207,6 +213,8 @@ I went to a total of three concerts this year, and this was my favourite. I ende
 This is the 4th competition win this year.
 
 This time, it was 2nd place in a NASA hackathon hosted by the business faculty from Ontario Tech University. I think our team won a total of $200 in Amazon gift cards.
+
+[GitHub Link](https://github.com/JeremyTubongbanua/nasa_space_apps_2025)
 
 ![](SpaceAppsTag.png)
 
@@ -299,7 +307,7 @@ During the trip, I brought some cool gadgets:
 - GL-INet Travel Router
 - Beelink Mini PC (500GB)
 
-It's so much fun bringing these two little guys around because I can spin up some VMs without having to run them on my laptop to save memory, space, and just overall keeping those things separate is great.
+It's so much fun bringing these two little guys around because I can spin up some VMs without having to run them on my laptop to save memory, space, and just overall keeping those things separate is great. They were also handy when doing a three-hour long presentation for a client, because then I could allow them to connect to the router and experiment with NoPorts themselves on my VMs without having to get them setup on their own environment.
 
 ![](beelink.png)
 
@@ -344,9 +352,12 @@ I am not complaining though, because this card peaked at $1100 CAD but is now ar
 Thank you for reading thus far, and especially thank you for making my 2025 amazing!
 
 My predictions this 2026:
-- I'll be super good at neovim (more on that on another blog)
-- I would have started some sort of tech YouTube channel and hit my first 1000 subscribers
 - XEQT hits $50 CAD/share 
-- I would have done my first V4 boulder
-- I'll have at least 3 more C++ projects in my portfolio
+- Companies realize AI can't replace juniours, and juniour hiring gets better
+- GTA 6 will come out
+
+My goals for 2026:
+- Hit a V4 boulder
+- Start a YouTube channel
+- Get at least 5 GitHub stars on some project
 
