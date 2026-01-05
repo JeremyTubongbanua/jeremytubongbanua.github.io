@@ -6,7 +6,12 @@ fromdate: "2023-04-27"
 todate: "2023-04-29"
 category: "In-Person Competition"
 hidden: true
+layout: ../../../layouts/ExperienceLayout.astro
 ---
+
+- [Project Link](/projects/clean_choice/)
+- [Award Details](/awards/schulich_hacks_2023/)
+- [Award Details](/awards/schulich_hacks_ui_ux_2023/)
 
 #
 

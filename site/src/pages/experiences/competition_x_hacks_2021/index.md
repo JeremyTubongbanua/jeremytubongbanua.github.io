@@ -6,7 +6,11 @@ fromdate: "2021-08-06"
 todate: "2021-08-08"
 category: "Virtual Competition"
 hidden: true
+layout: ../../../layouts/ExperienceLayout.astro
 ---
+
+- [Project Link](/projects/money_money_stocks_bot/)
+- [Award Details](/awards/xhacks_2021/)
 
 #
 

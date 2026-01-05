@@ -12,6 +12,8 @@ layout: ../../../layouts/ProjectLayout.astro
 
 # WeekyWardrobe
 
+- [Experience Details](/experiences/competition_hawkhacks_2024/)
+
 ## Links
 
 - [Taikai Project Site](https://taikai.network/hackbox/hackathons/hawkhacks/projects/clwd4ehgl0d80z901w94tbk3h/idea)

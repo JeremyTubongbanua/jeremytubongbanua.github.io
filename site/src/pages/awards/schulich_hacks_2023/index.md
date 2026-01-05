@@ -7,8 +7,9 @@ placement: "2nd Place"
 layout: ../../../layouts/AwardLayout.astro
 ---
 
-#
+# Schulich Hacks 2023
 
 ## Links
 
--
+- [Clean Choice Project](/projects/clean_choice)
+- [Schulich Hacks 2023 Experience](/experiences/competition_schulich_hacks_2023)

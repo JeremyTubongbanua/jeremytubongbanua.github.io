@@ -12,6 +12,9 @@ layout: ../../../layouts/ProjectLayout.astro
 
 # Cryptomon
 
+- [Experience Details](/experiences/competition_uw_blockchain_hacks_2021/)
+- [Award Details](/awards/uw_blockchain_hackathon_2021/)
+
 ## Links
 
 - <https://devpost.com/software/cryptomon-1mc5a7>

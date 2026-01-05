@@ -6,4 +6,10 @@ fromdate: "2025-03-07"
 todate: "2025-03-07"
 category: "In-Person Competition"
 hidden: true
+layout: ../../../layouts/ExperienceLayout.astro
 ---
+
+![](./thumbnail.png)
+
+![](./cert.png)
+

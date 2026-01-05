@@ -6,7 +6,10 @@ fromdate: ""
 todate: "2023-11-05"
 category: "In-Person Competition"
 hidden: true
+layout: ../../../layouts/ExperienceLayout.astro
 ---
+
+- [Award Details](/awards/iec_2023/)
 
 #
 

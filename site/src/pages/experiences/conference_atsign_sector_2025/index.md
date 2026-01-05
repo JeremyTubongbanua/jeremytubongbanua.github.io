@@ -6,5 +6,6 @@ fromdate: "2025-09-30"
 todate: "2025-10-02"
 category: "Conference"
 hidden: false
+layout: ../../../layouts/ExperienceLayout.astro
 ---
 

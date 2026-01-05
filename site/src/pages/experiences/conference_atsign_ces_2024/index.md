@@ -6,7 +6,10 @@ fromdate: "2024-01-09"
 todate: "2024-01-12"
 category: "Conference"
 hidden: false
+layout: ../../../layouts/ExperienceLayout.astro
 ---
+
+- [Qt and Atsign Plant booth demo for CES 2024](/projects/qt_atsign_plant/)
 
 #
 

@@ -6,4 +6,9 @@ fromdate: "2025-10-04"
 todate: "2025-10-05"
 category: "In-Person Competition"
 hidden: true
+layout: ../../../layouts/ExperienceLayout.astro
 ---
+
+- [Project Link](/projects/sky_dashboard/)
+- [Award Details](/awards/nasa_space_apps_2025/)
+

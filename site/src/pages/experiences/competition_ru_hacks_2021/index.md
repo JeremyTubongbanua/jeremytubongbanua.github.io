@@ -6,7 +6,10 @@ fromdate: "2021-04-30"
 todate: "2021-05-02"
 category: "Virtual Competition"
 hidden: true
+layout: ../../../layouts/ExperienceLayout.astro
 ---
+
+- [Project Link](/projects/restart/)
 
 #
 

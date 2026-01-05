@@ -12,6 +12,8 @@ layout: ../../../layouts/ProjectLayout.astro
 
 # Qt/Atsign Plant Demo
 
+- [Experience Details](/experiences/conference_atsign_ces_2024/)
+
 ## Links
 
 - [Source Code GitHub](https://github.com/JeremyTubongbanua/at_demos/tree/trunk/demos/qt_atsign_plant_demo)

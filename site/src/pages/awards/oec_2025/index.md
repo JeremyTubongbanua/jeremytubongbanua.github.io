@@ -6,3 +6,7 @@ date: "2025-01-26"
 placement: "3rd Place"
 layout: ../../../layouts/AwardLayout.astro
 ---
+
+Went to McMaster University in Hamilton and competed in the highly competitive Ontario Engineering Competition (OEC) representing Ontario Tech University.
+
+Check out linkedin post here - https://www.linkedin.com/posts/jerry-shum_oec2025-ontariotech-engineering-ugcPost-7291999367257808896-fYO9?utm_source=share&utm_medium=member_desktop&rcm=ACoAADTZZtwBlltMyxapONmi3aGKyNzKw47Wgm4

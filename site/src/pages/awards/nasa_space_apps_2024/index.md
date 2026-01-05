@@ -7,8 +7,11 @@ placement: "1st Place"
 layout: ../../../layouts/AwardLayout.astro
 ---
 
-#
+- Project [link](/projects/mapping_x/)
+- Experience [link](/experiences/competition_nasa_space_apps_2024/)
 
-## Links
+![](./Certificate.png)
 
--
+Each group member also received a $50 Amazon gift card or something for winning
+
+Also offered an internship at the CSA (Canadian Space Agency) upon completing the project.

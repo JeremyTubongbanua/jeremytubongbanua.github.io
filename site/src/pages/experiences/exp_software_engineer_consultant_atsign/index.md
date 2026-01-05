@@ -6,6 +6,7 @@ fromdate: "2022-08-01"
 todate: "2025-04-30"
 category: "Job"
 hidden: false
+layout: ../../../layouts/ExperienceLayout.astro
 ---
 
 # Software Engineer Consultant at Atsign

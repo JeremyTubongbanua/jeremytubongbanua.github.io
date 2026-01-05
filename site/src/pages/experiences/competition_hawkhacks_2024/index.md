@@ -6,7 +6,10 @@ fromdate: "2024-05-17"
 todate: "2024-05-19"
 category: "In-Person Competition"
 hidden: true
+layout: ../../../layouts/ExperienceLayout.astro
 ---
+
+- [Project Link](/projects/weekly_wardrobe/)
 
 #
 

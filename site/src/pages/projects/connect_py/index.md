@@ -12,6 +12,8 @@ layout: ../../../layouts/ProjectLayout.astro
 
 # connect.py
 
+- [Experience Details](/experiences/competition_hackthenorth_2024/)
+
 Hack The North 2024 submission 2024
 
 ## Links

@@ -15,8 +15,9 @@ layout: ../../../layouts/ProjectLayout.astro
 ## Links
 
 - [GitHub Source Code](https://github.com/JeremyTubongbanua/CleanChoice)
-
 - [LinkedIn Post](https://www.linkedin.com/posts/jeremy-tubongbanua_thank-you-schulich-school-of-engineering-activity-7060422361740677120-37kN?utm_source=share&utm_medium=member_desktop)
+- [Award Details](/awards/schulich_hacks_2023/)
+- [Experience](/experiences/competition_schulich_hacks_2023/)
 
 ## Description
 
@@ -25,3 +26,7 @@ CleanChoice was a project submitted to Schulich Hacks 2023. Me and my team were 
 Our project won 2nd place ($2k prize) and Best UI/UX ($1k prize)
 
 CleanChoice generates a QR code on your receipt and scans the environmental impact of the products you've purchased.
+
+My teammates were Henry Tran, Christopher Law, and Tyler Trott.
+
+Check out my LinkedIn Post - https://www.linkedin.com/posts/jeremy-tubongbanua_thank-you-schulich-school-of-engineering-activity-7060422361740677120-37kN?utm_source=share&utm_medium=member_desktop&rcm=ACoAADTZZtwBlltMyxapONmi3aGKyNzKw47Wgm4

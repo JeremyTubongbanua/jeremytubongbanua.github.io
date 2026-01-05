@@ -190,13 +190,13 @@ Raw, this card goes for $100-$200...
 
 ![Greninja EX SIR](GreninjaEX.png)
 
-<!-- ## June 29, 2025 - Stray Kids Concert -->
-<!---->
-<!-- Went to my first ever concert - Stray Kids in Toronto. -->
-<!---->
-<!-- I went to a total of three concerts this year, and this was my favourite. I ended up having multiple SKZ songs in final year Spotify Wrapped. -->
-<!---->
-<!-- ![](SKZ.png) -->
+## June 29, 2025 - Stray Kids Concert
+
+Went to my first ever concert - Stray Kids in Toronto.
+
+I went to a total of three concerts this year, and this was my favourite. I ended up having multiple SKZ songs in final year Spotify Wrapped.
+
+![](SKZ.png)
 
 ## October 1, 2025 - Presenting at SecTor 2025
 

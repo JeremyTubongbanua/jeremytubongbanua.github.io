@@ -6,6 +6,7 @@ fromdate: "2025-05-01"
 todate: ""
 category: "Job"
 hidden: false
+layout: ../../../layouts/ExperienceLayout.astro
 ---
 
 # Engineer at Atsign

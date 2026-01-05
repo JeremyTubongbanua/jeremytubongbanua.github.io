@@ -6,6 +6,7 @@ fromdate: "2022-06-05"
 todate: "2022-07-29"
 category: "Job"
 hidden: false
+layout: ../../../layouts/ExperienceLayout.astro
 ---
 
 # Software Engineer Intern at Atsign

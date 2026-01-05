@@ -6,6 +6,7 @@ fromdate: ""
 todate: "2024-09-02"
 category: "General"
 hidden: true
+layout: ../../../layouts/ExperienceLayout.astro
 ---
 
 #

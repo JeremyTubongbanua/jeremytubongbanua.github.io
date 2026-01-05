@@ -6,6 +6,9 @@ fromdate: "2025-01-24"
 todate: "2025-01-26"
 category: "In-Person Competition"
 hidden: true
+layout: ../../../layouts/ExperienceLayout.astro
 ---
+
+- [Award Details](/awards/oec_2025/)
 
 # 

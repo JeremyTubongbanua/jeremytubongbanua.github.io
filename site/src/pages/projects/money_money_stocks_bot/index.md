@@ -12,6 +12,9 @@ layout: ../../../layouts/ProjectLayout.astro
 
 # MoneyMoneyStocksBot
 
+- [Award Details](/awards/xhacks_2021/)
+- [Experience Details](/experiences/competition_x_hacks_2021/)
+
 ## Links
 
 - <https://devpost.com/software/money-money-stocks-bot>

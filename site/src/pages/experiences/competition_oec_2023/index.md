@@ -6,6 +6,7 @@ fromdate: "2023-01-20"
 todate: "2023-01-22"
 category: "In-Person Competition"
 hidden: true
+layout: ../../../layouts/ExperienceLayout.astro
 ---
 
 # 

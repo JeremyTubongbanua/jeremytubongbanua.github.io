@@ -6,6 +6,7 @@ fromdate: ""
 todate: "2024-01-21"
 category: "Robotics"
 hidden: false
+layout: ../../../layouts/ExperienceLayout.astro
 ---
 
 #

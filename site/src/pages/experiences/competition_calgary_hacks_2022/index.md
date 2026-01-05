@@ -6,12 +6,11 @@ fromdate: "2022-02-19"
 todate: "2022-02-20"
 category: "Virtual Competition"
 hidden: true
+layout: ../../../layouts/ExperienceLayout.astro
 ---
 
 #
 
 ## Links
 
-- [DevPost](https://devpost.com/software/beaverbot-uqcyi6)
-- [Youtube Video Demo Presentation](https://youtu.be/NGu4aZXOVpA)
-- [GitHub Repo](https://github.com/JeremyTubongbanua/Cryptomon)
+- [Project WhereTo](/projects/where_to/)

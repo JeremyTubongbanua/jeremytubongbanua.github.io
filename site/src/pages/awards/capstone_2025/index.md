@@ -11,6 +11,10 @@ layout: ../../../layouts/AwardLayout.astro
 
 ![](./cert.png)
 
+![](mail.png)
+
+I think we won some money too
+
 ## Project
 
 [Project Link](/projects/capstone_blind_person_assistant/)

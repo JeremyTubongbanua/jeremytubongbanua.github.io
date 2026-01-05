@@ -6,12 +6,13 @@ fromdate: "2021-02-13"
 todate: "2021-02-14"
 category: "Virtual Competition"
 hidden: true
+layout: ../../../layouts/ExperienceLayout.astro
 ---
+
+- [Project Link](/projects/cryptomon/)
+- [Award Details](/awards/uw_blockchain_hacks_2021/)
 
 #
 
 ## Links
 
-- [DevPost](https://devpost.com/software/beaverbot-uqcyi6)
-- [Youtube Video Demo Presentation](https://youtu.be/NGu4aZXOVpA)
-- [GitHub Repo](https://github.com/JeremyTubongbanua/Cryptomon)

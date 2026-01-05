@@ -12,6 +12,8 @@ layout: ../../../layouts/ProjectLayout.astro
 
 # WikiPathFinder
 
+- [Experience](/experiences/competition_hack_the_job_2022/)
+
 ## Links
 
 - <https://devpost.com/software/wikipathfinder>
