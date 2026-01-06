@@ -323,6 +323,15 @@ This time, it's out of spare parts I had lying around the house. I'm quite happy
 
 It has a Ryzen 3 3200G with Stock Cooler, Kingston 240GB SSD, CX450 PSU, Pro M-2 MSI Motherboard and a Q300L Cooler Master case. The PC isn't the flashiest, but I did not spend any additional money making this computer and it delivers more performance than his current one, so I call that a huge win!
 
+- CPU: Ryzen 3 3200G
+- CPU Cooler: Stock Cooler with Ryzen 3
+- MOBO: MSI Pro M-2 Motherboard microATX
+- RAM: 8 GB of DDR4
+- SSD: Kingston 240 GB SSD
+- GPU: Integrated Graphics
+- Case: Cooler Master Q300L MicroATX
+- PSU: CX450 450W ATX
+
 ![](nephew_2_pc.png)
 
 ## December 21, 2025 - AMS v2 Stacker
