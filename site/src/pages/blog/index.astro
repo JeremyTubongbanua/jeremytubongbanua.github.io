@@ -17,6 +17,7 @@ const allBlogs: Blog[] = Object.values(import.meta.glob('./**/index.md', { eager
 ---
 <BaseLayout pageTitle="Blog">
   <h2>Blog</h2>
+  <p>Subscribe via <a href="/rss.xml">RSS</a></p>
   <ul id="blog-list-ul">
     {allBlogs
       .sort((a: Blog, b: Blog) => -1 * ((new Date(a.frontmatter.date).getTime()) - (new Date(b.frontmatter.date).getTime())))
