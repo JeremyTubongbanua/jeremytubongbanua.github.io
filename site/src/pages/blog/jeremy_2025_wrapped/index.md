@@ -1,6 +1,6 @@
 ---
 title: "Jeremy's 2025 Wrapped"
-description: "Won 4 competitions, graduated, built 2 PCs, went to Singapore twice, and pulled a PSA 10 Greninja ex SIR"
+description: "Won 4 competitions, 1st place capstone, graduated from Ontario Tech, built 2 PCs, went to Singapore twice, and pulled a PSA 10 Greninja ex SIR"
 date: "01-03-2026"
 layout: ../../../layouts/BlogLayout.astro
 ---
@@ -202,9 +202,9 @@ I went to a total of three concerts this year, and this was my favourite. I ende
 
 I represented Atsign at Blackhat SecTor 2025 in Toronto. Along with my colleagues, we did a 1hr30min long presentation called "Kill Open Ports: A New Era of Secure Connectivity" at the conference.
 
-More specifically, we were in the "Arsenal" area which is a place where open-source security tools/software are presented. Atsign's NoPorts is fully open source, so we presented alongside others. My presentation consisted of 30-40 slides and a live demo, where I SSH'd into a Linux container (running my homelab at home) and also showing the ports closed using nmap. Most people were impressed. I found that I lost the attention of many folks during the slides portion, but quickly gained attention and confused heads once the demo was presented. It's a typical response because there is nothing else like it out there.
+More specifically, we were in the "Arsenal" area which is a place where open-source security tools/software are presented. Atsign's NoPorts is fully open source, so we presented alongside others. My presentation consisted of 30-40 slides and a live demo, where I SSH'd into a Linux container (running in my homelab at home) and showing the ports closed using nmap. Most people were impressed, as usual, and it raised a lot of eyebrows. I found that I lost the attention of many folks during the initial slides portion, but quickly gained attention and confused heads once the demo was presented. It's a typical response because there is nothing else like it out there. My takeaway from this presentation for next year is to maybe lead with the demo, then in the latter half dive into the "how".
 
-The more I go to conferences, the better I get at talking to people. I was nervous at first, but after maybe the first twenty minutes of presenting, it felt natural. My biggest takeaway is to just by myself and be organic and I find that less energy taxing on my mind and body.
+The more I go to conferences and do presentations., the better I get at talking to people. I was nervous at first, but after maybe the first twenty minutes of presenting, it felt natural. My biggest takeaway is to just by myself and be organic and I find that less energy taxing on my mind. School never prepared me for things like these, and it's best to just jump in, do your best, and make mistakes with humility along the way.
 
 ![](2026-01-01-21-38-18.png)
 
@@ -214,7 +214,7 @@ This is the 4th competition win this year.
 
 This time, it was 2nd place in a NASA hackathon hosted by the business faculty from Ontario Tech University. I think our team won a total of $200 in Amazon gift cards.
 
-[GitHub Link](https://github.com/JeremyTubongbanua/nasa_space_apps_2025)
+Our project was a simple front-end to a database filled with NASA data called "Sky Dashboard." Check it out on GitHub: [GitHub Link](https://github.com/JeremyTubongbanua/nasa_space_apps_2025)
 
 ![](SpaceAppsTag.png)
 
@@ -222,27 +222,36 @@ This time, it was 2nd place in a NASA hackathon hosted by the business faculty f
 
 ## October 17 to 24, 2025 - Singapore Trip 1
 
-This was my first singapore trip this year. It was a week long, but I arrived a little earlier to do some tourism. I did all the usual Singapore things like go to the Marina Bay, Gardens by the Bay, visit the big malls, and go to Sentosa Island.
-
-During this trip, I was the technical rep for my company at GovWare. GovWare is a very big annual cybersecurity conference in Singapore.
+This was my first singapore trip this year. It was supposed to be a week long business trip, but I arrived a little earlier to do some tourism. I did all the usual Singapore things like go to the Marina Bay, Gardens by the Bay, visit the big malls, and go to Sentosa Island. The weather was very very hot and humid that I would start sweating after a minute of standing outside. Other than that, Singapore felt very safe and was able to do things like walk outside at 2 in the morning. I also met with my cousin after 7 years of not seeing each other, and even she does things like leave her shoes outside without worry of it getting stolen. Meanwhile here in Canada, my packages would get stolen after being outside for a couple of hours.
 
 ![](Singapore1.png)
+
+Singapore has a rich [hawker culture](https://www.nationalgeographic.com/travel/article/partner-content-all-Singapore-under-one-roof) where there are many cheap asian street food vendors located everywhere (you can't miss it). When I first saw these, I was hesitant and questioned their safety and bringing my laptop bag with me to one of these, but Singapore is known to be a pretty safe country. The food was excellent and cheap.
+
+![](foodhawker.png)
+
+Hotel had a nice river view.
+
+![](hotelview.png)
+
+During this trip, I was the technical rep for my company at GovWare. GovWare is a very big annual cybersecurity conference in Singapore. 
+I presented the comapny's demo to many cybersecurity enthusiasts visiting our booth, as well as answer technical questions about our company and product. I was demo-ing SSH without open ports; accessing a container I had back home in Canada running in my homelab without opening ports to the Internet. We had a second AI arbitrage/cloud fluidity demo that I presented at the conference as well. The first demo was more successful in showing people because it was easier to show that the ports were closed using [nmap](https://nmap.org/).
 
 Representing the company at the conference was fun. Compared to other conferences, this is my most second favourite, right behind CES in 2024.
 
 ![](BothPic.png)
 
-Of course, at the end of the trip I had to visit the Pokemon Center!
+On my way back, I visited Jewel Changi Airport mall (also known as Jewel) which is a famous mall next to the Changi Airport. It's a convenient place for people to go to do shopping and eat food while waiting for their flights.
 
-![](Pokemoncenter.png)
-
-Jewel Changi Airport
+They had this cool waterfall thingy, which is a popular tourist attraction.
 
 ![](jewel.png)
 
-Hotel View was amazing as well
+The airport mall had a Pokemon Center, which I absolutely had to visit. This Pokemon Center had an event where if you took a picture and posted it on social media, they would give you a sticker, and so of course I had to.
 
-![](hotelview.png)
+![](Pokemoncenter.png)
+
+I learned that doing tech business in Asia is much more different than doing it in Canada/US; culture and background matters a lot. I got to speak to so many tech-focused business owners and engineers in Singapore and am grateful for this rich learning experience.
 
 ## November 18, 2025 - Building a New Gaming PC
 
@@ -286,15 +295,13 @@ I was awarded the Volunteer Appreciation Award as well
 
 ## November 30 to December 7, 2025 - Singapore Trip 2
 
-Right after the robotics tournament, I rushed back home to pack for my second Singapore trip this year.
+Right after the robotics tournament that happened on the 29th, I rushed back home to pack for my second Singapore trip this year. The tournament was so exhausting I nearly slept through my flight, but luckily I woke up just 2 hours before I had to leave for the airport.
 
-This was another fun business trip, doing solutions engineering for Atsign.
-
-I had a lot of fun meeting Atsign's clients and business partners. 
-
-![](FunanSG.png)
+This was another fun business trip, representing Atsign in sales/business focused meetings as a technical rep. I had a lot of fun meeting Atsign's clients and business partners, alongside doing a three-hour long presentation showcasing NoPorts and Atsign on a deep technical level.
 
 There was this fun Mofusand event going on in Singapore and Mofusand was everywhere!!!
+
+![](FunanSG.png)
 
 ![](mofusand.png)
 
@@ -307,13 +314,31 @@ During the trip, I brought some cool gadgets:
 - GL-INet Travel Router
 - Beelink Mini PC (500GB)
 
-It's so much fun bringing these two little guys around because I can spin up some VMs without having to run them on my laptop to save memory, space, and just overall keeping those things separate is great. They were also handy when doing a three-hour long presentation for a client, because then I could allow them to connect to the router and experiment with NoPorts themselves on my VMs without having to get them setup on their own environment.
+It's so much fun bringing these two little guys around because I can spin up some VMs without having to run them on my laptop to save memory, space, and just overall keeping those things separate is great. They were also handy when doing the three-hour long presentation, because then I could allow attendees to connect to the router and experiment with NoPorts themselves on my VMs without having to get them setup on their own local environment.
 
 ![](beelink.png)
 
-This was the view from the swimming pool
+This was the view from the hotel swimming pool.
 
 ![](singapore_1.png)
+
+My hotel view was just as good as the other one.
+
+![](hotel2.png)
+
+Throughout the trip, I also took advantage of the hotel gym. It was one of the best hotel gym's I've ever been to. Lots of machines, lots of space, and high quality and clean equipment. and going early in the morning (at 5AM) guaranteed the gym to be empty.
+
+![](hotel_gym.png)
+
+I took time to visit the national library of Singapore, and it was packed with students studying. I accidentally took a girl's seat because I did not know you had to book tables; even solo cubicles. This was the view from one of the top floors. What annoyed me the most was that food was not allowed in the library, so you had to leave any food or drinks in the lockers outside. Then, they checked your bags to make sure you weren't sneaking food in either. They had this level of security for every floor of the library so it was a big hassle bringing this one probiotic can around that I had.
+
+![](top_floor_lib.png)
+
+I've noticed that the flight back from Singapore back to Canada is always faster because of the jet streams.
+
+![](flight.png)
+
+This was another great learning experience in the world of doing international business in cybersecurity/tech.
 
 ## December 14, 2025 - Building Another PC For My Other Nephew
 
@@ -321,7 +346,9 @@ In my 2024 blog, I built a PC for my nephew. This time I'm building another PC f
 
 This time, it's out of spare parts I had lying around the house. I'm quite happy with this build because I feel it delivers great performance with such a low budget.
 
-It has a Ryzen 3 3200G with Stock Cooler, Kingston 240GB SSD, CX450 PSU, Pro M-2 MSI Motherboard and a Q300L Cooler Master case. The PC isn't the flashiest, but I did not spend any additional money making this computer and it delivers more performance than his current one, so I call that a huge win!
+The PC isn't the flashiest, but I did not spend any additional money making this computer and it delivers more performance than his current one, so I consider that a huge win!
+
+Spec List:
 
 - CPU: Ryzen 3 3200G
 - CPU Cooler: Stock Cooler with Ryzen 3
