@@ -20,7 +20,7 @@ const buildHierarchy = (headings: {slug: string; text: string; depth: number;}[]
     if(heading.depth == 2) {
       toc.push(heading);
     } else {
-      if(parentHeadings[heading.depth -1]) {
+      if(parentHeadings[heading.depth - 1]) {
         parentHeadings[heading.depth - 1].subheadings = parentHeadings[heading.depth - 1].subheadings || [];
       }
     }
