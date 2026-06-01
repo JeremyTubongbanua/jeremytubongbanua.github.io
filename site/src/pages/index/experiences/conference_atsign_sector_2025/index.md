@@ -1,0 +1,11 @@
+---
+title: "Blackhat Arsenal SecTor 2025"
+subtitle: "Arsenal Talk - Killing Open Ports Presentation"
+description: "Atsign representative at SecTor 2025"
+fromdate: "2025-09-30"
+todate: "2025-10-02"
+category: "Conference"
+hidden: false
+layout: ../../../../layouts/ExperienceLayout.astro
+---
+

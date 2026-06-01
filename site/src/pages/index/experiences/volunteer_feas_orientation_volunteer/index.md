@@ -1,0 +1,16 @@
+---
+title: "FEAS Orientation Volunteer"
+subtitle: ""
+description: "Volunteered as an engineering station leader for engineering orientation"
+fromdate: ""
+todate: "2024-09-02"
+category: "General"
+hidden: true
+layout: ../../../../layouts/ExperienceLayout.astro
+---
+
+#
+
+## Links
+
+-

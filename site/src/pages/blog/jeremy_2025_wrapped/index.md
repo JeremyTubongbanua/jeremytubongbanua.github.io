@@ -1,7 +1,9 @@
 ---
 title: "Jeremy's 2025 Wrapped"
 description: "Won 4 competitions, 1st place capstone, graduated from Ontario Tech, built 2 PCs, went to Singapore twice, and pulled a PSA 10 Greninja ex SIR"
-date: "01-03-2026"
+posted_date: "01-03-2026"
+last_updated: "01-03-2026"
+hidden: false
 layout: ../../../layouts/BlogLayout.astro
 ---
 

@@ -1,0 +1,25 @@
+---
+title: "connect.py"
+subtitle: "Hack The North 2024 submission"
+description: "Secure remote access to a Jetson Nano without opening any ports in an air-gapped environment"
+date: "2024-09-15"
+languages: ["Python"]
+progress: "Finished"
+association: "Hackathon"
+hidden: true
+layout: ../../../../layouts/ProjectLayout.astro
+---
+
+# connect.py
+
+- [Experience Details](/experiences/competition_hackthenorth_2024/)
+
+Hack The North 2024 submission 2024
+
+## Links
+
+- <https://devpost.com/software/connect-y6khjl>
+
+- <https://github.com/JeremyTubongbanua/hackthenorth2024>
+
+- <https://www.youtube.com/watch?v=lrKfHAbEC_E&feature=youtu.be>

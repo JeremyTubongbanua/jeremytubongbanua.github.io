@@ -4,7 +4,8 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 interface BlogFrontmatter {
   title: string;
   description: string;
-  date: string;
+  posted_date: string;
+  last_updated: string;
   hidden: boolean;
 }
 
@@ -20,12 +21,12 @@ const allBlogs: Blog[] = Object.values(import.meta.glob('./**/index.md', { eager
   <p>Subscribe via <a href="/rss.xml">RSS</a></p>
   <ul id="blog-list-ul">
     {allBlogs
-      .sort((a: Blog, b: Blog) => -1 * ((new Date(a.frontmatter.date).getTime()) - (new Date(b.frontmatter.date).getTime())))
+      .sort((a: Blog, b: Blog) => -1 * ((new Date(a.frontmatter.posted_date).getTime()) - (new Date(b.frontmatter.posted_date).getTime())))
       .map((blog: Blog) => {
         return (
           <li>
             <span>
-              Posted on {blog.frontmatter.date && Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(blog.frontmatter.date))}
+              Posted on {blog.frontmatter.posted_date && Intl.DateTimeFormat('en-US', {year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(blog.frontmatter.posted_date))}
               {' - '}
               <a href={blog.url}>
                 {blog.frontmatter.title}

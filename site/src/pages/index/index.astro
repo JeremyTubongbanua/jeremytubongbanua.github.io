@@ -1,0 +1,110 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"
+
+interface ProjectProps {
+  url: string;
+  frontmatter: {
+    title: string;
+    subtitle: string;
+    description: string;
+    date: string;
+    languages: string[];
+    progress: string;
+    association: string;
+    hidden: boolean;
+  }
+}
+
+interface ExperienceProps {
+  url: string;
+  frontmatter: {
+    title: string;
+    subtitle: string;
+    description: string;
+    fromdate: string;
+    todate: string;
+    category: string;
+    hidden: boolean;
+  }
+}
+
+interface AwardProps {
+  url: string;
+  frontmatter: {
+    title: string;
+    subtitle: string;
+    description: string;
+    fromdate: string;
+    todate: string;
+    category: string;
+    hidden: boolean;
+  }
+}
+
+interface CertificateProps {
+  url: string;
+  frontmatter: {
+    title: string;
+    subtitle: string;
+    description: string;
+    issuer: string;
+    issue_date: string;
+    status: string;
+  }
+}
+
+const allProjects: ProjectProps[] = Object.values(import.meta.glob('./projects/**/index.md', { eager: true }));
+
+const allExperiences: ExperienceProps[] = Object.values(import.meta.glob('./experiences/**/index.md', { eager: true }));
+
+const allAwards: AwardProps[] = Object.values(import.meta.glob('./awards/**/index.md', { eager: true }));
+
+const allCertifications: CertificateProps[] = Object.values(import.meta.glob('./certifications/**/index.md', { eager: true }));
+---
+<BaseLayout>
+  <h2>Index</h2>
+  <h3>Projects</h3>
+    <ul>
+      {allProjects.map((project: ProjectProps) => 
+        <li>
+          <a href={project.url}>
+            {project.frontmatter.title}
+          </a>
+          {project.frontmatter.subtitle != '' ? `(${project.frontmatter.subtitle})` : ''}
+        </li>
+      )}
+    </ul>
+  <h3>Experiences</h3>
+    <ul>
+      {allExperiences.map((experience: ExperienceProps) => 
+        <li>
+          <a href={experience.url}>
+            {experience.frontmatter.title}
+          </a>
+          {experience.frontmatter.subtitle != '' ? `(${experience.frontmatter.subtitle})` : ''}
+        </li>
+      )}
+    </ul>
+  <h3>Awards</h3>
+    <ul>
+      {allAwards.map((award: AwardProps) => 
+        <li>
+          <a href={award.url}>
+            {award.frontmatter.title}
+          </a>
+          {award.frontmatter.subtitle != '' ? `(${award.frontmatter.subtitle})` : ''}
+        </li>
+      )}
+    </ul>
+  <h3>Certifications</h3>
+    <ul>
+      {allCertifications.map((certification: CertificateProps) => 
+        <li>
+          <a href={certification.url}>
+            {certification.frontmatter.title}
+          </a>
+          {certification.frontmatter.subtitle != '' ? `(${certification.frontmatter.subtitle})` : ''}
+        </li>
+      )}
+    </ul>
+</BaseLayout>

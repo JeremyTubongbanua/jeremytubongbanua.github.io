@@ -5,10 +5,12 @@ import BaseLayout from './BaseLayout.astro';
 interface BlogFrontmatter {
   title: string;
   description: string;
-  date: string;
+  posted_date: string;
+  last_updated: string;
+  hidden: boolean;
 }
 
-interface Props {
+interface BlogProps {
   frontmatter: BlogFrontmatter;
   url: string;
   headings: {
@@ -18,10 +20,10 @@ interface Props {
   }[];
 }
 
-const { headings, url, frontmatter } = Astro.props;
-const { title, description, date } = frontmatter;
-
-
+const title = Astro.props.frontmatter.title;
+const date = Astro.props.frontmatter.date_posted;
+const description = Astro.props.frontmatter.description;
+const headings = Astro.props.headings;
 ---
 <BaseLayout pageTitle={title}>
   <div id="blog-header-div">
@@ -56,6 +58,5 @@ const { title, description, date } = frontmatter;
     justify-content: space-between;
     align-items: center;
   }
-
 </style>
 
