@@ -8,6 +8,18 @@ const { pageTitle } = Astro.props;
 	<head>
     <meta charset="UTF-8" />
     <title>{pageTitle}</title>
+    <style>
+      .base-layout-div {
+        margin: 4em;
+      }
+      footer {
+        margin-top: 4em;
+        padding: 1.5em 4em;
+        border-top: 1px solid #e5e7eb;
+        color: #6b7280;
+        font-size: 0.75rem;
+      }
+    </style>
 	</head>
   <body>
     <Header/>
@@ -15,10 +27,8 @@ const { pageTitle } = Astro.props;
     <div class="base-layout-div">
       <slot/>
     </div>
-    <style>
-      .base-layout-div {
-        margin: 4em;
-      }
-    </style>
+    <footer>
+      <p>This web page is not vibecoded. All code is hand-written.</p>
+    </footer>
 	</body>
 </html>
