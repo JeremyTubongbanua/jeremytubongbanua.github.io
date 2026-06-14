@@ -1,7 +1,7 @@
 ---
 title: "Jeremy's 2024 Wrapped"
 description: "My 2024 wrapped in one blog"
-date_posted: "01-03-2025"
+posted_date: "01-03-2025"
 last_updated: "05-31-2026"
 hidden: false
 layout: ../../../layouts/BlogLayout.astro
