@@ -7,8 +7,8 @@ placement: "2nd Place"
 layout: ../../../../layouts/AwardLayout.astro
 ---
 
-- Project [link](/projects/mapping_x/)
-- Experience [link](/experiences/nasa_space_apps_2024/)
+- Project [link](/index/projects/mapping_x/)
+- Experience [link](/index/experiences/competition_nasa_space_apps_2025/)
 
 
 ![](Certificate.png)

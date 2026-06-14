@@ -21,7 +21,6 @@ The v0.1.0 alpha release
 ## Links
 
 - <https://github.com/JeremyTubongbanua/at_c/tree/trunk>
-- [Experience](/experiences/exp_software_engineer_consultant_atsign/)
 
 ## Description
 

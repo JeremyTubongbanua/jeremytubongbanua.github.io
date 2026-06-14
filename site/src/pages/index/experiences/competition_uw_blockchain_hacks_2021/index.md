@@ -10,7 +10,7 @@ layout: ../../../../layouts/ExperienceLayout.astro
 ---
 
 - [Project Link](/index/projects/cryptomon/)
-- [Award Details](/index/awards/uw_blockchain_hacks_2021/)
+- [Award Details](/index/awards/uw_blockchain_hackathon_2021/)
 
 #
 

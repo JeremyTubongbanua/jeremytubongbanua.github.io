@@ -17,7 +17,7 @@ I think we won some money too
 
 ## Project
 
-[Project Link](/projects/capstone_blind_person_assistant/)
+[Project Link](/index/projects/capstone_blind_person_assistant/)
 
 ## Links
 

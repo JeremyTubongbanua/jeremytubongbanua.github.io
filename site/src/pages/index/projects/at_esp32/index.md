@@ -17,7 +17,6 @@ hidden: true
 ## Links
 
 - <https://github.com/JeremyTubongbanua/at_esp32>
-- [Experience](/experiences/exp_software_engineer_consultant_atsign/)
 - [Video tutorial playlist of at_esp32](https://www.youtube.com/playlist?list=PLkZCny-S3rfC93_Xqd_HBkK_dAjDzQ9Et)
 
 ## Description

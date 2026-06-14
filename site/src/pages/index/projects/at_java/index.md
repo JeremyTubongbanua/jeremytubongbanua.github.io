@@ -15,7 +15,6 @@ hidden: true
 ## Links
 
 - <https://github.com/JeremyTubongbanua/at_java>
-- [Experience](/experiences/exp_software_engineer_consultant_atsign/)
 
 ## Description
 

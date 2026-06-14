@@ -11,5 +11,5 @@ layout: ../../../../layouts/AwardLayout.astro
 
 ## Links
 
-- [Clean Choice Project](/projects/clean_choice)
-- [Schulich Hacks 2023 Experience](/experiences/competition_schulich_hacks_2023)
+- [Clean Choice Project](/index/projects/clean_choice)
+- [Schulich Hacks 2023 Experience](/index/experiences/competition_schulich_hacks_2023)
