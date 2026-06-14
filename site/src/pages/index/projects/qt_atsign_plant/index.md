@@ -12,7 +12,7 @@ layout: ../../../../layouts/ProjectLayout.astro
 
 # Qt/Atsign Plant Demo
 
-- [Experience Details](/experiences/conference_atsign_ces_2024/)
+- [Experience Details](/index/experiences/conference_atsign_ces_2024/)
 
 ## Links
 

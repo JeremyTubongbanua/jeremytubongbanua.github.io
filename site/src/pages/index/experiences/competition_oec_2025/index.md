@@ -9,6 +9,6 @@ hidden: true
 layout: ../../../../layouts/ExperienceLayout.astro
 ---
 
-- [Award Details](/awards/oec_2025/)
+- [Award Details](/index/awards/oec_2025/)
 
 # 

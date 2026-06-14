@@ -13,4 +13,4 @@ layout: ../../../../layouts/ExperienceLayout.astro
 
 ## Links
 
-- [Project WhereTo](/projects/where_to/)
+- [Project WhereTo](/index/projects/where_to/)

@@ -15,4 +15,4 @@ layout: ../../../../layouts/ExperienceLayout.astro
 
 - [DevPost](https://devpost.com/software/beaverbot-uqcyi6)
 - [Youtube Video Demo Presentation](https://www.youtube.com/watch?v=MbC2-SJtC_0)
-- [Project](/projects/beaverbot/)
+- [Project](/index/projects/beaverbot/)

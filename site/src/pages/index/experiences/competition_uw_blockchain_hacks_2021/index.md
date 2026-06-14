@@ -9,8 +9,8 @@ hidden: true
 layout: ../../../../layouts/ExperienceLayout.astro
 ---
 
-- [Project Link](/projects/cryptomon/)
-- [Award Details](/awards/uw_blockchain_hacks_2021/)
+- [Project Link](/index/projects/cryptomon/)
+- [Award Details](/index/awards/uw_blockchain_hacks_2021/)
 
 #
 

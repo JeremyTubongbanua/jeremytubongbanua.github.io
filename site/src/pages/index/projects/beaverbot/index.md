@@ -17,8 +17,8 @@ layout: ../../../../layouts/ProjectLayout.astro
 - <https://devpost.com/software/beaverbot-uqcyi6>
 - <https://github.com/JeremyTubongbanua/BeaverBot/tree/develop/src/main>
 - <https://www.youtube.com/watch?v=MbC2-SJtC_0>  
-- [Experience](/experiences/competition_calgary_hacks_2021/)
-- [Award](/awards/calgary_hacks_2021/)
+- [Experience](/index/experiences/competition_calgary_hacks_2021/)
+- [Award](/index/awards/calgary_hacks_2021/)
 
 ## Description
 

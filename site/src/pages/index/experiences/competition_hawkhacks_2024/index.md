@@ -9,7 +9,7 @@ hidden: true
 layout: ../../../../layouts/ExperienceLayout.astro
 ---
 
-- [Project Link](/projects/weekly_wardrobe/)
+- [Project Link](/index/projects/weekly_wardrobe/)
 
 #
 

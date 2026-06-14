@@ -13,4 +13,4 @@ layout: ../../../../layouts/ExperienceLayout.astro
 
 ## Links
 
-- [WikiPathFinder Project](/projects/wiki_path_finder/)
+- [WikiPathFinder Project](/index/projects/wiki_path_finder/)

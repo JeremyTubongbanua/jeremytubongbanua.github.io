@@ -16,8 +16,8 @@ layout: ../../../../layouts/ProjectLayout.astro
 
 - [GitHub Source Code](https://github.com/JeremyTubongbanua/CleanChoice)
 - [LinkedIn Post](https://www.linkedin.com/posts/jeremy-tubongbanua_thank-you-schulich-school-of-engineering-activity-7060422361740677120-37kN?utm_source=share&utm_medium=member_desktop)
-- [Award Details](/awards/schulich_hacks_2023/)
-- [Experience](/experiences/competition_schulich_hacks_2023/)
+- [Award Details](/index/awards/schulich_hacks_2023/)
+- [Experience](/index/experiences/competition_schulich_hacks_2023/)
 
 ## Description
 

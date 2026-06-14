@@ -12,7 +12,7 @@ layout: ../../../../layouts/ProjectLayout.astro
 
 # WeekyWardrobe
 
-- [Experience Details](/experiences/competition_hawkhacks_2024/)
+- [Experience Details](/index/experiences/competition_hawkhacks_2024/)
 
 ## Links
 

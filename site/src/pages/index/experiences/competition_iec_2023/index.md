@@ -9,7 +9,7 @@ hidden: true
 layout: ../../../../layouts/ExperienceLayout.astro
 ---
 
-- [Award Details](/awards/iec_2023/)
+- [Award Details](/index/awards/iec_2023/)
 
 #
 

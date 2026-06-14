@@ -9,6 +9,6 @@ hidden: true
 layout: ../../../../layouts/ExperienceLayout.astro
 ---
 
-- [Project Link](/projects/sky_dashboard/)
-- [Award Details](/awards/nasa_space_apps_2025/)
+- [Project Link](/index/projects/sky_dashboard/)
+- [Award Details](/index/awards/nasa_space_apps_2025/)
 

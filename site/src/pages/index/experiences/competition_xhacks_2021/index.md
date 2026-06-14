@@ -9,8 +9,8 @@ hidden: true
 layout: ../../../../layouts/ExperienceLayout.astro
 ---
 
-- [Project Link](/projects/money_money_stocks_bot/)
-- [Award Details](/awards/xhacks_2021/)
+- [Project Link](/index/projects/money_money_stocks_bot/)
+- [Award Details](/index/awards/xhacks_2021/)
 
 #
 

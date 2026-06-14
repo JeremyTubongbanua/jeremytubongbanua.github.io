@@ -9,9 +9,9 @@ hidden: true
 layout: ../../../../layouts/ExperienceLayout.astro
 ---
 
-- [Project Link](/projects/mapping_x/)
-- [Award Details](/awards/nasa_space_apps_2024/)
-- [Award Details - Global Nominee](/awards/nasa_space_apps_global_nominee_2024/)
+- [Project Link](/index/projects/mapping_x/)
+- [Award Details](/index/awards/nasa_space_apps_2024/)
+- [Award Details - Global Nominee](/index/awards/nasa_space_apps_global_nominee_2024/)
 
 #
 

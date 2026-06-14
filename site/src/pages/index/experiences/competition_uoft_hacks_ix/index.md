@@ -9,7 +9,7 @@ hidden: true
 layout: ../../../../layouts/ExperienceLayout.astro
 ---
 
-- [Project Link](/projects/master_chef/)
+- [Project Link](/index/projects/master_chef/)
 
 #
 

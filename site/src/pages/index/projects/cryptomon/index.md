@@ -12,8 +12,8 @@ layout: ../../../../layouts/ProjectLayout.astro
 
 # Cryptomon
 
-- [Experience Details](/experiences/competition_uw_blockchain_hacks_2021/)
-- [Award Details](/awards/uw_blockchain_hackathon_2021/)
+- [Experience Details](/index/experiences/competition_uw_blockchain_hacks_2021/)
+- [Award Details](/index/awards/uw_blockchain_hackathon_2021/)
 
 ## Links
 

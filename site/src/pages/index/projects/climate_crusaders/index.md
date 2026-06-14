@@ -18,7 +18,7 @@ layout: ../../../../layouts/ProjectLayout.astro
 - [Space Apps Challenge - Team Wesley](https://www.spaceappschallenge.org/2023/find-a-team/team-wesley/?tab=project)
 - [YouTube - Project Demo](https://youtu.be/2MLvS3TZ3bc)
 - [Experience Details](/experiences/competition_nasa_space_apps_2023/)
-- [Award Details](/awards/nasa_space_apps_2023/)
+- [Award Details](/index/awards/nasa_space_apps_2023/)
 
 ## NASA Space Apps 2023
 

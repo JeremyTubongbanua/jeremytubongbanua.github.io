@@ -18,7 +18,7 @@ layout: ../../../../layouts/ProjectLayout.astro
 - Source code: <https://github.com/JeremyTubongbanua/blind_person_assistant>
 - 3 minute video: <https://www.youtube.com/watch?v=-XyYb4GPD1U>
 - Official Ontario Tech Website: <https://engineering.ontariotechu.ca/current-students/current-undergraduate/capstone/2025-ecse-capstone-projects.php>
-- [1st Place Award Details](/awards/capstone_2025/)
+- [1st Place Award Details](/index/awards/capstone_2025/)
 ## Description
 
 8-month long capstone project for Ontario Tech University Engineering capstone course.

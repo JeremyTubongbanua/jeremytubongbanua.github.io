@@ -16,4 +16,4 @@ layout: ../../../../layouts/ExperienceLayout.astro
 - [DevPost](https://devpost.com/software/beaverbot-uqcyi6)
 - [Youtube Video Demo Presentation](https://youtu.be/NGu4aZXOVpA)
 - [GitHub Repo](https://github.com/JeremyTubongbanua/Cryptomon)
-- [Project](/projects/connect/)
+- [Project](/index/projects/connect/)

@@ -9,3 +9,6 @@ hidden: false
 layout: ../../../../layouts/ExperienceLayout.astro
 ---
 
+## Summary
+
+Went on another exciting trip to Singapore. This time to meet clients business partners.

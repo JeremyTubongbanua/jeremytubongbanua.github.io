@@ -11,7 +11,7 @@ layout: ../../../../layouts/ExperienceLayout.astro
 
 ![HackTheNorth 2024](./thumbnail.png)
 
-- [Project Link](/projects/connect_py/)
+- [Project Link](/index/projects/connect_py/)
 
 #
 

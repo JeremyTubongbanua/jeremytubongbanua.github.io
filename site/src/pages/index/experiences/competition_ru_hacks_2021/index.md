@@ -9,7 +9,7 @@ hidden: true
 layout: ../../../../layouts/ExperienceLayout.astro
 ---
 
-- [Project Link](/projects/restart/)
+- [Project Link](/index/projects/restart/)
 
 #
 
