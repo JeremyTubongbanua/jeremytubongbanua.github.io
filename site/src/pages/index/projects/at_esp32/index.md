@@ -6,8 +6,8 @@ date: "2023-04-26"
 languages: ["C++"]
 progress: "Finished"
 association: "Atsign"
-layout: ../../../../layouts/ProjectLayout.astro
 hidden: true
+layout: ../../../../layouts/ProjectLayout.astro
 ---
 
 ![thumbnail](./thumbnail.png)

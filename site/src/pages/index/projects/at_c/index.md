@@ -6,8 +6,8 @@ date: "2023-02-18"
 languages: ["C"]
 progress: "In-Progress"
 association: "Atsign"
-layout: ../../../../layouts/ProjectLayout.astro
 hidden: true
+layout: ../../../../layouts/ProjectLayout.astro
 ---
 
 ![Thumbnail](./thumbnail.png)

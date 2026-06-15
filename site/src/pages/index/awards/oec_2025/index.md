@@ -2,8 +2,8 @@
 title: "3rd Place - Ontario Engineering Competition - Programming"
 subtitle: "Ontario Engineering Competition"
 description: "Won 3rd Place in the Programming category in the province at Ontario Engineering Competition Engineering hosted by McMaster's Engineering Society located in Hamilton, Ontario. Won 3rd place out of 14 programming teams."
-date: "2025-01-26"
 placement: "3rd Place"
+date: "2025-01-26"
 hidden: false
 layout: ../../../../layouts/AwardLayout.astro
 ---

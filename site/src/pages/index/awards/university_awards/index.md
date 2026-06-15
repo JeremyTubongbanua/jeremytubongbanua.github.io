@@ -2,8 +2,8 @@
 title: "Ontario Tech University GPA Awards"
 subtitle: "4.0+ GPA"
 description: "On the Dean's List and President's Honour List every semester"
-date: "2025-04-30"
 placement: "General"
+date: "2025-04-30"
 hidden: false
 layout: ../../../../layouts/AwardLayout.astro
 ---

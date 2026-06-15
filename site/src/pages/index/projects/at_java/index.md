@@ -6,8 +6,8 @@ date: "2023-04-23"
 languages: ["Java"]
 progress: "Finished"
 association: "Atsign"
-layout: ../../../../layouts/ProjectLayout.astro
 hidden: true
+layout: ../../../../layouts/ProjectLayout.astro
 ---
 
 # at_java
