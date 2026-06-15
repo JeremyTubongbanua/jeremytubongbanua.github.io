@@ -10,6 +10,7 @@ layout: ../../../../layouts/ExperienceLayout.astro
 ---
 
 - [Qt and Atsign Plant booth demo for CES 2024](/index/projects/qt_atsign_plant/)
+- [Qt Blog: Revolutionizing Networking Security](/blog/qt_blog_2024/)
 
 #
 

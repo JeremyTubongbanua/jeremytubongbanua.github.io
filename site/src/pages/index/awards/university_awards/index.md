@@ -4,6 +4,7 @@ subtitle: "4.0+ GPA"
 description: "On the Dean's List and President's Honour List every semester"
 date: "2025-04-30"
 placement: "General"
+hidden: false
 layout: ../../../../layouts/AwardLayout.astro
 ---
 

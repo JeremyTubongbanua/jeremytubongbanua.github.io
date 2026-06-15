@@ -9,11 +9,10 @@ association: "Hackathon"
 hidden: true
 layout: ../../../../layouts/ProjectLayout.astro
 ---
-
 # MoneyMoneyStocksBot
 
-- [Award Details](/awards/xhacks_2021/)
-- [Experience Details](/experiences/competition_x_hacks_2021/)
+- [Award Details](/index/awards/xhacks_2021/)
+- [Experience Details](/index/experiences/competition_xhacks_2021/)
 
 ## Links
 

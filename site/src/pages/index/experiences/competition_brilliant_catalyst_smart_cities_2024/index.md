@@ -8,9 +8,9 @@ category: "In-Person Competition"
 hidden: true
 layout: ../../../../layouts/ExperienceLayout.astro
 ---
-
 #
 
 ## Links
 
 -
+

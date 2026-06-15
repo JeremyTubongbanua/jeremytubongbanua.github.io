@@ -4,6 +4,7 @@ subtitle: "Ontario Tech University Engineering Capstone Exhibition"
 placement: "1st Place"
 description: "Won 1st place out of 32 capstone teams with best electrical/computer engineering capstone made over the course of 8 months"
 date: "2025-04-07"
+hidden: false
 layout: ../../../../layouts/AwardLayout.astro
 ---
 

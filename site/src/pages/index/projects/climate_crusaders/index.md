@@ -9,7 +9,6 @@ association: "Hackathon"
 hidden: true
 layout: ../../../../layouts/ProjectLayout.astro
 ---
-
 # Climate Crusaders
 
 ## Links
@@ -17,7 +16,7 @@ layout: ../../../../layouts/ProjectLayout.astro
 - [GitHub - JeremyTubongbanua/nasa-space-apps-2023](https://github.com/JeremyTubongbanua/nasa-space-apps-2023)
 - [Space Apps Challenge - Team Wesley](https://www.spaceappschallenge.org/2023/find-a-team/team-wesley/?tab=project)
 - [YouTube - Project Demo](https://youtu.be/2MLvS3TZ3bc)
-- [Experience Details](/experiences/competition_nasa_space_apps_2023/)
+- [Experience Details](/index/experiences/competition_nasa_space_apps_2023/)
 - [Award Details](/index/awards/nasa_space_apps_2023/)
 
 ## NASA Space Apps 2023

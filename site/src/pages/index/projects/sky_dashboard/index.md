@@ -9,6 +9,5 @@ association: "Hackathon"
 hidden: true
 layout: ../../../../layouts/ProjectLayout.astro
 ---
-
 - [Experience](/index/experiences/competition_nasa_space_apps_2025/)
-- [Award](/awards/nasa_space_apps_2025/)
+- [Award](/index/awards/nasa_space_apps_2025/)
