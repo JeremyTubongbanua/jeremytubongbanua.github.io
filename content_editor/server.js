@@ -332,6 +332,37 @@ const server = http.createServer(async (req, res) => {
     }
   }
 
+  // POST /api/toggle-todo?path=...
+  if (req.method === 'POST' && url.pathname === '/api/toggle-todo') {
+    const relPath = url.searchParams.get('path');
+    if (!relPath) return json(res, { error: 'missing path' }, 400);
+    try {
+      let raw = fs.readFileSync(TODOS_PATH, 'utf8');
+      const entry = `- ${relPath}`;
+      if (raw.includes(entry)) {
+        // Remove the line
+        raw = raw.split('\n').filter(l => l.trim() !== entry.trim()).join('\n');
+        fs.writeFileSync(TODOS_PATH, raw);
+        return json(res, { ok: true, todo: false });
+      } else {
+        // Add under the appropriate section header, or at end of Blank Pages section
+        const section = getSection(relPath);
+        const sectionLabel = section === 'experiences' ? 'Experiences (empty)'
+          : section === 'awards' ? 'Awards (empty)'
+          : section === 'projects' ? 'Projects (empty)' : null;
+        if (sectionLabel && raw.includes(sectionLabel)) {
+          raw = raw.replace(sectionLabel + '\n', sectionLabel + '\n' + entry + '\n');
+        } else {
+          raw = raw.trimEnd() + '\n' + entry + '\n';
+        }
+        fs.writeFileSync(TODOS_PATH, raw);
+        return json(res, { ok: true, todo: true });
+      }
+    } catch (e) {
+      return json(res, { error: e.message }, 500);
+    }
+  }
+
   // GET /api/audit — scan all pages for dead links and missing images
   if (req.method === 'GET' && url.pathname === '/api/audit') {
     try {
@@ -469,6 +500,9 @@ const HTML = /* html */`<!DOCTYPE html>
   .editor-path { color: var(--muted); font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1; }
   .open-folder-btn { background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 2px 8px; font: inherit; font-size: 11px; color: var(--muted); cursor: pointer; flex-shrink: 0; white-space: nowrap; }
   .open-folder-btn:hover { color: var(--text); }
+  .todo-toggle-btn { border: 1px solid var(--border); border-radius: 4px; padding: 2px 8px; font: inherit; font-size: 11px; cursor: pointer; flex-shrink: 0; white-space: nowrap; background: var(--surface); color: var(--muted); }
+  .todo-toggle-btn.is-todo { background: #2a1a40; border-color: var(--todo); color: var(--todo); }
+  .todo-toggle-btn:hover { opacity: .8; }
   .fm-panel { background: var(--surface); border-bottom: 1px solid var(--border); font-size: 11px; color: var(--muted); flex-shrink: 0; line-height: 1.5; display: flex; flex-direction: column; }
   .fm-label { padding: 4px 16px 2px; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; color: var(--border); cursor: pointer; user-select: none; display: flex; align-items: center; gap: 6px; }
   .fm-label:hover { color: var(--muted); }
@@ -683,8 +717,8 @@ function renderEditor() {
   pane.innerHTML = \`
     <div class="editor-header">
       <span class="section-tag">\${escHtml(page.section)}</span>
-      \${todoTag}
       <span class="editor-path">\${escHtml(relPath)}</span>
+      <button class="todo-toggle-btn\${page.todo ? ' is-todo' : ''}" id="todo-toggle-btn">\${page.todo ? '★ todo' : '☆ todo'}</button>
       <button class="open-folder-btn" id="open-folder-btn">Open folder ↗</button>
     </div>
     <div class="fm-panel" id="fm-panel">
@@ -826,6 +860,21 @@ function renderEditor() {
   document.getElementById('save-btn').addEventListener('click', savePage);
   document.getElementById('open-folder-btn').addEventListener('click', () => {
     fetch(\`/api/open-folder?path=\${encodeURIComponent(current.relPath)}\`, { method: 'POST' });
+  });
+
+  document.getElementById('todo-toggle-btn').addEventListener('click', async () => {
+    const res = await fetch(\`/api/toggle-todo?path=\${encodeURIComponent(current.relPath)}\`, { method: 'POST' });
+    const data = await res.json();
+    if (!data.ok) return;
+    const p = allPages.find(p => p.relPath === current.relPath);
+    if (p) p.todo = data.todo;
+    current.page.todo = data.todo;
+    const btn = document.getElementById('todo-toggle-btn');
+    btn.textContent = data.todo ? '★ todo' : '☆ todo';
+    btn.classList.toggle('is-todo', data.todo);
+    renderList();
+    document.querySelectorAll('.page-item').forEach(el =>
+      el.classList.toggle('active', el.dataset.path === current.relPath));
   });
 
   ta.addEventListener('paste', handlePaste);
