@@ -1,5 +1,5 @@
 ---
-title: "fll_judge_durham_2026"
+title: "FLL Judge Canada Open International 2026"
 subtitle: ""
 description: ""
 fromdate: "2026-06-17"
