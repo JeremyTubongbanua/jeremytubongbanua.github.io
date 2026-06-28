@@ -8,9 +8,7 @@ category: "In-Person Competition"
 hidden: true
 layout: ../../../../layouts/ExperienceLayout.astro
 ---
-#
-
 ## Links
 
--
-
+- [2025 Brilliant Catalyst Pitch Competition](/index/experiences/competition_brilliant_catalyst_pitch_2025)
+- [Smart Cities Award](/index/awards/brilliant_catalyst_smart_cities_2024/)
