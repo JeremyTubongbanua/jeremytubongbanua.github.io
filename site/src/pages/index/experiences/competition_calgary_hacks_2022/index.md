@@ -9,7 +9,7 @@ hidden: true
 layout: ../../../../layouts/ExperienceLayout.astro
 ---
 
-#
+It was a remote hackathon, so honestly not too much to talk about.
 
 ## Links
 

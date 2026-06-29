@@ -14,9 +14,10 @@ layout: ../../../../layouts/ProjectLayout.astro
 
 ## Links
 
-- <https://www.youtube.com/watch?v=8vylsZiOOLw>
-
-- <https://devpost.com/software/connect-d3o8l2>
+- [DevPost](https://devpost.com/software/beaverbot-uqcyi6)
+- [Youtube Video Demo Presentation](https://youtu.be/NGu4aZXOVpA)
+- [GitHub Repo](https://github.com/JeremyTubongbanua/Cryptomon)
+- [Experience](/index/experiences/competition_cal_hacks_8/)
 
 ## Description
 
