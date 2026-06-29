@@ -10,14 +10,10 @@ hidden: true
 layout: ../../../../layouts/ProjectLayout.astro
 ---
 
-# WikiPathFinder
-
-- [Experience](/index/experiences/competition_hack_the_job_2022/)
-
 ## Links
 
+- [Experience](/index/experiences/competition_hack_the_job_2022/)
 - <https://devpost.com/software/wikipathfinder>
-
 - <https://github.com/JeremyTubongbanua/WikiPathFinder>
 
 ## Description
