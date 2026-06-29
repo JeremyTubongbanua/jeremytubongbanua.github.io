@@ -7,7 +7,15 @@ date: "2025-03-07"
 hidden: false
 layout: ../../../../layouts/AwardLayout.astro
 ---
-# 1st Place Overall
+## 1st Place Overall
 
 Won 1st place overall in ADC's Figma CHallenge on March 7th, 2025.
+
+## Links
+
+- [Competition Experience](/index/experiences/competition_adc_figma/)
+
+## Certificate Award
+
+![](./thumbnail.png)
 
