@@ -9,8 +9,10 @@ hidden: false
 layout: ../../../../layouts/ExperienceLayout.astro
 ---
 
-#
+## Summary
 
-## Links
+This was my 2nd time judge advising.
 
--
+I felt a little embarassed because this year around, I forgot how to judge FLL projects.
+
+I was asked by the coaches if I remembered a paper, and admittedly, I said no. Admittedly, I came a little unprepared for this one, but I think was still a fair and smooth event overall.

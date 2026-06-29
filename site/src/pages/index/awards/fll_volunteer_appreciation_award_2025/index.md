@@ -7,9 +7,15 @@ date: "2025-11-29"
 hidden: false
 layout: ../../../../layouts/AwardLayout.astro
 ---
+
+## Links
+
+- [Experience](/index/experiences/fll_judge_advisor_2025/)
+- Right after this competition, I had to rush home in order to pack for a flight to Singapore! Read about my second Singapore trip [here](/index/experiences/atsign_singapore_trip_2/)
+
 ## Volunteer Appreciation Award
 
-I volunteered at my ex-high school's annual lego robotics competition and was awarded the Volunteer Appreciation Award.
+I volunteered at my high school's annual lego robotics competition and was awarded the Volunteer Appreciation Award. This award is given to the volunteer who is appreciated the most for the competition. I was surprised it was granted to me because we typically give this to someone who it will greatly impact. I am part of the group of key volunteers, so it is usually my job to also consider who to give this award too. Although, I'm not surprised that I earned this, because a good amount of hours was put into making this event a great experience for all people (competitors and volunteers alike).
 
 What's funny is that I made the awards myself. So I essentially made an award for myself.
 
