@@ -10,6 +10,8 @@ hidden: true
 layout: ../../../../layouts/ProjectLayout.astro
 ---
 
+We did not end up winning, but read up on the Experience below as it was an awesome weekend.
+
 # connect.py
 
 - [Experience Details](/index/experiences/competition_hackthenorth_2024/)
